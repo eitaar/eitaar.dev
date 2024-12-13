@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr:  false,
+  ssr: true,
+  target: "static",
   app: {
     head: {
       link:[

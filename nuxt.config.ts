@@ -2,11 +2,19 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   target: "static",
+  modules:["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode','@nuxtjs/google-fonts'],
+  googleFonts: {
+    families: {
+      Roboto: true
+    }
+  },
+  colorMode: {
+    classSuffix: '',
+    preference: 'light',
+    fallback: 'light'
+},
   app: {
     head: {
-      link:[
-        {rel: 'stylesheet',href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'}
-      ],
       htmlAttrs: {
         lang: 'en',
       },
@@ -19,4 +27,6 @@ export default defineNuxtConfig({
       ],
     }
   },
+
+  compatibilityDate: '2024-12-15',
 })

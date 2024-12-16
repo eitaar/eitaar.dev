@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
     preference: 'light',
-    fallback: 'light'
+    fallback: 'light',
+    storage:'cookie'
 },
   app: {
     head: {

@@ -15,7 +15,9 @@ module.exports = {
         roboto: ['Roboto', 'sans-serif'],
       },
       animation : {
+      },
+      keyframes: {
+        }
       }
-    }
   }
 };

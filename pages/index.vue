@@ -11,7 +11,7 @@
         @click="openUrl('https://github.com/eitaar')"
         class="btn transition-all hover:scale-105 border-[0.35vmin] duration-200 rounded px-[2vmin] py-[1vmin] dark:bg-slate-950 border-slate-950 dark:border-slate-200 dark:text-slate-200 text-[2vmin] text-slate-950"
         :disabled="loaded">Github</button>
-    </div>
+    </div>  
 </template>
 
 <script setup>

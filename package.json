@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prod": "cls && nuxt build && node .output/server/index.mjs"
+    "prod": "cls && nuxt build && node .output/server/index.mjs",
+    "ssprod": "cls && nuxt generate && npx serve .output/public"
   },
   "dependencies": {
     "@nuxtjs/color-mode": "^3.5.2",

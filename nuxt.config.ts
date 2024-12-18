@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr: true,
+  ssr:false,
   target: "static",
   modules:["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode','@nuxtjs/google-fonts'],
   googleFonts: {

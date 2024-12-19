@@ -24,7 +24,7 @@ module.exports = {
           '10%, 25%, 40%': { opacity: '0' }, 
           '17.5%, 32.5%, 47.5%': { opacity: '1' },
           '50%': { transform: 'translate(-50%, -50%) scale(3)', left: '50vw', top: '50vh' },
-          '75%': { transform: 'translate(0%, 0%) scale(1)', left: '2vmin', top: '2vmin' },
+          '72.5%': { transform: 'translate(0%, 0%) scale(1)', left: '2vmin', top: '2vmin' },
           '100%': { transform: 'translate(0%, 0%)', left: '2vmin', top: '2vmin' },
         },
         showPage: {

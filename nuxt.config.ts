@@ -2,7 +2,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr:false,
   target: "static",
-  modules:["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode','@nuxtjs/google-fonts'],
+  modules:["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode','@nuxtjs/google-fonts','@hypernym/nuxt-gsap'],
+  
   googleFonts: {
     families: {
       Roboto: true
@@ -28,7 +29,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'eitaar.dev' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://eitaar.dev' },
-        { property: 'og:image', content: 'https://eitaar.dev/logo.png' },
+        { property: 'og:image', content: 'https://eitaar.dev/logo.' },
         { property: 'og:site_name', content: 'eitaar.dev' },
         { property: 'og:locale', content: 'en_US' },
       ],

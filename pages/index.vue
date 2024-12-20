@@ -26,7 +26,7 @@
 import { ref, onMounted, computed } from "vue";
 const loaded = ref(true);
 const openUrl = (url) => {
-    //window.open(url, "_blank");
+    window.open(url, "_blank");
 };
 
 onMounted(() => {

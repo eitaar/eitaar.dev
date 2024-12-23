@@ -22,14 +22,12 @@ export default defineNuxtConfig({
   },
   i18n: {
     lazy: true,
-    strategy: 'no_prefix', // デフォルト言語はプレフィックス無し
-    defaultLocale: 'en', // デフォルト言語を日本語
-    // 各言語の設定
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
     locales: [
       { code: 'ja', language: 'ja-JP', name: 'Japanese', file: 'ja.ts' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.ts' },
     ],
-    // 言語ファイルが格納されているファイル(外部ファイルかする場合)
     langDir: 'locales',
   },
   app: {

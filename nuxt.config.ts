@@ -1,9 +1,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr:false,
+  ssr: false,
   target: "static",
-  modules:["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode','@nuxtjs/google-fonts','@hypernym/nuxt-gsap'],
-  
+  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode', '@nuxtjs/google-fonts', '@hypernym/nuxt-gsap', '@nuxtjs/i18n'],
+  gsap: {
+    extraPlugins: {
+      scrollTo: true,
+      scrollTrigger: true
+    }
+  },
   googleFonts: {
     families: {
       Roboto: true
@@ -13,8 +18,20 @@ export default defineNuxtConfig({
     classSuffix: '',
     preference: 'dark',
     fallback: 'dark',
-    storage:'cookie'
-},
+    storage: 'cookie'
+  },
+  i18n: {
+    lazy: true,
+    strategy: 'no_prefix', // デフォルト言語はプレフィックス無し
+    defaultLocale: 'en', // デフォルト言語を日本語
+    // 各言語の設定
+    locales: [
+      { code: 'ja', language: 'ja-JP', name: 'Japanese', file: 'ja.ts' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.ts' },
+    ],
+    // 言語ファイルが格納されているファイル(外部ファイルかする場合)
+    langDir: 'locales',
+  },
   app: {
     head: {
       htmlAttrs: {

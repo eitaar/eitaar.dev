@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        Roboto: ['Roboto', 'sans-serif'],
       },
       animation: {
         showPage: 'showPage 1.025s cubic-bezier(0.4, 0, 0.2, 1) forwards',

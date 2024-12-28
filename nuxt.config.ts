@@ -2,11 +2,21 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
   target: "static",
-  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", '@nuxtjs/color-mode', '@nuxtjs/google-fonts', '@hypernym/nuxt-gsap', '@nuxtjs/i18n'],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+    '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
+    '@hypernym/nuxt-gsap',
+    '@nuxtjs/i18n',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@pinia/nuxt',
+  ],
   gsap: {
     extraPlugins: {
       scrollTo: true,
-      scrollTrigger: true
+      scrollTrigger: true,
+      pixi: true,
     }
   },
   googleFonts: {

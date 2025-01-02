@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
     '@hypernym/nuxt-gsap',
-    '@nuxtjs/i18n',
     '@pinia-plugin-persistedstate/nuxt',
     '@pinia/nuxt',
   ],

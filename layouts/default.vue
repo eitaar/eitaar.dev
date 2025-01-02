@@ -17,13 +17,12 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { storeToRefs } from "pinia";
+import { openUrl } from '~/assets/src/utils';
 const colorMode = useColorMode();
 const { $gsap } = useNuxtApp();   
 const loaded = ref(true);
-const openUrl = (url) => {
-    window.open(url, "_blank");
-};
 
+// Animation on page load
 onMounted(() => {
     loaded.value = false;
     const tl = $gsap.timeline();

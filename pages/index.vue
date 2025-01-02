@@ -24,20 +24,20 @@
 </template>
 
 <script setup>
+//Import modules & initialize variable
 import { ref, onMounted, watch } from 'vue';
 import {Application,Assets,Text,Graphics} from 'pixi.js';
-import { GlitchFilter } from 'pixi-filters';
-const colorMode = useColorMode();
+import { GlitchFilter,AsciiFilter } from 'pixi-filters';
+import { randInt,openUrl } from '~/assets/src/utils';
+import { useWindowSize,useEventListener} from '@vueuse/core';
 const {$gsap} = useNuxtApp();
+const app = new Application();
+const colorMode = useColorMode();
+const {width, height} = useWindowSize();
+
 const loaded = ref(true);
 const bg = ref(null);
-const app = new Application();
 let TCmoving = false;
-import { useWindowSize,useEventListener} from '@vueuse/core';
-const {width, height} = useWindowSize();
-const openUrl = (url) => {
-    window.open(url, "_blank");
-};
 
 //Initiate Pixi.js Application
 onMounted(async()=>{
@@ -46,6 +46,7 @@ onMounted(async()=>{
     document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
     app.ticker.maxFPS = 60;
     app.ticker.autoStart = false;
+
     //Add the Title
     let txt = new Text({text:"eitaar.dev",style:{fontFamily:'Roboto',fontSize:`${((width.value > height.value?height.value:width.value)/100)*10}px`,fontWeight: 'bold',fill:`${colorMode.preference == 'dark'?'#e2e8f0':'#020617'}`}});
     app.stage.addChild(txt);
@@ -53,26 +54,30 @@ onMounted(async()=>{
     txt.anchor.set(0.5); 
     txt.x = (width.value- (width.value - document.documentElement.clientWidth)) / 2;
     txt.y = height.value / 2;
-    let counter = 0; // Initialize counter
+
+    //Add effect & stuff
+    let counter = 0;
     const intervalFrames = 120;
-    // Ticker to handle updates
-    setTimeout(() => {
-        txt.filters = [new GlitchFilter({fillMode: 0})];
-    }, 2000);
-    app.ticker.add((timer) => {
+    const offset = [1, 5, 10, 15, 20, 25, 30];
+
+    //Add the effect to the text
+    setTimeout(() => {txt.filters = [new GlitchFilter({fillMode: 0}),/*new AsciiFilter({size:6})*/]}, 2000);
+    app.ticker.add(() => {
         counter++;
         if (counter >= intervalFrames) {
-            if (Math.random() > 0.40 && Math.random() <= 0.5) {
+            let randIntg = randInt();
+            if (randIntg > 35 && randIntg <= 40) {
+                ;
+            } else if (randIntg > 30 && randIntg <= 70) {
                 txt.filters[0].seed = Math.random();
-                txt.filters[0].slices = 5; // Adjust slice value as needed
-                const offset = [1, 5, 10, 15, 20, 25, 30];
-                const randintg = Math.floor(Math.random() * offset.length);
-                txt.filters[0].red = {x: Math.random() > 0.5?offset[randintg]/5:-offset[randintg],y: Math.random() > 0.5?offset[randintg]/5:-offset[randintg]/5};
-                txt.filters[0].green = {x: Math.random() > 0.5?offset[randintg]/5:-offset[randintg],y: Math.random() > 0.5?offset[randintg]/5:-offset[randintg]/5};
-                txt.filters[0].blue = {x: Math.random() > 0.5?offset[randintg]/5:-offset[randintg],y: Math.random() > 0.5?offset[randintg]/5:-offset[randintg]/5};
-                txt.filters[0].offset = Math.random() > 0.5 
-                    ? offset[randintg] 
-                    : -offset[randintg];
+                txt.filters[0].slices = 5;
+                const offsetChoice = Math.floor(Math.random() * offset.length);
+                txt.filters[0].red = {x: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice],y: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice]/5};
+                txt.filters[0].green = {x: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice],y: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice]/5};
+                txt.filters[0].blue = {x: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice],y: randInt() > 50?offset[offsetChoice]/5:-offset[offsetChoice]/5};
+                txt.filters[0].offset = randInt() > 50 
+                    ? offset[offsetChoice] 
+                    : -offset[offsetChoice];
 
                 // Reset counter
                 setTimeout(() => {
@@ -82,7 +87,7 @@ onMounted(async()=>{
                     txt.filters[0].slices = 0;
                     txt.filters[0].offset = 0;
                     counter = 0;
-                }, 500);
+                }, 250);
             }
         }
     });
@@ -91,12 +96,14 @@ onMounted(async()=>{
         app.renderer.background.color = `${newVal == 'dark'?'#020617':'#e2e8f0'}`;
         txt.style.fill = `${newVal == 'dark'?'#e2e8f0':'#020617'}`;
     });
-});
-
-//Resize the canvas when the window is resized
-useEventListener("resize", () => {
+    //Resize the canvas when the window is resized
+    useEventListener("resize", () => {
         app.renderer.resize(width.value- (width.value - document.documentElement.clientWidth),height.value);
+        txt.x = (width.value- (width.value - document.documentElement.clientWidth)) / 2;
+        txt.y = height.value / 2;
     });
+
+});
 
 onMounted(() => {
     console.log("App loaded");

@@ -25,6 +25,7 @@
     "pixi-filters": "^6.0.5",
     "pixi.js": "^8.6.6",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "yarn": "^1.22.22"
   }
 }

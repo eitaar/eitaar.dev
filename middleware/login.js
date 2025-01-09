@@ -1,6 +1,6 @@
 const supabase = useSupabaseClient();
-const { data: { user } } = await supabase.auth.getUser();
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(async(to, from) => {
+  const { data: { user } } = await supabase.auth.getUser();
   if (user) {
     return navigateTo("/");
   };

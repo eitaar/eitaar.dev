@@ -16,7 +16,7 @@
 </template>
 <script setup>
 const supabase = useSupabaseClient();
-const { data: { user } } = await supabase.auth.getUser()
+const { data: { user } } = await supabase.auth.getUser();
 const email = ref('');
 const password = ref('');
 definePageMeta({

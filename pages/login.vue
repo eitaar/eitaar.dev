@@ -18,7 +18,7 @@
 </template>
 <script setup>
 const supabase = useSupabaseClient();
-const { data: { user } } = await supabase.auth.getUser()
+const { data: { user } } = await supabase.auth.getUser();
 const email = ref('');
 const loginError = ref(false);
 const password = ref('');

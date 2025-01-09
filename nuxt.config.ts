@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
     '@pinia-plugin-persistedstate/nuxt',
     '@pinia/nuxt',
+    '@nuxtjs/supabase'
   ],
   gsap: {
     extraPlugins: {
@@ -17,6 +18,9 @@ export default defineNuxtConfig({
       scrollTrigger: true,
       pixi: true,
     }
+  },
+  supabase: {
+    redirect: false,
   },
   googleFonts: {
     families: {

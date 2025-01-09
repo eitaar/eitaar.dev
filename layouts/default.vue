@@ -12,7 +12,7 @@
             <img v-if="$colorMode.preference == 'dark'" src="~assets/img/github-w.svg" alt="Dark Mode" class="h-[4vmin] w-[4vmin] transition-all duration-200 hover:scale-105"/>
         </div>
     </div></header>
-    <div><slot class="scroll-smooth"/></div>
+    <div><slot class="scroll-smooth "/></div>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
@@ -21,21 +21,26 @@ import { openUrl } from '~/assets/src/utils';
 const colorMode = useColorMode();
 const { $gsap } = useNuxtApp();   
 const loaded = ref(true);
+const route = useRoute();
 
 // Animation on page load
 onMounted(() => {
     loaded.value = false;
-    const tl = $gsap.timeline();
-    $gsap.set(".LOGO", { x: '50vw', y: '50vh', scale: 3, xPercent: -50, yPercent: -50 });
-    tl.to(".LOGO", { autoAlpha: 1, duration: 0 })
-        .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
-        .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
-        .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
-        .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
-        .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
-        .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
-        .to(".LOGO", { duration: 0.075 })
-        .to(".LOGO", { x: '2vmin', y: '2vmin', scale: 1, xPercent: 0, yPercent: 0, ease: 'power4.out', duration: 0.5 });
+    if (route.name == "index") {
+        const tl = $gsap.timeline();
+        $gsap.set(".LOGO", { x: '50vw', y: '50vh', scale: 3, xPercent: -50, yPercent: -50 });
+        tl.to(".LOGO", { autoAlpha: 1, duration: 0 })
+            .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
+            .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
+            .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
+            .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
+            .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
+            .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
+            .to(".LOGO", { duration: 0.075 })
+            .to(".LOGO", { x: '2vmin', y: '2vmin', scale: 1, xPercent: 0, yPercent: 0, ease: 'power4.out', duration: 0.5 });
+    } else {
+        $gsap.set(".LOGO", { x: '2vmin', y:'2vmin'});
+    }
 });
 
 </script>

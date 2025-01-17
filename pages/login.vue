@@ -5,7 +5,7 @@
       <p class="dark:text-slate-200 text-slate-950 font-bold text-center transition-all duration-200 text-[3vmin] mt-[2vmin]">Login to eitaar.dev</p>
       <div class="absolute w-[80%] h-[40%] top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 ">
         <div v-if="loginError" class="w-full h-[20%] "><p class=" top-1/2 translate-y-1/2 text-center text-[100%] text-red-700 transition-all duration-200">Login failed</p></div>
-        <input v-model="email" @focus="loginError = false" type="email" placeholder="e-mail" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] rounded"/>
+        <input v-model="email" @focus="loginError = false" type="email" placeholder="email" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] rounded"/>
         <input v-model="password" @focus="loginError = false" type="password" placeholder="password" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] mt-[1vmin] rounded"/>
         <p></p>
         <button @click="signInWithEmail"class="w-full bg-sky-500 hover:bg-sky-400 h-[27.5%] mt-[2vmin] rounded text-[150%] transition-all duration-200">{{ user?"Sign out":"Login" }}</button>

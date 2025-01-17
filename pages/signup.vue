@@ -4,7 +4,7 @@
     <div class="absolute w-[60vmin] h-[60vmin] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 dark:border-slate-200 border-slate-950 transition-all duration-200 border-[0.5vmin] rounded-md ">
       <p class="dark:text-slate-200 text-slate-950 font-bold text-center transition-all duration-200 text-[3vmin] mt-[2vmin]">Sign up to eitaar.dev</p>
       <div class="absolute w-[80%] h-[40%] top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-        <input v-model="email" type="email" placeholder="e-mail" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] rounded"/>
+        <input v-model="email" type="email" placeholder="email" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] rounded"/>
         <input v-model="password" type="password" placeholder="password" class="w-full dark:bg-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] dark:outline-slate-200 outline-slate-950 dark:text-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] mt-[1vmin] rounded"/>
         <button @click="signInWithEmail"class="w-full bg-sky-500 hover:bg-sky-400 h-[27.5%] mt-[2vmin] rounded text-[150%] transition-all duration-200">Sign up</button>
         <p class="text-center text-[125%] mt-[1vmin] mb-[1vmin] dark:text-slate-200 text-slate-950 transition-all duration-200">OR</p>

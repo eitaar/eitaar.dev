@@ -16,7 +16,7 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import { storeToRefs } from "pinia";
+import {gsap} from 'gsap'
 import { openUrl } from '~/assets/src/utils';
 const colorMode = useColorMode();
 const { $gsap } = useNuxtApp();   
@@ -27,8 +27,9 @@ const route = useRoute();
 onMounted(() => {
     loaded.value = false;
     if (route.name == "index") {
-        const tl = $gsap.timeline();
-        $gsap.set(".LOGO", { x: '50vw', y: '50vh', scale: 3, xPercent: -50, yPercent: -50 });
+        gsap.set(".LOGO", { x: '50vw', y: '50vh', scale: 3, xPercent: -50, yPercent: -50 });
+        const tl = gsap.timeline();
+        setTimeout(() =>{
         tl.to(".LOGO", { autoAlpha: 1, duration: 0 })
             .to(".LOGO", { autoAlpha: 0, duration: 0.075 })
             .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
@@ -38,8 +39,9 @@ onMounted(() => {
             .to(".LOGO", { autoAlpha: 1, duration: 0.075 })
             .to(".LOGO", { duration: 0.075 })
             .to(".LOGO", { x: '2vmin', y: '2vmin', scale: 1, xPercent: 0, yPercent: 0, ease: 'power4.out', duration: 0.5 });
+        },100);
     } else {
-        $gsap.set(".LOGO", { x: '2vmin', y:'2vmin'});
+        gsap.set(".LOGO", { x: '2vmin', y:'2vmin'});
     }
 });
 

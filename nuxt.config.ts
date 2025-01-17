@@ -7,10 +7,9 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    '@hypernym/nuxt-gsap',
     '@pinia-plugin-persistedstate/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
   ],
   gsap: {
     extraPlugins: {

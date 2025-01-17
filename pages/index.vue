@@ -24,26 +24,37 @@
 //Import modules & initialize variable
 import { ref, onMounted, watch } from 'vue';
 import { Application, Assets, Text, Graphics } from 'pixi.js';
-import { GlitchFilter, AsciiFilter } from 'pixi-filters';
-import { randInt, openUrl } from '~/assets/src/utils';
+import * as PIXI from 'pixi.js';
+import { GlitchFilter, AsciiFilter, angleFromCssOrientation } from 'pixi-filters';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { PixiPlugin } from "gsap/PixiPlugin";
+import { randInt, openUrl,hexToRgb } from '~/assets/src/utils';
 import { useWindowSize, useEventListener } from '@vueuse/core';
-const { $gsap } = useNuxtApp();
+
 const app = new Application();
 const colorMode = useColorMode();
 const { width, height } = useWindowSize();
-
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,PixiPlugin);
+PixiPlugin.registerPIXI(PIXI);
 const loaded = ref(true);
-const bg = ref(null);
 let TCmoving = false;
 
 //Initiate Pixi.js Application
 onMounted(async () => {
   loadFont();
-  await app.init({ background: `${colorMode.preference == 'dark' ? '#020617' : '#e2e8f0'}`, width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
+  await app.init({background: `${colorMode.preference == 'dark' ? '#020617' : '#e2e8f0'}`,  width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
   document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
   app.ticker.maxFPS = 60;
   app.ticker.autoStart = false;
 
+  //Load the background
+  /*const background = new Graphics();
+  background.rect(0, 0, width.value - (width.value - document.documentElement.clientWidth),height.value);
+  background.fill(colorMode.preference == 'dark' ? '#020617' : '#e2e8f0');
+  app.stage.addChild(background);
+  */
   //Add the Title
   let txt = new Text({ text: "eitaar.dev", style: { fontFamily: 'Roboto', fontSize: `${((width.value > height.value ? height.value : width.value) / 100) * 10}px`, fontWeight: 'bold', fill: `${colorMode.preference == 'dark' ? '#e2e8f0' : '#020617'}` } });
   app.stage.addChild(txt);
@@ -52,6 +63,9 @@ onMounted(async () => {
   txt.x = (width.value - (width.value - document.documentElement.clientWidth)) / 2;
   txt.y = height.value / 2;
 
+  const tmp = new Graphics();
+  tmp.rect(0,0,200,200);
+  app.stage.addChild(tmp);
   //Add effect & stuff
   let counter = 0;
   const intervalFrames = 120;
@@ -86,11 +100,36 @@ onMounted(async () => {
       }
     }
   });
-  //Change the background color of the canvas and text color when the colormode is changed
-  watch(() => colorMode.preference, (newVal) => {
-    app.renderer.background.color = `${newVal == 'dark' ? '#020617' : '#e2e8f0'}`;
-    txt.style.fill = `${newVal == 'dark' ? '#e2e8f0' : '#020617'}`;
+
+watch(() => colorMode.preference, async (newVal) => {
+  console.log(newVal === 'dark' ? '#020617' : '#e2e8f0');
+  const transitionDuration = 0.15;
+  const framesPerSecond = 60; 
+  const totalFrames = Math.round(transitionDuration * framesPerSecond);
+  let currentRGB = hexToRgb(newVal === 'dark' ? '#e2e8f0' : '#020617');
+  const targetRGB = hexToRgb(newVal === 'dark' ? '#020617' : '#e2e8f0');
+  const colorStep = {
+    r: (targetRGB.r - currentRGB.r) / totalFrames,
+    g: (targetRGB.g - currentRGB.g) / totalFrames,
+    b: (targetRGB.b - currentRGB.b) / totalFrames
+  };
+  let frame = 0;
+  app.ticker.add(() => {
+    if (frame < totalFrames) {
+      currentRGB.r += colorStep.r;
+      currentRGB.g += colorStep.g;
+      currentRGB.b += colorStep.b;
+
+      app.renderer.background.color = currentRGB;
+
+      frame++;
+    }
   });
+
+  // Update text color immediately
+  txt.style.fill = `${newVal === 'dark' ? '#e2e8f0' : '#020617'}`;
+});
+
   //Resize the canvas when the window is resized
   useEventListener("resize", () => {
     app.renderer.resize(width.value - (width.value - document.documentElement.clientWidth), height.value);
@@ -104,7 +143,7 @@ onMounted(() => {
   console.log("App loaded");
   loaded.value = false;
   //Scroll to the .CONTENT if scrolled
-  $gsap.to('.TITLE', {
+  gsap.to('.TITLE', {
     scrollTrigger: {
       trigger: '.TITLE',
       start: 'bottom center',
@@ -114,7 +153,7 @@ onMounted(() => {
         //make sure that no transition happens during the transition. 
         if (!TCmoving) {
           TCmoving = true;
-          $gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: { y: '.CONTENT', offsetY: 0 } });
+          gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: { y: '.CONTENT', offsetY: 0 } });
           setTimeout(() => {
             TCmoving = false;
           }, 250);
@@ -123,7 +162,7 @@ onMounted(() => {
     }
   });
   //Scroll to the top if scrolled back (opposite of the above)
-  $gsap.to('.CONTENT', {
+  gsap.to('.CONTENT', {
     scrollTrigger: {
         trigger: '.CONTENT',
       start: 'top-=10vmin top',
@@ -134,7 +173,7 @@ onMounted(() => {
       onLeaveBack: () => {
         if (!TCmoving) {
           TCmoving = true;
-          $gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: 0 });
+          gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: 0 });
           setTimeout(() => {
             TCmoving = false;
           }, 250);

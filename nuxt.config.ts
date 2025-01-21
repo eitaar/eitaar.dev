@@ -56,7 +56,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'eitaar.dev' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://eitaar.dev' },
-        { property: 'og:image', content: 'https://eitaar.dev/logo.' },
+        { property: 'og:image', content: 'https://eitaar.dev/logo.png' },
         { property: 'og:site_name', content: 'eitaar.dev' },
         { property: 'og:locale', content: 'en_US' },
       ],

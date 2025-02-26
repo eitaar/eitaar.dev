@@ -32,16 +32,6 @@ export default defineNuxtConfig({
     fallback: 'dark',
     storage: 'cookie'
   },
-  i18n: {
-    lazy: true,
-    strategy: 'no_prefix',
-    defaultLocale: 'en',
-    locales: [
-      { code: 'ja', language: 'ja-JP', name: 'Japanese', file: 'ja.ts' },
-      { code: 'en', language: 'en-US', name: 'English', file: 'en.ts' },
-    ],
-    langDir: 'locales',
-  },
   app: {
     head: {
       htmlAttrs: {

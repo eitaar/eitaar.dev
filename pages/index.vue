@@ -14,7 +14,7 @@
     <!--Content Area-->
     <div class="w-full h-0 absolute bottom-0 bg-transparent">
       <div class="CONTENT w-full h-[100vh] absolute">
-        <h1 ref="tit">products</h1>
+        <h1 ref="tit">Projects</h1>
       </div>
     </div>
   </div>

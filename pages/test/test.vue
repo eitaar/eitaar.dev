@@ -1,7 +1,7 @@
 <template>
   <div class="p-4 flex gap-4">
     <button class="btn">Hello daisyUI</button>
-    <select class="select w-full max-w-xs" v-model="theme">
+    <select class="select w-full max-w-xs" v-model="$colorMode.preference">
       <option disabled selected>Theme</option>
       <option v-for="themeOption in themes" :key="themeOption">{{ themeOption }}</option>
     </select>
@@ -34,19 +34,5 @@
 
 <script setup>
 import { ref, watch } from 'vue';
-
 const themes = ref(['light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate']);
-const theme = ref('');
-const colorMode = useColorMode();
-
-watch(theme, (newTheme) => {
-  if (newTheme) {
-    document.documentElement.setAttribute('data-theme', newTheme);
-    colorMode.preference = newTheme;  // Update the color mode preference
-  }
-});
 </script>
-
-<style scoped>
-/* Add any custom styles here */
-</style>

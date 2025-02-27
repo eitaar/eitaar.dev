@@ -34,5 +34,5 @@
 
 <script setup>
 import { ref, watch } from 'vue';
-const themes = ref(['light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate']);
+const themes = ref(['light', 'dark']);
 </script>

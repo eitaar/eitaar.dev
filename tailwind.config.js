@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
+        Libre: ['Libre Baskerville', 'serif'],
       },
       animation: {
         showPage: 'showPage 1.125s cubic-bezier(0.4, 0, 0.2, 1) forwards',

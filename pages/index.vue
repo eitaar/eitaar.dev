@@ -1,27 +1,14 @@
 <template>
-  <!--Background overlay-->
-  <background />
-  <!--Title Area-->
-  <div class="animate-showPage">
-    <div id="pixiArea" class="w-full h-[100vh] absolute top-0 left-0"></div>
-    <div class="TITLE-WRAPPER absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-5xl text-slate-950 ext-slate-200 text-[7.5vmin] font-Roboto font-bold select-none transition-all duration-200">
-      <h1 class="TITLE"></h1>
-    </div>
-    <!--Title Button (currently link to github)-->
-    <div class="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-Roboto">
-      <button @click="openUrl('https://github.com/eitaar')" class="transition-all hover:scale-105 border-[0.35vmin] duration-200 rounded px-[2vmin] py-[1vmin] g-slate-950 border-slate-950 order-slate-200 ext-slate-200 text-[2vmin] text-slate-950" :disabled="loaded">Github</button>
-    </div>
-    <!--Content Area-->
-    <div class="w-full h-0 absolute bottom-0 bg-transparent">
-      <div class="CONTENT w-full h-[100vh] absolute">
-        <h1 ref="tit">Projects</h1>
-      </div>
+  <div class="flex items-center justify-center min-h-screen">
+    <div id="pixiArea" class="TITLE pixiArea w-full h-screen flex items-center justify-center font-Libre">
+      <!--<h1 class="font-bold text-8xl tracking-[-0.075em]">eitaar.dev </h1>-->
     </div>
   </div>
+  <div class="flex justify-center h-[100vh]">
+    <h1 class="PROJECTS text-xl">Projects</h1>
+  </div>
 </template>
-
 <script setup>
-//Import modules & initialize variable
 import { ref, onMounted, watch } from 'vue';
 import { Application, Assets, Text, Graphics } from 'pixi.js';
 import * as PIXI from 'pixi.js';
@@ -40,11 +27,12 @@ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,PixiPlugin);
 PixiPlugin.registerPIXI(PIXI);
 const loaded = ref(true);
 let TCmoving = false;
-
+const lightBg = "#ffffff";
+const darkBg = "#1d232a";
 //Initiate Pixi.js Application
 onMounted(async () => {
   loadFont();
-  await app.init({background: `${colorMode.preference == 'dark' ? '#020617' : '#e2e8f0'}`,  width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
+  await app.init({background: `${colorMode.preference == 'dark' ? darkBg : lightBg}`,  width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
   document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
   app.ticker.maxFPS = 60;
   app.ticker.autoStart = false;
@@ -56,7 +44,7 @@ onMounted(async () => {
   app.stage.addChild(background);
   */
   //Add the Title
-  let txt = new Text({ text: "eitaar.dev", style: { fontFamily: 'Roboto', fontSize: `${((width.value > height.value ? height.value : width.value) / 100) * 10}px`, fontWeight: 'bold', fill: `${colorMode.preference == 'dark' ? '#e2e8f0' : '#020617'}` } });
+  let txt = new Text({ text: "eitaar.dev", style: { fontFamily: 'Roboto', fontSize: `${((width.value > height.value ? height.value : width.value) / 100) * 10}px`, fontWeight: 'bold', fill: `${colorMode.preference == 'dark' ? '#a6adbb' : '#1f2937'}` } });
   app.stage.addChild(txt);
   txt.resolution = 2;
   txt.anchor.set(0.5);
@@ -101,59 +89,35 @@ onMounted(async () => {
     }
   });
 
-watch(() => colorMode.preference, async (newVal) => {
-  console.log(newVal === 'dark' ? '#020617' : '#e2e8f0');
-  const transitionDuration = 0.15;
-  const framesPerSecond = 60; 
-  const totalFrames = Math.round(transitionDuration * framesPerSecond);
-  let currentRGB = hexToRgb(newVal === 'dark' ? '#e2e8f0' : '#020617');
-  const targetRGB = hexToRgb(newVal === 'dark' ? '#020617' : '#e2e8f0');
-  const colorStep = {
-    r: (targetRGB.r - currentRGB.r) / totalFrames,
-    g: (targetRGB.g - currentRGB.g) / totalFrames,
-    b: (targetRGB.b - currentRGB.b) / totalFrames
-  };
-  let frame = 0;
-  app.ticker.add(() => {
-    if (frame < totalFrames) {
-      currentRGB.r += colorStep.r;
-      currentRGB.g += colorStep.g;
-      currentRGB.b += colorStep.b;
-
-      app.renderer.background.color = currentRGB;
-
-      frame++;
-    }
+  watch(() => colorMode.preference, async (newVal) => {
+    // Update    color immediately
+    app.renderer.background.color = newVal == 'dark' ? darkBg : lightBg;
+    txt.style.fill = `${newVal === 'dark' ? '#a6adbb' : '#1f2937'}`;
   });
 
-  // Update text color immediately
-  txt.style.fill = `${newVal === 'dark' ? '#e2e8f0' : '#020617'}`;
-});
-
-  //Resize the canvas when the window is resized
+    //Resize the canvas when the window is resized
   useEventListener("resize", () => {
     app.renderer.resize(width.value - (width.value - document.documentElement.clientWidth), height.value);
     txt.x = (width.value - (width.value - document.documentElement.clientWidth)) / 2;
     txt.y = height.value / 2;
   });
-
 });
 
 onMounted(() => {
   console.log("App loaded");
   loaded.value = false;
-  //Scroll to the .CONTENT if scrolled
+  //Scroll to the .PROJECTS if scrolled
   gsap.to('.TITLE', {
     scrollTrigger: {
       trigger: '.TITLE',
-      start: 'bottom center',
+      start: 'bottom bottom',
       toggleActions: 'play none none reverse',
       markers: false,
       onEnter: () => {
         //make sure that no transition happens during the transition. 
         if (!TCmoving) {
           TCmoving = true;
-          gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: { y: '.CONTENT', offsetY: 0 } });
+          gsap.to(window, { ease: 'power4.out', duration: 0.25, scrollTo: { y: '.PROJECTS', offsetY: 0 } });
           setTimeout(() => {
             TCmoving = false;
           }, 250);
@@ -162,9 +126,9 @@ onMounted(() => {
     }
   });
   //Scroll to the top if scrolled back (opposite of the above)
-  gsap.to('.CONTENT', {
+  gsap.to('.PROJECTS', {
     scrollTrigger: {
-        trigger: '.CONTENT',
+        trigger: '.PROJECTS',
       start: 'top-=10vmin top',
       end: 'bottom bottom',
       toggleActions: 'play none none reverse',
@@ -200,4 +164,5 @@ async function loadFont() {
     },
   };
 }
+
 </script>

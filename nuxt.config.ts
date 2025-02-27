@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Roboto: true
+      Roboto: true,
+      LibreBaskerville: true,
     }
   },
   colorMode: {

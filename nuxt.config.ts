@@ -23,14 +23,16 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Roboto: true
+      Roboto: true,
+      LibreBaskerville: true,
     }
   },
   colorMode: {
     classSuffix: '',
     preference: 'dark',
     fallback: 'dark',
-    storage: 'cookie'
+    dataValue:'theme'
+      
   },
   app: {
     head: {

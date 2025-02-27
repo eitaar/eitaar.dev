@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     classSuffix: '',
     preference: 'dark',
     fallback: 'dark',
-    storage: 'cookie'
+      
   },
   app: {
     head: {

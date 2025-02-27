@@ -4,12 +4,12 @@
   <!--Title Area-->
   <div class="animate-showPage">
     <div id="pixiArea" class="w-full h-[100vh] absolute top-0 left-0"></div>
-    <div class="TITLE-WRAPPER absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-5xl text-slate-950 dark:text-slate-200 text-[7.5vmin] font-Roboto font-bold select-none transition-all duration-200">
+    <div class="TITLE-WRAPPER absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-5xl text-slate-950 ext-slate-200 text-[7.5vmin] font-Roboto font-bold select-none transition-all duration-200">
       <h1 class="TITLE"></h1>
     </div>
     <!--Title Button (currently link to github)-->
     <div class="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-Roboto">
-      <button @click="openUrl('https://github.com/eitaar')" class="transition-all hover:scale-105 border-[0.35vmin] duration-200 rounded px-[2vmin] py-[1vmin] dark:bg-slate-950 border-slate-950 dark:border-slate-200 dark:text-slate-200 text-[2vmin] text-slate-950" :disabled="loaded">Github</button>
+      <button @click="openUrl('https://github.com/eitaar')" class="transition-all hover:scale-105 border-[0.35vmin] duration-200 rounded px-[2vmin] py-[1vmin] g-slate-950 border-slate-950 order-slate-200 ext-slate-200 text-[2vmin] text-slate-950" :disabled="loaded">Github</button>
     </div>
     <!--Content Area-->
     <div class="w-full h-0 absolute bottom-0 bg-transparent">

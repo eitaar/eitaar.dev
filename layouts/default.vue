@@ -4,14 +4,7 @@
   <div class="flex-1">
     <a class="btn btn-ghost text-xl">eitaar.dev</a>
   </div>
-  <!--Dark/Light mode toggle btn-->
-  <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                <input type="checkbox" v-model="isChecked" @click="$colorMode.preference = !isChecked ? 'dark' : 'light'"/>
-                <!-- sun icon -->
-                <SvgSun />
-                <!-- moon icon -->
-                <SvgMoon/>
-            </label>
+  <div class="flex-none gap-2 ">
             <!--Navigation links-->
             <label class="z-10 swap btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
                 <input type="checkbox" @click="openUrl('https://github.com/eitaar/')"/>
@@ -20,7 +13,17 @@
                 <!-- github icon -->
                 <SvgGithub2/>
             </label>
-            </div>
+            <!--Dark/Light mode toggle btn-->
+            <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                <input type="checkbox" v-model="isChecked" @click="$colorMode.preference = !isChecked ? 'dark' : 'light'"/>
+                <!-- sun icon -->
+                <SvgSun />
+                <!-- moon icon -->
+                <SvgMoon/>
+            </label>
+  </div>
+ 
+        </div>
     </header>
     <div><slot class="scroll-smooth "/></div>
 </template>

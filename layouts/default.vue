@@ -1,21 +1,26 @@
 <template>
-    <header>
-        <!--Dark/Light mode toggle btn-->
-        <label class="swap swap-rotate absolute top-[2vmin] right-[2vmin] btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-            <input type="checkbox" v-model="isChecked" @click="$colorMode.preference = !isChecked ? 'dark' : 'light'"/>
-            <!-- sun icon -->
-            <SvgSun/>
-            <!-- moon icon -->
-            <SvgMoon/>
-        </label>
-        <!--Navigation links-->
-        <label class="z-10 swap absolute top-[2vmin] right-[10vmin] btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-            <input type="checkbox" @click="openUrl('https://github.com/eitaar/')"/>
-            <!-- github icon -->
-            <SvgGithub/>
-            <!-- github icon -->
-            <SvgGithub2/>
-        </label>
+    <header class="">
+        <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">eitaar.dev</a>
+  </div>
+  <!--Dark/Light mode toggle btn-->
+  <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                <input type="checkbox" v-model="isChecked" @click="$colorMode.preference = !isChecked ? 'dark' : 'light'"/>
+                <!-- sun icon -->
+                <SvgSun />
+                <!-- moon icon -->
+                <SvgMoon/>
+            </label>
+            <!--Navigation links-->
+            <label class="z-10 swap btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                <input type="checkbox" @click="openUrl('https://github.com/eitaar/')"/>
+                <!-- github icon -->
+                <SvgGithub />
+                <!-- github icon -->
+                <SvgGithub2/>
+            </label>
+            </div>
     </header>
     <div><slot class="scroll-smooth "/></div>
 </template>
@@ -24,8 +29,5 @@ import { ref, onMounted } from "vue";
 import { gsap } from 'gsap';
 import { openUrl } from '~/assets/src/utils';
 const colorMode = useColorMode();
-const { $gsap } = useNuxtApp();   
-const loaded = ref(true);
-const route = useRoute();
 const isChecked = ref(colorMode.preference == 'dark'? true : false);
 </script>

@@ -9,6 +9,9 @@
   </div>
 </template>
 <script setup>
+definePageMeta({
+  //layout: false
+})
 import { ref, onMounted, watch } from 'vue';
 import { Application, Assets, Text, Graphics } from 'pixi.js';
 import * as PIXI from 'pixi.js';
@@ -32,7 +35,7 @@ const darkBg = "#1d232a";
 //Initiate Pixi.js Application
 onMounted(async () => {
   loadFont();
-  await app.init({background: `${colorMode.preference == 'dark' ? darkBg : lightBg}`,  width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
+  await app.init({background: `${colorMode.preference == 'dark' ? darkBg : lightBg}`, width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
   document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
   app.ticker.maxFPS = 60;
   app.ticker.autoStart = false;

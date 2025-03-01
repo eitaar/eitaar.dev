@@ -35,7 +35,7 @@ const darkBg = "#1d232a";
 //Initiate Pixi.js Application
 onMounted(async () => {
   loadFont();
-  await app.init({background: `${colorMode.preference == 'dark' ? darkBg : lightBg}`, width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
+  await app.init({backgroundAlpha: 0, width: width.value - (width.value - document.documentElement.clientWidth), height: height.value, autoRender: true });
   document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
   app.ticker.maxFPS = 60;
   app.ticker.autoStart = false;

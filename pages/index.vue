@@ -12,7 +12,7 @@
 definePageMeta({
   //layout: false
 })
-import { ref, onMounted, watch, inject } from 'vue';
+import { ref, onMounted, watch, inject,provide } from 'vue';
 import { Application, Text } from 'pixi.js';
 import * as PIXI from 'pixi.js';
 import { GlitchFilter } from 'pixi-filters';
@@ -34,6 +34,7 @@ let TCmoving = false;
 const lightBg = "#ffffff";
 const darkBg = "#1d232a";
 const canvasLoaded = ref(false);
+provide('canvasLoaded', canvasLoaded);
 const navBarHeight = ref(inject('navBarHeight'));
 
 // Initiate Pixi.js Application

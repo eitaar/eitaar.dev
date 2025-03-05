@@ -1,25 +1,25 @@
 <template>
   <header class="">
-    <div ref="navbar" class="navbar bg-base-100">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">eitaar.dev</a>
+    <div ref="navbar" class="navbar bg-base-100" >
+      <div class="navbar-start">
+        <a class="btn btn-ghost btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl font-Roboto">eitaar.dev</a>
       </div>
-      <div class="flex-none gap-2 ">
+      <div class="navbar-end gap-2">
         <!--Navigation links-->
-        <label class="z-10 swap btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <label class="z-10 swap btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"> 
           <input type="checkbox" @click="openUrl('https://github.com/eitaar/')"/>
           <!-- github icon -->
-          <SvgGithub />
+          <SvgGithub class="absolute w-full"/>
           <!-- github icon -->
-          <SvgGithub2/>
+          <SvgGithub2 class="absolute w-full"/>
         </label>
         <!--Dark/Light mode toggle btn-->
-        <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
           <input type="checkbox" v-model="isChecked" @click="$colorMode.preference = !isChecked ? 'dark' : 'light'"/>
           <!-- sun icon -->
-          <SvgSun />
+          <SvgSun class="absolute w-full"/>
           <!-- moon icon -->
-          <SvgMoon/>
+          <SvgMoon class="absolute w-full"/>
         </label>
       </div>
     </div>

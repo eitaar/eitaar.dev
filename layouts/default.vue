@@ -1,6 +1,6 @@
 <template>
   <header class="">
-    <div class="navbar bg-base-100">
+    <div ref="navbar" class="navbar bg-base-100">
       <div class="flex-1">
         <a class="btn btn-ghost text-xl">eitaar.dev</a>
       </div>
@@ -29,9 +29,11 @@
   </div>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, provide } from "vue";
 import { gsap } from 'gsap';
 import { openUrl } from '~/assets/src/utils';
 const colorMode = useColorMode();
 const isChecked = ref(colorMode.preference == 'dark'? true : false);
+const navbar = ref(null);
+provide('navBarHeight', navbar);
 </script>

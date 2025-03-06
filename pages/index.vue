@@ -22,6 +22,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { randInt, loadFonts } from '~/assets/src/utils';
 import { useWindowSize, useEventListener } from '@vueuse/core';
+import { CreatePixi } from '~/assets/src/indexPixi';
 
 const app = new Application();
 const colorMode = useColorMode();
@@ -31,77 +32,14 @@ PixiPlugin.registerPIXI(PIXI);
 
 const loaded = ref(true);
 let TCmoving = false;
-const lightBg = "#ffffff";
-const darkBg = "#1d232a";
 const canvasLoaded = ref(false);
 provide('canvasLoaded', canvasLoaded);
 const navBarHeight = ref(inject('navBarHeight'));
 
 // Initiate Pixi.js Application
 onMounted(async () => {
-  console.log(navBarHeight.value.offsetHeight);
-  await loadFonts(['Libre Baskerville']);
-  //Create Canvas
-  await app.init({backgroundAlpha: 0, width: width.value - (width.value - document.documentElement.clientWidth), height: (height.value-navBarHeight.value.offsetHeight), autoRender: true });
-  document.getElementById("pixiArea").appendChild(app.canvas).classList.add("pixiCanvas");
-  app.ticker.maxFPS = 60;
-
-  //Add the Title
-  let txt = new Text({ text: "eitaar.dev", style: { fontFamily: 'Libre Baskerville', fontSize: `${((width.value > height.value ? height.value : width.value) / 100) * 10}px`, fontWeight: 'bold', fill: `${colorMode.preference == 'dark' ? '#a6adbb' : '#1f2937'}` } });
-  app.stage.addChild(txt);
-  txt.resolution = 2;
-  txt.anchor.set(0.5);
-  txt.x = (width.value - (width.value - document.documentElement.clientWidth)) / 2;
-  txt.y = (height.value / 2)-navBarHeight.value.offsetHeight;
-  canvasLoaded.value = true;
-  // Add Glitch effect animation
-  let counter = 0;
-  const intervalFrames = 120;
-  const offset = [1, 5, 10, 15, 20, 25, 30];
-
-  // Add the effect to the text
-  setTimeout(() => { txt.filters = [new GlitchFilter({ fillMode: 0 })]; }, 2000);
-  app.ticker.add(() => {
-    counter++;
-    if (counter >= intervalFrames) {
-      let randIntg = randInt();
-      if (randIntg > 35 && randIntg <= 40) {
-        // No action
-      } else if (randIntg > 30 && randIntg <= 70) {
-        // Randomize the seed and the offset
-        txt.filters[0].seed = Math.random();
-        txt.filters[0].slices = 5;
-        const offsetChoice = Math.floor(Math.random() * offset.length);
-        // Randomize the offset direction
-        txt.filters[0].red = { x: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice], y: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice] / 5 };
-        txt.filters[0].green = { x: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice], y: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice] / 5 };
-        txt.filters[0].blue = { x: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice], y: randInt() > 50 ? offset[offsetChoice] / 5 : -offset[offsetChoice] / 5 };
-        txt.filters[0].offset = randInt() > 50 ? offset[offsetChoice] : -offset[offsetChoice];
-
-        // Reset counter
-        setTimeout(() => {
-            txt.filters[0].red = { x: 0, y: 0 };
-            txt.filters[0].green = { x: 0, y: 0 };
-            txt.filters[0].blue = { x: 0, y: 0 };
-            txt.filters[0].slices = 0;
-            txt.filters[0].offset = 0;
-            counter = 0;
-        }, 250);
-      }
-    }
-  });
-
-  watch(() => colorMode.preference, (newVal) => {
-    // Update color immediately
-    app.renderer.background.color = newVal == 'dark' ? darkBg : lightBg;
-    txt.style.fill = `${newVal === 'dark' ? '#a6adbb' : '#1f2937'}`;
-  });
-
-    // Rerender the canvas when the window is resized
-  useEventListener("resize", () => {
-    app.renderer.resize(width.value - (width.value - document.documentElement.clientWidth), height.value - navBarHeight.value.offsetHeight);
-    txt.x = (width.value - (width.value - document.documentElement.clientWidth)) / 2;
-    txt.y = height.value / 2;
+  await CreatePixi().then(() => {
+    canvasLoaded.value = true;
   });
 });
 

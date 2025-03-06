@@ -6,12 +6,10 @@
       </div>
       <div class="navbar-end gap-2">
         <!--Navigation links-->
-        <label class="z-10 swap btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"> 
-          <input type="checkbox" @click="openUrl('https://github.com/eitaar/')"/>
+        <label class="z-10 btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"> 
+          <input type="button" @click="openUrl('https://github.com/eitaar/')"/>
           <!-- github icon -->
-          <SvgGithub class="absolute w-full"/>
-          <!-- github icon -->
-          <SvgGithub2 class="absolute w-full"/>
+          <SvgGithub class="absolute h-10 w-10 fill-current"/>
         </label>
         <!--Dark/Light mode toggle btn-->
         <label class="swap swap-rotate btn btn-square btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">

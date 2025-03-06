@@ -1,17 +1,27 @@
 <template>
-  <background/>
-  <div class="font-Roboto">
-    <div class="absolute w-[60vmin] h-[60vmin] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 order-slate-200 border-slate-950 transition-all duration-200 border-[0.5vmin] rounded-md ">
-      <p class="ext-slate-200 text-slate-950 font-bold text-center transition-all duration-200 text-[3vmin] mt-[2vmin]">Sign up to eitaar.dev</p>
-      <div class="absolute w-[80%] h-[40%] top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-        <input v-model="email" type="email" placeholder="email" class="w-full g-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] utline-slate-200 outline-slate-950 ext-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] rounded"/>
-        <input v-model="password" type="password" placeholder="password" class="w-full g-slate-900 bg-slate-300 h-[27.5%] outline-[0.25vmin] utline-slate-200 outline-slate-950 ext-slate-200 transform-all duration-200 text-[150%] pl-[2vmin] mt-[1vmin] rounded"/>
-        <button @click="signInWithEmail"class="w-full bg-sky-500 hover:bg-sky-400 h-[27.5%] mt-[2vmin] rounded text-[150%] transition-all duration-200">Sign up</button>
-        <p class="text-center text-[125%] mt-[1vmin] mb-[1vmin] ext-slate-200 text-slate-950 transition-all duration-200">OR</p>
-        <button @click="signInWithGithub" class="relative w-full bg-gray-800 hover:bg-gray-700 h-[27.5%] rounded text-[125%] text-slate-200 transition-all duration-200"><img src="~/assets/img/github-w.svg" class="absolute h-[75%] top-1/2 -translate-y-1/2 -translate-x-1/2 left-[7.5%]"/>Sign up with Gitub</button>
-        <p class="mt-[1.5vmin] text-[100%] text-center ext-slate-200 text-slate-950 transition-all duration-200">Already a user? <NuxtLink to="/login" class="text-sky-700 ext-sky-400">Login</NuxtLink></p> 
-      </div>
-    </div>
+  <div class="font-Roboto flex justify-center align-bottom ">
+    <fieldset class="fieldset w-1/4 bg-base-200 border border-base-300 p-4 rounded-box">
+      <legend class="fieldset-legend">Sign up</legend>
+
+      <label class="fieldset-label">Email</label>
+      <label class="input validator w-full input-xs sm:input-sm md:input-md lg:input-lg">
+        <Icon name="ant-design:mail-outlined" class="icon" />
+        <input type="email" placeholder="Email" required/>
+      </label>
+      <label class="fieldset-label">Password</label>
+      <label class="input validator w-full input-xs sm:input-sm md:input-md lg:input-lg">
+        <Icon name="ant-design:lock-outlined" class="icon" />
+        <input type="password" placeholder="Password" required/>
+      </label>
+  
+      <button class="btn btn-primary mt-4 btn-xs sm:btn-sm md:btn-md lg:btn-lg" @click="signUpWithEmail">Sign up</button>
+      <p class="text-center my-1.5 text-xs sm:text-sm md:text-md lg:text-lg ">OR</p>
+      <button class="btn btn-neutral btn-xs sm:btn-sm md:btn-md lg:btn-lg" @click="signInWithGithub"> 
+        <Icon name="octicon:mark-github-24" woclass="icon" />
+        Login with Github
+        </button>
+      <p class="text-center my-1.5 text-xs md:text-sm lg:text-md ">Already a user? <NuxtLink to="/signup" class="link link-info">Login</NuxtLink></p>
+    </fieldset>
   </div>
 </template>
 <script setup>
@@ -30,7 +40,7 @@ const signInWithGithub = async() => {
   console.log(data);
   console.log(error);
 }
-const signInWithEmail = async() => {
+const signUpWithEmail = async() => {
   if(!user) {
     const {data,error} = await supabase.auth.signUp({
       email: email.value,

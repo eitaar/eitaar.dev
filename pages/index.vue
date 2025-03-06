@@ -38,7 +38,7 @@ const navBarHeight = ref(inject('navBarHeight'));
 
 // Initiate Pixi.js Application
 onMounted(async () => {
-  await CreatePixi().then(() => {
+  await CreatePixi().then(() => { 
     canvasLoaded.value = true;
   });
 });

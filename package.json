@@ -12,6 +12,7 @@
     "ssprod": "cls && nuxt generate && npx serve .output/public"
   },
   "dependencies": {
+    "@nuxt/icon": "^1.10.3",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/supabase": "^1.4.5",

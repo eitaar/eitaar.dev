@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/supabase',
+    '@nuxt/icon'
   ],
   gsap: {
     extraPlugins: {

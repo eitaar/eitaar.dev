@@ -19,5 +19,5 @@ export default function App(props) {
         <div>{props.reactIcon}</div>
       </CardBody>
     </Card>
-  );z
+  );
 }

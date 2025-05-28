@@ -3,7 +3,7 @@ name: Auto Merge Articles to Main
 on:
   push:
     branches:
-      - article
+      - articles
 
 jobs:
   auto-merge:

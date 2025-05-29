@@ -18,6 +18,13 @@ const colors = {
       </CardHeader>      
       <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center overflow-y-visible">
         <div className="w-full relative p-4">
+        <Progress
+          aria-label="bg-bar"
+          className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+          value={0}
+          color="none"
+          disableAnimation={true}
+        />
         {(stats.data.languages.map((lang, index) => (
           <Progress
             aria-label={lang.name}

@@ -1,14 +1,6 @@
 import {Card, CardHeader, CardBody, Progress} from "@heroui/react";
-import { fetcher } from "../../../assets/src/fetcher";
-const stats = await fetcher();
-const stats2 = await fetcher();
-const statts = stats;
-let previous = 0
-stats.data.languages.map((lang) => {
-  lang.percentage += previous;
-  previous = lang.percentage;
-});
-export default function App(props) {
+
+export default function App({ stats, stats2 }) {
 const colors = {
   "Vue": "bg-[#41b883]",
   "JavaScript": "bg-[#f1e05a]",
@@ -21,12 +13,18 @@ const colors = {
 }
   return (
     <Card className="w-full h-full flex-1 flex justify-center">
-      <CardHeader className="flex items-center justify-center gap-1">
+      <CardHeader className="flex items-center justify-center gap-1 pb-0">
         <p className="text-3xl font-Quantico font-bold text-center">Stats</p>
-      </CardHeader>
-      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center">
+      </CardHeader>      
+      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center overflow-y-visible">
         <div className="w-full relative p-4">
-        <Progress isIndeterminate aria-label="Loading..." className="max-w-md absolute left-1/2 top-1/2 -translate-1/2" size="sm"/>
+        <Progress
+          aria-label="bg-bar"
+          className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+          value={0}
+          color="none"
+          disableAnimation={true}
+        />
         {(stats.data.languages.map((lang, index) => (
           <Progress
             aria-label={lang.name}

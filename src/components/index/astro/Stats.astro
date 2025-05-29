@@ -1,7 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 import StatsJSX from "../jsx/StatsJSX";
+import { fetcher } from "../../../assets/src/fetcher";
+
+// Astro側でデータをビルド時に取得
+const stats = await fetcher();
+const stats2 = await fetcher();
+
+// percentage累積処理
+let previous = 0;
+stats.data.languages.map((lang: any) => {
+  lang.percentage += previous;
+  previous = lang.percentage;
+});
 ---
 
-<StatsJSX client:idle>
+<StatsJSX client:visible stats={stats} stats2={stats2}>
 </StatsJSX>

@@ -18,7 +18,7 @@ type StatsData = {
 type Props = {
   stats: StatsData;
   stats2: StatsData;
-  isLg?: boolean;
+  children?: React.ReactNode;
 };
 
 const colors: Record<string, string> = {
@@ -32,11 +32,12 @@ const colors: Record<string, string> = {
   Batchfile: "bg-[#C1F12E]",
 };
 
-export default function App({ stats, stats2, isLg }: Props) {
+export default function App({ stats, stats2, children }: Props) {
   return (
     <Card className="w-full h-full flex-1 flex justify-center">
       <CardHeader className="flex items-center justify-center gap-1 pb-0">
-        <p className="text-3xl font-Quantico font-bold text-center">Stats</p>
+        <div>{children}</div>
+        <p className="text-3xl font-Quantico font-bold text-center">Github Stats</p>
       </CardHeader>
       <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center overflow-y-visible">
         <div className="w-full relative p-4">

@@ -18,12 +18,42 @@ import { Icon } from "astro-icon/components";
 import StatsJSX from "../jsx/StatsJSX";
 import { fetcher } from "../../../assets/src/fetcher";
 
-let stats:StatsData;
-let stats2:StatsData;
+let stats: StatsData;
+let stats2: StatsData;
 
 if (process.env.NODE_ENV == "development") {
-  stats = {"status":"success","data":{"totalSize":190613,"languages":[{"name":"Vue","size":91673,"percentage":48.09,"color":"#41b883"},{"name":"JavaScript","size":52772,"percentage":27.69,"color":"#f1e05a"},{"name":"Astro","size":19827,"percentage":10.4,"color":"#ff5a03"},{"name":"TypeScript","size":19407,"percentage":10.18,"color":"#3178c6"},{"name":"CSS","size":3281,"percentage":1.72,"color":"#663399"},{"name":"Java","size":2319,"percentage":1.22,"color":"#b07219"},{"name":"MDX","size":1008,"percentage":0.53,"color":"#fcb32c"},{"name":"Batchfile","size":326,"percentage":0.17,"color":"#C1F12E"}]}};
-  stats2 = {"status":"success","data":{"totalSize":190613,"languages":[{"name":"Vue","size":91673,"percentage":48.09,"color":"#41b883"},{"name":"JavaScript","size":52772,"percentage":27.69,"color":"#f1e05a"},{"name":"Astro","size":19827,"percentage":10.4,"color":"#ff5a03"},{"name":"TypeScript","size":19407,"percentage":10.18,"color":"#3178c6"},{"name":"CSS","size":3281,"percentage":1.72,"color":"#663399"},{"name":"Java","size":2319,"percentage":1.22,"color":"#b07219"},{"name":"MDX","size":1008,"percentage":0.53,"color":"#fcb32c"},{"name":"Batchfile","size":326,"percentage":0.17,"color":"#C1F12E"}]}};
+  stats = {
+    status: "success",
+    data: {
+      totalSize: 190613,
+      languages: [
+        { name: "Vue", size: 91673, percentage: 48.09, color: "#41b883" },
+        { name: "JavaScript", size: 52772, percentage: 27.69, color: "#f1e05a" },
+        { name: "Astro", size: 19827, percentage: 10.4, color: "#ff5a03" },
+        { name: "TypeScript", size: 19407, percentage: 10.18, color: "#3178c6" },
+        { name: "CSS", size: 3281, percentage: 1.72, color: "#663399" },
+        { name: "Java", size: 2319, percentage: 1.22, color: "#b07219" },
+        { name: "MDX", size: 1008, percentage: 0.53, color: "#fcb32c" },
+        { name: "Batchfile", size: 326, percentage: 0.17, color: "#C1F12E" },
+      ],
+    },
+  };
+  stats2 = {
+    status: "success",
+    data: {
+      totalSize: 190613,
+      languages: [
+        { name: "Vue", size: 91673, percentage: 48.09, color: "#41b883" },
+        { name: "JavaScript", size: 52772, percentage: 27.69, color: "#f1e05a" },
+        { name: "Astro", size: 19827, percentage: 10.4, color: "#ff5a03" },
+        { name: "TypeScript", size: 19407, percentage: 10.18, color: "#3178c6" },
+        { name: "CSS", size: 3281, percentage: 1.72, color: "#663399" },
+        { name: "Java", size: 2319, percentage: 1.22, color: "#b07219" },
+        { name: "MDX", size: 1008, percentage: 0.53, color: "#fcb32c" },
+        { name: "Batchfile", size: 326, percentage: 0.17, color: "#C1F12E" },
+      ],
+    },
+  };
 } else {
   stats = await fetcher();
   stats2 = await fetcher();
@@ -31,10 +61,12 @@ if (process.env.NODE_ENV == "development") {
 
 // percentage累積処理
 let previous = 0;
-stats.data.languages.forEach((lang:Language) => {
+stats.data.languages.forEach((lang: Language) => {
   lang.percentage += previous;
   previous = lang.percentage;
 });
 ---
 
-<StatsJSX client:visible stats={stats} stats2={stats2} />
+<StatsJSX client:visible stats={stats} stats2={stats2}>
+  <Icon name="mdi:graph-box" class="h-7 w-auto" />
+</StatsJSX>

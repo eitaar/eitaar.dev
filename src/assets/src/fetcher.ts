@@ -8,7 +8,12 @@ type Language = {
 type StatsData = {
   status: "success" | "error";
   data: {
+    followerCount: number;
+    totalCommitContributions: number;
+    totalStars: number;
     totalSize: number;
+    totalRepositories: number;
+    totalPRs: number;
     languages: Language[];
   };
 };

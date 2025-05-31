@@ -35,6 +35,8 @@ const colors: Record<string, string> = {
   Java: "bg-[#b07219]",
   MDX: "bg-[#fcb32c]",
   Batchfile: "bg-[#C1F12E]",
+  HTML : "bg-[#e34c26]",
+  EJS: "bg-[#a91e50]",
 };
 
 export default function App({ stats, stats2, children }: Props) {

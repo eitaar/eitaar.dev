@@ -15,6 +15,7 @@
     "@astrojs/react": "^4.3.0",
     "@heroui/react": "^2.8.0-beta.6",
     "@heroui/use-theme": "^2.1.8",
+    "@iconify-json/bi": "^1.2.4",
     "@iconify-json/devicon-plain": "^1.2.22",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.5",

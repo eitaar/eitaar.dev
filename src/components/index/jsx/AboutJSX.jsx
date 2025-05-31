@@ -1,8 +1,8 @@
-import {Card, CardHeader, CardBody,Divider, Button, Popover, PopoverTrigger, PopoverContent} from "@heroui/react";
+import {Card, CardHeader, CardBody, CardFooter, Divider, Button, Popover, PopoverTrigger, PopoverContent} from "@heroui/react";
 export default function App(props) {
   return (
     <Card className="w-full h-full flex-1 flex justify-center">
-      <CardHeader className="flex gap-3">
+      <CardHeader className="flex gap-3 pb-0">
         <div>{props.avatarImg}</div>
         <div className="flex flex-col font-Quantico text-center tracking-tightest">
           <p className="text-3xl font-bold">eitaar</p>
@@ -15,7 +15,7 @@ export default function App(props) {
           <p className="text-xl">Learning React</p>
         </div>
       </CardHeader>
-      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-center justify-center pt-0 max-h-15">
+      <CardFooter className="flex flex-wrap flex-row gap-2 w-full items-center justify-center pt-0">
         <Button
           isIconOnly
           aria-label="twitter"
@@ -53,7 +53,7 @@ export default function App(props) {
               </div>
             </PopoverContent>
           </Popover>          
-      </CardBody>
+      </CardFooter>
     </Card>
   );
 }

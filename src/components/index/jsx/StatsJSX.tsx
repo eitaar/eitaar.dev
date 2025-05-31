@@ -42,12 +42,12 @@ const colors: Record<string, string> = {
 export default function App({ stats, stats2, children }: Props) {
   return (
     <Card className="w-full h-full flex-2 flex justify-center">
-      <CardHeader className="flex items-center justify-center gap-1 pb-0">
+      <CardHeader className="flex items-center justify-center gap-1 pb-0 ">
         <div>{children}</div>
         <p className="text-3xl font-Quantico font-bold text-center">GitHub Stats</p>
       </CardHeader>      
-      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-start overflow-y-visible">
-        <div className="relative w-full flex flex-col items-center justify-center">
+      <CardBody className="flex flex-wrap flex-row gap-2 w-full h-full items-start justify-start pt-0">
+        <div className="relative w-full flex flex-col items-center justify-center h-full">
           <div className="w-full relative p-4">
             <Progress
               aria-label="bg-bar"
@@ -90,25 +90,26 @@ export default function App({ stats, stats2, children }: Props) {
             </div>
           ))}
         </div>
-        <Divider className="my-2" /><div className="w-full font-Quantico">
-          <div className="flex flex-wrap gap-2">
-            <div className="flex flex-col items-center p-3 bg-content2 rounded-lg basis-[30%] grow">
+        <Divider className="my-2" />
+        <div className="w-full h-full font-Quantico">
+          <div className="flex flex-wrap gap-2 h-full ">
+            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalRepositories}</span>
               <span className="text-sm text-default-500">Repositories</span>
             </div>
-            <div className="flex flex-col items-center p-3 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalStars}</span>
               <span className="text-sm text-default-500">Stars</span>
             </div>
-            <div className="flex flex-col items-center p-3 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalCommitContributions}</span>
               <span className="text-sm text-default-500">Contributions</span>
             </div>
-            <div className="flex flex-col items-center p-3 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.followerCount}</span>
               <span className="text-sm text-default-500">Followers</span>
             </div>
-            <div className="flex flex-col items-center p-3 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalPRs}</span>
               <span className="text-sm text-default-500">Pull Requests</span>
             </div>

@@ -8,7 +8,7 @@ export default function App(props) {
         <div>{props.skillIcon}</div>
         <p className="text-3xl font-Quantico font-bold text-center">Skills</p>
       </CardHeader>
-      <CardBody className="flex flex-wrap flex-row gap-2 w-full h-full items-start justify-center">
+      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center">
         <div>{props.jsIcon}</div>
         <div>{props.tsIcon}</div>
         <div>{props.nuxtIcon}</div>

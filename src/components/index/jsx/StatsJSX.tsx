@@ -70,7 +70,7 @@ export default function App({ stats, stats2, children }: Props) {
             ))
             .reverse()}
         </div>
-        <div className="max-w-md flex flex-row flex-wrap justify-between">
+        <div className="max-w-md flex flex-row flex-wrap justify-between font-Quantico">
           {stats2.data.languages.map((lang, index) => (
             <div
               className="w-1/3 flex items-center gap-2 text-sm lg:text-md" key={index} >

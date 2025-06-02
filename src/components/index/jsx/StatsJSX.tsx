@@ -51,7 +51,7 @@ export default function App({ stats, stats2, children }: Props) {
           <div className="w-full relative p-4">
             <Progress
               aria-label="bg-bar"
-              className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+              className="max-w-9/10 absolute left-1/2 top-1/2 -translate-1/2"
               value={0}
               disableAnimation={true}
             />          
@@ -60,7 +60,7 @@ export default function App({ stats, stats2, children }: Props) {
               <Progress
                 aria-label={lang.name}
                 key={index}
-                className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+                className="max-w-9/10 absolute left-1/2 top-1/2 -translate-1/2"
                 value={lang.percentage}
                 classNames={{
                   indicator: `${colors[lang.name] ?? ""} rounded-br-none rounded-tr-none`,
@@ -75,7 +75,7 @@ export default function App({ stats, stats2, children }: Props) {
               <Progress
                 aria-label={lang.name}
                 key={index}
-                className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+                className="max-w-9/10 absolute left-1/2 top-1/2 -translate-1/2"
                 value={lang.percentage}
                 disableAnimation={true}
                 classNames={{
@@ -87,7 +87,7 @@ export default function App({ stats, stats2, children }: Props) {
             .reverse()}
             </noscript>
         </div>
-        <div className="max-w-md flex flex-row flex-wrap justify-between font-Quantico">
+        <div className="max-w-9/10 flex flex-row flex-wrap justify-between font-Quantico">
           {stats2.data.languages.map((lang, index) => (
             <div
               className="w-1/3 flex items-center gap-2 text-sm lg:text-md" key={index} >
@@ -107,28 +107,27 @@ export default function App({ stats, stats2, children }: Props) {
             </div>
           ))}
         </div>
-        <Divider className="my-2" />
-        <div className="w-full h-full font-Quantico">
+        <div className="w-full h-full font-Quantico pt-2">
           <div className="flex flex-wrap gap-2 h-full ">
             <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalRepositories}</span>
-              <span className="text-sm text-default-500">Repositories</span>
+              <span className="text-sm text-default-600">Repositories</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalStars}</span>
-              <span className="text-sm text-default-500">Stars</span>
+              <span className="text-sm text-default-600">Stars</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalCommitContributions}</span>
-              <span className="text-sm text-default-500">Contributions</span>
+              <span className="text-sm text-default-600">Contributions</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.followerCount}</span>
-              <span className="text-sm text-default-500">Followers</span>
+              <span className="text-sm text-default-600">Followers</span>
             </div>
             <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalPRs}</span>
-              <span className="text-sm text-default-500">Pull Requests</span>
+              <span className="text-sm text-default-600">Pull Requests</span>
             </div>
           </div>
         </div>

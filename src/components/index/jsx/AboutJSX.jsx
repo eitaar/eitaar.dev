@@ -1,4 +1,4 @@
-import {Card, CardHeader, CardBody, CardFooter, Divider, Button, Popover, PopoverTrigger, PopoverContent, Link} from "@heroui/react";
+import {Card, CardHeader, CardBody, Divider, Button, Popover, PopoverTrigger, PopoverContent, Chip} from "@heroui/react";
 export default function App(props) {
   return (
     <Card className="w-full max-w-[800px] flex-1 p-6 mx-auto">
@@ -7,10 +7,10 @@ export default function App(props) {
           {props.avatarImg}
         </div>
         <div className="flex flex-col items-center gap-1 font-Quantico">
-          <h2 className="text-3xl font-bold ">eitaar</h2>
+          <h2 className="text-4xl font-bold ">eitaar</h2>
           <p className="text-default-600">student?</p>
           <div className="flex items-center gap-2">
-            <span className="text-sm">Japanese | 16</span>
+            <Chip className="text-sm" variant="flat" color="primary">Japanese | 16</Chip>
           </div>
         </div>
       </CardHeader>      

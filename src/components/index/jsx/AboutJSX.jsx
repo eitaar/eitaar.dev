@@ -22,29 +22,42 @@ export default function App(props) {
             href="https://x.com/eitaar0"
             target="_blank"
             className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
-            variant="light">
+            variant="light"
+            disableRipple={true}>
             <div className="text-2xl mb-2">
               {props.xIcon}
             </div>
             <span className="font-medium">Twitter</span>
             <span className="text-xs text-default-500">@eitaar0</span>
-          </Button>          
+          </Button>    
+          <Popover placement="bottom" showArrow={true}>
+            <PopoverTrigger>
+              <Button
+                className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
+                variant="light"
+                onPressEnd={() => {
+                  navigator.clipboard.writeText("eitaar");
+                }}
+                disableRipple={true}
+                >
+                <div className="text-2xl mb-2">
+                  {props.discordIcon}
+                </div>
+                <span className="font-medium">Discord</span>
+                <span className="text-xs text-default-500">@eitaar</span>
+              </Button>  
+            </PopoverTrigger>
+            <PopoverContent className="p-4">
+              <p className="text-sm">Copied to clipboard!</p>
+            </PopoverContent>
+          </Popover>
           <Button
-            as="a"
-            target="_blank"
-            className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
-            variant="light">
-            <div className="text-2xl mb-2">
-              {props.discordIcon}
-            </div>
-            <span className="font-medium">Discord</span>
-            <span className="text-xs text-default-500">@eitaar</span>
-          </Button>            <Button
             as="a"
             href="https://github.com/eitaar"
             target="_blank"
             className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
-            variant="light">
+            variant="light"
+            disableRipple={true}>
             <div className="text-2xl mb-2">
               {props.githubIcon}
             </div>

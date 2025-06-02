@@ -49,7 +49,7 @@ export default function App(props) {
             </PopoverTrigger>
             <PopoverContent>
               <div className="px-1 py-2">
-                <div className="text-tiny">Copied username!</div>
+                <p className="text-tiny">Copied! Paste in Discord to add.</p>
               </div>
             </PopoverContent>
           </Popover>          

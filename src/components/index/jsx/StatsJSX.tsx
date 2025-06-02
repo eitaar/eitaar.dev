@@ -69,6 +69,23 @@ export default function App({ stats, stats2, children }: Props) {
               />
             ))
             .reverse()}
+            <noscript>
+              {[...stats.data.languages]
+            .map((lang, index) => (
+              <Progress
+                aria-label={lang.name}
+                key={index}
+                className="max-w-md absolute left-1/2 top-1/2 -translate-1/2"
+                value={lang.percentage}
+                disableAnimation={true}
+                classNames={{
+                  indicator: `${colors[lang.name] ?? ""} rounded-br-none rounded-tr-none`,
+                  track: "bg-transparent",
+                }}
+              />
+            ))
+            .reverse()}
+            </noscript>
         </div>
         <div className="max-w-md flex flex-row flex-wrap justify-between font-Quantico">
           {stats2.data.languages.map((lang, index) => (

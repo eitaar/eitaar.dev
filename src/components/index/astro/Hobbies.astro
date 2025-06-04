@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+import HobbiesJSX from "../jsx/HobbiesJSX.tsx";
+
+interface Hobby {
+  title: string;
+  flavour: string;
+  iconName: string;
+}
+
+const hobbies: Hobby[] = [
+  {
+    title: "Minecraft",
+    flavour: "OverModded",
+    iconName: "mdi:minecraft"
+  },
+  {
+    title: "Undertale",
+    flavour: '"Determination"',
+    iconName: "simple-icons:undertale"
+  },
+  {
+    title: "Coding",
+    flavour: "Still learning...",
+    iconName: "devicon-plain:vscode"
+  },
+];
+---
+<HobbiesJSX hobbies={hobbies} client:load>
+  <Icon name="mdi:gamepad-variant-outline" slot="hobbyIcon" class="h-7 w-auto" />
+  <Icon name="mdi:minecraft" slot="hobbyIcon0" class="h-8 w-8" />
+  <Icon name="simple-icons:undertale" slot="hobbyIcon1" class="h-8 w-8" />
+  <Icon name="devicon-plain:vscode" slot="hobbyIcon2" class="h-8 w-8" />
+</HobbiesJSX>
+

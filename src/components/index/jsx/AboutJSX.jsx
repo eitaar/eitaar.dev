@@ -1,7 +1,7 @@
 import {Card, CardHeader, CardBody, Divider, Button, Popover, PopoverTrigger, PopoverContent, Chip} from "@heroui/react";
 export default function App(props) {
   return (
-    <Card className="w-full max-w-[800px] flex-1 p-6 mx-auto">
+    <Card className="w-full flex-1 mx-auto">
       <CardHeader className="flex flex-col items-center gap-4">
         <div className="rounded-md overflow-hidden">
           {props.avatarImg}
@@ -14,14 +14,16 @@ export default function App(props) {
           </div>
         </div>
       </CardHeader>      
-      <Divider />          
+      <div className="px-4">
+        <Divider/>
+      </div>          
       <CardBody>
-        <div className="flex flex-wrap gap-2 justify-center">          
+        <div className="flex flex-wrap gap-2 justify-center h-full">          
           <Button
             as="a"
             href="https://x.com/eitaar0"
             target="_blank"
-            className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
+            className="flex flex-col items-center justify-center p-4 h-28 rounded-lg hover:bg-default-100"
             variant="light"
             disableRipple={true}>
             <div className="text-2xl mb-2">
@@ -33,7 +35,7 @@ export default function App(props) {
           <Popover placement="bottom" showArrow={true}>
             <PopoverTrigger>
               <Button
-                className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
+                className="flex flex-col items-center justify-center p-4 h-28 rounded-lg hover:bg-default-100"
                 variant="light"
                 onPressEnd={() => {
                   navigator.clipboard.writeText("eitaar");
@@ -55,7 +57,7 @@ export default function App(props) {
             as="a"
             href="https://github.com/eitaar"
             target="_blank"
-            className="flex flex-col items-center justify-center p-6 h-28 rounded-lg hover:bg-default-100"
+            className="flex flex-col items-center justify-center p-4 h-28 rounded-lg hover:bg-default-100"
             variant="light"
             disableRipple={true}>
             <div className="text-2xl mb-2">

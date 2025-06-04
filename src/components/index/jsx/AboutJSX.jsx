@@ -1,7 +1,7 @@
 import {Card, CardHeader, CardBody, Divider, Button, Popover, PopoverTrigger, PopoverContent, Chip} from "@heroui/react";
 export default function App(props) {
   return (
-    <Card className="w-full flex-1 mx-auto">
+    <Card className="w-full flex-1 mx-auto" isBlurred={false} >
       <CardHeader className="flex flex-col items-center gap-4">
         <div className="rounded-md overflow-hidden">
           {props.avatarImg}

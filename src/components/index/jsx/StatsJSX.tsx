@@ -41,7 +41,7 @@ const colors: Record<string, string> = {
 
 export default function App({ stats, stats2, children }: Props) {
   return (
-    <Card className="w-full h-full flex-2 flex justify-center">
+    <Card className="w-full h-full flex-2 flex justify-center" isBlurred={false} >
       <CardHeader className="flex items-center justify-center gap-1 pb-0 ">
         <div>{children}</div>
         <p className="text-3xl font-Quantico font-bold text-center">GitHub Stats</p>
@@ -108,23 +108,23 @@ export default function App({ stats, stats2, children }: Props) {
         </div>
         <div className="w-full h-full font-Quantico pt-2">
           <div className="flex flex-wrap gap-2 h-full ">
-            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalRepositories}</span>
               <span className="text-sm text-default-600">Repositories</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalStars}</span>
               <span className="text-sm text-default-600">Stars</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalCommitContributions}</span>
               <span className="text-sm text-default-600">Contributions</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.followerCount}</span>
               <span className="text-sm text-default-600">Followers</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2 bg-content2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalPRs}</span>
               <span className="text-sm text-default-600">Pull Requests</span>
             </div>

@@ -13,9 +13,9 @@ const ThemeProps = {
 
 export function useTheme() {
   let theme = document.documentElement.classList.contains("dark")? "dark" : "light";
+  
   function setTheme(newTheme: string) {
     theme = newTheme;
-    console.log("Setting theme to", theme);
     if (newTheme == "dark") {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");

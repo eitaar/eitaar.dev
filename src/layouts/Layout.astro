@@ -1,21 +1,24 @@
 ---
 const {title} = Astro.props;
 import avatarIcon from '../assets/img/avatar.png';
+import { HeroUIProvider } from '@heroui/react';
+import Header from './astro/Header.astro';
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
 
   <head>
-    <script is:inline>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="eitaar.dev" />    <script is:inline>
       if (localStorage.getItem("heroui-theme") === null) {
-        document.documentElement.setAttribute("heroui-theme", "dark");
+        document.documentElement.setAttribute("heroui-theme", "light");
+        document.documentElement.setAttribute("class", "light");
       } else {
+        document.documentElement.setAttribute("heroui-theme", localStorage.getItem("heroui-theme"));
         document.documentElement.setAttribute("class", localStorage.getItem("heroui-theme"));
       }
     </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="eitaar.dev" />
     <!-- Open Graph Protocol (OGP) meta tags -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content="eitaar's website" />
@@ -28,7 +31,20 @@ import avatarIcon from '../assets/img/avatar.png';
 		<title>{title}</title>
   </head>
   <body>
+    <HeroUIProvider>
+      <Header/>
       <slot/>
+    </HeroUIProvider>
   </body>
+  <script is:inline>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("heroui-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("class", newTheme);
+      document.documentElement.setAttribute("heroui-theme", newTheme);
+      localStorage.setItem("heroui-theme", newTheme);
+      console.log(`Theme changed to ${newTheme}`);
+    });
+  </script>
 </html>	
 

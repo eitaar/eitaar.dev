@@ -94,3 +94,25 @@
 .rain-line:nth-child(28) { left: 97%; height: 180px; animation-duration: 0.7s; animation-delay: 0.7s; }
 .rain-line:nth-child(29) { left: 3%; height: 150px; animation-duration: 2.2s; animation-delay: 0.4s; }
 .rain-line:nth-child(30) { left: 11%; height: 200px; animation-duration: 0.7s; animation-delay: 1.0s; }
+
+/* Animated gradient for title */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #06b6d4, #8b5cf6, #7c3aed, #4c1d95);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}

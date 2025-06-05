@@ -1,11 +1,11 @@
 ---
-const {title} = Astro.props;
+const {title, Navbar} = Astro.props;
 import avatarIcon from '../assets/img/avatar.png';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 ---
 
-<html lang="en" class="dark">
+<html lang="en" class="">
 
   <head>
     <meta charset="utf-8" />
@@ -66,7 +66,7 @@ import Header from './astro/Header.astro';
     </div>
     
     <HeroUIProvider>
-      <Header/>
+      {Navbar && <Header />}
       <slot/>
     </HeroUIProvider>
   </body>

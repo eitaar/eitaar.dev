@@ -20,7 +20,7 @@ export default function App(props:any) {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button color="primary" id="theme-toggle" variant="flat" isIconOnly={true}>
+          <Button color="primary" id="theme-toggle" variant="flat" isIconOnly={true} aria-label="Toggle theme">
             {props.themeToggle}
           </Button>
         </NavbarItem>

@@ -2,13 +2,13 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@her
 
 export default function App(props:any) {
   return (
-    <Navbar>
+    <Navbar maxWidth="full" position="sticky" id="navbar">
       <NavbarBrand>
         <p className="font-bold text-2xl font-Quantico">eitaar.dev</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#About">
             About
           </Link>
         </NavbarItem>

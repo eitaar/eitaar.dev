@@ -11,10 +11,10 @@ import Header from '../layouts/astro/Header.astro';
 ---
 <Layout title="eitaar.dev">
   <Header class="fixed top-0 left-0 right-0 z-50"/>
-  <div class="h-screen w-full">
+  <div class="min-h-screen w-full">
     <Title />
   </div>  
-  <div class="h-screen w-full">
+  <div class="min-h-screen w-full">
     <h2 class="w-full font-Quantico text-5xl text-center font-bold py-4" id="ABOUT">About</h2>
     <div class="w-9/10 flex flex-col gap-3 mx-auto">
       <div class="w-full min-h-[50vh] flex flex-col lg:flex-row gap-3">
@@ -35,7 +35,7 @@ import Header from '../layouts/astro/Header.astro';
       <!-- fotter -->
     </div>
   </div>
-  <div class="h-screen w-full">
+  <div class="min-h-screen w-full">
     <h2 class="w-full font-Quantico text-5xl text-center font-bold py-4" id="PROJECTS">Projects</h2>
   </div>
 </Layout> 

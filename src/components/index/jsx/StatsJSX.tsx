@@ -116,7 +116,7 @@ export default function App({ stats, stats2, children }: Props) {
               <span className="text-2xl font-bold">{stats.data.totalStars}</span>
               <span className="text-sm text-default-600">Stars</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center p-2 rounded-lg basis-[30%] grow">
               <span className="text-2xl font-bold">{stats.data.totalCommitContributions}</span>
               <span className="text-sm text-default-600">Contributions</span>
             </div>

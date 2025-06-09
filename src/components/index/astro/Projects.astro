@@ -1,0 +1,54 @@
+---
+import ProjectJSX from "../jsx/ProjectJSX";
+import {Image} from "astro:assets";
+import eitaar_dev from "../../../assets/img/eitaar_dev.png";
+import wahoot from "../../../assets/img/wahoot.png";
+interface Project {
+  title: string;
+  stack: string[];
+  description: string;
+  github?: string;
+  page?: string;
+  image: ImageMetadata;
+}
+
+const projects: Project[] = [
+  {
+    title: "Personal Portfolio",
+    stack: ["Astro", "React", "HeroUI", "Tailwind CSS", "TypeScript"],
+    description: "My personal portfolio website built with Astro, showcasing my skills and projects.",
+    github: "https://github.com/eitaar/eitaar.dev",
+    page: "https://eitaar.dev",
+    image: eitaar_dev
+  },
+  {
+    title: "Wahoot",
+    stack: ["Nuxt", "Vue", "JavaScript"],
+    description: "An unofficial third-party Kahoot client built using Nuxt. and custom library.",
+    github: "https://github.com/eitaar/wahoot",
+    page: "https://wahoot.eitaar.dev",
+    image: wahoot
+  },
+]
+---
+<div class="w-full flex flex-wrap gap-3 justify-center">
+  {projects.map((project) => (
+    <ProjectJSX
+      client:visible
+      title={project.title}
+      stack={project.stack}
+      description={project.description}
+      github={project.github}
+      page={project.page}
+    >
+      <Image
+        src={project.image}
+        alt={project.title}
+        width={960}
+        height={540}
+        class="w-full h-auto rounded-lg"
+        loading="lazy"
+        />
+    </ProjectJSX>
+  ))}
+</div>

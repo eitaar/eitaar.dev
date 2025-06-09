@@ -8,8 +8,9 @@ import Stats from '../components/index/astro/Stats.astro';
 import Hobbies from '../components/index/astro/Hobbies.astro';
 import Title from '../components/index/astro/Title.astro';
 import Header from '../layouts/astro/Header.astro';
+import Projects from '../components/index/astro/Projects.astro';
 ---
-<Layout title="eitaar.dev">
+<Layout title="eitaar.dev" showRain={true} >
   <Header class="fixed top-0 left-0 right-0 z-50"/>
   <div class="min-h-screen w-full">
     <Title />
@@ -37,17 +38,8 @@ import Header from '../layouts/astro/Header.astro';
   </div>
   <div class="min-h-screen w-full">
     <h2 class="w-full font-Quantico text-5xl text-center font-bold py-4" id="PROJECTS">Projects</h2>
+    <div class="w-9/10 mx-auto">
+      <Projects />
+    </div>
   </div>
 </Layout> 
-
-<script>
-  import { gsap } from "gsap";
-    
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// ScrollSmoother requires ScrollTrigger
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollTrigger,ScrollSmoother,ScrollToPlugin);
-
-</script>

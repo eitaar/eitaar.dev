@@ -1,5 +1,5 @@
 ---
-const {title, Navbar} = Astro.props;
+const {title, Navbar, showRain} = Astro.props;
 import avatarIcon from '../assets/img/avatar.png';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
@@ -32,39 +32,41 @@ import Header from './astro/Header.astro';
   </head>  
   <body>
     <!-- Digital Rain Background -->
-    <div class="rain-container">
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
-      <div class="rain-line"></div>
+    {
+      showRain && 
+      <div class="rain-container">
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
     </div>
-    
+    }
     <HeroUIProvider>
       {Navbar && <Header />}
       <slot/>

@@ -3,6 +3,7 @@ import ProjectJSX from "../jsx/ProjectJSX";
 import {Image} from "astro:assets";
 import eitaar_dev from "../../../assets/img/eitaar_dev.png";
 import wahoot from "../../../assets/img/wahoot.png";
+import get_github_api from "../../../assets/img/get_github_api.png";
 interface Project {
   title: string;
   stack: string[];
@@ -29,6 +30,13 @@ const projects: Project[] = [
     page: "https://wahoot.eitaar.dev",
     image: wahoot
   },
+  {
+    title: "GitHub Stats API",
+    stack: ["Hono", "TypeScript"],
+    description: "A simple API to fetch GitHub user's stats, built with Hono and TypeScript.",
+    image: get_github_api,
+    page: "https://get-github-stats.eitaar.workers.dev/eitaar",
+  }
 ]
 ---
 <div class="w-full flex flex-wrap gap-3 justify-center">

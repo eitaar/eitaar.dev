@@ -48,12 +48,12 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
           <Button
             color="success"
             variant="flat"
-            className="w-full"
+            className={github ? "w-full" : "w-1/2 ml-auto"}
             href={page}
             target="_blank"
             as="a"
           >
-            Page
+            Visit
           </Button>
         )}
       </CardFooter>

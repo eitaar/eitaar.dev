@@ -12,7 +12,7 @@ interface ProjectProps {
 
 export default function ProjectJSX({ title, stack, description, github, page, children }: ProjectProps) {
   return (
-    <Card className="max-w-sm font-Quantico">
+    <Card className="max-w-sm font-Quantico text-sm lg:text-md">
       <CardHeader>
         {children}
       </CardHeader>
@@ -20,7 +20,7 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
         <h2 className="text-2xl font-bold text-center">{title}</h2>
       </CardBody>
       <CardBody className="pt-0 pb-2">
-        <div className="flex flex-wrap gap-1 justify-center">
+        <div className="flex flex-wrap gap-1 justify-center"> 
           {stack.map((item, index) => (
             <Chip key={index} color="primary" size="sm" variant="flat">
               {item}
@@ -31,12 +31,12 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
       <CardBody className="pt-0">
         <p className="text-center">{description}</p>
       </CardBody>
-      <CardFooter className="flex gap-2 w-1/2 ml-auto pt-0">
+      <CardFooter className="flex gap-2 ml-auto pt-0">
         {github && (
           <Button
             color="secondary"
             variant="flat"
-            className="w-full"
+            className="w-1/4 ml-auto"
             href={github}
             target="_blank"
             as="a"
@@ -48,7 +48,7 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
           <Button
             color="success"
             variant="flat"
-            className={github ? "w-full" : "w-1/2 ml-auto"}
+            className={github ? "w-1/4" : "w-1/4   ml-auto"}
             href={page}
             target="_blank"
             as="a"

@@ -18,6 +18,15 @@ import Header from './astro/Header.astro';
         document.documentElement.setAttribute("heroui-theme", localStorage.getItem("heroui-theme"));
         document.documentElement.setAttribute("class", localStorage.getItem("heroui-theme"));
       }
+        // Remove rain container if rain is disabled
+      if (localStorage.getItem("rain-visible") === "false") {
+        document.addEventListener("DOMContentLoaded", function() {
+          const rainContainer = document.querySelector('.rain-container');
+          if (rainContainer) {
+            rainContainer.remove();
+          }
+        });
+      }
     </script>
     <!-- Open Graph Protocol (OGP) meta tags -->
     <meta property="og:title" content={title} />
@@ -33,7 +42,7 @@ import Header from './astro/Header.astro';
   <body>
     <!-- Digital Rain Background -->
     {
-      showRain && 
+      showRain &&
       <div class="rain-container">
         <div class="rain-line"></div>
         <div class="rain-line"></div>
@@ -70,17 +79,7 @@ import Header from './astro/Header.astro';
     <HeroUIProvider>
       {Navbar && <Header />}
       <slot/>
-    </HeroUIProvider>
+    </HeroUIProvider>  
   </body>
-  <script is:inline>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("heroui-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("class", newTheme);
-      document.documentElement.setAttribute("heroui-theme", newTheme);
-      localStorage.setItem("heroui-theme", newTheme);
-      console.log(`Theme changed to ${newTheme}`);
-    });
-  </script>
-</html>	
+</html>
 

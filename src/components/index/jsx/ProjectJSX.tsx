@@ -12,7 +12,7 @@ interface ProjectProps {
 
 export default function ProjectJSX({ title, stack, description, github, page, children }: ProjectProps) {
   return (
-    <Card className="max-w-sm font-Quantico">
+    <Card className="max-w-sm font-Quantico text-sm lg:text-md">
       <CardHeader>
         {children}
       </CardHeader>

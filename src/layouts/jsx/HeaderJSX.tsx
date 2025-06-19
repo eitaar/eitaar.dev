@@ -1,5 +1,6 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
-  import { gsap } from "gsap";
+import { gsap } from "gsap";
+import { useState, useEffect } from "react";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // ScrollSmoother requires ScrollTrigger
@@ -9,6 +10,49 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger,ScrollSmoother,ScrollToPlugin);
 
 export default function App(props:any) {
+  const [isRainVisible, setIsRainVisible] = useState(true);
+
+  useEffect(() => {
+    // Get initial rain state from localStorage
+    const savedRainState = localStorage.getItem("rain-visible");
+    if (savedRainState !== null) {
+      setIsRainVisible(savedRainState === "true");
+    }
+  }, []);
+  useEffect(() => {
+    // Create or remove rain container based on state
+    const existingRainContainer = document.querySelector('.rain-container');
+    
+    if (isRainVisible && !existingRainContainer) {
+      // Create rain container if it doesn't exist
+      createRainContainer();
+    } else if (!isRainVisible && existingRainContainer) {
+      // Remove rain container if it exists
+      existingRainContainer.remove();
+    }
+    
+    // Save state to localStorage
+    localStorage.setItem("rain-visible", isRainVisible.toString());
+  }, [isRainVisible]);
+
+  const createRainContainer = () => {
+    const rainContainer = document.createElement('div');
+    rainContainer.className = 'rain-container';
+    
+    // Create 30 rain lines
+    for (let i = 1; i <= 30; i++) {
+      const rainLine = document.createElement('div');
+      rainLine.className = 'rain-line';
+      rainContainer.appendChild(rainLine);
+    }
+    
+    // Insert at the beginning of body
+    document.body.insertBefore(rainContainer, document.body.firstChild);
+  };
+
+  const toggleRain = () => {
+    setIsRainVisible(!isRainVisible);
+  };
   return (
     <Navbar maxWidth="full" position="sticky" id="navbar" className="font-Quantico">
       <NavbarBrand>
@@ -46,9 +90,33 @@ export default function App(props:any) {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent justify="end">        <NavbarItem>
+          <Button
+            color="secondary"
+            variant="flat"
+            isIconOnly={true}
+            aria-label="Toggle rain"
+            onPress={toggleRain}
+            >
+            {isRainVisible ? props.rainToggleOn : props.rainToggleOff}
+            </Button>
+        </NavbarItem>
         <NavbarItem>
-          <Button color="primary" id="theme-toggle" variant="flat" isIconOnly={true} aria-label="Toggle theme">
+          <Button 
+            color="primary" 
+            id="theme-toggle" 
+            variant="flat" 
+            isIconOnly={true} 
+            aria-label="Toggle theme"
+            onPress={() => {
+              const currentTheme = document.documentElement.getAttribute("heroui-theme");
+              const newTheme = currentTheme === "dark" ? "light" : "dark";
+              document.documentElement.setAttribute("class", newTheme);
+              document.documentElement.setAttribute("heroui-theme", newTheme);
+              localStorage.setItem("heroui-theme", newTheme);
+              console.log(`Theme changed to ${newTheme}`);
+            }}
+          >
             {props.themeToggle}
           </Button>
         </NavbarItem>

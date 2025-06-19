@@ -5,8 +5,7 @@ import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 ---
 
-<html lang="en" class="">
-
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,15 +16,6 @@ import Header from './astro/Header.astro';
       } else {
         document.documentElement.setAttribute("heroui-theme", localStorage.getItem("heroui-theme"));
         document.documentElement.setAttribute("class", localStorage.getItem("heroui-theme"));
-      }
-        // Remove rain container if rain is disabled
-      if (localStorage.getItem("rain-visible") === "false") {
-        document.addEventListener("DOMContentLoaded", function() {
-          const rainContainer = document.querySelector('.rain-container');
-          if (rainContainer) {
-            rainContainer.remove();
-          }
-        });
       }
     </script>
     <!-- Open Graph Protocol (OGP) meta tags -->

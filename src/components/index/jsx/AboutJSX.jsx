@@ -3,7 +3,7 @@ export default function App(props) {
   return (
     <Card className="w-full flex-1 mx-auto" isBlurred={false} >
       <CardHeader className="flex flex-col items-center gap-4">
-        <div className="rounded-md overflow-hidden">
+        <div className="rounded-md overflow-hidden w-1/2 lg:w-auto">
           {props.avatarImg}
         </div>
         <div className="flex flex-col items-center gap-1 font-Quantico">

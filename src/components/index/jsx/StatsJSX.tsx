@@ -47,7 +47,7 @@ export default function App({ stats, stats2, children }: Props) {
         <p className="text-3xl font-Quantico font-bold text-center">GitHub Stats</p>
       </CardHeader>      
       <CardBody className="flex flex-wrap flex-row gap-2 w-full h-full items-start justify-start pt-0">
-        <div className="relative w-full flex flex-col items-center justify-center ">
+        <div className="relative w-full flex flex-col h-full items-center justify-center ">
           <div className="w-full relative p-4">
             <Progress
               aria-label="bg-bar"
@@ -108,7 +108,7 @@ export default function App({ stats, stats2, children }: Props) {
           ))}
         </div>
         <div className="w-full font-Quantico pt-2 h-full">
-          <div className="flex flex-wrap ">
+          <div className="flex flex-wrap h-full">
             <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.totalRepositories}</span>
               <span className="text-sm text-default-600">Repositories</span>

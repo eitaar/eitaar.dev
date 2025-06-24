@@ -18,7 +18,7 @@ export default function App(props) {
         <Divider/>
       </div>          
       <CardBody>
-        <div className="flex flex-wrap gap-2 justify-center h-full">          
+        <div className="flex gap-2 justify-center">          
           <Button
             as="a"
             href="https://x.com/eitaar0"

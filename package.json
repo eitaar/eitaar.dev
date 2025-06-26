@@ -20,13 +20,13 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/simple-icons": "^1.2.37",
+    "@richmd/js": "^2.0.12",
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.15",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
-    "astro": "^5.4.3",
-    "astro-expressive-code": "^0.41.2",
+    "astro": "latest",
     "astro-icon": "^1.1.5",
     "framer-motion": "^12.12.2",
     "gsap": "^3.13.0",
@@ -35,6 +35,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.0.15",
-    "theme-change": "^2.5.0"
+    "zenn-content-css": "^0.1.161",
+    "zenn-markdown-html": "^0.1.161"
   }
 }

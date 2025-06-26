@@ -17,8 +17,17 @@
   src: url(/fonts/quantico-bold.woff2) format('woff2'); 
 }
 
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url('/fonts/noto-color-emoji-v35-emoji-regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
 @theme {
-  --font-Quantico: Quantico,sans-serif;
+  --font-Quantico: Quantico, "Noto Color Emoji", sans-serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Colour Emoji", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --tracking-tightest: -0.075em; 
 }
 

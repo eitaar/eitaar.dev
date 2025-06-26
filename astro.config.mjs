@@ -7,7 +7,6 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  // ...
   integrations: [expressiveCode({
     themes : ['tokyo-night'],
   }), icon(), mdx(), react()],

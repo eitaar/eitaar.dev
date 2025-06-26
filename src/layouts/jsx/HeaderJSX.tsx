@@ -17,19 +17,16 @@ export default function App(props:any) {
     } else if (!isRainVisible && existingRainContainer) {
       existingRainContainer.remove();
     }
-
   }, [isRainVisible]);
 
   const createRainContainer = () => {
     const rainContainer = document.createElement('div');
     rainContainer.className = 'rain-container';
-
     for (let i = 1; i <= 30; i++) {
       const rainLine = document.createElement('div');
       rainLine.className = 'rain-line';
       rainContainer.appendChild(rainLine);
     }
-
     document.body.insertBefore(rainContainer, document.body.firstChild);
   };
 
@@ -39,40 +36,59 @@ export default function App(props:any) {
   return (
     <Navbar maxWidth="full" position="sticky" id="navbar" className="font-Quantico">
       <NavbarBrand>
-        <p className="font-bold text-2xl">eitaar.dev</p>
+        <Link
+          href="/"
+          className="text-2xl font-bold"
+          underline="none"
+          color="none"
+        >
+          eitaar.dev
+        </Link>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">        
-        <NavbarItem>
-          <Link
-          className="cursor-pointer"
-          color="primary" 
-          underline="hover"
-          onPressEnd={()=>{
-            const aboutElement = document.getElementById("ABOUT");
-            gsap.to(window, { duration: 0.2, scrollTo: {y:'#ABOUT', 
-              offsetY : aboutElement ? aboutElement.offsetHeight : 0,
-            }});
-          }}
-          >
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link 
-          color="primary"
-          className="cursor-pointer"
-          underline="hover"
-          onPressEnd={()=>{
-            const projectsElement = document.getElementById("PROJECTS");
-            gsap.to(window, { duration: 0.2, scrollTo: {y:'#PROJECTS', 
-              offsetY : projectsElement ? projectsElement.offsetHeight : 0,
-            }});
-          }}
-          >
-            Projects
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+      {
+        <NavbarContent className="hidden sm:flex gap-4" justify="center">        
+          <NavbarItem>
+            <Link
+            className="cursor-pointer"
+            color="primary" 
+            underline="hover"
+            onPressEnd={()=>{
+              const aboutElement = document.getElementById("ABOUT");
+              gsap.to(window, { duration: 0.2, scrollTo: {y:'#ABOUT', 
+                offsetY : aboutElement ? aboutElement.offsetHeight : 0,
+              }});
+            }}
+            >
+              About
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link 
+            color="primary"
+            className="cursor-pointer"
+            underline="hover"
+            onPressEnd={()=>{
+              const projectsElement = document.getElementById("PROJECTS");
+              gsap.to(window, { duration: 0.2, scrollTo: {y:'#PROJECTS', 
+                offsetY : projectsElement ? projectsElement.offsetHeight : 0,
+              }});
+            }}
+            >
+              Projects
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link 
+              color="primary"
+              className="cursor-pointer"
+              underline="hover"
+              href="/articles"
+            >
+              Articles
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+      }
       <NavbarContent justify="end">        
         <NavbarItem>
           <Button

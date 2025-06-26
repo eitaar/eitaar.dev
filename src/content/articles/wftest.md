@@ -1,8 +1,8 @@
 ---
 title: "Your Article Title"
 date: 2023-10-01
-description: "A brief description of your article."
 tags: ["tag1", "tag2", "tag3"]
+emoji: "📝"
 ---
 
 ## Your Article Title

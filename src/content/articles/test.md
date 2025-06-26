@@ -1,29 +1,77 @@
 ---
-title: 'Lorem ipsum dolor sit amet consectetur adipiscing elit'
+title: "astro"
 date: 2025-04-14
-description: 'Content Collections を使って記事を追加しました。'
-tags: ["Astro", "Markdown", "Lorem", "ipsum", "dolor", "sit", "amet"]
-image: /avatar.png
+tags: ["Astro", "Markdown" ]
+emoji: "😎"
 ---
 
 ## Lorem ipsum dolor sit amet consectetur adipiscing elit
-![avatar](/avatar.png)    
-```diff lang="js" title=Lorem.js
-cont arr = ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit"];
-const lorem = arr.map((word) => word.toUpperCase()).join(" ");
-+ console.log(lorem);
-- console.log(arr);
+```js title="isEven.js"
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+// Testing the function
+const num = 4;
+if (isEven(num)) {
+  console.log(`${num} is even.`);
+} else {
+  throw new Error('Wait, what?');
+}
 ```
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+https://zenn.dev/zenn/articles/markdown-guide
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+as
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+bs
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+cs
 
 
-sss
+ds
 
+es
+
+fs
+
+gs
+h
+is
+
+js
+
+ks
+ls
+
+ls
+ms
+
+n
+
+os
+
+ps
+
+qs
+
+rs
+
+ss
+
+ts
+us
+vs
+
+ws
+
+xs
+
+ys
+
+z
+
+## Lorem ipsum dolor sit amet consectetur adipiscing elit
+```js:apple.js
+ const grape = "Grape 🍇";
+```

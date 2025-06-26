@@ -41,13 +41,13 @@ const colors: Record<string, string> = {
 
 export default function App({ stats, stats2, children }: Props) {
   return (
-    <Card className="w-full h-full flex-2 flex justify-center" isBlurred={false} >
+    <Card className="w-full  flex-2 flex justify-center" isBlurred={false} >
       <CardHeader className="flex items-center justify-center gap-1 pb-0 ">
         <div>{children}</div>
         <p className="text-3xl font-Quantico font-bold text-center">GitHub Stats</p>
       </CardHeader>      
       <CardBody className="flex flex-wrap flex-row gap-2 w-full h-full items-start justify-start pt-0">
-        <div className="relative w-full flex flex-col items-center justify-center h-full">
+        <div className="relative w-full flex flex-col h-full items-center justify-center ">
           <div className="w-full relative p-4">
             <Progress
               aria-label="bg-bar"
@@ -86,7 +86,8 @@ export default function App({ stats, stats2, children }: Props) {
             ))
             .reverse()}
             </noscript>
-        </div>        <div className="max-w-9/10 flex flex-row flex-wrap justify-between font-Quantico">
+        </div>        
+        <div className="max-w-9/10 flex flex-row flex-wrap justify-between font-Quantico">
           {stats2.data.languages.slice(0, 9).map((lang, index) => (
             <div
               className="w-1/3 flex items-center gap-2 text-sm lg:text-md" key={index} >
@@ -106,27 +107,27 @@ export default function App({ stats, stats2, children }: Props) {
             </div>
           ))}
         </div>
-        <div className="w-full h-full font-Quantico pt-2">
-          <div className="flex flex-wrap gap-2 h-full ">
-            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
+        <div className="w-full font-Quantico pt-2 h-full">
+          <div className="flex flex-wrap h-full">
+            <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.totalRepositories}</span>
               <span className="text-sm text-default-600">Repositories</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.totalStars}</span>
               <span className="text-sm text-default-600">Stars</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2 rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.totalCommitContributions}</span>
               <span className="text-sm text-default-600">Contributions</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.followerCount}</span>
               <span className="text-sm text-default-600">Followers</span>
             </div>
-            <div className="flex flex-col items-center justify-center p-2  rounded-lg basis-[30%] grow">
+            <div className="flex flex-col items-center justify-center px-2 rounded-lg basis-[15%] grow">
               <span className="text-2xl font-bold">{stats.data.totalPRs}</span>
-              <span className="text-sm text-default-600">Pull Requests</span>
+              <span className="text-sm text-default-600">PRs</span>
             </div>
           </div>
         </div>

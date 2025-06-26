@@ -1,16 +1,18 @@
 ---
 const {title, Navbar, showRain} = Astro.props;
-import avatarIcon from '../assets/img/avatar.png';
+import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 import "../styles/global.css";
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="eitaar.dev" />    <script is:inline>
+    <meta name="description" content="eitaar.dev" />    
+    <script is:inline>
       if (localStorage.getItem("heroui-theme") === null) {
         document.documentElement.setAttribute("heroui-theme", "light");
         document.documentElement.setAttribute("class", "light");
@@ -22,15 +24,16 @@ import "../styles/global.css";
     <!-- Open Graph Protocol (OGP) meta tags -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content="eitaar's website" />
-    <meta property="og:image" content="https://eitaar.dev/avatar.png" />
+    <meta property="og:image" content="https://eitaar.dev/avatar.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="eitaar" />    
     <meta property="og:url" content="https://eitaar.dev/" />
-    <meta property="og:logo" content="https://eitaar.dev/avatar.png" />
+    <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
 		<title>{title}</title>
   </head>  
   <body>
+    <ClientRouter />
     <!-- Digital Rain Background -->
     {
       showRain &&
@@ -65,7 +68,9 @@ import "../styles/global.css";
         <div class="rain-line"></div>
         <div class="rain-line"></div>
         <div class="rain-line"></div>
-    </div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+      </div>
     }
     <HeroUIProvider>
       {Navbar && <Header />}

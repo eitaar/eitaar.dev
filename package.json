@@ -28,6 +28,7 @@
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "astro": "latest",
+    "astro-expressive-code": "^0.41.2",
     "astro-icon": "^1.1.5",
     "framer-motion": "^12.12.2",
     "gsap": "^3.13.0",

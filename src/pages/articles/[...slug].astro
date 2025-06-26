@@ -12,7 +12,14 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Layout title={entry.data.title} Navbar={true}>
-  <article class="prose prose-sm sm:prose lg:prose-lg prose-indigo dark:prose-invert w-9/10 mx-auto bg-background">
+  <article class="prose prose-sm sm:prose lg:prose-lg prose-indigo dark:prose-invert w-9/10 mx-auto bg-background font-Quantico">
+    <h1>{entry.data.title}</h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      {entry.data.date.toLocaleDateString('en-UK', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })}
     <Content/>
   </article>
 </Layout>

@@ -9,6 +9,7 @@ interface ArticleProps {
     emoji: string;
   }
   slug: string;
+  penIcon?: ReactNode;
 }
 
 export default function ArticleCard(article: ArticleProps) {
@@ -17,7 +18,7 @@ export default function ArticleCard(article: ArticleProps) {
     ext: '.svg'
   });
   return (
-    <Card className="">
+    <Card className="" isPressable={true} as="a" href={`/articles/${article.slug}`} isHoverable={true}>
       <CardHeader className="pb-0">
         <div
           dangerouslySetInnerHTML={{ __html: icon }}
@@ -35,7 +36,16 @@ export default function ArticleCard(article: ArticleProps) {
         </div>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button color="primary" variant="flat" className="ml-auto" as="a" href={`/articles/${article.slug}`}>Read More</Button>
+        <div className="flex items-center gap-1 text-sm text-gray-500">
+          {<span>{article.penIcon}</span>}
+          <span>
+            {new Date(article.data.date).toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </span>
+        </div>
       </CardFooter>
     </Card>
   );

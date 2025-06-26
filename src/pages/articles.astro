@@ -1,17 +1,20 @@
 ---
 import ArticleCard from "../components/articles/ArticleCard"
 import Layout from "../layouts/Layout.astro"
+import { Icon } from "astro-icon/components";
 import { getCollection } from 'astro:content';
 const articles = await getCollection("articles");
 import twemoji from '@twemoji/api'
 const entities = twemoji.parse('🧡');
 ---
 <Layout Navbar={true} title="Articles" >
-  <h1 class="text-4xl font-bold mx-auto text-center mb-4">Articles</h1>
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 w-9/10 mx-auto">
+  <h1 class="text-4xl font-bold mx-auto text-center mb-4 font-Quantico">Articles</h1>
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 w-9/10 mx-auto font-Quantico">
     {
       articles.map((article) => (
-        <ArticleCard {...article}/>
+        <ArticleCard {...article} client:visible>
+          <Icon name="mdi:pencil" class="w-4 h-4" slot="penIcon"/>
+        </ArticleCard>
       ))
     }
   </div>

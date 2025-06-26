@@ -6,10 +6,19 @@ emoji: "😎"
 ---
 
 ## Lorem ipsum dolor sit amet consectetur adipiscing elit
-```js:apple.js
- const grape = "Grape 🍇";
-```
+```js title="isEven.js"
+function isEven(num) {
+  return num % 2 === 0;
+}
 
+// Testing the function
+const num = 4;
+if (isEven(num)) {
+  console.log(`${num} is even.`);
+} else {
+  throw new Error('Wait, what?');
+}
+```
 
 https://zenn.dev/zenn/articles/markdown-guide
 

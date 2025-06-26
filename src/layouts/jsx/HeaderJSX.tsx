@@ -36,7 +36,14 @@ export default function App(props:any) {
   return (
     <Navbar maxWidth="full" position="sticky" id="navbar" className="font-Quantico">
       <NavbarBrand>
-        <p className="font-bold text-2xl">eitaar.dev</p>
+        <Link
+          href="/"
+          className="text-2xl font-bold"
+          underline="none"
+          color="none"
+        >
+          eitaar.dev
+        </Link>
       </NavbarBrand>
       {
         <NavbarContent className="hidden sm:flex gap-4" justify="center">        
@@ -68,6 +75,16 @@ export default function App(props:any) {
             }}
             >
               Projects
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link 
+              color="primary"
+              className="cursor-pointer"
+              underline="hover"
+              href="/articles"
+            >
+              Articles
             </Link>
           </NavbarItem>
         </NavbarContent>

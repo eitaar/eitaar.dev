@@ -1,6 +1,6 @@
 import {Card, CardHeader, CardBody, CardFooter, Button, Chip} from "@heroui/react";
 import type { ReactNode } from "react";
-
+import twemoji from '@twemoji/api'
 interface ArticleProps {
   data: {
     date: Date;
@@ -12,13 +12,20 @@ interface ArticleProps {
 }
 
 export default function ArticleCard(article: ArticleProps) {
+  const icon = twemoji.parse(article.data.emoji, {
+    folder: 'svg',
+    ext: '.svg'
+  });
   return (
     <Card className="">
       <CardHeader className="pb-0">
-        <p className="emoji text-8xl text-center w-full font-Quantico">{article.data.emoji}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: icon }}
+          className="w-20 h-20 lg:w-24 lg:h-24 mx-auto"
+        />
       </CardHeader>
       <CardBody>
-        <h2 className="text-lg text-center w-full font-bold pb-2">{article.data.title}</h2>
+        <h2 className="text-xl lg:text-lg text-center w-full font-bold pb-2">{article.data.title}</h2>
         <div className="flex flex-wrap gap-2">
           {article.data.tags.map((tag) => (
             <Chip key={tag} variant="flat" color="secondary" size="sm">

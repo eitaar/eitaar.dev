@@ -24,6 +24,7 @@
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.15",
+    "@twemoji/api": "^16.0.1",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "astro": "latest",

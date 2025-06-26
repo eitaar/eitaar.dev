@@ -3,7 +3,8 @@ import ArticleCard from "../components/articles/ArticleCard"
 import Layout from "../layouts/Layout.astro"
 import { getCollection } from 'astro:content';
 const articles = await getCollection("articles");
-
+import twemoji from '@twemoji/api'
+const entities = twemoji.parse('🧡');
 ---
 <Layout Navbar={true} title="Articles" >
   <h1 class="text-4xl font-bold mx-auto text-center mb-4">Articles</h1>

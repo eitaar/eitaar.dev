@@ -701,126 +701,126 @@
   dependencies:
     tslib "^2.8.0"
 
-"@heroui/accordion@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/accordion/-/accordion-2.2.19-beta.2.tgz#7fed470b855a0f82210f06ce5e749457c397948a"
-  integrity sha512-HNxHZtFkNzNd21U9j+iLs083zFBb36OB6lSbjnO+E19DPkuLG5c191rAGuPWPXH5ZfPOQm+FB4c0mgdiVL4euA==
+"@heroui/accordion@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/accordion/-/accordion-2.2.20.tgz#32024475b1dd64ed5b080d1a805ffec1d83dedf8"
+  integrity sha512-VZiNP35NMWrT2AHoH2kODrzC3j5GUwryS4fx1iX5+sEx8jcYm0SKHW9WIlLQ2T7HEAVTQACUtl1anezmQ4LtaQ==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/divider" "2.2.16-beta.2"
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-accordion" "2.2.14-beta.2"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/divider" "2.2.16"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-accordion" "2.2.15"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-stately/tree" "3.9.0"
     "@react-types/accordion" "3.0.0-alpha.26"
     "@react-types/shared" "3.30.0"
 
-"@heroui/alert@2.2.22-beta.2":
-  version "2.2.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/alert/-/alert-2.2.22-beta.2.tgz#7cd7eefc8ed20f279bc45eb45568cd9a9b982cf2"
-  integrity sha512-jBleMR6xlx89rdiMoOLlKj43MaSL4ohXiQNfqolz+siKQap2T1l4ufNhnEGzIEGkgIHvfMSJRgYCyJ95SNL6EQ==
+"@heroui/alert@2.2.23":
+  version "2.2.23"
+  resolved "https://registry.yarnpkg.com/@heroui/alert/-/alert-2.2.23.tgz#7112defed18072b8757d1ef13e1f913d8e2dedaf"
+  integrity sha512-6P20Za8S8HERHK0Rz4coW3bxQDMkx55zZrMlMf5X0jBi+oZhPpqalvpdhcOrlvNZCyKtBEUCUe+Lu6IO1UKE2Q==
   dependencies:
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/button" "2.2.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
     "@react-stately/utils" "3.10.7"
 
-"@heroui/aria-utils@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/aria-utils/-/aria-utils-2.2.19-beta.2.tgz#a12a7ff653a4709d424395706242389959bd1003"
-  integrity sha512-QYsfZ2FEJxomeV9xX0CLLtNQyrAkS0Qnkn7BSVV3QvNdUrBM1ofXi33Y3V2XbJffFEM3nrJqESPdHWvwPOfdbg==
+"@heroui/aria-utils@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/aria-utils/-/aria-utils-2.2.20.tgz#228b68801cf57156d5acaee8ca5aef911221d8fe"
+  integrity sha512-tq5X29pu5oMLE0bIJbcE43XJwv9UrMusNv5FVOVPWwdyRpo0JfAeCvfqfnvGoT7wHqNNFp9MyOZZyCoZ6DlxIg==
   dependencies:
-    "@heroui/system" "2.4.18-beta.2"
+    "@heroui/system" "2.4.19"
     "@react-aria/utils" "3.29.1"
     "@react-stately/collections" "3.12.5"
     "@react-types/overlays" "3.8.16"
     "@react-types/shared" "3.30.0"
 
-"@heroui/autocomplete@2.3.23-beta.2":
-  version "2.3.23-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/autocomplete/-/autocomplete-2.3.23-beta.2.tgz#493233c4820016ac97cdd636baf583770c0c8aee"
-  integrity sha512-rofbrbcvFmH9UkdmfXXVcITeSezJ9DHDtkkBnHoadN6jR8bKK8ZurBgRFJ0fi7h1HsWtwAABS8+H5WE58vnkEg==
+"@heroui/autocomplete@2.3.24":
+  version "2.3.24"
+  resolved "https://registry.yarnpkg.com/@heroui/autocomplete/-/autocomplete-2.3.24.tgz#c7fb444c6b416a9cb5d0384b18f5e0459fde7529"
+  integrity sha512-rT2c5gYxucLjttSUP7H6sGpIMBA187WvPeLdrbK1PCM/s5f5lMlO429xjxbwBGpnC1Rywp4npNJs7rquGuAIow==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/input" "2.4.22-beta.2"
-    "@heroui/listbox" "2.3.21-beta.2"
-    "@heroui/popover" "2.3.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/scroll-shadow" "2.3.15-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/button" "2.2.23"
+    "@heroui/form" "2.1.22"
+    "@heroui/input" "2.4.23"
+    "@heroui/listbox" "2.3.22"
+    "@heroui/popover" "2.3.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/scroll-shadow" "2.3.16"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/combobox" "3.12.5"
     "@react-aria/i18n" "3.12.10"
     "@react-stately/combobox" "3.10.6"
     "@react-types/combobox" "3.13.6"
     "@react-types/shared" "3.30.0"
 
-"@heroui/avatar@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/avatar/-/avatar-2.2.18-beta.2.tgz#04bf0410451e0035a9c2595ff0b9723c21deaf10"
-  integrity sha512-KYUdjdblG1ZaunAacKnhGE5M5GV6IGhQHBEdMZB07foU+bv5eenDfKTeukOQtVTUZTsk6h35mAVQnzc9XERWVw==
+"@heroui/avatar@2.2.19":
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@heroui/avatar/-/avatar-2.2.19.tgz#ce8303ffbe868d9a03d66c46e616cef76744ea9d"
+  integrity sha512-hnyF0mMYZgUr/vLSsNjFB9POFa3JZfIK54oYe0qxDZNzNhXNm5S5e8hhSF2QlZyUiiUPNGxAyPWaGyO92kaWnA==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-image" "2.1.11-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-image" "2.1.11"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
 
-"@heroui/badge@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/badge/-/badge-2.2.14-beta.2.tgz#3e907eccf202ca688d840eed8de9be474bf1744b"
-  integrity sha512-gHh6MdhCQUHuLzS+K3aXpuw714KVY9alFtyLkW+E9rM3vOqYqWarsZLnbSL7VbHkbhOUsKSBDT9Fq0HH2cgIFQ==
+"@heroui/badge@2.2.15":
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/@heroui/badge/-/badge-2.2.15.tgz#011e09bf3ae86ed54689ff9ba799a1b0de818d5a"
+  integrity sha512-wdxMBH+FkfqPZrv2FP9aqenKG5EeOH2i9mSopMHP+o4ZaWW5lmKYqjN1lQ5DXCO4XaDtY4jOWEExp4UJ2e7rKg==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/breadcrumbs@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/breadcrumbs/-/breadcrumbs-2.2.18-beta.2.tgz#68696a17b1dad804795a302543eedd1146569a0b"
-  integrity sha512-Xl9g5/aLJQ/lCSXlpfUX1JQdIfvtcXynjlB+rdO8MIKx1HnPtTjf6fi4kgKzKy8Ru/lpv8784BM8iVcJfbbLCA==
+"@heroui/breadcrumbs@2.2.19":
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@heroui/breadcrumbs/-/breadcrumbs-2.2.19.tgz#19f89ac503a9287b549bd26ef2a451b1e46f38a3"
+  integrity sha512-QFXusQJzjGV/1Iu1hM4Ihc1S9yAuC1D21sGsnmTSG6fOaEJ784CDvdq0jxwoGoRy3H+vFiPjxYk80K4r/WEuFQ==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/breadcrumbs" "3.5.26"
     "@react-aria/focus" "3.20.5"
     "@react-types/breadcrumbs" "3.7.14"
 
-"@heroui/button@2.2.22-beta.2":
-  version "2.2.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/button/-/button-2.2.22-beta.2.tgz#7e53bc4e2bb46c48ca44a6ace5d4d77ce157b4f2"
-  integrity sha512-4bbNN8BdcfMw+Bga7iuASxqsz0yD+aIT5GneuZBEGpegd3+1KnS3l00Ko/KEFVEqarA0aQtpfgAg4YPPowXuBg==
+"@heroui/button@2.2.23":
+  version "2.2.23"
+  resolved "https://registry.yarnpkg.com/@heroui/button/-/button-2.2.23.tgz#229401ebfded4e2a43b183d0bbf69f2ca8b2435b"
+  integrity sha512-8jvlcVVoJOfjdBm84WHOT2A6bJ8tiT6e0qgzKvSmZrKMgR8T3szkJZR+NkRDOYHuHn3tn6jolfLGpM3ybN5p3g==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/ripple" "2.2.17-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/spinner" "2.2.19-beta.2"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/ripple" "2.2.18"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/spinner" "2.2.20"
+    "@heroui/use-aria-button" "2.2.17"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-types/shared" "3.30.0"
 
-"@heroui/calendar@2.2.22-beta.2":
-  version "2.2.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/calendar/-/calendar-2.2.22-beta.2.tgz#7a52fa863dc5f887a67b45dda02409840234a787"
-  integrity sha512-PfVeHTofYv2Bih2pD9I/lt7sUv9bmeWnEJHN0yde2/T/1L096ZOXDSPk3G1RsGEwHkDbPsUJppmrfZ+qdIpGGw==
+"@heroui/calendar@2.2.23":
+  version "2.2.23"
+  resolved "https://registry.yarnpkg.com/@heroui/calendar/-/calendar-2.2.23.tgz#a8c9ce4286e4761340539186c27d13a5e7ab2c8f"
+  integrity sha512-/kkJRb7JQ1DozpnTKVNlXBEmpcAx19NVC1wttTOtLMPKiG6psuKJvbe9F5nQ0ZKnWOSqjdF7k8noGoZ/5Ox+Ig==
   dependencies:
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
+    "@heroui/button" "2.2.23"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-button" "2.2.17"
     "@internationalized/date" "3.8.2"
     "@react-aria/calendar" "3.8.3"
     "@react-aria/focus" "3.20.5"
@@ -834,29 +834,29 @@
     "@react-types/shared" "3.30.0"
     scroll-into-view-if-needed "3.0.10"
 
-"@heroui/card@2.2.21-beta.2":
-  version "2.2.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/card/-/card-2.2.21-beta.2.tgz#01198a9765be23ceb26380e4181110a64cfa551b"
-  integrity sha512-FKONBih+g3u9ovMSa6r3oNk17Q5JuMlTKBi/Y4zj4eiyV+FI68tCGhI35vWKMKoWtMkWrCxTlIR1NrubLBK+Xw==
+"@heroui/card@2.2.22":
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/@heroui/card/-/card-2.2.22.tgz#e6e21ca31b533191a5bde45f5e08ea7584d83648"
+  integrity sha512-JJv3snddQJ5y0M4CIC2pu4RDtK2RAXmKx4w22fAfkPEE+lFVZDnyU9fwRhhO8KoIHdv4oYvMJ+McjHIwCQvPrQ==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/ripple" "2.2.17-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/ripple" "2.2.18"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-button" "2.2.17"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-types/shared" "3.30.0"
 
-"@heroui/checkbox@2.3.21-beta.2":
-  version "2.3.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/checkbox/-/checkbox-2.3.21-beta.2.tgz#98152fbbac177006e7a0301d3b49fca558cae548"
-  integrity sha512-b3k+Hb4osfY9QR6O+1WqcXntIQGl1yfdWs7SldAQdn0O65A/eq5AotmkDjZ4izse1iD0asWwrKlT+9V/vfdZfQ==
+"@heroui/checkbox@2.3.22":
+  version "2.3.22"
+  resolved "https://registry.yarnpkg.com/@heroui/checkbox/-/checkbox-2.3.22.tgz#1220fe5b0a0c6381122675fd98ba6a5d0d8f56cb"
+  integrity sha512-BkpJNouSrqUHKZifqR0vTkp61UAL55/RWqJOAL9gAFT5cLOus8YRdCChVY3WJUoFyLolki2pTZQYFl4EXXywZg==
   dependencies:
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-callback-ref" "2.1.8-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-callback-ref" "2.1.8"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/checkbox" "3.15.7"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
@@ -865,34 +865,34 @@
     "@react-types/checkbox" "3.9.5"
     "@react-types/shared" "3.30.0"
 
-"@heroui/chip@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/chip/-/chip-2.2.18-beta.2.tgz#0c83cd6c9d0754bbe16070a2ed1096d794c7df5e"
-  integrity sha512-j5PAGMi/OFDr2ydSXfpxRvK+VAZMb/T5WU8nTmel1FLSYRYqkicYl4VXLhq2eW0abzbYuMt5pkZ1Idww9qc3sg==
+"@heroui/chip@2.2.19":
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@heroui/chip/-/chip-2.2.19.tgz#3c2d15b199d2c918640df1a62c9fd73cf68f1c3c"
+  integrity sha512-C/sZJBKCIbVekdpXY1NJMM45hgIJX9N4ciXBrJnKkz96mKdO3AsPBI/j0nIBp6+nDGjKr2nr0YBpt7QLnNJZWQ==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
 
-"@heroui/code@2.2.17-beta.2":
-  version "2.2.17-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/code/-/code-2.2.17-beta.2.tgz#5eb985cd9d2ad2d38e052db49af8c6b092df6c07"
-  integrity sha512-2Ggr1QgzHitjeqQrQCB6X4g+EmfNJcyyQ1FZaGNtrU7qWvIJSnL6qnQzSHEWzv6nx0sUpYnoVeAnN5hwbXNPLA==
+"@heroui/code@2.2.17":
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/@heroui/code/-/code-2.2.17.tgz#fb7efd7f166a631b487a16d56d95c28a04d3c6d6"
+  integrity sha512-Wku5mcfIfvq/x4yXMR+Me35sTG5cLKD+M10amX6AIbIUjqhGJmqlkitpELMWJJjab0UHyn2/AI+VUej4c29W5A==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/system-rsc" "2.3.16"
 
-"@heroui/date-input@2.3.21-beta.2":
-  version "2.3.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/date-input/-/date-input-2.3.21-beta.2.tgz#490b15c683ad804cd730da76e9617335191015bc"
-  integrity sha512-4cnhGLTpk0yzAX9xHG4w2ipTSngzEl9skkXIDScqM9hOxCx4T9t5FS/sOQlMW18wCQ9Z+G10nUqKOWv0Mt3zGw==
+"@heroui/date-input@2.3.22":
+  version "2.3.22"
+  resolved "https://registry.yarnpkg.com/@heroui/date-input/-/date-input-2.3.22.tgz#7eec4991d19eef8e81cba30c247910cc1973ba83"
+  integrity sha512-Hd1SmEmoUUk2dL/ZOT0PuZW7Yd0bheYmMNzXfaDXN199SiKVQWBleZQEYjU8XSZYj21bUV4sogN7mVITkdNz/w==
   dependencies:
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
     "@internationalized/date" "3.8.2"
     "@react-aria/datepicker" "3.14.5"
     "@react-aria/i18n" "3.12.10"
@@ -900,20 +900,20 @@
     "@react-types/datepicker" "3.12.2"
     "@react-types/shared" "3.30.0"
 
-"@heroui/date-picker@2.3.22-beta.2":
-  version "2.3.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/date-picker/-/date-picker-2.3.22-beta.2.tgz#0522cdb6972b36c2f9a6e7eac708e64e2e1ca531"
-  integrity sha512-FpyHHUcvPXlmKDSpWXqsE/5Seg3DfEh0ByEBzPBBvYtBsQ+XBg8PiZdRFbt2jYL4kLcjckkEh9QTNHAEAt06ig==
+"@heroui/date-picker@2.3.23":
+  version "2.3.23"
+  resolved "https://registry.yarnpkg.com/@heroui/date-picker/-/date-picker-2.3.23.tgz#f622a61b64cbb2ca84918fabe6d2ff0e2074c24a"
+  integrity sha512-9ksPUa/E57D3QXTc32S748hyTnWiO96CBacrx5xmUlGDYmfuvAl3HI/dQLiUBfgcXPU3qSCHD+aSxH1rRB4HOw==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/calendar" "2.2.22-beta.2"
-    "@heroui/date-input" "2.3.21-beta.2"
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/popover" "2.3.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/button" "2.2.23"
+    "@heroui/calendar" "2.2.23"
+    "@heroui/date-input" "2.3.22"
+    "@heroui/form" "2.1.22"
+    "@heroui/popover" "2.3.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
     "@internationalized/date" "3.8.2"
     "@react-aria/datepicker" "3.14.5"
     "@react-aria/i18n" "3.12.10"
@@ -922,83 +922,83 @@
     "@react-types/datepicker" "3.12.2"
     "@react-types/shared" "3.30.0"
 
-"@heroui/divider@2.2.16-beta.2":
-  version "2.2.16-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/divider/-/divider-2.2.16-beta.2.tgz#8ee7cd71fb943e49ce3a0845391dcfeb991ebfea"
-  integrity sha512-BiJwg9Wth8rRDBWmVTKjOYW+nDWnYKqlsUqS59kuUs0pHOHHXUu800WOKasUI/dbYnVMCweYe+taLrikVRxxjA==
+"@heroui/divider@2.2.16":
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/@heroui/divider/-/divider-2.2.16.tgz#417534d95a0b002ea95b50ccf810113716fd0357"
+  integrity sha512-8d794SECqx7c83VbM7ex8wXKz+JdrPnq1feY9ODP39BEPINE4akmurEU9sU5tMwk17HXibGzXyRl9VeIlGLB7w==
   dependencies:
-    "@heroui/react-rsc-utils" "2.1.9-beta.2"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/react-rsc-utils" "2.1.9"
+    "@heroui/system-rsc" "2.3.16"
     "@react-types/shared" "3.30.0"
 
-"@heroui/dom-animation@2.1.10-beta.2":
-  version "2.1.10-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/dom-animation/-/dom-animation-2.1.10-beta.2.tgz#aee9a7a30ada64d0bbdb4c25cd6f8e43e6d6d793"
-  integrity sha512-VWfPBhOsU77d+iYvWfMbdBB50FWJO4pAQiR6GrQ+ND8GoerZrJ5/c3o3HiyaiWGQRcM8LFxOiJzKaTLLD0lBog==
+"@heroui/dom-animation@2.1.10":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@heroui/dom-animation/-/dom-animation-2.1.10.tgz#fa7a05cef4df35571f3ff2c92920bc1e993aeba6"
+  integrity sha512-dt+0xdVPbORwNvFT5pnqV2ULLlSgOJeqlg/DMo97s9RWeD6rD4VedNY90c8C9meqWqGegQYBQ9ztsfX32mGEPA==
 
-"@heroui/drawer@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/drawer/-/drawer-2.2.19-beta.2.tgz#a560215cf4a0a0e4e63acb9a0a0911ae5e0846e9"
-  integrity sha512-hZXkeNjPcEW9g91zhdnVlUsgHF8sgfy98LO0vR80peXX7HWjEPs08jjMq2FIJRDq+5XEQBxMqURnU+VB1d0UCQ==
+"@heroui/drawer@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/drawer/-/drawer-2.2.20.tgz#2cf7874992a94db3002e15e646699dd3c51bf18b"
+  integrity sha512-rO9TCDgSm6C6NSwM/YRPsRFMB6xN013tQKZz/o3/hDeluQf4MdiPZ7jO1sl9AuhYGd8SqB188cb+3lyTcy6b8w==
   dependencies:
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/modal" "2.2.19-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/modal" "2.2.20"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/dropdown@2.3.22-beta.2":
-  version "2.3.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/dropdown/-/dropdown-2.3.22-beta.2.tgz#a58ae04325b43dbdf2dc358e98ab849aac9aaec2"
-  integrity sha512-EXbkOn7dc1ZAnf1ZkegWp+aMFQDHGKtNB90ouv+APAQ+Zude0newnKr4B2SMU/KzFVdwI0zqGOXKUD45MkFleg==
+"@heroui/dropdown@2.3.23":
+  version "2.3.23"
+  resolved "https://registry.yarnpkg.com/@heroui/dropdown/-/dropdown-2.3.23.tgz#a30fb4159e591adf255e1cd92c1a56a6cc532127"
+  integrity sha512-2m/HAWSwSv8yfwtJaelQGV7S71sA3VuI9eJlvC7cTQ5/+M+9X4tbze935OZ32Rd95gtaxA4V2odVAu3ba7qC5w==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/menu" "2.2.21-beta.2"
-    "@heroui/popover" "2.3.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/menu" "2.2.22"
+    "@heroui/popover" "2.3.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
     "@react-aria/menu" "3.18.5"
     "@react-stately/menu" "3.9.5"
     "@react-types/menu" "3.10.2"
 
-"@heroui/form@2.1.21-beta.2":
-  version "2.1.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/form/-/form-2.1.21-beta.2.tgz#fdcabd8fc16c70bbdac13e3505936143710450c3"
-  integrity sha512-5QLP6WrZsDVYqNA7duggxgYOCXvNfp3nMShbeq3ZQS7hwH/wmwCtoACasP3gbDHW+7xPNWZM8GT0jp0cGGCBvg==
+"@heroui/form@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.yarnpkg.com/@heroui/form/-/form-2.1.22.tgz#4476052a79b338523cd01ffd7e864e2ed49d1ed5"
+  integrity sha512-hEKFEblVEQ6iA3PsZSJ+LBVczgXy/0pcWb1+dw5Qp3+vfaAhbVyDsYvn2Xeg5scoHzDATVJQeg8tiK6TLQIw7g==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/system" "2.4.18-beta.2"
-    "@heroui/theme" "2.4.18-beta.2"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/system" "2.4.19"
+    "@heroui/theme" "2.4.18"
     "@react-stately/form" "3.1.5"
     "@react-types/form" "3.7.13"
     "@react-types/shared" "3.30.0"
 
-"@heroui/framer-utils@2.1.18-beta.2":
-  version "2.1.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/framer-utils/-/framer-utils-2.1.18-beta.2.tgz#16cb363ecb1bbf21691f3cd05e1ddb72d5360390"
-  integrity sha512-0GFmdfufRabLom3KvFxu8oKcjzuuLlMkWQNw7x/NBnDE/t5bf40gzVDbBvZA7etSDKxvq/98WTUYHEEmrEKO3w==
+"@heroui/framer-utils@2.1.19":
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/@heroui/framer-utils/-/framer-utils-2.1.19.tgz#774947513354899cedfe99087817bf9134b5afce"
+  integrity sha512-dDbWYtH4TFmEtNrt1cKF1VY4N7rVSK+qWqJzazQ//BltAVx1WtyLqcuSbBwgECy9UMmJ5NmH9EfL85RCvnJmbg==
   dependencies:
-    "@heroui/system" "2.4.18-beta.2"
-    "@heroui/use-measure" "2.1.8-beta.4"
+    "@heroui/system" "2.4.19"
+    "@heroui/use-measure" "2.1.8"
 
-"@heroui/image@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/image/-/image-2.2.14-beta.2.tgz#155d0270e9c1a0b64e36ee992621df737473c773"
-  integrity sha512-Tf7iHh9jjefT31YOJtM0wSZmbJ61KyOpDQaDMf1f7arpF1ApDNigkCpJSYWSTTzZ0B1Sd2Poci1a0Rcd7QYU7Q==
+"@heroui/image@2.2.15":
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/@heroui/image/-/image-2.2.15.tgz#bf2da968ddb518c98abca5394c00247e882f24fd"
+  integrity sha512-7/DIVZJh2CIZuzoRW9/XVLRyLTWsqNFQgEknEAjGudAUxlcu1dJ8ZuFBVC55SfPIrXE7WuGoiG1Q0B1iwW65IA==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-image" "2.1.11-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-image" "2.1.11"
 
-"@heroui/input-otp@2.1.21-beta.2":
-  version "2.1.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/input-otp/-/input-otp-2.1.21-beta.2.tgz#7231aa71350890422a4e1a54e47c0c0d4cb5d1dc"
-  integrity sha512-XITk8VRErrbat9gweVIFsPbAmKZfDRDXnDJ8hq/fR2dQfvdApaykDKzlCL15p0vIFvp2o/+1ScGfiAxGV0ppyg==
+"@heroui/input-otp@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.yarnpkg.com/@heroui/input-otp/-/input-otp-2.1.22.tgz#05cb787a4eefdeb8549121206499434e3032f3c2"
+  integrity sha512-a3AAB7lZql3DSIfr4D5NnEFlzAR/+ZnjgKTRkgMFD8VBo9uaa/EFVPNBTjIPF0lL6X85EiwmtJjITXq+SjhPaA==
   dependencies:
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-form-reset" "2.0.0-beta.1"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-form-reset" "2.0.1"
     "@react-aria/focus" "3.20.5"
     "@react-aria/form" "3.0.18"
     "@react-stately/form" "3.1.5"
@@ -1006,16 +1006,16 @@
     "@react-types/textfield" "3.12.3"
     input-otp "1.4.1"
 
-"@heroui/input@2.4.22-beta.2":
-  version "2.4.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/input/-/input-2.4.22-beta.2.tgz#357d091efad3937148de2b3ab37fbb6eef32537c"
-  integrity sha512-k4fo9zHIQuW9vnrQgBsuDczYkz4/g8i/Sn1NiWz1ybVe7F6rk/afsEildSh4I+nOxJ0fVRoWNJusL0kgBDwrbw==
+"@heroui/input@2.4.23":
+  version "2.4.23"
+  resolved "https://registry.yarnpkg.com/@heroui/input/-/input-2.4.23.tgz#7d1bebb4e8c6afa95704b3d8a7c976ec76b3666a"
+  integrity sha512-cr6KOGlfCHKjsTHunV5CukEiaDZKK9q/Aw5XaaGQU9OnAGIxj5MQIYScAjK/NbEXb4+6H8YPeYwY7nPoPbfrhw==
   dependencies:
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/textfield" "3.17.5"
@@ -1024,37 +1024,37 @@
     "@react-types/textfield" "3.12.3"
     react-textarea-autosize "^8.5.3"
 
-"@heroui/kbd@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/kbd/-/kbd-2.2.18-beta.2.tgz#988fe77c85b0933905a9d47daff771fcd03f0234"
-  integrity sha512-S3qhWJV6tkchg7pJr/Ou37eC+CyC7f2d6ZmgtHfZuoANHSR+MDZuAGekSlIgS2F9SLpUxDmyv0SPtjgjF/a8hQ==
+"@heroui/kbd@2.2.18":
+  version "2.2.18"
+  resolved "https://registry.yarnpkg.com/@heroui/kbd/-/kbd-2.2.18.tgz#b4a4e0454116cb9766a4a4f907071e4c1c6d304d"
+  integrity sha512-z/Sjco9LZ9vavjoqIIN3Kca/TIVEqBOKHH3/B9Omj5DsoBJMEz7gXBynjkVGVUvyKq0pUnCgThc6HPSQ9wbuUA==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/system-rsc" "2.3.16"
 
-"@heroui/link@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/link/-/link-2.2.19-beta.2.tgz#cc3618f839fdc8f2938d55dd10a22f621d2ff0fd"
-  integrity sha512-/DeNq0EKpj1NyGD6RFJtz5WmxOQJV9WFXXge7Ito3OYgdJUf94ujMlF7p5YhXsVLkcZ4Zkeu/zHVSBTxa2TDNg==
+"@heroui/link@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/link/-/link-2.2.20.tgz#393a26db731a8bb3d1f40e259500755133608271"
+  integrity sha512-0xzeIkO9Mg5YbQCnuDaQCmw6lYM1ZPnS5dfk3NNLEM+AVPzYK18nYVihNJKKaBicefNzzJIt2+2vVWNdb3kP1A==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-link" "2.2.17-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-link" "2.2.18"
     "@react-aria/focus" "3.20.5"
     "@react-types/link" "3.6.2"
 
-"@heroui/listbox@2.3.21-beta.2":
-  version "2.3.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/listbox/-/listbox-2.3.21-beta.2.tgz#23dc3d8ebd2f392e850229d6b62d47b90b14d85f"
-  integrity sha512-D9adixYFwTLzRco16YjHRWoymfpsUWu+el4hrIA+QJlld+V4fXt4aQ7XqReygbSgjaEhwcmC8gPnKNfTgd616g==
+"@heroui/listbox@2.3.22":
+  version "2.3.22"
+  resolved "https://registry.yarnpkg.com/@heroui/listbox/-/listbox-2.3.22.tgz#6b7d3c0aed5ee9bd6deb387a2b8d85a9925dc5b7"
+  integrity sha512-sVxIiGnoapdwfJGfDzuXcdfWLmdKvRGEA3oklZnXrikQfZF+ZTtF+lf23gL98Q8MD7ECE/CTkuoLiTSu3xYrRg==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/divider" "2.2.16-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-is-mobile" "2.2.11-beta.2"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/divider" "2.2.16"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-is-mobile" "2.2.11"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/listbox" "3.14.6"
@@ -1062,16 +1062,16 @@
     "@react-types/shared" "3.30.0"
     "@tanstack/react-virtual" "3.11.3"
 
-"@heroui/menu@2.2.21-beta.2":
-  version "2.2.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/menu/-/menu-2.2.21-beta.2.tgz#67c47c2f1e864818efa33c6844c779412a8752ae"
-  integrity sha512-8rjIh/5ZloRxpmswjsfXKikDsgknSTMFb/TvZwIVHOuR7TIPqNk2XN83m11EUFXd4YGf7ahjOD251VBFJC6gmg==
+"@heroui/menu@2.2.22":
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/@heroui/menu/-/menu-2.2.22.tgz#1c4890266ed9aade2c22459f27b8d8d9af523d2e"
+  integrity sha512-locrpJLTsaHAnTBW5hPscExfH2JnWhc3Hbmr3w36zkPcQhqh6XFJjEt7ElJJbPjFvI7d/OxSWC8eq5MxUzID5w==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/divider" "2.2.16-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-is-mobile" "2.2.11-beta.2"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/divider" "2.2.16"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-is-mobile" "2.2.11"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/menu" "3.18.5"
@@ -1079,37 +1079,37 @@
     "@react-types/menu" "3.10.2"
     "@react-types/shared" "3.30.0"
 
-"@heroui/modal@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/modal/-/modal-2.2.19-beta.2.tgz#a2e6c2d364078e5e64f6969d19861e5c7e72165f"
-  integrity sha512-qAlmZFATOIwt6niotz8FQoDGWHexLcCpJi8OikESk48prVwUjMnUI4Pdizn6dS882nl1X9Q+A42j/9LO6182YA==
+"@heroui/modal@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/modal/-/modal-2.2.20.tgz#bc89329ae509b4c1e187c793e9e2bcc692285450"
+  integrity sha512-+8dwgXJQ9tG5z8SRUatNxldqJJDSdm5PaqCit07475umWdJw4E5fCInwFP9hyuj3IXFMZgFpOShgS+frG/fMfA==
   dependencies:
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
-    "@heroui/use-aria-modal-overlay" "2.2.15-beta.2"
-    "@heroui/use-disclosure" "2.2.14-beta.2"
-    "@heroui/use-draggable" "2.1.14-beta.2"
-    "@heroui/use-viewport-size" "2.0.0-beta.1"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-button" "2.2.17"
+    "@heroui/use-aria-modal-overlay" "2.2.16"
+    "@heroui/use-disclosure" "2.2.14"
+    "@heroui/use-draggable" "2.1.15"
+    "@heroui/use-viewport-size" "2.0.1"
     "@react-aria/dialog" "3.5.27"
     "@react-aria/focus" "3.20.5"
     "@react-aria/overlays" "3.27.3"
     "@react-stately/overlays" "3.6.17"
 
-"@heroui/navbar@2.2.20-beta.2":
-  version "2.2.20-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/navbar/-/navbar-2.2.20-beta.2.tgz#7537364b9c177ed6528f3c042584169385372435"
-  integrity sha512-o7d3xDi1nIwXVD1ja1kICLrF/dY1usc6RtSWs3YHQJiELiB+t/hVUEZ1mv1L7wXa/n8JKqDY7ecdT7eq5Eg0Lw==
+"@heroui/navbar@2.2.21":
+  version "2.2.21"
+  resolved "https://registry.yarnpkg.com/@heroui/navbar/-/navbar-2.2.21.tgz#e6f2df34caa7de42ce328f49516df322fac38cfe"
+  integrity sha512-vKA6F/W6tjUhWvwZPR5qwNhwheKstNyS/tb6g4dVcldLUj7WVm04GXouVcv2i1M2a2jY1XwjlKXZfU+kDux4KQ==
   dependencies:
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-resize" "2.1.8-beta.4"
-    "@heroui/use-scroll-position" "2.1.8-beta.4"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-resize" "2.1.8"
+    "@heroui/use-scroll-position" "2.1.8"
     "@react-aria/button" "3.13.3"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
@@ -1117,17 +1117,17 @@
     "@react-stately/toggle" "3.8.5"
     "@react-stately/utils" "3.10.7"
 
-"@heroui/number-input@2.0.12-beta.2":
-  version "2.0.12-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/number-input/-/number-input-2.0.12-beta.2.tgz#138d0d4cd43c3a3cc297f48d76b42e3e353a059b"
-  integrity sha512-2mIwtyy/+OtRDY3AxyUXPFvJALbfBZrY66bYCxaxAnVgjTTD3s85R7lbO7jj+kPq07xOmo7eEK6BVqgtQf+yzQ==
+"@heroui/number-input@2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@heroui/number-input/-/number-input-2.0.13.tgz#9e8aa8d6ad67f724e0bba1a4ca389ba08465f581"
+  integrity sha512-c592XTfBswHnWJo6q4g1cQEY+dQPGHhr4MF93EFX12hLoaPkdnuFfXedm+nTIUP43iWpQ/8ftMTbpNLr+Ef5tA==
   dependencies:
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/button" "2.2.23"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/focus" "3.20.5"
     "@react-aria/i18n" "3.12.10"
     "@react-aria/interactions" "3.25.3"
@@ -1137,60 +1137,61 @@
     "@react-types/numberfield" "3.8.12"
     "@react-types/shared" "3.30.0"
 
-"@heroui/pagination@2.2.20-beta.2":
-  version "2.2.20-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/pagination/-/pagination-2.2.20-beta.2.tgz#97351f435b067987ef012b5944b0f9d48225fb02"
-  integrity sha512-mKmOJhB6al/WwiDn8MkpDQfDfPP5ET1rODnm9XE7yuK79Y84wypgaBIMrgXg/GmCh7Jbi0kMCd2P/I5AeGH5vA==
+"@heroui/pagination@2.2.21":
+  version "2.2.21"
+  resolved "https://registry.yarnpkg.com/@heroui/pagination/-/pagination-2.2.21.tgz#ac1c350ea36084076105f3cd03e6fa4ff98d7d26"
+  integrity sha512-zhxIUkyR0AY2mMlHnJphQ68NfvDT19XeHihTxW1Fxpp5MKcz9rOdk85v2batnXWqXah+s5h+O03n11IyZJbVBw==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-intersection-observer" "2.2.14-beta.2"
-    "@heroui/use-pagination" "2.2.15-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-intersection-observer" "2.2.14"
+    "@heroui/use-pagination" "2.2.15"
     "@react-aria/focus" "3.20.5"
     "@react-aria/i18n" "3.12.10"
     "@react-aria/interactions" "3.25.3"
+    "@react-aria/utils" "3.29.1"
     scroll-into-view-if-needed "3.0.10"
 
-"@heroui/popover@2.3.22-beta.2":
-  version "2.3.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/popover/-/popover-2.3.22-beta.2.tgz#4ce9aeb2019c1b7e090b557c96af78074be74b32"
-  integrity sha512-L+WwBczzyTEy7mIJQ2rXJt5kzFkVMeU4iuuPN0zvwUdPfA54OsSAJ6x+wcLp/jAYRqhikmlz58zGw4ZjI4pcXw==
+"@heroui/popover@2.3.23":
+  version "2.3.23"
+  resolved "https://registry.yarnpkg.com/@heroui/popover/-/popover-2.3.23.tgz#7e93f32b83aec5222aca7aef4b938a01932ca7b5"
+  integrity sha512-mqWU2HRzbk2MIPRP+0oR3SJgjJIu5PPnf4geabc9JymZHJJQFvtOMTHPiF+nN0O9sS72ba7FgUwArZIhm1UE7Q==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
-    "@heroui/use-aria-overlay" "2.0.1-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/button" "2.2.23"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-button" "2.2.17"
+    "@heroui/use-aria-overlay" "2.0.1"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/dialog" "3.5.27"
     "@react-aria/focus" "3.20.5"
     "@react-aria/overlays" "3.27.3"
     "@react-stately/overlays" "3.6.17"
     "@react-types/overlays" "3.8.16"
 
-"@heroui/progress@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/progress/-/progress-2.2.18-beta.2.tgz#aceb4e386d58f2f85e2a5524a3c6c7869b5748e2"
-  integrity sha512-aYOsn4d3j1RuRZHu3R/K3XQY/7LtmXUk61QDA17lchCsG/5q1sx3fJGXmTnwciMIZWk4gJx8IHuT7jq+QzM0dw==
+"@heroui/progress@2.2.19":
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@heroui/progress/-/progress-2.2.19.tgz#268ad6f3ff83c05b3b6fcbfbc2fa4d91b88e27bc"
+  integrity sha512-rtpzwRlfcJ3gPLMuRN2K+MtHJHQciz5kGydvKXu4TBq+rs8SD+bJIFU3RxV5H7LwvlBiYKoXeZY56R8qVVKkPw==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-is-mounted" "2.1.8-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-is-mounted" "2.1.8"
     "@react-aria/progress" "3.4.24"
     "@react-types/progress" "3.5.13"
 
-"@heroui/radio@2.3.21-beta.2":
-  version "2.3.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/radio/-/radio-2.3.21-beta.2.tgz#e05bae90fcc5c62960df82f130cb71f18cc5c96e"
-  integrity sha512-n8FiFiUoMHNSReWSaOrhJ9r5gUd7nQLdlIVDF2aw2Ots/DHNbJzjNewPFqHZfvc0HZm0AABz9bM1bBANF3nsIg==
+"@heroui/radio@2.3.22":
+  version "2.3.22"
+  resolved "https://registry.yarnpkg.com/@heroui/radio/-/radio-2.3.22.tgz#49c1121ad4ddf3b84c65a9091e9584ccad5ab498"
+  integrity sha512-9WIl1L/PwnjoCV/RQeRKTYyF8CAV/RcSzMt36vtFDbU8792yaMMiXCcTA/nAonIe5qyGosBjOasSc1goTv+Yaw==
   dependencies:
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/form" "2.1.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/radio" "3.11.5"
@@ -1199,110 +1200,110 @@
     "@react-types/radio" "3.8.10"
     "@react-types/shared" "3.30.0"
 
-"@heroui/react-rsc-utils@2.1.9-beta.2":
-  version "2.1.9-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/react-rsc-utils/-/react-rsc-utils-2.1.9-beta.2.tgz#b5410391cbaa47c6cae2e6c31fc505692009f124"
-  integrity sha512-TuZGdd/EoZc3aM6Lbo5O6bbZf3yBhNrGknQyyMyqP84FFN0kIXdLhPl9j08Ua34vsLrbEx4wikzZx6jVPVAn8g==
+"@heroui/react-rsc-utils@2.1.9":
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/@heroui/react-rsc-utils/-/react-rsc-utils-2.1.9.tgz#fe0f71761560093db2557f93db8600f3dbf50c26"
+  integrity sha512-e77OEjNCmQxE9/pnLDDb93qWkX58/CcgIqdNAczT/zUP+a48NxGq2A2WRimvc1uviwaNL2StriE2DmyZPyYW7Q==
 
-"@heroui/react-utils@2.1.12-beta.2":
-  version "2.1.12-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/react-utils/-/react-utils-2.1.12-beta.2.tgz#d1eb4c140e8dde47464154ab842e77876b007816"
-  integrity sha512-CYrtDVf3qH78ADSpLH1IUN8fpK9HgzWHzJi+SGeOxyt7VhiRbQycF4bErDYdZaJtTjZn9vsI3h1Mi+HUQHBn4w==
+"@heroui/react-utils@2.1.12":
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/@heroui/react-utils/-/react-utils-2.1.12.tgz#256d3b7583c8465a872caed47be77d126157099b"
+  integrity sha512-D+EYFMtBuWGrtsw+CklgAHtQfT17wZcjmKIvUMGOjAFFSLHG9NJd7yOrsZGk90OuJVQ3O1Gj3MfchEmUXidxyw==
   dependencies:
-    "@heroui/react-rsc-utils" "2.1.9-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/react-rsc-utils" "2.1.9"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/react@^2.8.0-beta.6":
-  version "2.8.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@heroui/react/-/react-2.8.0-beta.10.tgz#5d7709b133e8729713ccd3a38919503618783c4c"
-  integrity sha512-yGlAdxXYSMMzSsuRRKvB6fMxeeqjH1KPAgpqUFO2B7/uuZeVTEWKeA9PyDH4w9pDmsizULBz2nvpiZ7Uw4cEkA==
+"@heroui/react@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@heroui/react/-/react-2.8.0.tgz#002d5c438c7fe36825a082511b34b70304afe0a1"
+  integrity sha512-4zbVcmWNRACNfLlQMc4qlHbQ5QPYtVn0FFmlmBHSDoR1LpLwPjI7Cq16RYIFy69wl4hzNp6mZxxcPhhZk2HoVA==
   dependencies:
-    "@heroui/accordion" "2.2.19-beta.2"
-    "@heroui/alert" "2.2.22-beta.2"
-    "@heroui/autocomplete" "2.3.23-beta.2"
-    "@heroui/avatar" "2.2.18-beta.2"
-    "@heroui/badge" "2.2.14-beta.2"
-    "@heroui/breadcrumbs" "2.2.18-beta.2"
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/calendar" "2.2.22-beta.2"
-    "@heroui/card" "2.2.21-beta.2"
-    "@heroui/checkbox" "2.3.21-beta.2"
-    "@heroui/chip" "2.2.18-beta.2"
-    "@heroui/code" "2.2.17-beta.2"
-    "@heroui/date-input" "2.3.21-beta.2"
-    "@heroui/date-picker" "2.3.22-beta.2"
-    "@heroui/divider" "2.2.16-beta.2"
-    "@heroui/drawer" "2.2.19-beta.2"
-    "@heroui/dropdown" "2.3.22-beta.2"
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/image" "2.2.14-beta.2"
-    "@heroui/input" "2.4.22-beta.2"
-    "@heroui/input-otp" "2.1.21-beta.2"
-    "@heroui/kbd" "2.2.18-beta.2"
-    "@heroui/link" "2.2.19-beta.2"
-    "@heroui/listbox" "2.3.21-beta.2"
-    "@heroui/menu" "2.2.21-beta.2"
-    "@heroui/modal" "2.2.19-beta.2"
-    "@heroui/navbar" "2.2.20-beta.2"
-    "@heroui/number-input" "2.0.12-beta.2"
-    "@heroui/pagination" "2.2.20-beta.2"
-    "@heroui/popover" "2.3.22-beta.2"
-    "@heroui/progress" "2.2.18-beta.2"
-    "@heroui/radio" "2.3.21-beta.2"
-    "@heroui/ripple" "2.2.17-beta.2"
-    "@heroui/scroll-shadow" "2.3.15-beta.2"
-    "@heroui/select" "2.4.22-beta.2"
-    "@heroui/skeleton" "2.2.14-beta.2"
-    "@heroui/slider" "2.4.19-beta.2"
-    "@heroui/snippet" "2.2.23-beta.2"
-    "@heroui/spacer" "2.2.17-beta.2"
-    "@heroui/spinner" "2.2.19-beta.2"
-    "@heroui/switch" "2.2.20-beta.2"
-    "@heroui/system" "2.4.18-beta.2"
-    "@heroui/table" "2.2.21-beta.2"
-    "@heroui/tabs" "2.2.19-beta.2"
-    "@heroui/theme" "2.4.18-beta.2"
-    "@heroui/toast" "2.0.12-beta.2"
-    "@heroui/tooltip" "2.2.19-beta.2"
-    "@heroui/user" "2.2.18-beta.2"
+    "@heroui/accordion" "2.2.20"
+    "@heroui/alert" "2.2.23"
+    "@heroui/autocomplete" "2.3.24"
+    "@heroui/avatar" "2.2.19"
+    "@heroui/badge" "2.2.15"
+    "@heroui/breadcrumbs" "2.2.19"
+    "@heroui/button" "2.2.23"
+    "@heroui/calendar" "2.2.23"
+    "@heroui/card" "2.2.22"
+    "@heroui/checkbox" "2.3.22"
+    "@heroui/chip" "2.2.19"
+    "@heroui/code" "2.2.17"
+    "@heroui/date-input" "2.3.22"
+    "@heroui/date-picker" "2.3.23"
+    "@heroui/divider" "2.2.16"
+    "@heroui/drawer" "2.2.20"
+    "@heroui/dropdown" "2.3.23"
+    "@heroui/form" "2.1.22"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/image" "2.2.15"
+    "@heroui/input" "2.4.23"
+    "@heroui/input-otp" "2.1.22"
+    "@heroui/kbd" "2.2.18"
+    "@heroui/link" "2.2.20"
+    "@heroui/listbox" "2.3.22"
+    "@heroui/menu" "2.2.22"
+    "@heroui/modal" "2.2.20"
+    "@heroui/navbar" "2.2.21"
+    "@heroui/number-input" "2.0.13"
+    "@heroui/pagination" "2.2.21"
+    "@heroui/popover" "2.3.23"
+    "@heroui/progress" "2.2.19"
+    "@heroui/radio" "2.3.22"
+    "@heroui/ripple" "2.2.18"
+    "@heroui/scroll-shadow" "2.3.16"
+    "@heroui/select" "2.4.23"
+    "@heroui/skeleton" "2.2.15"
+    "@heroui/slider" "2.4.20"
+    "@heroui/snippet" "2.2.24"
+    "@heroui/spacer" "2.2.17"
+    "@heroui/spinner" "2.2.20"
+    "@heroui/switch" "2.2.21"
+    "@heroui/system" "2.4.19"
+    "@heroui/table" "2.2.22"
+    "@heroui/tabs" "2.2.20"
+    "@heroui/theme" "2.4.18"
+    "@heroui/toast" "2.0.13"
+    "@heroui/tooltip" "2.2.20"
+    "@heroui/user" "2.2.19"
     "@react-aria/visually-hidden" "3.8.25"
 
-"@heroui/ripple@2.2.17-beta.2":
-  version "2.2.17-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/ripple/-/ripple-2.2.17-beta.2.tgz#59fb652124fffe37d18a7073676a0d54667f084e"
-  integrity sha512-93sGhATmpQB1nNhv6rSwoFdZgTHzj1Q5Q0ef3R3+QMiF+KS4znVry3ieeJ8K5YVEfTmJmcSjbSAEODJkhU/E6w==
+"@heroui/ripple@2.2.18":
+  version "2.2.18"
+  resolved "https://registry.yarnpkg.com/@heroui/ripple/-/ripple-2.2.18.tgz#7fed1176fa19bd67fd508df26ed2e006e425b5f2"
+  integrity sha512-EAZrF6hLJTBiv1sF6R3Wfj/pAIO2yIdVNT2vzaNEXEInrB/fFJlnxfka4p89JjuPl3tiC9jAfavv+zK9YhyBag==
   dependencies:
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/scroll-shadow@2.3.15-beta.2":
-  version "2.3.15-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/scroll-shadow/-/scroll-shadow-2.3.15-beta.2.tgz#2d9d0cc816181b781b0051c5bd5d3a258eb7df5b"
-  integrity sha512-EkxfvwxqWYFa2DZpdfd9+SQr2IwrgGHKX1IXF5YUtqoXHM71xZtIKyvUfs/HgCvkVkcrXUOMVbrFcUYJ8W73yQ==
+"@heroui/scroll-shadow@2.3.16":
+  version "2.3.16"
+  resolved "https://registry.yarnpkg.com/@heroui/scroll-shadow/-/scroll-shadow-2.3.16.tgz#eca82a2e741c6df00e836452e8ceddfa0cb11d97"
+  integrity sha512-T1zTUjSOpmefMTacFQJFrgssY2BBUO+ZoGQnCiybY+XSZDiuMDmOEjNxC71VUuaHXOzYvhLwmzJY4ZnaUOTlXw==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-data-scroll-overflow" "2.2.11-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-data-scroll-overflow" "2.2.11"
 
-"@heroui/select@2.4.22-beta.2":
-  version "2.4.22-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/select/-/select-2.4.22-beta.2.tgz#900f4448f8b1cba6ccdf6ed68dbaf8c98b953758"
-  integrity sha512-aGrZg9TY6RzGH9w1ubT7UGGGSdCFG0eY72YYLqbigAAWZVwOqhjViU+Miowu/sc5/Wc6o2LHeZfS2MGmh8qSTw==
+"@heroui/select@2.4.23":
+  version "2.4.23"
+  resolved "https://registry.yarnpkg.com/@heroui/select/-/select-2.4.23.tgz#dd5472a771d316658d4cad0dea51fdd86521fc42"
+  integrity sha512-9tkwk59yEtclSWcv3gFfFnt1lywKZnO93Ly9FySnL7uaSlVE8vKTYauDW6+/Q9xcIPnLQssTvAzOi1H9VBbUTQ==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/form" "2.1.21-beta.2"
-    "@heroui/listbox" "2.3.21-beta.2"
-    "@heroui/popover" "2.3.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/scroll-shadow" "2.3.15-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/spinner" "2.2.19-beta.2"
-    "@heroui/use-aria-button" "2.2.16-beta.2"
-    "@heroui/use-aria-multiselect" "2.4.15-beta.2"
-    "@heroui/use-form-reset" "2.0.0-beta.1"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/form" "2.1.22"
+    "@heroui/listbox" "2.3.22"
+    "@heroui/popover" "2.3.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/scroll-shadow" "2.3.16"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/spinner" "2.2.20"
+    "@heroui/use-aria-button" "2.2.17"
+    "@heroui/use-aria-multiselect" "2.4.16"
+    "@heroui/use-form-reset" "2.0.1"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/focus" "3.20.5"
     "@react-aria/form" "3.0.18"
     "@react-aria/interactions" "3.25.3"
@@ -1310,31 +1311,31 @@
     "@react-aria/visually-hidden" "3.8.25"
     "@react-types/shared" "3.30.0"
 
-"@heroui/shared-icons@2.1.10-beta.2":
-  version "2.1.10-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/shared-icons/-/shared-icons-2.1.10-beta.2.tgz#134a5883e1c6995147a80c4f7833a0897eda78dd"
-  integrity sha512-vburW3cLQqIarx4QK8iInl7aqFJTc5nCRxok+ywkjqBzbj/xeUXKJHbF7R8PyI8r3urGs3qIofi2mYk83eJVXw==
+"@heroui/shared-icons@2.1.10":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@heroui/shared-icons/-/shared-icons-2.1.10.tgz#df53c7726d790320618530827627f71f8b8c759e"
+  integrity sha512-ePo60GjEpM0SEyZBGOeySsLueNDCqLsVL79Fq+5BphzlrBAcaKY7kUp74964ImtkXvknTxAWzuuTr3kCRqj6jg==
 
-"@heroui/shared-utils@2.1.10-beta.4":
-  version "2.1.10-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.10-beta.4.tgz#16ba5eda8d38916cff29cd4298213f36fb986bec"
-  integrity sha512-KlP/qfIS0gzLUdCkIs8/JNt1qtEDnTgqyaTOp6159pjKowJxlqOjmLVxGCK1Y9Fk+noNnJ+9UtD5pShPQNbKDw==
+"@heroui/shared-utils@2.1.10":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.10.tgz#15c12c49b92610a2cd545a74343b96bb4371e785"
+  integrity sha512-w6pSRZZBNDG5/aFueSDUWqOIzqUjKojukg7FxTnVeUX+vIlnYV2Wfv+W+C4l+OV7o0t8emeoe5tXZh8QcLEZEQ==
 
-"@heroui/skeleton@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/skeleton/-/skeleton-2.2.14-beta.2.tgz#79fb621f00c56167b0a2e78761c8033cf5c73b4e"
-  integrity sha512-rSD5Dlv0agvl2UKanik+iake0vzZV9U+vEqwewG9nzMjtN0BNUZBkxluFQuezWIrAQYUp+0Qh72uKNLy+Rx63w==
+"@heroui/skeleton@2.2.15":
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/@heroui/skeleton/-/skeleton-2.2.15.tgz#d64d7d69f91809c661cf5a743b4aa629f56cfeca"
+  integrity sha512-Y0nRETaOuF5a1VQy6jPczEM4+MQ9dIJVUSDv2WwJeFBnSs47aNKjOj0ooHaECreynOcKcSqC6hdzKCnN2upKrw==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/slider@2.4.19-beta.2":
-  version "2.4.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/slider/-/slider-2.4.19-beta.2.tgz#2edd010a621bd70eadba9432ba9480057a7965eb"
-  integrity sha512-V6mBDS43VvEjx91FBxMjmIvS+IpO+42enkuKJno7s7xcsOfbf/gm3+JDLh0em485Ge5OcPHpHAwcLj97B77dyw==
+"@heroui/slider@2.4.20":
+  version "2.4.20"
+  resolved "https://registry.yarnpkg.com/@heroui/slider/-/slider-2.4.20.tgz#20821b74aa1228bb136c38fa3363cafe23492dfd"
+  integrity sha512-25dfBbdezy/bIsN5OudxAm/tCX2nHSJSJ5Sv6jfo7QEHkgYkEdM7oxZOydlJx2O8uaRiFLy11h4iy+cc2J+X+A==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/tooltip" "2.2.19-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/tooltip" "2.2.20"
     "@react-aria/focus" "3.20.5"
     "@react-aria/i18n" "3.12.10"
     "@react-aria/interactions" "3.25.3"
@@ -1342,78 +1343,80 @@
     "@react-aria/visually-hidden" "3.8.25"
     "@react-stately/slider" "3.6.5"
 
-"@heroui/snippet@2.2.23-beta.2":
-  version "2.2.23-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/snippet/-/snippet-2.2.23-beta.2.tgz#49928f5a8c41c90f013141c03873a381efe2aa7e"
-  integrity sha512-RTcRFGvhixVMr/cs4jrWPkjgBTVYfqQ3LSOI4c+XGoATkHMXLPCNOP1u2skSadXDqWPoMdHp9RdItqB+xLRMZQ==
+"@heroui/snippet@2.2.24":
+  version "2.2.24"
+  resolved "https://registry.yarnpkg.com/@heroui/snippet/-/snippet-2.2.24.tgz#19998929f9d43e02d65a8a6ede941f2a5f623660"
+  integrity sha512-bWtPxYVc58YH1hsGQMmPkuVTI8XvmM72gKmnUDZE+noRXLdY4HTXJDK9sV3+tlu3WbZ2MHab+b8d2JePx+ssHA==
   dependencies:
-    "@heroui/button" "2.2.22-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/tooltip" "2.2.19-beta.2"
-    "@heroui/use-clipboard" "2.1.9-beta.4"
+    "@heroui/button" "2.2.23"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/tooltip" "2.2.20"
+    "@heroui/use-clipboard" "2.1.9"
     "@react-aria/focus" "3.20.5"
 
-"@heroui/spacer@2.2.17-beta.2":
-  version "2.2.17-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/spacer/-/spacer-2.2.17-beta.2.tgz#c9ce12df6a2f42bca30e65b77bef8ef791eb8bee"
-  integrity sha512-xA3Lgl8yitp1eptl82jOx87p/yA19De4BYXJAy+yUwOrSYwVKmS/7tx7kCMo6n+cebRLVcb7zwiHeR9PAsbNIg==
+"@heroui/spacer@2.2.17":
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/@heroui/spacer/-/spacer-2.2.17.tgz#3762a751cfcfe2fc8cd6c9f63f7491cbec160183"
+  integrity sha512-z83NPn9mS7MR9LC3c3VeGHsfSxDNxHR8CQs1uJou2l1395jWPdzCwjwM4oxMsH9JJZdk5JKCcDzN4lXpYdLyng==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/system-rsc" "2.3.16"
 
-"@heroui/spinner@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/spinner/-/spinner-2.2.19-beta.2.tgz#b2c3f5344187dcae47d64dd254a9e7ba8e3c1566"
-  integrity sha512-wJ0WfiESWdQBPAz1ONMn+Z3GvzCFSgDRyki+TDPjSQjL811A8CBJ/Wx+WfuuweFy1v3IvNzNh536dClZlxJ4nw==
+"@heroui/spinner@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/spinner/-/spinner-2.2.20.tgz#583958c6a6e45a8fb424fa4f381a21008cc5a45f"
+  integrity sha512-pn0FKWXFdrXLCYf9eLkUGINrHDpSzvC2MvEbMZ3fLMl9jHlUuqgcDCj1F9e4aZ4btPiAMaRfjCi04JPNe8dvjg==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/system" "2.4.18-beta.2"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/system" "2.4.19"
+    "@heroui/system-rsc" "2.3.16"
 
-"@heroui/switch@2.2.20-beta.2":
-  version "2.2.20-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/switch/-/switch-2.2.20-beta.2.tgz#8eb77e0e95c5800c8a535bac3b8c5ab20aa1b036"
-  integrity sha512-g2x9tFtBMZHcR3NI3mEiG2gf6n2PO/l5+7EHOpgtcXKKWIIxiUiebra443Kygn1BxSNetg0dPWGT4yXSqJL+Qg==
+"@heroui/switch@2.2.21":
+  version "2.2.21"
+  resolved "https://registry.yarnpkg.com/@heroui/switch/-/switch-2.2.21.tgz#a7e5e2216cd08123d039ff63a655fa3c8c86ad6b"
+  integrity sha512-/3txSRCLz+PB85BXqQceX4vS4T6/iW7Jtn+e/8SjENepoE6P1RUBQNUp77SLIMbwuIx/4n+lUMFUJxhvzZHLNQ==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/switch" "3.7.5"
     "@react-aria/visually-hidden" "3.8.25"
     "@react-stately/toggle" "3.8.5"
 
-"@heroui/system-rsc@2.3.16-beta.2":
-  version "2.3.16-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/system-rsc/-/system-rsc-2.3.16-beta.2.tgz#ce2a69ab27f8a5782f219b44124cac565c5e400b"
-  integrity sha512-vTYwQK2w4lSCaveBgp2XNki/Qk4qi4TgxW99GXcQVFNiqHbnpAYulU1RqLZgtdk1p0o5G7In6mhJjax2s4h7qQ==
+"@heroui/system-rsc@2.3.16":
+  version "2.3.16"
+  resolved "https://registry.yarnpkg.com/@heroui/system-rsc/-/system-rsc-2.3.16.tgz#af7539af76ccf4c0d697c90bafa27b390a0c0d19"
+  integrity sha512-6zuKh5glnrrc8A7kCqjr5D1EWjUdBG0UqpX8rLQwXzY6p9hbhu0LSlkxuGoLW7goUBqa57MmGvJFVb8VZpk6EA==
   dependencies:
     "@react-types/shared" "3.30.0"
     clsx "^1.2.1"
 
-"@heroui/system@2.4.18-beta.2":
-  version "2.4.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/system/-/system-2.4.18-beta.2.tgz#aecb1cfefcd203ef93da67a615080cd15f4d70a7"
-  integrity sha512-PKF0bHrx4CBhJ20qCVNfxuc3dfQInFBCSvK5ibLb+62CTB1npwcwcJ0nsnJJv0PHGd+6e8BMpUJlNN/lRiERDg==
+"@heroui/system@2.4.19":
+  version "2.4.19"
+  resolved "https://registry.yarnpkg.com/@heroui/system/-/system-2.4.19.tgz#1860afe0ec23b244e3cbf15562d4a0ecc6e1490c"
+  integrity sha512-glLZASHQPmyE4BGVD22VyBb/vP0CRfHVFmA8/TXmNWqGLmapmcWgbJ3cnKOE7DWRFns4bMTe2LqSj1rgjt/EjA==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/system-rsc" "2.3.16-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/system-rsc" "2.3.16"
     "@react-aria/i18n" "3.12.10"
+    "@react-aria/overlays" "3.27.3"
+    "@react-aria/utils" "3.29.1"
 
-"@heroui/table@2.2.21-beta.2":
-  version "2.2.21-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/table/-/table-2.2.21-beta.2.tgz#dbbf79e2a1921656cebbf22dab2480fbcc0b6855"
-  integrity sha512-Sqim7VxBTA0rI09QLnt4Li63TYbEWceaLQfoBxWWoFDWtivuAv+WCYj+baExGckl+ag1pOQhFg0jv1DTwWvkZQ==
+"@heroui/table@2.2.22":
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/@heroui/table/-/table-2.2.22.tgz#22a237f2a01417b6f8464c6b7d761c918011b2dc"
+  integrity sha512-+Tv/Rx3S5od7ct+sagY6Xzu5r/cXBhj/sKIyIZdBcUYpHMesdRD3+iZIZ0nheCv7AlZLyUHPqKP2KHqAWPEHMw==
   dependencies:
-    "@heroui/checkbox" "2.3.21-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/spacer" "2.2.17-beta.2"
+    "@heroui/checkbox" "2.3.22"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/spacer" "2.2.17"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/table" "3.17.5"
@@ -1424,15 +1427,15 @@
     "@react-types/table" "3.13.1"
     "@tanstack/react-virtual" "3.11.3"
 
-"@heroui/tabs@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/tabs/-/tabs-2.2.19-beta.2.tgz#9609ff50924b0e00a49cc589254bdab521bb0015"
-  integrity sha512-I/ZG/VfBkDt+c6H5FEVn4N8GGJc+ExTVZZhtYBfePwVjc0aCH3YpZ8toVvrinN6wof7kWx2D929/zMdI9J0yoQ==
+"@heroui/tabs@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/tabs/-/tabs-2.2.20.tgz#52ec8d9d8fde664e17e30c99b0e344b0b9c62dff"
+  integrity sha512-1kXZGMEUejvGpHqEwn+axRfQqr0ocdRP8gL1JL6K0oxg/AAAkyp2t6JvrVW4/dcNuOGh2/VeyRhjCZh1bNFqVQ==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-is-mounted" "2.1.8-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-is-mounted" "2.1.8"
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/tabs" "3.10.5"
@@ -1440,12 +1443,12 @@
     "@react-types/shared" "3.30.0"
     scroll-into-view-if-needed "3.0.10"
 
-"@heroui/theme@2.4.18-beta.2":
-  version "2.4.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/theme/-/theme-2.4.18-beta.2.tgz#7ea85ef40630ff150c08ad2e400e3699ff590f33"
-  integrity sha512-gMAsElhNF4z8ZPl6dEea3yg55UcYAh4gmtAP9FhO3h1uhzw84T99lFkVoO7yloTalj+xNEoIlyfBb35N8DC5pA==
+"@heroui/theme@2.4.18":
+  version "2.4.18"
+  resolved "https://registry.yarnpkg.com/@heroui/theme/-/theme-2.4.18.tgz#23e71fb604cbd686cdc0b5579bf67ae1a3d3206f"
+  integrity sha512-gKAJtR4RPlnn0Z2ojYKqPvAa0tYbLFtchmg1Alxk11o1/37/NvBtzvTtBpGn7Dhhbk+4h3B+dgMp17U6SM2YOQ==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/shared-utils" "2.1.10"
     clsx "^1.2.1"
     color "^4.2.3"
     color2k "^2.0.3"
@@ -1454,42 +1457,42 @@
     tailwind-merge "3.0.2"
     tailwind-variants "1.0.0"
 
-"@heroui/toast@2.0.12-beta.2":
-  version "2.0.12-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/toast/-/toast-2.0.12-beta.2.tgz#0911aa42498377302f2ad1005a22667e973f7a90"
-  integrity sha512-ZeaGAYv0QhpMG9WIikeHiA+0z2R4VOYgzBGCDqn5J5AzfdH7BPYJaldZk8zUV92TrA8f8NEuxeuw4vHg1yfCPw==
+"@heroui/toast@2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@heroui/toast/-/toast-2.0.13.tgz#b5c877df8379492358924d4e6051653ff83bdaa1"
+  integrity sha512-qaUvUVA9goYFnsTReytlxtxSRnXFXmdG48gZ6CCFFKt8pENPWcxSap8Y83oDr4pciCpAae/GgYnDpQHg+ytRyQ==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-icons" "2.1.10-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/spinner" "2.2.19-beta.2"
-    "@heroui/use-is-mobile" "2.2.11-beta.2"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-icons" "2.1.10"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/spinner" "2.2.20"
+    "@heroui/use-is-mobile" "2.2.11"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/toast" "3.0.5"
     "@react-stately/toast" "3.1.1"
 
-"@heroui/tooltip@2.2.19-beta.2":
-  version "2.2.19-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/tooltip/-/tooltip-2.2.19-beta.2.tgz#7a7cb08ea04459ce2e183f202e47bb50d415e91e"
-  integrity sha512-VJUh/6IXU8hN3LOSnbw2fwxcyw3VBXqavCgXvZJZ66NrQTpBJn25pcLMbY4X80nleJX6kbfD62sz8UUMLPCbFw==
+"@heroui/tooltip@2.2.20":
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/@heroui/tooltip/-/tooltip-2.2.20.tgz#20cb2dd049f3609bf4841656f4db93d8f295a733"
+  integrity sha512-l1ewL4mgCzGzSAgU+BXj6oJsDxsiW84RXG9xL8QWw5BD9/iPjuYbZBOeZNBkKShwYeI3mz2RwtHnq0Q/SsfBTA==
   dependencies:
-    "@heroui/aria-utils" "2.2.19-beta.2"
-    "@heroui/dom-animation" "2.1.10-beta.2"
-    "@heroui/framer-utils" "2.1.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
-    "@heroui/use-aria-overlay" "2.0.1-beta.4"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/aria-utils" "2.2.20"
+    "@heroui/dom-animation" "2.1.10"
+    "@heroui/framer-utils" "2.1.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
+    "@heroui/use-aria-overlay" "2.0.1"
+    "@heroui/use-safe-layout-effect" "2.1.8"
     "@react-aria/overlays" "3.27.3"
     "@react-aria/tooltip" "3.8.5"
     "@react-stately/tooltip" "3.5.5"
     "@react-types/overlays" "3.8.16"
     "@react-types/tooltip" "3.4.18"
 
-"@heroui/use-aria-accordion@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-accordion/-/use-aria-accordion-2.2.14-beta.2.tgz#b107f7f3c232e8f2be02ca0b4a84ad778dd0769d"
-  integrity sha512-JgxqhYfk+MLr3MTAb/qAiTz3cXTG2ikrCyWAwZTkXqHUjbtOeFV2fJI46rIFiZ61IMYn7t0nkTlQ/PZKiNfOng==
+"@heroui/use-aria-accordion@2.2.15":
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-accordion/-/use-aria-accordion-2.2.15.tgz#cc7cfafc94a96adc7e794cb6f3a12d06f3b04573"
+  integrity sha512-WeSY7TOqqnFLhii8vRX2VHggmrPYBa9mlMnYlBBvl3BsV0C8xvTuJ1tZfQmyGYGVAF8F2fCG/GLACEsOHBuRfA==
   dependencies:
     "@react-aria/button" "3.13.3"
     "@react-aria/focus" "3.20.5"
@@ -1498,10 +1501,10 @@
     "@react-types/accordion" "3.0.0-alpha.26"
     "@react-types/shared" "3.30.0"
 
-"@heroui/use-aria-button@2.2.16-beta.2":
-  version "2.2.16-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-button/-/use-aria-button-2.2.16-beta.2.tgz#04005d365cb26ed57fad28f7b9a156111ae5b925"
-  integrity sha512-FlCuZF7DQAnfNtxulu3aY07/4FbWIJL/ZX/iw95rk4g7DUNnLbYPnYlThEg9cExfvk1k+VUL2mm+lw9iJ+8H3w==
+"@heroui/use-aria-button@2.2.17":
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-button/-/use-aria-button-2.2.17.tgz#ea7e28dad65b68c106a9698731eb170ba8ed5a41"
+  integrity sha512-mzOztFoN/2zWinbeZw9gECJwXV+vY3uosvk58+3/CX/938VwHnLCGXr5YkLE0IDfoOimEcS4Pjb93RZaZFeR3g==
   dependencies:
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
@@ -1509,10 +1512,10 @@
     "@react-types/button" "3.12.2"
     "@react-types/shared" "3.30.0"
 
-"@heroui/use-aria-link@2.2.17-beta.2":
-  version "2.2.17-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-link/-/use-aria-link-2.2.17-beta.2.tgz#72a384d533ffce85773431d4e3447b344a808a85"
-  integrity sha512-4MvN0H8aYGyE6RKF9X+uWxgOTCEg2gEaY7Sk7N61jfT8xLQzHkKgg8WoOk6F4/NiFKEoILi68UxD8+fa7y+INA==
+"@heroui/use-aria-link@2.2.18":
+  version "2.2.18"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-link/-/use-aria-link-2.2.18.tgz#5ca6a2f961bd2a40f630bf06e8999522db76ce34"
+  integrity sha512-Kb1kHYCPkCcSQy+4NwPbfhapx6qAxLGd7cg7U0MPeBDKhJLhirCCMi9BBrRdSDn1uUwbmKL0N1d+tyCEnuXN0A==
   dependencies:
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
@@ -1520,20 +1523,20 @@
     "@react-types/link" "3.6.2"
     "@react-types/shared" "3.30.0"
 
-"@heroui/use-aria-modal-overlay@2.2.15-beta.2":
-  version "2.2.15-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-modal-overlay/-/use-aria-modal-overlay-2.2.15-beta.2.tgz#17213044b1e1b0a13e7d579750a545bb186659c1"
-  integrity sha512-795MgzX1QsIZEoxLACnyvb3RBOmOovRfc3agpHmXL3OXY9y8wJK/iW9l0Ls41YF9fKJ4kSMX//VvLsz6hjfNug==
+"@heroui/use-aria-modal-overlay@2.2.16":
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-modal-overlay/-/use-aria-modal-overlay-2.2.16.tgz#e4e0df5fdf895dd8313ef936cb7bfc2c058ec260"
+  integrity sha512-AYM24Rylx1HMPcBEKN6szOeQXTmaFSskl94+SEVHqEFlNmou2zYtAlSAgBJxYUc0kryBlWFilATvyTMk5EqtYQ==
   dependencies:
-    "@heroui/use-aria-overlay" "2.0.1-beta.4"
+    "@heroui/use-aria-overlay" "2.0.1"
     "@react-aria/overlays" "3.27.3"
     "@react-aria/utils" "3.29.1"
     "@react-stately/overlays" "3.6.17"
 
-"@heroui/use-aria-multiselect@2.4.15-beta.2":
-  version "2.4.15-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-multiselect/-/use-aria-multiselect-2.4.15-beta.2.tgz#9955f921f8d3982c41764c711a3b97057b5ace72"
-  integrity sha512-d2RJepptG1LFRP1hden/Sv6IoJ74IH9yTkWcGZIlAfr5YE+AcT61EklLLqlLlIb+lRmuN4myj/ylSg5hceOJDw==
+"@heroui/use-aria-multiselect@2.4.16":
+  version "2.4.16"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-multiselect/-/use-aria-multiselect-2.4.16.tgz#671aed2f48cb5d0c097489ba526828d2194d6393"
+  integrity sha512-p1bca6M+szG+U0/tGRTF9ya1T1kYZGP7i4MM2y6VedXNEm0pfdYCPiXxXnJnEFmlGpnQYmtgrVim3ichJQA7mw==
   dependencies:
     "@react-aria/i18n" "3.12.10"
     "@react-aria/interactions" "3.25.3"
@@ -1549,135 +1552,135 @@
     "@react-types/overlays" "3.8.16"
     "@react-types/shared" "3.30.0"
 
-"@heroui/use-aria-overlay@2.0.1-beta.4":
-  version "2.0.1-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-aria-overlay/-/use-aria-overlay-2.0.1-beta.4.tgz#7b7754cff20923b179cdf470e34ead9c2f985bc4"
-  integrity sha512-hcXJG4jD5U7wUoZW5rkGQfexvC1DAd1kDrAu3Osz+XPbpPW2nVKDUioZaylpnJILKfmw4NC1hNIWXWfaLj62Cw==
+"@heroui/use-aria-overlay@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@heroui/use-aria-overlay/-/use-aria-overlay-2.0.1.tgz#85617f961f35837c0a8900e62c52b41c4975c6dd"
+  integrity sha512-63v+c6AcvXQh1X2YPbqUS930D8gFHxDc/crZsFJGywUe1e317zlfNgOztxhxHJI546SUhKOTXDysX0qvFRZxbQ==
   dependencies:
     "@react-aria/focus" "3.20.5"
     "@react-aria/interactions" "3.25.3"
     "@react-aria/overlays" "3.27.3"
     "@react-types/shared" "3.30.0"
 
-"@heroui/use-callback-ref@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-callback-ref/-/use-callback-ref-2.1.8-beta.4.tgz#b09f9fc16ab91a397606241869589975fc3c9afa"
-  integrity sha512-Elf7h9rM1oaptUorxvTi5a68k84BeA9DisRgbUF6Lnw9za4p2VQQ5KQ/uDb/I6h7i0kKwXTGg5HmKHtdev0V4A==
+"@heroui/use-callback-ref@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-callback-ref/-/use-callback-ref-2.1.8.tgz#c586a609949b7bb2e358f4458998dfc242e0fc84"
+  integrity sha512-D1JDo9YyFAprYpLID97xxQvf86NvyWLay30BeVVZT9kWmar6O9MbCRc7ACi7Ngko60beonj6+amTWkTm7QuY/Q==
   dependencies:
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/use-safe-layout-effect" "2.1.8"
 
-"@heroui/use-clipboard@2.1.9-beta.4":
-  version "2.1.9-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-clipboard/-/use-clipboard-2.1.9-beta.4.tgz#8edffa5743dea14fba61c951b1ff1bd8f12692d6"
-  integrity sha512-mUgILqZtOm9kpcFFCgXoRQ3imv7e3nmcyWkd09xE1K7/gURuFXnMK77sHnS9qV6A2gnE5DwAOQGtlVRfGjOhNw==
+"@heroui/use-clipboard@2.1.9":
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/@heroui/use-clipboard/-/use-clipboard-2.1.9.tgz#09654698b929560f8dd68d2d87cfaa37ffa0ea55"
+  integrity sha512-lkBq5RpXHiPvk1BXKJG8gMM0f7jRMIGnxAXDjAUzZyXKBuWLoM+XlaUWmZHtmkkjVFMX1L4vzA+vxi9rZbenEQ==
 
-"@heroui/use-data-scroll-overflow@2.2.11-beta.4":
-  version "2.2.11-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-data-scroll-overflow/-/use-data-scroll-overflow-2.2.11-beta.4.tgz#4d6ec3d470a00ac48dc44085a651ecc9da0cc396"
-  integrity sha512-lqeBXDsp1lrXkkyuvUtgEIsUtuWN05zzRcb5fyX9sE4OTr+sWAHpoaoia3QPqhu4PtnSZ3radK8rHvGlfvI6wA==
+"@heroui/use-data-scroll-overflow@2.2.11":
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/@heroui/use-data-scroll-overflow/-/use-data-scroll-overflow-2.2.11.tgz#3912758452d1cdd9b7784e7d33a63e980c651f40"
+  integrity sha512-5H7Q31Ub+O7GygbuaNFrItB4VVLGg2wjr4lXD2o414TgfnaSNPNc0Fb6E6A6m0/f6u7fpf98YURoDx+LFkkroA==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/shared-utils" "2.1.10"
 
-"@heroui/use-disclosure@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-disclosure/-/use-disclosure-2.2.14-beta.2.tgz#bb7cd524b89f369490cc49796d71f98a1902da92"
-  integrity sha512-B4cPqSv+nhuFmdKXfOYxaTKsfu23KvnRDhBEKIckwKQTPFgjgHswMA8Yd+jQm4PKbByW4Wkikc3eguHeQu6ncg==
+"@heroui/use-disclosure@2.2.14":
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/@heroui/use-disclosure/-/use-disclosure-2.2.14.tgz#966e5f70fd23f952fb15b9678333166d89bc58d8"
+  integrity sha512-UO6CuSAwYsu2qrzQtAGF1Z+FFg3oEX3Z/0GiGPACreKdlZIzhAQ392VnVXhnNnjSWt5CPpl4S4Pgt2HVmnf/WQ==
   dependencies:
-    "@heroui/use-callback-ref" "2.1.8-beta.4"
+    "@heroui/use-callback-ref" "2.1.8"
     "@react-aria/utils" "3.29.1"
     "@react-stately/utils" "3.10.7"
 
-"@heroui/use-draggable@2.1.14-beta.2":
-  version "2.1.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-draggable/-/use-draggable-2.1.14-beta.2.tgz#765e1ed8529f4304da59d2bd99cf18fbcc5c758b"
-  integrity sha512-7f3iwu51pxGrAnApBjOh/u6nOWsG3zEI2hbruNntP0K4zVFI5SX7HtF+AwelvQTUNEkga6Sr7BVtH10tYh57JA==
+"@heroui/use-draggable@2.1.15":
+  version "2.1.15"
+  resolved "https://registry.yarnpkg.com/@heroui/use-draggable/-/use-draggable-2.1.15.tgz#4f17e40935165981ebf4562edfabe67a6bbc5077"
+  integrity sha512-Mks+pBG15PXRkaonbEjkbG14UeC0mJ9JLXZdYYHDjRDc0tfMChBmOKlC5AsLn9J+nqYE2LsHMY1LOar3uBZRtQ==
   dependencies:
     "@react-aria/interactions" "3.25.3"
 
-"@heroui/use-form-reset@2.0.0-beta.1":
-  version "2.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@heroui/use-form-reset/-/use-form-reset-2.0.0-beta.1.tgz#f7eda46cecab5b0d0241d3e6d70b3866214bdd6b"
-  integrity sha512-Di8809HG7ZTqJ+92MHlNgNT9n7VMWd0nT3Nq4lzlRv+l7Ku6U+doYGxKKej3wpdoEVrxKzH2juhj6SF1yUNWQQ==
+"@heroui/use-form-reset@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@heroui/use-form-reset/-/use-form-reset-2.0.1.tgz#d90eb1dde84310f6bb92615d1446b2099b7ae125"
+  integrity sha512-6slKWiLtVfgZnVeHVkM9eXgjwI07u0CUaLt2kQpfKPqTSTGfbHgCYJFduijtThhTdKBhdH6HCmzTcnbVlAxBXw==
 
-"@heroui/use-image@2.1.11-beta.2":
-  version "2.1.11-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-image/-/use-image-2.1.11-beta.2.tgz#3e733f0163cd9811f65d8cad61410d145b39985c"
-  integrity sha512-zuBVsjU0VRkelIBC9BIYgoHKXyxgwTtZ+vtnL6RjmvBm9m7RDDJM5A2b5xyl9m78KF3T0ylIVScWiBTJzKqR1w==
+"@heroui/use-image@2.1.11":
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/@heroui/use-image/-/use-image-2.1.11.tgz#01153a19d0ccca2216e6d866e0eb910dd7ad7cf9"
+  integrity sha512-zG3MsPvTSqW69hSDIxHsNJPJfkLoZA54x0AkwOTiqiFh5Z+3ZaQvMTn31vbuMIKmHRpHkkZOTc85cqpAB1Ct4w==
   dependencies:
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/use-safe-layout-effect" "2.1.8-beta.4"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/use-safe-layout-effect" "2.1.8"
 
-"@heroui/use-intersection-observer@2.2.14-beta.2":
-  version "2.2.14-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-intersection-observer/-/use-intersection-observer-2.2.14-beta.2.tgz#d314e545db331c020f7cd22bedaa346f2e7d1ad5"
-  integrity sha512-ZBqws//A0xYHC55v0LfsB21Svt7qi+uSgHdRPKD6yzl8fvE6vFy93FauHDAesREpSmK017y4Dsd60vxcr6thrg==
+"@heroui/use-intersection-observer@2.2.14":
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/@heroui/use-intersection-observer/-/use-intersection-observer-2.2.14.tgz#ec025cc6408f8fdce5819c1b73e69d5a300046f1"
+  integrity sha512-qYJeMk4cTsF+xIckRctazCgWQ4BVOpJu+bhhkB1NrN+MItx19Lcb7ksOqMdN5AiSf85HzDcAEPIQ9w9RBlt5sg==
 
-"@heroui/use-is-mobile@2.2.11-beta.2":
-  version "2.2.11-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-is-mobile/-/use-is-mobile-2.2.11-beta.2.tgz#79be53401f033daebdf8d1941ecfd7c8b3114b24"
-  integrity sha512-SY3DrkCIPM+mlYDDm+v/mummL8maP0EG9vvZtP/c6n7qIImshjRd/4Ik1KHtlYuxKO1xGqKm5N8Fmdy8IVLNYw==
+"@heroui/use-is-mobile@2.2.11":
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/@heroui/use-is-mobile/-/use-is-mobile-2.2.11.tgz#420a26894a9aeb13e845f7436dcd82bd5002f216"
+  integrity sha512-ZEEZEihzkhYiKbLiUWNKDrDJYUG1UjSF5N+Q0jGvU0KBS9m+hFQSqkqndyPNB/cf5MeHCgPGAUkm5bDKyEF00g==
   dependencies:
     "@react-aria/ssr" "3.9.9"
 
-"@heroui/use-is-mounted@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-is-mounted/-/use-is-mounted-2.1.8-beta.4.tgz#22bfb76a02c12806258efa4fb1a8ac9b723a8868"
-  integrity sha512-cx4axqJ1Fe0nQ7AkjWmJW7m+uwahLbbZDnMaeNf98uN822tAosDxuPRwdYlJJoul2W9vfdLG9tc1By6qoAETqg==
+"@heroui/use-is-mounted@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-is-mounted/-/use-is-mounted-2.1.8.tgz#8a42f8d99e3641d872c4013044d24449f48ca616"
+  integrity sha512-DO/Th1vD4Uy8KGhd17oGlNA4wtdg91dzga+VMpmt94gSZe1WjsangFwoUBxF2uhlzwensCX9voye3kerP/lskg==
 
-"@heroui/use-measure@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-measure/-/use-measure-2.1.8-beta.4.tgz#eef646c33c92770efbc5669510fe1ac6827a599a"
-  integrity sha512-joX8KNgOJ+dicYMWMagHYXdJyTxWSfTMzmsxMZx5Byx0SwfEqJb4xPDpU7oRNOkc1+2AcFPGTyxFQ+KCJGB5WA==
+"@heroui/use-measure@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-measure/-/use-measure-2.1.8.tgz#9f209eb0a3bd54fd2674540ff8198410d0fc8dc4"
+  integrity sha512-GjT9tIgluqYMZWfAX6+FFdRQBqyHeuqUMGzAXMTH9kBXHU0U5C5XU2c8WFORkNDoZIg1h13h1QdV+Vy4LE1dEA==
 
-"@heroui/use-pagination@2.2.15-beta.2":
-  version "2.2.15-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/use-pagination/-/use-pagination-2.2.15-beta.2.tgz#c40f2f115e43a3294dc8653129f012f575a56a08"
-  integrity sha512-kaP7JQi2Cno/AM3yavMtD0X87LYtNpica29PRRYBUSjf/Y6ncULP/fXX+wFUz90kvn3zcuIX1xHeOuoQMLE9fA==
+"@heroui/use-pagination@2.2.15":
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/@heroui/use-pagination/-/use-pagination-2.2.15.tgz#f9b476e880b6b21df6c2219d612b9178c41191d4"
+  integrity sha512-hTu0gY5BSGch+JW8SDpSG8zI8grYt+EYVS2bn7nrI8vUZQOseNXOmKpiFeshuQP9X129ACZjmEkH7/LMbs4E7Q==
   dependencies:
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/i18n" "3.12.10"
 
-"@heroui/use-resize@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-resize/-/use-resize-2.1.8-beta.4.tgz#64f0831eecf8a4b22ff8b9422a453aa694a47b55"
-  integrity sha512-KHDK00TWS2qmRlgUawJGK0Rqcb+LV5FOfFnYkbCbNjrLCauURGcN5PJmvkUhixagw9EOdpWZmTP/dvdQ9XmvAw==
+"@heroui/use-resize@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-resize/-/use-resize-2.1.8.tgz#bfaf5a82736ebf383134386f92525b3b4c3bd6d7"
+  integrity sha512-htF3DND5GmrSiMGnzRbISeKcH+BqhQ/NcsP9sBTIl7ewvFaWiDhEDiUHdJxflmJGd/c5qZq2nYQM/uluaqIkKA==
 
-"@heroui/use-safe-layout-effect@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-safe-layout-effect/-/use-safe-layout-effect-2.1.8-beta.4.tgz#c6a221acde66bc775daaa3cbd152bd47560d359b"
-  integrity sha512-B5plzjiecWz4Cd+HRwAH9NbuFS5258HCy3yKMsSeKqNmbH/zyXIQYZ+Yc/d8suSS+XvcWibxnAWLIa5pyHDHLw==
+"@heroui/use-safe-layout-effect@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-safe-layout-effect/-/use-safe-layout-effect-2.1.8.tgz#a6798339639a728524185f88473ce24b8d437333"
+  integrity sha512-wbnZxVWCYqk10XRMu0veSOiVsEnLcmGUmJiapqgaz0fF8XcpSScmqjTSoWjHIEWaHjQZ6xr+oscD761D6QJN+Q==
 
-"@heroui/use-scroll-position@2.1.8-beta.4":
-  version "2.1.8-beta.4"
-  resolved "https://registry.yarnpkg.com/@heroui/use-scroll-position/-/use-scroll-position-2.1.8-beta.4.tgz#5425e5de82eedc6de15eb21884c88890e555883c"
-  integrity sha512-Nsg8azfcUoOGpBx8UYRI3AGCJtGcXB82XRk+IDwxuhlgI3HLUR0a1l8C639v9VxZYqgs3lDtmrLPh9DdBaMcjQ==
+"@heroui/use-scroll-position@2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@heroui/use-scroll-position/-/use-scroll-position-2.1.8.tgz#569160b9b00cc37388e99938be5a4a9a46fb5923"
+  integrity sha512-NxanHKObxVfWaPpNRyBR8v7RfokxrzcHyTyQfbgQgAGYGHTMaOGkJGqF8kBzInc3zJi+F0zbX7Nb0QjUgsLNUQ==
 
-"@heroui/use-viewport-size@2.0.0-beta.1":
-  version "2.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@heroui/use-viewport-size/-/use-viewport-size-2.0.0-beta.1.tgz#a06bdb770899b23549c88a790e532f94c46400b4"
-  integrity sha512-uq/YnQ6DCagynmLycPM2nGzhJF2cUsUF5Yzic+o/WqKjBXNAyWChYGlkl2S1XGc9dN/uETi2O2Rfp6SZQK9tcQ==
+"@heroui/use-viewport-size@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@heroui/use-viewport-size/-/use-viewport-size-2.0.1.tgz#3a2a5029b33b11bf6f4c7eb96b7580996f08b860"
+  integrity sha512-blv8BEB/QdLePLWODPRzRS2eELJ2eyHbdOIADbL0KcfLzOUEg9EiuVk90hcSUDAFqYiJ3YZ5Z0up8sdPcR8Y7g==
 
-"@heroui/user@2.2.18-beta.2":
-  version "2.2.18-beta.2"
-  resolved "https://registry.yarnpkg.com/@heroui/user/-/user-2.2.18-beta.2.tgz#3029478bedbb781e1cf809af4ba94f0234d5a92a"
-  integrity sha512-4W9ToE+N+zKiC4iP6i4AOWCjcDE7+nsg5FyL5ETtD368LNsXfaBZ8UD8OqvNxtZbA8QxdWOAjfVy7g6GwSdFkQ==
+"@heroui/user@2.2.19":
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@heroui/user/-/user-2.2.19.tgz#aa26fb904d5bd01bcb5482b2a3dc8a560676d118"
+  integrity sha512-wAyjh7IVaMTz3TyTg4R6SsbtppKMldjJT0j0FSbvWttpXqIzjhbii4CQMVb/tpGVIdfvjbxIbAS2i2LF3oHQmA==
   dependencies:
-    "@heroui/avatar" "2.2.18-beta.2"
-    "@heroui/react-utils" "2.1.12-beta.2"
-    "@heroui/shared-utils" "2.1.10-beta.4"
+    "@heroui/avatar" "2.2.19"
+    "@heroui/react-utils" "2.1.12"
+    "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
-
-"@iconify-json/bi@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@iconify-json/bi/-/bi-1.2.4.tgz#c8b265ef234ebfc5df2bc70c58ee94f1906c7856"
-  integrity sha512-ipD8nm86ovjgXGEJj/B5oSJGaEIsGgzrKqNT1ei66nRExzK6Mgh4an/efG30Xtvp2eQjz9eWN5kHmadbnjUmzw==
-  dependencies:
-    "@iconify/types" "*"
 
 "@iconify-json/devicon-plain@^1.2.22":
   version "1.2.28"
   resolved "https://registry.yarnpkg.com/@iconify-json/devicon-plain/-/devicon-plain-1.2.28.tgz#39affb81b922a93a4ced10a39b296eb4d91be7eb"
   integrity sha512-8/UVoq0acj0uVBjK+fm4Q4WaFf6SPie+NWqvE+knNkSRbV2kAI3H1kPuc6wDDic2ZUEXU7J5Mv7fXZ4aFgwErA==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/devicon@^1.2.31":
+  version "1.2.31"
+  resolved "https://registry.yarnpkg.com/@iconify-json/devicon/-/devicon-1.2.31.tgz#fd953bf4aa0343652797b0f90c6d949dbea58b84"
+  integrity sha512-rJKKYzPgO5aYrUPY4DZpcNJ3QxmnO8PwM4kSGuPMygPhDvl94iAoKiQtt3jE+uOM4mQOxxW1Jtspz3rGjJyxYg==
   dependencies:
     "@iconify/types" "*"
 
@@ -1699,6 +1702,13 @@
   version "1.2.40"
   resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.2.40.tgz#9884000e80e8adacefeb4e67cedbd8a346c0cb8c"
   integrity sha512-sr2fbrS8rRhJNap41ucTStctxTcWQ3lcsHkY3loc4Yt1KNOne6D+l1JTOQCDj9f/VrUktVIEdaRQoYTvqfuSSw==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/skill-icons@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@iconify-json/skill-icons/-/skill-icons-1.2.0.tgz#7914e645b4fdd95da3622397fdc2f5653feeb232"
+  integrity sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==
   dependencies:
     "@iconify/types" "*"
 

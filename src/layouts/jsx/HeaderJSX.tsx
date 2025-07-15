@@ -1,7 +1,6 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
-    
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -21,7 +20,7 @@ export default function App(props:any) {
 
   const createRainContainer = () => {
     const rainContainer = document.createElement('div');
-    rainContainer.className = 'rain-container';
+    rainContainer.className = 'rain-container opacity-30';
     for (let i = 1; i <= 30; i++) {
       const rainLine = document.createElement('div');
       rainLine.className = 'rain-line';
@@ -38,45 +37,14 @@ export default function App(props:any) {
       <NavbarBrand>
         <Link
           href="/"
-          className="text-2xl font-bold"
+          className="text-2xl font-bold animated-gradient"
           underline="none"
           color="none"
         >
           eitaar.dev
         </Link>
       </NavbarBrand>
-      {
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">        
-          <NavbarItem>
-            <Link
-            className="cursor-pointer"
-            color="primary" 
-            underline="hover"
-            onPressEnd={()=>{
-              const aboutElement = document.getElementById("ABOUT");
-              gsap.to(window, { duration: 0.2, scrollTo: {y:'#ABOUT', 
-                offsetY : aboutElement ? aboutElement.offsetHeight : 0,
-              }});
-            }}
-            >
-              About
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link 
-            color="primary"
-            className="cursor-pointer"
-            underline="hover"
-            onPressEnd={()=>{
-              const projectsElement = document.getElementById("PROJECTS");
-              gsap.to(window, { duration: 0.2, scrollTo: {y:'#PROJECTS', 
-                offsetY : projectsElement ? projectsElement.offsetHeight : 0,
-              }});
-            }}
-            >
-              Projects
-            </Link>
-          </NavbarItem>
+        <NavbarContent justify="center">
           <NavbarItem>
             <Link 
               color="primary"
@@ -88,7 +56,6 @@ export default function App(props:any) {
             </Link>
           </NavbarItem>
         </NavbarContent>
-      }
       <NavbarContent justify="end">        
         <NavbarItem>
           <Button

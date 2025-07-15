@@ -5,8 +5,8 @@ import avatar from "../../../assets/img/avatar.webp";
 import AboutJSX from '../jsx/AboutJSX';
 ---
 <AboutJSX client:visible>
-  <Image src={avatar} alt="Avatar" slot="avatarImg"  width={300} class="lg:w-40 mx-auto bg-transparent"/>
-  <Icon name="ri:twitter-x-fill" slot="xIcon" class="h-6 w-6"/>
-  <Icon name="ri:github-fill" slot="githubIcon" class="h-6 w-6"/>
-  <Icon name="ri:discord-fill" slot="discordIcon" class="h-6 w-6"/>
+  <Image src={avatar} alt="Avatar" slot="avatarImg"  width={300} class="w-40 lg:w-50 bg-transparent dark:opacity-75 rounded-full shadow-lg border-slate-200 border-2"/>
+  <Icon name="ri:twitter-x-fill" slot="xIcon" class="h-7 w-7"/>
+  <Icon name="ri:github-fill" slot="githubIcon" class="h-7 w-7"/>
+  <Icon name="ri:discord-fill" slot="discordIcon" class="h-7 w-7 text-[#5662f6]"/>
 </AboutJSX>

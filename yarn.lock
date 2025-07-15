@@ -1670,17 +1670,17 @@
     "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
 
-"@iconify-json/bi@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@iconify-json/bi/-/bi-1.2.4.tgz#c8b265ef234ebfc5df2bc70c58ee94f1906c7856"
-  integrity sha512-ipD8nm86ovjgXGEJj/B5oSJGaEIsGgzrKqNT1ei66nRExzK6Mgh4an/efG30Xtvp2eQjz9eWN5kHmadbnjUmzw==
-  dependencies:
-    "@iconify/types" "*"
-
 "@iconify-json/devicon-plain@^1.2.22":
   version "1.2.28"
   resolved "https://registry.yarnpkg.com/@iconify-json/devicon-plain/-/devicon-plain-1.2.28.tgz#39affb81b922a93a4ced10a39b296eb4d91be7eb"
   integrity sha512-8/UVoq0acj0uVBjK+fm4Q4WaFf6SPie+NWqvE+knNkSRbV2kAI3H1kPuc6wDDic2ZUEXU7J5Mv7fXZ4aFgwErA==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/devicon@^1.2.31":
+  version "1.2.31"
+  resolved "https://registry.yarnpkg.com/@iconify-json/devicon/-/devicon-1.2.31.tgz#fd953bf4aa0343652797b0f90c6d949dbea58b84"
+  integrity sha512-rJKKYzPgO5aYrUPY4DZpcNJ3QxmnO8PwM4kSGuPMygPhDvl94iAoKiQtt3jE+uOM4mQOxxW1Jtspz3rGjJyxYg==
   dependencies:
     "@iconify/types" "*"
 
@@ -1702,6 +1702,13 @@
   version "1.2.40"
   resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.2.40.tgz#9884000e80e8adacefeb4e67cedbd8a346c0cb8c"
   integrity sha512-sr2fbrS8rRhJNap41ucTStctxTcWQ3lcsHkY3loc4Yt1KNOne6D+l1JTOQCDj9f/VrUktVIEdaRQoYTvqfuSSw==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify-json/skill-icons@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@iconify-json/skill-icons/-/skill-icons-1.2.0.tgz#7914e645b4fdd95da3622397fdc2f5653feeb232"
+  integrity sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==
   dependencies:
     "@iconify/types" "*"
 

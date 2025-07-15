@@ -22,7 +22,7 @@ export default function App(props:any) {
 
   const createRainContainer = () => {
     const rainContainer = document.createElement('div');
-    rainContainer.className = 'rain-container';
+    rainContainer.className = 'rain-container opacity-30';
     for (let i = 1; i <= 30; i++) {
       const rainLine = document.createElement('div');
       rainLine.className = 'rain-line';

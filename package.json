@@ -13,7 +13,7 @@
     "@astrojs/cloudflare": "^12.5.3",
     "@astrojs/mdx": "^4.2.6",
     "@astrojs/react": "^4.3.0",
-    "@heroui/react": "^2.8.0-beta.6",
+    "@heroui/react": "^2.8.0",
     "@iconify-json/bi": "^1.2.4",
     "@iconify-json/devicon-plain": "^1.2.22",
     "@iconify-json/mdi": "^1.2.3",

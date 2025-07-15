@@ -1,6 +1,7 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
+import Title from "../../components/index/astro/Title.astro";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -38,7 +39,7 @@ export default function App(props:any) {
       <NavbarBrand>
         <Link
           href="/"
-          className="text-2xl font-bold"
+          className="text-2xl font-bold animated-gradient"
           underline="none"
           color="none"
         >

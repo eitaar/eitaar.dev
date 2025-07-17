@@ -41,7 +41,7 @@ const colors: Record<string, string> = {
 
 export default function App({ stats, stats2, children }: Props) {
   return (
-    <Card className="w-full  flex-2 flex justify-center" isBlurred={false} >
+    <Card className="w-full flex-2 flex justify-center CARD" isBlurred={false} >
       <CardHeader className="flex items-center justify-center gap-1 pb-0 ">
         <div>{children}</div>
         <p className="text-3xl font-Quantico font-bold text-center">GitHub Stats</p>

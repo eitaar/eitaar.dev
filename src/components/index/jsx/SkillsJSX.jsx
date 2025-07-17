@@ -3,7 +3,7 @@ import {Card, CardHeader, CardBody} from "@heroui/react";
 
 export default function App(props) {
   return (
-    <Card className="w-full h-full flex-1 flex justify-center" isBlurred={false}>
+    <Card className="w-full h-full flex-1 flex justify-center CARD" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1">
         <div>{props.skillIcon}</div>
         <p className="text-3xl font-Quantico font-bold text-center">Skills</p>

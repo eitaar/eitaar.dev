@@ -8,11 +8,13 @@ interface ProjectProps {
   github?: string;
   page?: string;
   children: ReactNode;
+  githubIcon?: ReactNode;
+  pageIcon?: ReactNode;
 }
 
-export default function ProjectJSX({ title, stack, description, github, page, children }: ProjectProps) {
+export default function ProjectJSX({ title, stack, description, github, page, children, githubIcon, pageIcon}: ProjectProps) {
   return (
-    <Card className="CARD basis-full md:basis-[39%] lg:basis-[32%] xl:basis-[24%] font-Quantico text-sm lg:text-md">
+    <Card className="basis-full md:basis-[39%] lg:basis-[32%] xl:basis-[24%] font-Quantico text-sm lg:text-md">
       <CardHeader>
         {children}
       </CardHeader>
@@ -22,7 +24,7 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
       <CardBody className="pt-0 pb-2">
         <div className="flex flex-wrap gap-1 justify-center"> 
           {stack.map((item, index) => (
-            <Chip key={index} color="primary" size="sm" variant="flat">
+            <Chip key={index} color="success" size="sm" variant="flat">
               {item}
             </Chip>
           ))}
@@ -35,23 +37,25 @@ export default function ProjectJSX({ title, stack, description, github, page, ch
         {github && (
           <Button
             color="secondary"
-            variant="flat"
-            className="w-1/4 ml-auto"
+            variant="light"
+            className="ml-auto"
             href={github}
             target="_blank"
             as="a"
+            startContent={githubIcon}
           >
             Github
           </Button>
         )}
         {page && (
           <Button
-            color="success"
+            color="primary"
             variant="flat"
-            className={github ? "w-1/4" : "w-1/4   ml-auto"}
+            className={github ? "" : "ml-auto"}
             href={page}
             target="_blank"
             as="a"
+            startContent={pageIcon}
           >
             Visit
           </Button>

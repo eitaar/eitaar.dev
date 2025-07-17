@@ -1,6 +1,7 @@
 ---
 import ProjectJSX from "../jsx/ProjectJSX";
 import {Image} from "astro:assets";
+import {Icon} from "astro-icon/components";
 import eitaar_dev from "../../../assets/img/eitaar_dev.png";
 import wahoot from "../../../assets/img/wahoot.png";
 import get_github_api from "../../../assets/img/get_github_api.png";
@@ -48,14 +49,16 @@ const projects: Project[] = [
       description={project.description}
       github={project.github}
       page={project.page}
-    >
-      <Image
-        src={project.image}
-        alt={project.title}
-        width={960}
-        height={540}
-        class="w-full h-auto rounded-lg"
-        loading="lazy"
+      >
+        <Icon name="ri:github-fill" slot="githubIcon" class="h-3/5 w-auto"/>
+        <Icon name="mdi:open-in-new" slot="pageIcon" class="h-3/5 w-auto"/>
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={512}
+          height={288}
+          class="w-full h-auto rounded-lg"
+          loading="lazy"
         />
     </ProjectJSX>
   ))}

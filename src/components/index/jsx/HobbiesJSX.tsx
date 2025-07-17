@@ -15,7 +15,7 @@ export default function HobbiesJSX(props: HobbiesJSXProps) {
   const { hobbies } = props;
   
   return (
-    <Card className="w-full flex-1 font-Quantico" isBlurred={false}>
+    <Card className="w-full flex-1 font-Quantico CARD" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1">
         <div>{props.hobbyIcon}</div>
         <p className="text-3xl font-Quantico font-bold text-center">Hobbies</p>

@@ -19,7 +19,7 @@
 
 @theme {
   --font-Quantico: Quantico, sans-serif;
-  --tracking-tightest: -0.075em; 
+  --tracking-tightest: -0.075em;
 }
 
 @plugin './hero.ts';
@@ -119,12 +119,13 @@
 }
 
 .CARD {
-  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.75s ease;
+  transition: transform 0.75s ease, box-shadow 0.75s ease, border-color 0.75s ease;
   border: 2px solid transparent;
 }
 
 .CARD:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 111, 238, 0.1), 0 6px 6px rgba(0, 111, 238, 0.1);
-  border-color: #006FEE;
+  transform: translateY(-4px);
+  box-shadow: 0 0 100px 15px rgba(0, 111, 238, 0.125);
+  border-color: #338ef7; /*color-primary-400 */
+  z-index: 10;
 }

@@ -14,6 +14,9 @@ export default function App(props) {
             <Button
               isIconOnly={true}
               variant="light"
+              as="a"
+              href="https://github.com/eitaar"
+              target="_blank"
             >
               {props.githubIcon}
             </Button>

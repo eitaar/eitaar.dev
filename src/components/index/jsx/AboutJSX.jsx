@@ -5,7 +5,7 @@ export default function App(props) {
       <div className="flex gap-3 flex-row items-center">
         {props.avatarImg}
         <div className="flex items-center flex-col gap-1">
-          <h2 className="text-5xl font-bold font-Quantico text-success-500 tracking-tighter">eitaar</h2>
+          <h2 className="text-5xl font-bold font-Quantico text-success-600 tracking-tighter">eitaar</h2>
           <Chip
             variant="flat"
             color="primary"
@@ -17,18 +17,26 @@ export default function App(props) {
               as="a"
               href="https://github.com/eitaar"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
             >
               {props.githubIcon}
             </Button>
             <Button
               isIconOnly={true}
               variant="light"
+              as="a"
+              href="https://x.com/eitaar0"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
             >
               {props.xIcon}
             </Button>
             <Button
               isIconOnly={true}
               variant="light"
+              aria-label="Discord"
             >
               {props.discordIcon}
             </Button>

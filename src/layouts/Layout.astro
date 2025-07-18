@@ -4,8 +4,8 @@ import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 import "../styles/global.css";
-import articleStyles from '../styles/article.css';
-const isArticlePage = Astro.url.pathname.startsWith('/articles');
+
+const isArticlePage = Astro.url.pathname.startsWith('/articles')? true : false;
 ---
 
 <html lang="en">
@@ -32,7 +32,7 @@ const isArticlePage = Astro.url.pathname.startsWith('/articles');
     <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
     <!-- Load article.css only for article pages -->
-    {isArticlePage && <link rel="stylesheet" href={articleStyles} />}
+    {isArticlePage && <link rel="stylesheet" href="/src/styles/article.css" />}
 		<title>{title}</title>
   </head>  
   <body>

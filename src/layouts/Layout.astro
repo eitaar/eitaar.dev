@@ -4,7 +4,8 @@ import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 import "../styles/global.css";
-import { ClientRouter } from 'astro:transitions';
+
+const isArticlePage = Astro.url.pathname.startsWith('/articles');
 ---
 
 <html lang="en">
@@ -30,14 +31,18 @@ import { ClientRouter } from 'astro:transitions';
     <meta property="og:url" content="https://eitaar.dev/" />
     <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
+    <!-- Load article.css only for article pages -->
+    {isArticlePage && <link rel="stylesheet" href={articleStyles} />}
 		<title>{title}</title>
   </head>  
   <body>
-    <ClientRouter />
     <!-- Digital Rain Background -->
     {
       showRain &&
       <div class="rain-container opacity-30">
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
+        <div class="rain-line"></div>
         <div class="rain-line"></div>
         <div class="rain-line"></div>
         <div class="rain-line"></div>

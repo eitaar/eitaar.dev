@@ -20,5 +20,4 @@ export default function App(props) {
       </CardBody>
     </Card>
   );
-  z;
 }

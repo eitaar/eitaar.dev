@@ -5,14 +5,14 @@ import Interests from '../components/index/astro/Interests.astro';
 import Skills from '../components/index/astro/Skills.astro';
 import Stats from '../components/index/astro/Stats.astro';
 import Hobbies from '../components/index/astro/Hobbies.astro';
-import Title from '../components/index/astro/Title.astro';
 import Header from '../layouts/astro/Header.astro';
 import Projects from '../components/index/astro/Projects.astro';
 ---
-<Layout title="eitaar.dev" showRain={true} >
-  <Header class="fixed inset-x-0 top-0 z-50"/>
+
+<Layout title="eitaar.dev" showRain={true}>
+  <Header class="fixed inset-x-0 top-0 z-50" />
   <div class="w-9/10 mx-auto">
-    <About/>
+    <About />
   </div>
   <div>
     <h2 class="font-Quantico text-3xl text-center font-bold py-4" id="ABOUT">Information</h2>
@@ -22,7 +22,7 @@ import Projects from '../components/index/astro/Projects.astro';
           <div class="flex flex-col lg:flex-row gap-3 flex-1">
             <Skills />
             <Interests />
-          </div>      
+          </div>
           <div class="flex flex-col lg:flex-row gap-3 flex-2">
             <Stats />
             <Hobbies />
@@ -38,4 +38,4 @@ import Projects from '../components/index/astro/Projects.astro';
       <Projects />
     </div>
   </div>
-</Layout> 
+</Layout>

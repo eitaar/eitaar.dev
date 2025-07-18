@@ -1,5 +1,4 @@
-import {Card, CardHeader, CardBody} from "@heroui/react";
-
+import { Card, CardHeader, CardBody } from '@heroui/react';
 
 export default function App(props) {
   return (
@@ -12,7 +11,7 @@ export default function App(props) {
         <div>{props.jsIcon}</div>
         <div>{props.tsIcon}</div>
         <div>{props.nuxtIcon}</div>
-        <div>{props.vueIcon}</div>  
+        <div>{props.vueIcon}</div>
         <div>{props.astroIcon}</div>
         <div>{props.twIcon}</div>
         <div>{props.pixIcon}</div>
@@ -20,5 +19,6 @@ export default function App(props) {
         <div>{props.mdIcon}</div>
       </CardBody>
     </Card>
-  );z
+  );
+  z;
 }

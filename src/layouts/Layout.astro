@@ -1,5 +1,5 @@
 ---
-const {title, Navbar, showRain} = Astro.props;
+const { title, Navbar, showRain } = Astro.props;
 import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
@@ -10,14 +10,14 @@ import '../styles/global.css';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="eitaar.dev" />    
+    <meta name="description" content="eitaar.dev" />
     <script is:inline>
-      if (localStorage.getItem("heroui-theme") === null) {
-        document.documentElement.setAttribute("heroui-theme", "light");
-        document.documentElement.setAttribute("class", "light");
+      if (localStorage.getItem('heroui-theme') === null) {
+        document.documentElement.setAttribute('heroui-theme', 'light');
+        document.documentElement.setAttribute('class', 'light');
       } else {
-        document.documentElement.setAttribute("heroui-theme", localStorage.getItem("heroui-theme"));
-        document.documentElement.setAttribute("class", localStorage.getItem("heroui-theme"));
+        document.documentElement.setAttribute('heroui-theme', localStorage.getItem('heroui-theme'));
+        document.documentElement.setAttribute('class', localStorage.getItem('heroui-theme'));
       }
     </script>
     <!-- Open Graph Protocol (OGP) meta tags -->
@@ -25,62 +25,26 @@ import '../styles/global.css';
     <meta property="og:description" content="eitaar's website" />
     <meta property="og:image" content="https://eitaar.dev/avatar.webp" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="eitaar" />    
+    <meta property="og:site_name" content="eitaar" />
     <meta property="og:url" content="https://eitaar.dev/" />
     <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
     <title>{title}</title>
-  </head>  
+  </head>
   <body>
     <!-- Digital Rain Background -->
     {
-      showRain &&
-      <div class="rain-container opacity-30">
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-      </div>
+      showRain && (
+        <div class="rain-container opacity-30">
+          {Array.from({ length: 39 }).map(() => (
+            <div class="rain-line" />
+          ))}
+        </div>
+      )
     }
     <HeroUIProvider>
       {Navbar && <Header />}
-      <slot/>
-    </HeroUIProvider>  
+      <slot />
+    </HeroUIProvider>
   </body>
 </html>
-

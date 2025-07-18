@@ -1,4 +1,4 @@
-import { Chip, Button } from "@heroui/react";
+import { Chip, Button, Popover, PopoverTrigger, PopoverContent } from "@heroui/react";
 export default function App(props) {
   return (
     <div className="flex items-center justify-center gap-5 lg:max-w-2/5 h-full mx-auto">
@@ -33,13 +33,23 @@ export default function App(props) {
             >
               {props.xIcon}
             </Button>
-            <Button
-              isIconOnly={true}
-              variant="light"
-              aria-label="Discord"
-            >
-              {props.discordIcon}
-            </Button>
+            <Popover placement="bottom" showArrow={true}>
+              <PopoverTrigger>
+                <Button
+                  isIconOnly={true}
+                  variant="light"
+                  aria-label="Discord"
+                  onPressEnd={() => {
+                    navigator.clipboard.writeText("eitaar");
+                  }}
+                >
+                  {props.discordIcon}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <p className="text-sm">Copied!</p>
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
       </div>

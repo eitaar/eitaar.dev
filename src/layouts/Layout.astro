@@ -32,16 +32,7 @@ import '../styles/global.css';
     <title>{title}</title>
   </head>
   <body>
-    <!-- Digital Rain Background -->
-    {
-      showRain && (
-        <div class="rain-container opacity-30">
-          {Array.from({ length: 39 }).map(() => (
-            <div class="rain-line" />
-          ))}
-        </div>
-      )
-    }
+    <!-- add CSS Background animation here-->
     <HeroUIProvider>
       {Navbar && <Header />}
       <slot />

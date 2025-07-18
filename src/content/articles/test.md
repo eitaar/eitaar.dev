@@ -1,11 +1,12 @@
 ---
-title: "astro"
+title: 'astro'
 date: 2025-04-14
-tags: ["Astro", "Markdown" ]
-emoji: "😎"
+tags: ['Astro', 'Markdown']
+emoji: '😎'
 ---
 
 ## Lorem ipsum dolor sit amet consectetur adipiscing elit
+
 ```js title="isEven.js"
 function isEven(num) {
   return num % 2 === 0;
@@ -27,7 +28,6 @@ as
 bs
 
 cs
-
 
 ds
 
@@ -72,6 +72,7 @@ ys
 z
 
 ## Lorem ipsum dolor sit amet consectetur adipiscing elit
-```js:apple.js
- const grape = "Grape 🍇";
+
+```js title="apple.js"
+const grape = 'Grape 🍇';
 ```

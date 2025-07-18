@@ -33,7 +33,7 @@ export default function App(props: any) {
     setIsRainVisible(!isRainVisible);
   };
   return (
-    <Navbar maxWidth="full" position="sticky" id="navbar" className="font-Quantico">
+    <Navbar maxWidth="full" position="sticky" id="navbar" className="NAVBAR font-Quantico">
       <NavbarBrand>
         <Link
           href="/"

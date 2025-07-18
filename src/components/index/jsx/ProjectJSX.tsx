@@ -23,7 +23,7 @@ export default function ProjectJSX({
   pageIcon,
 }: ProjectProps) {
   return (
-    <Card className="lg:text-md basis-full font-Quantico text-sm md:basis-[39%] lg:basis-[32%] xl:basis-[24%]">
+    <Card className="CARD lg:text-md basis-full font-Quantico text-sm md:basis-[39%] lg:basis-[32%] xl:basis-[24%]">
       <CardHeader>{children}</CardHeader>
       <CardBody className="pt-0 pb-2">
         <h2 className="text-center text-2xl font-bold">{title}</h2>

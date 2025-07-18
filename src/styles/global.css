@@ -51,7 +51,9 @@
   transition:
     transform 0.75s ease,
     box-shadow 0.75s ease,
-    border-color 0.75s ease;
+    border-color 0.75s ease,
+    background-color 0.1s linear,
+    color 0.1s linear;
   border: 2px solid transparent;
 }
 

@@ -32,44 +32,44 @@ import '../styles/drop.css';
     <link rel="icon" type="image/png" href={avatarIcon.src} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="">
     <!-- add CSS Background animation here-->
-    {showRain && (
-      <div class="rain-container">
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-      </div>
-    )}
-    <HeroUIProvider>
-      {Navbar && <Header />}
-      <slot />
-    </HeroUIProvider>
+    {
+      showRain && (
+        <div class="rain-container">
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+          <div class="rain" />
+        </div>
+      )
+    }
+    {Navbar && <Header />}
+    <slot class="" />
   </body>
 </html>

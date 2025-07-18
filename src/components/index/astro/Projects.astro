@@ -1,10 +1,10 @@
 ---
-import ProjectJSX from "../jsx/ProjectJSX";
-import {Image} from "astro:assets";
-import {Icon} from "astro-icon/components";
-import eitaar_dev from "../../../assets/img/eitaar_dev.png";
-import wahoot from "../../../assets/img/wahoot.png";
-import get_github_api from "../../../assets/img/get_github_api.png";
+import ProjectJSX from '../jsx/ProjectJSX';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import eitaar_dev from '../../../assets/img/eitaar_dev.png';
+import wahoot from '../../../assets/img/wahoot.png';
+import get_github_api from '../../../assets/img/get_github_api.png';
 interface Project {
   title: string;
   stack: string[];
@@ -16,50 +16,54 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Personal Portfolio",
-    stack: ["Astro", "React", "HeroUI", "Tailwind CSS", "TypeScript"],
-    description: "My personal portfolio website built with Astro, showcasing my skills and projects.",
-    github: "https://github.com/eitaar/eitaar.dev",
-    page: "https://eitaar.dev",
-    image: eitaar_dev
+    title: 'Personal Portfolio',
+    stack: ['Astro', 'React', 'HeroUI', 'Tailwind CSS', 'TypeScript'],
+    description:
+      'My personal portfolio website built with Astro, showcasing my skills and projects.',
+    github: 'https://github.com/eitaar/eitaar.dev',
+    page: 'https://eitaar.dev',
+    image: eitaar_dev,
   },
   {
-    title: "Wahoot",
-    stack: ["Nuxt", "Vue", "JavaScript"],
-    description: "An unofficial third-party Kahoot client built using Nuxt. and custom library.",
-    github: "https://github.com/eitaar/wahoot",
-    page: "https://wahoot.eitaar.dev",
-    image: wahoot
+    title: 'Wahoot',
+    stack: ['Nuxt', 'Vue', 'JavaScript'],
+    description: 'An unofficial third-party Kahoot client built using Nuxt. and custom library.',
+    github: 'https://github.com/eitaar/wahoot',
+    page: 'https://wahoot.eitaar.dev',
+    image: wahoot,
   },
   {
-    title: "GitHub Stats API",
-    stack: ["Hono", "TypeScript"],
+    title: 'GitHub Stats API',
+    stack: ['Hono', 'TypeScript'],
     description: "A simple API to fetch GitHub user's stats, built with Hono and TypeScript.",
     image: get_github_api,
-    page: "https://get-github-stats.eitaar.workers.dev/eitaar",
-  }
-]
+    page: 'https://get-github-stats.eitaar.workers.dev/eitaar',
+  },
+];
 ---
-<div class="w-full flex flex-wrap gap-3 justify-center">
-  {projects.map((project) => (
-    <ProjectJSX
-      client:visible
-      title={project.title}
-      stack={project.stack}
-      description={project.description}
-      github={project.github}
-      page={project.page}
+
+<div class="flex w-full flex-wrap justify-center gap-3">
+  {
+    projects.map((project) => (
+      <ProjectJSX
+        client:visible
+        title={project.title}
+        stack={project.stack}
+        description={project.description}
+        github={project.github}
+        page={project.page}
       >
-        <Icon name="ri:github-fill" slot="githubIcon" class="h-3/5 w-auto"/>
-        <Icon name="mdi:open-in-new" slot="pageIcon" class="h-3/5 w-auto"/>
+        <Icon name="ri:github-fill" slot="githubIcon" class="h-3/5 w-auto" />
+        <Icon name="mdi:open-in-new" slot="pageIcon" class="h-3/5 w-auto" />
         <Image
           src={project.image}
           alt={project.title}
           width={512}
           height={288}
-          class="w-full h-auto rounded-lg"
+          class="h-auto w-full rounded-lg"
           loading="lazy"
         />
-    </ProjectJSX>
-  ))}
+      </ProjectJSX>
+    ))
+  }
 </div>

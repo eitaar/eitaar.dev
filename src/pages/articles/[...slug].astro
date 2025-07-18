@@ -3,23 +3,30 @@ import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
   const blogEntries = await getCollection('articles');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
+
 <ArticleLayout title={entry.data.title} Navbar={true}>
-  <article class="prose prose-sm sm:prose lg:prose-lg prose-indigo dark:prose-invert w-9/10 mx-auto bg-background font-Quantico">
+  <article
+    class="prose prose-sm sm:prose lg:prose-lg prose-indigo dark:prose-invert mx-auto w-9/10 bg-background font-Quantico"
+  >
     <h1>{entry.data.title}</h1>
     <p class="text-sm text-gray-500 dark:text-gray-400">
-      {entry.data.date.toLocaleDateString('en-UK', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      })}
-    <Content/>
-  </article>
-</ArticleLayout>
+      {
+        entry.data.date.toLocaleDateString('en-UK', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })
+      }
+      <Content />
+    </p>
+  </article></ArticleLayout
+>

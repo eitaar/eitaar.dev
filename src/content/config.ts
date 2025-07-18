@@ -7,8 +7,8 @@ const articleCollection = defineCollection({
     date: z.date(),
     title: z.string(),
     tags: z.array(z.string()),
-    emoji: z.string()
-  })
+    emoji: z.string(),
+  }),
 });
 
 export const collections = {

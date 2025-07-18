@@ -1,13 +1,13 @@
-import {Card, CardHeader, CardBody} from "@heroui/react";
+import { Card, CardHeader, CardBody } from '@heroui/react';
 
 export default function App(props) {
   return (
-    <Card className="w-full h-full flex-1 flex justify-center CARD" isBlurred={false}>
+    <Card className="CARD flex h-full w-full flex-1 justify-center" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1">
         <div>{props.interestIcon}</div>
-        <p className="text-3xl font-Quantico font-bold text-center">Interests</p>
+        <p className="text-center font-Quantico text-3xl font-bold">Interests</p>
       </CardHeader>
-      <CardBody className="flex flex-wrap flex-row gap-2 w-full items-start justify-center">
+      <CardBody className="flex w-full flex-row flex-wrap items-start justify-center gap-2">
         <div>{props.ardIcon}</div>
         <div>{props.cppIcon}</div>
         <div>{props.rustIcon}</div>

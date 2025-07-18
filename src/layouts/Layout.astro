@@ -32,7 +32,7 @@ const isArticlePage = Astro.url.pathname.startsWith('/articles');
     <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
     <!-- Load article.css only for article pages -->
-    {isArticlePage && <link rel="stylesheet" href="/src/styles/article.css" />}
+    {isArticlePage && <link rel="stylesheet" href={articleStyles} />}
 		<title>{title}</title>
   </head>  
   <body>

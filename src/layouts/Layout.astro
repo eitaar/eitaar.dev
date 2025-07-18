@@ -5,7 +5,7 @@ import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
 import "../styles/global.css";
 
-const isArticlePage = Astro.url.pathname.startsWith('/article/');
+const isArticlePage = Astro.url.pathname.startsWith('/articles')? true : false;
 ---
 
 <html lang="en">

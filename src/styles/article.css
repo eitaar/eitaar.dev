@@ -1,1 +1,27 @@
+@import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: 'Quantico';
+  src: url(/fonts/quantico.woff2) format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/quantico-bold.woff2) format('woff2'); 
+}
+
+@theme {
+  --font-Quantico: Quantico, sans-serif;
+  --tracking-tightest: -0.075em;
+}
+
+@plugin './hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx,astro}';
+@custom-variant dark (&:is(.dark *));

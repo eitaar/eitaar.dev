@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody, Progress, Divider } from "@heroui/react";
+import { Card, CardHeader, CardBody, Progress } from "@heroui/react";
 
 type Language = {
   name: string;

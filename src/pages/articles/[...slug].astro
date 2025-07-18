@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
   const blogEntries = await getCollection('articles');
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<Layout title={entry.data.title} Navbar={true}>
+<ArticleLayout title={entry.data.title} Navbar={true}>
   <article class="prose prose-sm sm:prose lg:prose-lg prose-indigo dark:prose-invert w-9/10 mx-auto bg-background font-Quantico">
     <h1>{entry.data.title}</h1>
     <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -22,4 +22,4 @@ const { Content } = await entry.render();
       })}
     <Content/>
   </article>
-</Layout>
+</ArticleLayout>

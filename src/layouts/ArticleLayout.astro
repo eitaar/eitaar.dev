@@ -3,7 +3,7 @@ const {title, Navbar, showRain} = Astro.props;
 import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
-import '../styles/global.css';
+import '../styles/article.css';
 ---
 
 <html lang="en">
@@ -36,45 +36,9 @@ import '../styles/global.css';
     {
       showRain &&
       <div class="rain-container opacity-30">
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
-        <div class="rain-line"></div>
+        {Array.from({ length: 39 }).map(() => (
+          <div class="rain-line"></div>
+        ))}
       </div>
     }
     <HeroUIProvider>
@@ -83,4 +47,3 @@ import '../styles/global.css';
     </HeroUIProvider>  
   </body>
 </html>
-

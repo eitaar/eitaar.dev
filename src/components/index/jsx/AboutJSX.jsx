@@ -40,7 +40,11 @@ export default function App(props) {
                   variant="light"
                   aria-label="Discord"
                   onPressEnd={() => {
-                    navigator.clipboard.writeText("eitaar");
+                    try {
+                      navigator.clipboard.writeText("eitaar");
+                    } catch (error) {
+                      console.error("Failed to copy text to clipboard:", error);
+                    }
                   }}
                 >
                   {props.discordIcon}

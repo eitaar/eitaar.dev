@@ -1,13 +1,13 @@
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
-import { gsap } from "gsap";
-import { useState, useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@heroui/react';
+import { gsap } from 'gsap';
+import { useState, useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-gsap.registerPlugin(ScrollTrigger,ScrollSmoother,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-export default function App(props:any) {
+export default function App(props: any) {
   const [isRainVisible, setIsRainVisible] = useState(true);
   useEffect(() => {
     const existingRainContainer = document.querySelector('.rain-container');
@@ -37,26 +37,21 @@ export default function App(props:any) {
       <NavbarBrand>
         <Link
           href="/"
-          className="text-2xl font-bold animated-gradient"
+          className="animated-gradient text-2xl font-bold"
           underline="none"
           color="none"
         >
           eitaar.dev
         </Link>
       </NavbarBrand>
-        <NavbarContent justify="center">
-          <NavbarItem>
-            <Link 
-              color="primary"
-              className="cursor-pointer"
-              underline="hover"
-              href="/articles"
-            >
-              Articles
-            </Link>
-          </NavbarItem>
-        </NavbarContent>
-      <NavbarContent justify="end">        
+      <NavbarContent justify="center">
+        <NavbarItem>
+          <Link color="primary" className="cursor-pointer" underline="hover" href="/articles">
+            Articles
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
         <NavbarItem>
           <Button
             color="secondary"
@@ -64,25 +59,25 @@ export default function App(props:any) {
             isIconOnly={true}
             aria-label="Toggle rain"
             onPress={toggleRain}
-            >
+          >
             <div id="rain-toggle-icon">
               {isRainVisible ? props.rainToggleOn : props.rainToggleOff}
             </div>
-            </Button>
+          </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button 
-            color="primary" 
-            id="theme-toggle" 
-            variant="flat" 
-            isIconOnly={true} 
+          <Button
+            color="primary"
+            id="theme-toggle"
+            variant="flat"
+            isIconOnly={true}
             aria-label="Toggle theme"
             onPress={() => {
-              const currentTheme = document.documentElement.getAttribute("heroui-theme");
-              const newTheme = currentTheme === "dark" ? "light" : "dark";
-              document.documentElement.setAttribute("class", newTheme);
-              document.documentElement.setAttribute("heroui-theme", newTheme);
-              localStorage.setItem("heroui-theme", newTheme);
+              const currentTheme = document.documentElement.getAttribute('heroui-theme');
+              const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+              document.documentElement.setAttribute('class', newTheme);
+              document.documentElement.setAttribute('heroui-theme', newTheme);
+              localStorage.setItem('heroui-theme', newTheme);
               console.log(`Theme changed to ${newTheme}`);
             }}
           >

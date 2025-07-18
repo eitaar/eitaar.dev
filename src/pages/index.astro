@@ -11,19 +11,19 @@ import Projects from '../components/index/astro/Projects.astro';
 
 <Layout title="eitaar.dev" showRain={true}>
   <Header class="fixed inset-x-0 top-0 z-50" />
-  <div class="w-9/10 mx-auto">
+  <div class="mx-auto w-9/10">
     <About />
   </div>
   <div>
-    <h2 class="font-Quantico text-3xl text-center font-bold py-4" id="ABOUT">Information</h2>
-    <div class="w-9/10 flex flex-col gap-3 mx-auto">
-      <div class="flex flex-col lg:flex-row gap-3">
-        <div class="flex-3 flex flex-col gap-3">
-          <div class="flex flex-col lg:flex-row gap-3 flex-1">
+    <h2 class="py-4 text-center font-Quantico text-3xl font-bold" id="ABOUT">Information</h2>
+    <div class="mx-auto flex w-9/10 flex-col gap-3">
+      <div class="flex flex-col gap-3 lg:flex-row">
+        <div class="flex flex-3 flex-col gap-3">
+          <div class="flex flex-1 flex-col gap-3 lg:flex-row">
             <Skills />
             <Interests />
           </div>
-          <div class="flex flex-col lg:flex-row gap-3 flex-2">
+          <div class="flex flex-2 flex-col gap-3 lg:flex-row">
             <Stats />
             <Hobbies />
           </div>
@@ -33,8 +33,8 @@ import Projects from '../components/index/astro/Projects.astro';
     </div>
   </div>
   <div class="min-h-screen">
-    <h2 class="font-Quantico text-3xl text-center font-bold py-4" id="PROJECTS">Projects</h2>
-    <div class="w-9/10 mx-auto">
+    <h2 class="py-4 text-center font-Quantico text-3xl font-bold" id="PROJECTS">Projects</h2>
+    <div class="mx-auto w-9/10">
       <Projects />
     </div>
   </div>

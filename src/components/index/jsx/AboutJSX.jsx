@@ -1,11 +1,11 @@
 import { Chip, Button, Popover, PopoverTrigger, PopoverContent } from '@heroui/react';
 export default function App(props) {
   return (
-    <div className="flex items-center justify-center gap-5 lg:max-w-2/5 h-full mx-auto">
-      <div className="flex gap-3 flex-row items-center">
+    <div className="mx-auto flex h-full items-center justify-center gap-5 lg:max-w-2/5">
+      <div className="flex flex-row items-center gap-3">
         {props.avatarImg}
-        <div className="flex items-center flex-col gap-1">
-          <h2 className="text-5xl font-bold font-Quantico text-success-600 tracking-tighter">
+        <div className="flex flex-col items-center gap-1">
+          <h2 className="font-Quantico text-5xl font-bold tracking-tighter text-success-600">
             eitaar
           </h2>
           <Chip variant="flat" color="primary">

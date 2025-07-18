@@ -34,38 +34,39 @@ import '../styles/drop.css';
   </head>
   <body>
     <!-- add CSS Background animation here-->
-    <div class="rain-container">
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-      <div class="rain"></div>
-    </div>
+    {showRain && (
+      <div class="rain-container">
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+    )}
     <HeroUIProvider>
       {Navbar && <Header />}
       <slot />

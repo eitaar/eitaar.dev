@@ -4,10 +4,17 @@ import { useState, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import type { ReactNode } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-export default function App(props: any) {
+interface HeaderProps {
+  themeToggle: ReactNode;
+  rainToggleOn: ReactNode;
+  rainToggleOff: ReactNode;
+}
+
+export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: HeaderProps) {
   const [isRainVisible, setIsRainVisible] = useState(true);
   useEffect(() => {
     const existingRainContainer = document.querySelector('.rain-container');
@@ -33,14 +40,9 @@ export default function App(props: any) {
     setIsRainVisible(!isRainVisible);
   };
   return (
-    <Navbar maxWidth="full" position="sticky" id="navbar" className="font-Quantico">
+    <Navbar maxWidth="full" position="sticky" id="navbar" className="NAVBAR font-Quantico">
       <NavbarBrand>
-        <Link
-          href="/"
-          className="animated-gradient text-2xl font-bold"
-          underline="none"
-          color="none"
-        >
+        <Link href="/" className="animated-gradient text-2xl font-bold" underline="none">
           eitaar.dev
         </Link>
       </NavbarBrand>
@@ -60,9 +62,7 @@ export default function App(props: any) {
             aria-label="Toggle rain"
             onPress={toggleRain}
           >
-            <div id="rain-toggle-icon">
-              {isRainVisible ? props.rainToggleOn : props.rainToggleOff}
-            </div>
+            <div id="rain-toggle-icon">{isRainVisible ? rainToggleOn : rainToggleOff}</div>
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -81,7 +81,7 @@ export default function App(props: any) {
               console.log(`Theme changed to ${newTheme}`);
             }}
           >
-            {props.themeToggle}
+            {themeToggle}
           </Button>
         </NavbarItem>
       </NavbarContent>

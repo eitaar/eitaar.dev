@@ -1,24 +1,5 @@
 ---
-type Language = {
-  name: string;
-  percentage: number;
-  size: number;
-  color: string;
-};
-
-type StatsData = {
-  status: 'success' | 'error';
-  data: {
-    followerCount: number;
-    totalCommitContributions: number;
-    totalStars: number;
-    totalSize: number;
-    totalRepositories: number;
-    totalPRs: number;
-    languages: Language[];
-  };
-};
-
+import type { StatsData, Language } from '../../../types/common';
 import { Icon } from 'astro-icon/components';
 import StatsJSX from '../jsx/StatsJSX';
 import { fetcher } from '../../../assets/src/fetcher';

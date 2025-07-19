@@ -1,14 +1,9 @@
 import { Card, CardHeader, CardBody, CardFooter, Button, Chip } from '@heroui/react';
 import type { ReactNode } from 'react';
+import type { Article } from '../../types/common';
 import twemoji from '@twemoji/api';
-interface ArticleProps {
-  data: {
-    date: Date;
-    title: string;
-    tags: string[];
-    emoji: string;
-  };
-  slug: string;
+
+interface ArticleProps extends Article {
   penIcon?: ReactNode;
 }
 

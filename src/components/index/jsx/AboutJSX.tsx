@@ -1,9 +1,18 @@
 import { Chip, Button, Popover, PopoverTrigger, PopoverContent } from '@heroui/react';
-export default function App(props) {
+import type { ReactNode } from 'react';
+
+interface AboutProps {
+  avatarImg?: ReactNode;
+  githubIcon?: ReactNode;
+  xIcon?: ReactNode;
+  discordIcon?: ReactNode;
+}
+
+export default function AboutJSX({ avatarImg, githubIcon, xIcon, discordIcon }: AboutProps) {
   return (
     <div className="mx-auto flex h-full items-center justify-center gap-5 lg:max-w-2/5">
       <div className="flex flex-row items-center gap-3">
-        {props.avatarImg}
+        {avatarImg}
         <div className="flex flex-col items-center gap-1">
           <h2 className="font-Quantico text-5xl font-bold tracking-tighter text-success-600">
             eitaar
@@ -21,7 +30,7 @@ export default function App(props) {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              {props.githubIcon}
+              {githubIcon}
             </Button>
             <Button
               isIconOnly={true}
@@ -32,7 +41,7 @@ export default function App(props) {
               rel="noopener noreferrer"
               aria-label="X"
             >
-              {props.xIcon}
+              {xIcon}
             </Button>
             <Popover placement="bottom" showArrow={true}>
               <PopoverTrigger>
@@ -48,7 +57,7 @@ export default function App(props) {
                     }
                   }}
                 >
-                  {props.discordIcon}
+                  {discordIcon}
                 </Button>
               </PopoverTrigger>
               <PopoverContent>

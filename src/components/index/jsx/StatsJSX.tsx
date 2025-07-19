@@ -1,45 +1,16 @@
 import { Card, CardHeader, CardBody, Progress } from '@heroui/react';
+import type { StatsData } from '../../../types/common';
+import { LANGUAGE_COLORS } from '../../../constants/colors';
 
-type Language = {
-  name: string;
-  percentage: number;
-  size: number;
-  color: string;
-};
-
-type StatsData = {
-  status: 'success' | 'error';
-  data: {
-    followerCount: number;
-    totalCommitContributions: number;
-    totalStars: number;
-    totalSize: number;
-    totalRepositories: number;
-    totalPRs: number;
-    languages: Language[];
-  };
-};
-
-type Props = {
+interface StatsProps {
   stats: StatsData;
   stats2: StatsData;
   children?: React.ReactNode;
-};
+}
 
-const colors: Record<string, string> = {
-  Vue: 'bg-[#41b883]',
-  JavaScript: 'bg-[#f1e05a]',
-  TypeScript: 'bg-[#3178c6]',
-  Astro: 'bg-[#ff5a03]',
-  CSS: 'bg-[#663399]',
-  Java: 'bg-[#b07219]',
-  MDX: 'bg-[#fcb32c]',
-  Batchfile: 'bg-[#C1F12E]',
-  HTML: 'bg-[#e34c26]',
-  EJS: 'bg-[#a91e50]',
-};
+const colors: Record<string, string> = LANGUAGE_COLORS;
 
-export default function App({ stats, stats2, children }: Props) {
+export default function App({ stats, stats2, children }: StatsProps) {
   return (
     <Card className="CARD flex w-full flex-2 justify-center" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1 pb-0">

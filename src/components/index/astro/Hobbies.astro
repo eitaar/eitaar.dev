@@ -1,12 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import HobbiesJSX from '../jsx/HobbiesJSX.tsx';
-
-interface Hobby {
-  title: string;
-  flavour: string;
-  iconName: string;
-}
+import type { Hobby } from '../../../types/common';
 
 const hobbies: Hobby[] = [
   {

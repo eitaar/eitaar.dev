@@ -1,9 +1,5 @@
 import { Card, CardHeader, CardBody } from '@heroui/react';
-
-interface Hobby {
-  title: string;
-  flavour: string;
-}
+import type { Hobby } from '../../../types/common';
 
 interface HobbiesJSXProps {
   hobbies: Hobby[];

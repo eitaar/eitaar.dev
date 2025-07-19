@@ -1,12 +1,6 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@heroui/react';
-import { gsap } from 'gsap';
 import { useState, useEffect } from 'react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import type { ReactNode } from 'react';
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 interface HeaderProps {
   themeToggle: ReactNode;
@@ -36,9 +30,14 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
     document.body.insertBefore(rainContainer, document.body.firstChild);
   };
 
-  const toggleRain = () => {
-    setIsRainVisible(!isRainVisible);
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('heroui-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('class', newTheme);
+    document.documentElement.setAttribute('heroui-theme', newTheme);
+    localStorage.setItem('heroui-theme', newTheme);
   };
+
   return (
     <Navbar maxWidth="full" position="sticky" id="navbar" className="NAVBAR font-Quantico">
       <NavbarBrand>
@@ -58,28 +57,20 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
           <Button
             color="secondary"
             variant="flat"
-            isIconOnly={true}
+            isIconOnly
             aria-label="Toggle rain"
-            onPress={toggleRain}
+            onPress={() => setIsRainVisible(!isRainVisible)}
           >
-            <div id="rain-toggle-icon">{isRainVisible ? rainToggleOn : rainToggleOff}</div>
+            {isRainVisible ? rainToggleOn : rainToggleOff}
           </Button>
         </NavbarItem>
         <NavbarItem>
           <Button
             color="primary"
-            id="theme-toggle"
             variant="flat"
-            isIconOnly={true}
+            isIconOnly
             aria-label="Toggle theme"
-            onPress={() => {
-              const currentTheme = document.documentElement.getAttribute('heroui-theme');
-              const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-              document.documentElement.setAttribute('class', newTheme);
-              document.documentElement.setAttribute('heroui-theme', newTheme);
-              localStorage.setItem('heroui-theme', newTheme);
-              console.log(`Theme changed to ${newTheme}`);
-            }}
+            onPress={toggleTheme}
           >
             {themeToggle}
           </Button>

@@ -59,8 +59,10 @@ const projects: Project[] = [
             alt={project.title}
             width={512}
             height={288}
+            decoding={'async'}
             class="h-auto w-full rounded-lg"
             loading="lazy"
+            fetchpriority={'low'}
           />
         </ProjectJSX>
       );

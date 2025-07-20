@@ -1,4 +1,14 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@heroui/react';
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+  Button,
+} from '@heroui/react';
 import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
@@ -8,8 +18,19 @@ interface HeaderProps {
   rainToggleOff: ReactNode;
 }
 
+interface menuItem {
+  name: string;
+  href: string;
+}
 export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: HeaderProps) {
   const [isRainVisible, setIsRainVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuItems: menuItem[] = [
+    { name: 'Top', href: '/' },
+    { name: 'Articles', href: '/articles' },
+    { name: 'Projects', href: '/projects' },
+  ];
+
   useEffect(() => {
     const existingRainContainer = document.querySelector('.rain-container');
     if (isRainVisible && !existingRainContainer) {
@@ -21,10 +42,10 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
 
   const createRainContainer = () => {
     const rainContainer = document.createElement('div');
-    rainContainer.className = 'rain-container opacity-30';
+    rainContainer.className = 'rain-container';
     for (let i = 1; i <= 30; i++) {
       const rainLine = document.createElement('div');
-      rainLine.className = 'rain-line';
+      rainLine.className = 'rain';
       rainContainer.appendChild(rainLine);
     }
     document.body.insertBefore(rainContainer, document.body.firstChild);
@@ -39,21 +60,42 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
   };
 
   return (
-    <Navbar maxWidth="full" position="sticky" id="navbar" className="NAVBAR font-Quantico">
-      <NavbarBrand>
-        <Link href="/" className="animated-gradient text-2xl font-bold" underline="none">
-          eitaar.dev
-        </Link>
-      </NavbarBrand>
-      <NavbarContent justify="center">
+    <Navbar
+      maxWidth="full"
+      position="sticky"
+      id="navbar"
+      className="NAVBAR font-Quantico"
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent justify="start">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <Link
+            href="/"
+            className="animated-gradient text-3xl font-bold tracking-tighter"
+            underline="none"
+          >
+            eitaar.dev
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent justify="center" className="hidden md:flex">
         <NavbarItem>
           <Link color="primary" className="cursor-pointer" underline="hover" href="/articles">
             Articles
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="primary" className="cursor-pointer" underline="hover" href="/projects">
+            Projects
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
+        <NavbarItem className="flex items-end gap-2">
           <Button
             color="secondary"
             variant="flat"
@@ -63,8 +105,6 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
           >
             {isRainVisible ? rainToggleOn : rainToggleOff}
           </Button>
-        </NavbarItem>
-        <NavbarItem>
           <Button
             color="primary"
             variant="flat"
@@ -76,6 +116,21 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
           </Button>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu className="flex flex-col items-center">
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={item.name} className="">
+            <Link
+              className="w-full text-center font-Quantico text-xl"
+              color="primary"
+              href={item.href}
+              size="lg"
+              underline="active"
+            >
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }

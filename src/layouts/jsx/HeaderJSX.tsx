@@ -51,6 +51,11 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
             Articles
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="primary" className="cursor-pointer" underline="hover" href="/projects">
+            Projects
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>

@@ -68,19 +68,23 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
-        />
-        <NavbarBrand>
-          <Link
-            href="/"
-            className="animated-gradient text-3xl font-bold tracking-tighter"
-            underline="none"
-          >
-            eitaar.dev
-          </Link>
-        </NavbarBrand>
+        <NavbarItem className="h-full">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            className="sm:hidden"
+          />
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarBrand>
+            <Link
+              href="/"
+              className="animated-gradient text-3xl font-bold tracking-tighter"
+              underline="none"
+            >
+              eitaar.dev
+            </Link>
+          </NavbarBrand>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="center" className="hidden md:flex">
         <NavbarItem>

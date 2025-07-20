@@ -122,7 +122,7 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
       </NavbarContent>
       <NavbarMenu className="flex flex-col items-center">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className="">
+          <NavbarMenuItem key={item.name} className="">
             <Link
               className="w-full text-center font-Quantico text-xl"
               color="primary"

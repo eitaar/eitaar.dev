@@ -2,16 +2,16 @@ import { Card, CardHeader, CardBody } from '@heroui/react';
 import type { ReactNode } from 'react';
 
 interface InterestsProps {
-  interestIcon: ReactNode;
-  ardIcon: ReactNode;
-  cppIcon: ReactNode;
-  rustIcon: ReactNode;
-  bderIcon: ReactNode;
-  fltIcon: ReactNode;
-  javaIcon: ReactNode;
-  p5Icon: ReactNode;
-  thjsIcon: ReactNode;
-  reactIcon: ReactNode;
+  interestIcon?: ReactNode;
+  ardIcon?: ReactNode;
+  cppIcon?: ReactNode;
+  rustIcon?: ReactNode;
+  bderIcon?: ReactNode;
+  fltIcon?: ReactNode;
+  javaIcon?: ReactNode;
+  p5Icon?: ReactNode;
+  thjsIcon?: ReactNode;
+  reactIcon?: ReactNode;
 }
 
 export default function InterestsJSX({

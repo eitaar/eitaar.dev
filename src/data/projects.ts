@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     title: 'Wahoot',
     stack: ['Nuxt', 'Vue', 'JavaScript'],
-    description: 'An unofficial third-party Kahoot client built using Nuxt. and custom library.',
+    description: 'An unofficial third-party Kahoot client built using Nuxt and custom library.',
     github: 'https://github.com/eitaar/wahoot',
     page: 'https://wahoot.eitaar.dev',
     image: wahoot,

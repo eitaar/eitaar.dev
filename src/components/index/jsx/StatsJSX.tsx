@@ -35,7 +35,7 @@ const LanguageProgressBar = ({ lang, index }: { lang: Language; index: number })
 
 const LanguageLegendItem = ({ lang, index }: { lang: Language; index: number }) => (
   <div className="flex items-center justify-center">
-    <div className="h-3 w-3 rounded-full" style={{ backgroundColor: lang.color }}></div>
+    <div className="h-3.5 w-3.5 rounded-full" style={{ backgroundColor: lang.color }}></div>
     <p className="ml-1">
       {formatLanguageName(lang.name)} {Math.round(lang.percentage * 2) / 2}%
     </p>
@@ -43,9 +43,9 @@ const LanguageLegendItem = ({ lang, index }: { lang: Language; index: number }) 
 );
 
 const StatItem = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center justify-center rounded-lg px-2">
-    <span className="text-2xl font-bold">{value}</span>
-    <span className="text-sm text-default-600">{label}</span>
+  <div className="flex flex-1 flex-col items-center justify-center rounded-lg px-2">
+    <span className="text-xl font-bold sm:text-2xl">{value}</span>
+    <span className="text-center text-sm text-default-600">{label}</span>
   </div>
 );
 
@@ -75,14 +75,14 @@ export default function StatsComponent({ originalStats, cumulativeStats, childre
             </noscript>
           </div>
 
-          <div className="grid w-full grid-cols-3 font-Quantico text-sm">
+          <div className="grid w-full grid-cols-3 font-Quantico">
             {originalStats.data.languages.slice(0, 9).map((lang, index) => (
               <LanguageLegendItem key={index} lang={lang} index={index} />
             ))}
           </div>
 
-          <div className="w-full pt-2 font-Quantico">
-            <div className="flex flex-wrap justify-center gap-4">
+          <div className="w-full pt-4 font-Quantico">
+            <div className="flex w-full flex-wrap justify-center gap-4">
               <StatItem value={originalStats.data.totalRepositories} label="Repositories" />
               <StatItem value={originalStats.data.totalStars} label="Stars" />
               <StatItem value={originalStats.data.totalCommitContributions} label="Contributions" />

@@ -1,25 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import HobbiesJSX from '../jsx/HobbiesJSX.tsx';
-import type { Hobby } from '../../../types/common';
-
-const hobbies: Hobby[] = [
-  {
-    title: 'Minecraft',
-    flavour: 'OverModded',
-    iconName: 'mdi:minecraft',
-  },
-  {
-    title: 'Undertale',
-    flavour: '"Determination"',
-    iconName: 'simple:undertale',
-  },
-  {
-    title: 'Coding',
-    flavour: 'Still learning...',
-    iconName: 'devicon:vscode',
-  },
-];
+import hobbies from '../../../data/hobbies';
 ---
 
 <HobbiesJSX hobbies={hobbies}>

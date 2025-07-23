@@ -1,68 +1,56 @@
 ---
 import type { StatsData, Language } from '../../../types/common';
 import { Icon } from 'astro-icon/components';
-import StatsJSX from '../jsx/StatsJSX';
+import StatsComponent from '../jsx/StatsJSX';
 import { fetcher } from '../../../assets/src/fetcher';
 
-let stats: StatsData;
-let stats2: StatsData;
+// dummy data
+const dummyData: StatsData = {
+  status: 'success',
+  data: {
+    followerCount: 2,
+    totalCommitContributions: 365,
+    totalSize: 266079,
+    totalStars: 2,
+    totalRepositories: 13,
+    totalPRs: 78,
+    languages: [
+      { name: 'Vue', size: 99430, percentage: 37.37, color: '#41b883' },
+      { name: 'JavaScript', size: 72874, percentage: 27.39, color: '#f1e05a' },
+      { name: 'TypeScript', size: 31385, percentage: 11.8, color: '#3178c6' },
+      { name: 'Astro', size: 28581, percentage: 10.74, color: '#ff5a03' },
+      { name: 'CSS', size: 22210, percentage: 8.35, color: '#663399' },
+      { name: 'EJS', size: 5497, percentage: 2.07, color: '#a91e50' },
+      { name: 'Java', size: 2319, percentage: 0.87, color: '#b07219' },
+      { name: 'HTML', size: 2313, percentage: 0.87, color: '#e34c26' },
+      { name: 'MDX', size: 1144, percentage: 0.43, color: '#fcb32c' },
+      { name: 'Batchfile', size: 326, percentage: 0.12, color: '#C1F12E' },
+    ],
+  },
+};
 
-if (process.env.NODE_ENV == 'development') {
-  stats = {
-    status: 'success',
-    data: {
-      followerCount: 123,
-      totalCommitContributions: 456,
-      totalStars: 789,
-      totalSize: 12345,
-      totalRepositories: 10,
-      totalPRs: 5,
-      languages: [
-        { name: 'Vue', size: 91673, percentage: 48.09, color: '#41b883' },
-        { name: 'JavaScript', size: 52772, percentage: 27.69, color: '#f1e05a' },
-        { name: 'Astro', size: 19827, percentage: 10.4, color: '#ff5a03' },
-        { name: 'TypeScript', size: 19407, percentage: 10.18, color: '#3178c6' },
-        { name: 'CSS', size: 3281, percentage: 1.72, color: '#663399' },
-        { name: 'Java', size: 2319, percentage: 1.22, color: '#b07219' },
-        { name: 'MDX', size: 1008, percentage: 0.53, color: '#fcb32c' },
-        { name: 'Batchfile', size: 326, percentage: 0.17, color: '#C1F12E' },
-      ],
-    },
-  };
-  stats2 = {
-    status: 'success',
-    data: {
-      followerCount: 123,
-      totalCommitContributions: 456,
-      totalStars: 789,
-      totalSize: 12345,
-      totalRepositories: 10,
-      totalPRs: 5,
-      languages: [
-        { name: 'Vue', size: 91673, percentage: 48.09, color: '#41b883' },
-        { name: 'JavaScript', size: 52772, percentage: 27.69, color: '#f1e05a' },
-        { name: 'Astro', size: 19827, percentage: 10.4, color: '#ff5a03' },
-        { name: 'TypeScript', size: 19407, percentage: 10.18, color: '#3178c6' },
-        { name: 'CSS', size: 3281, percentage: 1.72, color: '#663399' },
-        { name: 'Java', size: 2319, percentage: 1.22, color: '#b07219' },
-        { name: 'MDX', size: 1008, percentage: 0.53, color: '#fcb32c' },
-        { name: 'Batchfile', size: 326, percentage: 0.17, color: '#C1F12E' },
-      ],
-    },
-  };
-} else {
-  stats = await fetcher();
-  stats2 = await fetcher();
+function convertToCumulativePercentages(languages: Language[]): Language[] {
+  let cumulative = 0;
+  return languages.map((lang) => {
+    cumulative += lang.percentage;
+    return { ...lang, percentage: cumulative };
+  });
 }
 
-// percentage累積処理
-let previous = 0;
-stats.data.languages.forEach((lang: Language) => {
-  lang.percentage += previous;
-  previous = lang.percentage;
-});
+const originalStats = process.env.NODE_ENV === 'development' ? dummyData : await fetcher();
+const statsWithCumulativePercentages = {
+  ...originalStats,
+  data: {
+    ...originalStats.data,
+    languages: convertToCumulativePercentages(originalStats.data.languages),
+  },
+};
 ---
 
-<StatsJSX client:visible stats={stats} stats2={stats2}>
+<StatsComponent
+  client:visible
+  originalStats={originalStats}
+  cumulativeStats={statsWithCumulativePercentages}
+>
   <Icon name="mdi:graph-box" class="h-7 w-auto" />
-</StatsJSX>
+</StatsComponent>

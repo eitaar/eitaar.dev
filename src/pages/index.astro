@@ -15,25 +15,35 @@ import Projects from '../components/index/astro/Projects.astro';
     <About />
   </div>
   <div>
-    <h2 class="py-4 text-center font-Quantico text-3xl font-bold" id="ABOUT">Information</h2>
-    <div class="mx-auto flex w-9/10 flex-col gap-3">
-      <div class="flex flex-col gap-3 lg:flex-row">
-        <div class="flex flex-3 flex-col gap-3">
-          <div class="flex flex-1 flex-col gap-3 lg:flex-row">
+    <h2
+      class="mx-auto w-9/10 py-8 font-Quantico text-3xl font-bold underline underline-offset-8"
+      id="ABOUT"
+    >
+      Information
+    </h2>
+    <section class="mx-auto flex w-9/10 flex-col gap-4">
+      <div class="flex flex-col gap-4 lg:flex-row">
+        <div class="flex flex-3 flex-col gap-4">
+          <div class="flex flex-1 flex-col gap-4 lg:flex-row">
             <Skills />
             <Interests />
           </div>
-          <div class="flex flex-2 flex-col gap-3 lg:flex-row">
+          <div class="flex flex-2 flex-col gap-4 lg:flex-row">
             <Stats />
             <Hobbies />
           </div>
         </div>
       </div>
       <!-- fotter -->
-    </div>
+    </section>
   </div>
-  <div class="min-h-screen">
-    <h2 class="py-4 text-center font-Quantico text-3xl font-bold" id="PROJECTS">Main Projects</h2>
+  <div>
+    <h2
+      class="mx-auto w-9/10 py-8 font-Quantico text-3xl font-bold underline underline-offset-8"
+      id="PROJECTS"
+    >
+      Main Projects
+    </h2>
     <div class="mx-auto w-9/10">
       <Projects isPreview={true} />
     </div>

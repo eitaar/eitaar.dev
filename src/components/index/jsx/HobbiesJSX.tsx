@@ -17,10 +17,10 @@ export default function HobbiesJSX(props: HobbiesJSXProps) {
         <p className="text-center font-Quantico text-3xl font-bold">Hobbies</p>
       </CardHeader>
       <CardBody>
-        <div className="flex w-full flex-col flex-wrap gap-3">
+        <div className="flex w-full flex-col flex-wrap gap-4">
           {hobbies &&
             hobbies.map((hobby, index) => (
-              <div key={hobby.title} className="flex items-center gap-3">
+              <div key={hobby.title} className="flex items-center gap-4">
                 <div>{props[`hobbyIcon${index}`]}</div>
                 <div>
                   <h3 className="text-lg font-bold">{hobby.title}</h3>

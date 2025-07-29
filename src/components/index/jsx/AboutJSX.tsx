@@ -11,7 +11,7 @@ interface AboutProps {
 export default function AboutJSX({ avatarImg, githubIcon, xIcon, discordIcon }: AboutProps) {
   return (
     <div className="mx-auto flex h-full items-center justify-center gap-5 lg:max-w-2/5">
-      <div className="flex flex-row items-center gap-3">
+      <div className="flex flex-row items-center gap-4">
         {avatarImg}
         <div className="flex flex-col items-center gap-1">
           <h2 className="font-Quantico text-5xl font-bold tracking-tighter text-success-600">

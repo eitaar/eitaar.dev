@@ -40,10 +40,9 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
   }, [isRainVisible]);
 
   const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute('heroui-theme');
+    const currentTheme = document.documentElement.getAttribute('class');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('class', newTheme);
-    document.documentElement.setAttribute('heroui-theme', newTheme);
     localStorage.setItem('heroui-theme', newTheme);
   };
 

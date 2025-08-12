@@ -43,7 +43,7 @@ export default function ProjectJSX({
       <CardFooter className="ml-auto flex gap-2 pt-0">
         {github && (
           <Button
-            color="secondary"
+            color="default"
             variant="light"
             className="ml-auto"
             href={github}

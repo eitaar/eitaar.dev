@@ -10,6 +10,7 @@ import Projects from '../components/index/astro/Projects.astro';
 ---
 
 <Layout title="eitaar.dev" showRain={true}>
+  <canvas id="artCanvas" class="fixed -z-10 h-screen w-full"></canvas>
   <Header class="fixed inset-x-0 top-0 z-50" />
   <div
     class="mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"
@@ -51,3 +52,12 @@ import Projects from '../components/index/astro/Projects.astro';
     </div>
   </div>
 </Layout>
+<script>
+  import { initArt } from '../assets/src/art.ts';
+  try {
+    const canvas = document.getElementById('artCanvas');
+    initArt();
+  } catch (e) {
+    console.warn('art init failed', e);
+  }
+</script>

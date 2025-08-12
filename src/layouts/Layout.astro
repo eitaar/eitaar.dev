@@ -14,8 +14,8 @@ import '../styles/drop.css';
     <meta name="description" content="eitaar.dev" />
     <script is:inline>
       if (localStorage.getItem('heroui-theme') === null) {
-        document.documentElement.setAttribute('heroui-theme', 'light');
-        document.documentElement.setAttribute('class', 'light');
+        document.documentElement.setAttribute('heroui-theme', 'dark');
+        document.documentElement.setAttribute('class', 'dark');
       } else {
         document.documentElement.setAttribute('heroui-theme', localStorage.getItem('heroui-theme'));
         document.documentElement.setAttribute('class', localStorage.getItem('heroui-theme'));
@@ -38,8 +38,9 @@ import '../styles/drop.css';
         {Array.from({ length: 30 }).map(() => <div class="rain" />)}
       </div>
     </noscript>
-    
-    {Navbar && <Header />}
-    <slot />
+    <HeroUIProvider>
+      {Navbar && <Header />}
+      <slot />
+    </HeroUIProvider>
   </body>
 </html>

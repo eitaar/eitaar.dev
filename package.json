@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.5.3",
-    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/cloudflare": "12.6.3",
+    "@astrojs/mdx": "4.3.3",
     "@astrojs/react": "^4.3.0",
     "@heroui/react": "^2.8.0",
     "@iconify-json/devicon": "^1.2.31",
@@ -30,6 +30,7 @@
     "astro-icon": "^1.1.5",
     "framer-motion": "^12.12.2",
     "gsap": "^3.13.0",
+    "pixi.js": "^8.12.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.0.15",

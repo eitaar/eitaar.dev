@@ -1,5 +1,5 @@
 ---
-const { title, Navbar, showRain } = Astro.props;
+const { title, Navbar } = Astro.props;
 import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
@@ -32,43 +32,13 @@ import '../styles/drop.css';
     <link rel="icon" type="image/png" href={avatarIcon.src} />
     <title>{title}</title>
   </head>
-  <body>
-    <!-- add CSS Background animation here-->
-    {
-      showRain && (
-        <div class="rain-container">
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-          <div class="rain" />
-        </div>
-      )
-    }
+  <body class="global.css">
+    <noscript>
+      <div class="rain-container">
+        {Array.from({ length: 30 }).map(() => <div class="rain" />)}
+      </div>
+    </noscript>
+    
     {Navbar && <Header />}
     <slot />
   </body>

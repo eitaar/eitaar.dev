@@ -34,22 +34,10 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
   useEffect(() => {
     const existingRainContainer = document.querySelector('.rain-container');
     if (isRainVisible && !existingRainContainer) {
-      createRainContainer();
     } else if (!isRainVisible && existingRainContainer) {
       existingRainContainer.remove();
     }
   }, [isRainVisible]);
-
-  const createRainContainer = () => {
-    const rainContainer = document.createElement('div');
-    rainContainer.className = 'rain-container';
-    for (let i = 1; i <= 30; i++) {
-      const rainLine = document.createElement('div');
-      rainLine.className = 'rain';
-      rainContainer.appendChild(rainLine);
-    }
-    document.body.insertBefore(rainContainer, document.body.firstChild);
-  };
 
   const toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute('heroui-theme');

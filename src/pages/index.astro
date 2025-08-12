@@ -11,12 +11,14 @@ import Projects from '../components/index/astro/Projects.astro';
 
 <Layout title="eitaar.dev" showRain={true}>
   <Header class="fixed inset-x-0 top-0 z-50" />
-  <div class="mx-auto w-9/10">
-    <About />
+  <div
+    class="mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"
+  >
+    <About class="" />
   </div>
   <div>
     <h2
-      class="mx-auto w-9/10 py-8 font-Quantico text-3xl font-bold underline underline-offset-8"
+      class="mx-auto w-9/10 py-8 text-center font-Quantico text-3xl font-bold underline underline-offset-8"
       id="ABOUT"
     >
       Information
@@ -39,7 +41,7 @@ import Projects from '../components/index/astro/Projects.astro';
   </div>
   <div>
     <h2
-      class="mx-auto w-9/10 py-8 font-Quantico text-3xl font-bold underline underline-offset-8"
+      class="mx-auto w-9/10 py-8 text-center font-Quantico text-3xl font-bold underline underline-offset-8"
       id="PROJECTS"
     >
       Main Projects

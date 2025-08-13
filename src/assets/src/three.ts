@@ -6,7 +6,7 @@ import Stats from 'three/examples/jsm/libs/stats.module.js';
 
 function showStats() {
   const stats = new Stats();
-  stats.showPanel(0); // 0: fps, 1: ms, 2: memory
+  stats.showPanel(0);
   document.body.appendChild(stats.dom);
   return stats;
 }

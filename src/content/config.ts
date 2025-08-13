@@ -1,6 +1,5 @@
 // src/content/config.ts
 import { z, defineCollection } from 'astro:content';
-import { date } from 'astro:schema';
 
 const articleCollection = defineCollection({
   type: 'content',
@@ -12,17 +11,6 @@ const articleCollection = defineCollection({
   }),
 });
 
-const modelCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    filename: z.string(),
-    date: z.date(),
-    title: z.string(),
-    description: z.string().optional(),
-  }),
-});
-
 export const collections = {
   articles: articleCollection,
-  models: modelCollection,
 };

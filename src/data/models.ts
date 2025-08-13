@@ -10,7 +10,7 @@ const models: Model[] = [
   {
     filename: 'mht.gltf',
     title: 'Double Sided Sword',
-    description: 'A model with double-sided rendering enabled.',
+    description: 'A double sided sword model from the anime "Neon Genesis Evangelion".',
     date: new Date('2024-10-24'),
     software: 'Blockbench',
   },

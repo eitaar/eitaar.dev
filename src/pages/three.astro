@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Info from '../components/three/Info.tsx';
+---
+
+<Layout title="Three.js Example">
+  <div
+    id="loadingScreen"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-[#17191d] opacity-100 transition-opacity duration-500"
+  >
+    <div class="animate-pulse text-xl text-white">
+      Loading 3D Model...
+      <noscript> Please enable JavaScript to view this page. </noscript>
+    </div>
+  </div>
+  <Info client:load />
+  <canvas id="threeCanvas" class="relative z-10 transition-opacity duration-500"></canvas>
+</Layout>
+
+<script>
+  import show3DModel from '../assets/src/three';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('threeCanvas') as HTMLCanvasElement;
+    const loadingScreen = document.getElementById('loadingScreen');
+
+    if (!canvas || !loadingScreen) {
+      console.error('Required DOM elements not found');
+      return;
+    }
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const modelFile = queryParams.get('file') || 'warn.gltf';
+    const isDeveloperMode = queryParams.get('dev') === 'true';
+    show3DModel(canvas, modelFile, isDeveloperMode)
+      .then(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.remove();
+        }, 500);
+      })
+      .catch((error) => {
+        console.error('Failed to load 3D model:', error);
+        loadingScreen.innerHTML = `<div class="text-red-500">Failed to load model: ${error.message}</div>`;
+        loadingScreen.style.opacity = '1';
+      });
+  });
+</script>

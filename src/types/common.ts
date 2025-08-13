@@ -44,3 +44,11 @@ export interface Article {
   data: ArticleData;
   slug: string;
 }
+
+export interface Model {
+  filename: string;
+  title: string;
+  description?: string;
+  date: Date;
+  software: 'Blender' | 'Blockbench';
+}

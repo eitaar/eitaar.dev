@@ -1,34 +1,30 @@
 import { Card, CardBody, CardHeader } from '@heroui/react';
+import models from '../../data/models';
+import type { Model } from '../../types/common';
+import { useEffect, useState } from 'react';
 
-interface ModelInfoProps {
-  title: string;
-  description?: string;
-  date: Date | string;
-  test: any; // Adjust type as needed
-}
+export default function ModelInfo() {
+  const [targetModel, setTargetModel] = useState<Model | null>(null);
 
-export default function ModelInfo({ title, description, date, test }: ModelInfoProps) {
-  const formatDate = (date: Date | string) => {
-    const dateObj = typeof date === 'string' ? new Date(date) : date;
-    return new Intl.DateTimeFormat('ja-JP', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }).format(dateObj);
-  };
+  useEffect(() => {
+    const targetFile = new URLSearchParams(window.location.search).get('file') || 'warn.gltf';
+    const model = models.find((model) => model.filename === targetFile) || null;
+    setTargetModel(model);
+  }, []);
+
+  if (!targetModel) {
+    return null;
+  }
 
   return (
-    <div className="pointer-events-none fixed z-10 flex w-full flex-col items-center p-4 lg:items-end">
-      <Card className="pointer-events-auto z-10 w-auto max-w-sm border-1 border-divider">
+    <div className="pointer-events-none fixed top-4 right-4 z-20 flex w-full max-w-sm flex-col items-end">
+      <Card className="pointer-events-auto w-full border-1 border-divider bg-background/80 shadow-lg backdrop-blur-sm">
         <CardHeader>
-          <div className="flex flex-col gap-1">
-            <h2 className="text-lg font-semibold text-foreground">{title}</h2>
-            <p className="text-small text-default-500">{formatDate(date)}</p>
-          </div>
+          <h2 className="text-lg font-semibold text-foreground">{targetModel?.title}</h2>
         </CardHeader>
-        {description && (
-          <CardBody className="">
-            <p className="">{description}</p>
+        {targetModel?.description && (
+          <CardBody>
+            <p className="text-small text-foreground/80">{targetModel.description}</p>
           </CardBody>
         )}
       </Card>

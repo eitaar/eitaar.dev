@@ -1,21 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Get the model file from URL params for preloading
-const url = Astro.url;
-const modelFile = url.searchParams.get('file') || 'warn.gltf';
-
-// Preload resources for better LCP
-const preloadResources = [
-  {
-    href: `/models/${modelFile}`,
-    as: 'fetch',
-    type: 'model/gltf+json',
-  },
-];
+import Info from '../components/three/Info.tsx';
 ---
 
-<Layout title="Three.js Example" preloadResources={preloadResources}>
+<Layout title="Three.js Example">
   <div
     id="loadingScreen"
     class="fixed inset-0 z-50 flex items-center justify-center bg-[#17191d] opacity-100 transition-opacity duration-500"
@@ -25,37 +13,25 @@ const preloadResources = [
       <noscript> Please enable JavaScript to view this page. </noscript>
     </div>
   </div>
-
+  <Info client:load />
   <canvas id="threeCanvas" class="relative z-10 transition-opacity duration-500"></canvas>
 </Layout>
 
 <script>
   import show3DModel from '../assets/src/three';
-  import models from '../data/models';
+
   document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('threeCanvas') as HTMLCanvasElement;
-    const loadingScreen = document.getElementById('loadingScreen') as HTMLDivElement;
+    const loadingScreen = document.getElementById('loadingScreen');
+
+    if (!canvas || !loadingScreen) {
+      console.error('Required DOM elements not found');
+      return;
+    }
+
     const queryParams = new URLSearchParams(window.location.search);
     const modelFile = queryParams.get('file') || 'warn.gltf';
     const isDeveloperMode = queryParams.get('dev') === 'true';
-
-    if (!canvas) {
-      console.error('Canvas or loading screen element not found');
-      return;
-    }
-
-    // Find model in the models array
-    const targetModel = models.find((model) => model.filename === modelFile);
-
-    if (!targetModel) {
-      loadingScreen.innerHTML = `<div class="text-red-500">Model file "${modelFile}" not found.</div>`;
-      loadingScreen.style.opacity = '1';
-      return;
-    }
-
-    // Initialize 3D scene with the found model
-    document.title = targetModel.title;
-
     show3DModel(canvas, modelFile, isDeveloperMode)
       .then(() => {
         loadingScreen.style.opacity = '0';
@@ -66,6 +42,7 @@ const preloadResources = [
       .catch((error) => {
         console.error('Failed to load 3D model:', error);
         loadingScreen.innerHTML = `<div class="text-red-500">Failed to load model: ${error.message}</div>`;
+        loadingScreen.style.opacity = '1';
       });
   });
 </script>

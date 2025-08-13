@@ -1,24 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const { filename } = Astro.props;
+
+// Get the model file from URL params for preloading
+const url = Astro.url;
+const modelFile = url.searchParams.get('file') || 'warn.gltf';
+
+// Preload resources for better LCP
+const preloadResources = [
+  {
+    href: `/models/${modelFile}`,
+    as: 'fetch',
+    type: 'model/gltf+json',
+  },
+];
 ---
 
-<Layout title="Three.js Example">
-  <div class="fixed h-screen w-full bg-[#17191d]">
-    <canvas id="threeCanvas" class=""></canvas>
+<Layout title="Three.js Example" preloadResources={preloadResources}>
+  <div
+    id="loadingScreen"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-[#17191d] opacity-100 transition-opacity duration-500"
+  >
+    <div class="animate-pulse text-xl text-white">
+      Loading 3D Model...
+      <noscript> Please enable JavaScript to view this page. </noscript>
+    </div>
   </div>
+
+  <canvas id="threeCanvas" class="relative z-10 transition-opacity duration-500"></canvas>
 </Layout>
+
 <script>
   import show3DModel from '../assets/src/three';
+  import models from '../data/models';
   document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('threeCanvas') as HTMLCanvasElement;
+    const loadingScreen = document.getElementById('loadingScreen') as HTMLDivElement;
     const queryParams = new URLSearchParams(window.location.search);
     const modelFile = queryParams.get('file') || 'warn.gltf';
     const isDeveloperMode = queryParams.get('dev') === 'true';
-    if (canvas) {
-      show3DModel(canvas, modelFile, isDeveloperMode);
-    } else {
-      console.error('Canvas element not found');
+
+    if (!canvas) {
+      console.error('Canvas or loading screen element not found');
+      return;
     }
+
+    // Find model in the models array
+    const targetModel = models.find((model) => model.filename === modelFile);
+
+    if (!targetModel) {
+      loadingScreen.innerHTML = `<div class="text-red-500">Model file "${modelFile}" not found.</div>`;
+      loadingScreen.style.opacity = '1';
+      return;
+    }
+
+    // Initialize 3D scene with the found model
+    document.title = targetModel.title;
+
+    show3DModel(canvas, modelFile, isDeveloperMode)
+      .then(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.remove();
+        }, 500);
+      })
+      .catch((error) => {
+        console.error('Failed to load 3D model:', error);
+        loadingScreen.innerHTML = `<div class="text-red-500">Failed to load model: ${error.message}</div>`;
+      });
   });
 </script>

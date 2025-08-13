@@ -13,9 +13,9 @@ import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 interface HeaderProps {
-  themeToggle: ReactNode;
-  rainToggleOn: ReactNode;
-  rainToggleOff: ReactNode;
+  themeToggle?: ReactNode;
+  rainToggleOn?: ReactNode;
+  rainToggleOff?: ReactNode;
 }
 
 interface menuItem {

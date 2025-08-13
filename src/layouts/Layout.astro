@@ -1,5 +1,5 @@
 ---
-const { title, Navbar } = Astro.props;
+const { title, Navbar, preloadResources } = Astro.props;
 import avatarIcon from '../assets/img/avatar.webp';
 import { HeroUIProvider } from '@heroui/react';
 import Header from './astro/Header.astro';
@@ -28,6 +28,13 @@ import '../styles/drop.css';
     <meta property="og:url" content="https://eitaar.dev/" />
     <meta property="og:logo" content="https://eitaar.dev/avatar.webp" />
     <link rel="icon" type="image/png" href={avatarIcon.src} />
+    {
+      preloadResources &&
+        preloadResources.map((resource: any) => (
+          <link rel="preload" href={resource.href} as={resource.as} type={resource.type} />
+        ))
+    }
+
     <title>{title}</title>
   </head>
   <body class="global.css">

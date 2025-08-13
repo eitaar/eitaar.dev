@@ -15,7 +15,7 @@ export default async function show3DModel(
   canvas: HTMLCanvasElement,
   filename: string,
   isDeveloperMode: boolean
-) {
+): Promise<void> {
   // Create the basic Three.js components
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x17191d);
@@ -64,21 +64,19 @@ export default async function show3DModel(
     scene.add(helper);
   }
   // Load and add 3D model to scene
-  try {
-    const loader = new GLTFLoader();
-    const modelPath = `/models/${filename}`;
-    loader.load(modelPath, (gltf) => {
-      try {
-        scene.add(gltf.scene);
-        gltf.scene.position.set(0, 0, 0);
-        gltf.scene.scale.set(4, 4, 4);
-      } catch (error) {
-        console.error('Error adding model to scene:', error);
-      }
-    });
-  } catch (error) {
-    console.error('Failed to load 3D model:', error);
-  }
+  const loader = new GLTFLoader();
+  const modelPath = `/models/${filename}`;
+
+  loader.load(modelPath, (gltf) => {
+    try {
+      scene.add(gltf.scene);
+      gltf.scene.position.set(0, 0, 0);
+      gltf.scene.scale.set(4, 4, 4);
+    } catch (error) {
+      console.error('Error adding model to scene:', error);
+    }
+  });
+
   const stats = isDeveloperMode ? showStats() : false;
   // Main animation loop
   function animate() {

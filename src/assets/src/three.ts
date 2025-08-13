@@ -16,7 +16,6 @@ export default async function show3DModel(
   filename: string,
   isDeveloperMode: boolean
 ) {
-  const stats = showStats();
   // Create the basic Three.js components
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x17191d);
@@ -80,7 +79,7 @@ export default async function show3DModel(
   } catch (error) {
     console.error('Failed to load 3D model:', error);
   }
-
+  const stats = showStats();
   // Main animation loop
   function animate() {
     requestAnimationFrame(animate);

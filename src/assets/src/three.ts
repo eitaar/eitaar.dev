@@ -79,13 +79,15 @@ export default async function show3DModel(
   } catch (error) {
     console.error('Failed to load 3D model:', error);
   }
-  const stats = showStats();
+  const stats = isDeveloperMode ? showStats() : false;
   // Main animation loop
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
     renderer.render(scene, camera);
-    stats.update();
+    if (stats) {
+      stats.update();
+    }
   }
 
   // Start the animation

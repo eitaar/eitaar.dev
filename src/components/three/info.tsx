@@ -10,12 +10,12 @@ export default function ModelInfo() {
     const targetFile = new URLSearchParams(window.location.search).get('file') || 'warn.gltf';
     const model = models.find((model) => model.filename === targetFile) || null;
     setTargetModel(model);
+    document.title = model ? `${model.title} - eitaar.dev` : 'eitaar.dev';
   }, []);
 
   if (!targetModel) {
     return null;
   }
-
   return (
     <div className="pointer-events-none fixed top-4 right-4 z-20 flex w-full max-w-sm flex-col items-end">
       <Card className="pointer-events-auto w-full border-1 border-divider bg-background/80 shadow-lg backdrop-blur-sm">

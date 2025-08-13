@@ -27,7 +27,7 @@ export default function SkillsJSX({
   mdIcon,
 }: SkillsProps) {
   return (
-    <Card className="CARD flex h-full w-full flex-1 justify-center" isBlurred={true}>
+    <Card className="CARD flex h-full w-full flex-1 justify-center" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1">
         <div>{skillIcon}</div>
         <p className="text-center font-Quantico text-3xl font-bold">Skills</p>

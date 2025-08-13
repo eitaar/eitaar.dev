@@ -51,7 +51,7 @@ const StatItem = ({ value, label }: { value: number; label: string }) => (
 
 export default function StatsComponent({ originalStats, cumulativeStats, children }: StatsProps) {
   return (
-    <Card className="CARD flex flex-2 justify-center" isBlurred={true}>
+    <Card className="CARD flex flex-2 justify-center" isBlurred={false}>
       <CardHeader className="flex items-center justify-center gap-1">
         {children}
         <p className="font-Quantico text-3xl font-bold">GitHub Stats</p>

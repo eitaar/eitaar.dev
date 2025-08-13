@@ -16,7 +16,7 @@ export default async function show3DModel(
   filename: string,
   isDeveloperMode: boolean
 ) {
-  const stats = showStats();
+  const stats = isDeveloperMode ? showStats() : false;
   // Create the basic Three.js components
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x17191d);
@@ -86,7 +86,9 @@ export default async function show3DModel(
     requestAnimationFrame(animate);
     controls.update();
     renderer.render(scene, camera);
-    stats.update();
+    if (stats) {
+      stats.update();
+    }
   }
 
   // Start the animation

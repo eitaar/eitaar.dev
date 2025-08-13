@@ -16,7 +16,7 @@ const modelCollection = defineCollection({
   type: 'content',
   schema: z.object({
     filename: z.string(),
-    date: date(),
+    date: z.date(),
     title: z.string(),
     description: z.string().optional(),
   }),

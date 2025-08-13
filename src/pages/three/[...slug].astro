@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const modelEntries = await getCollection('models');
+  return modelEntries.map((entry) => ({
+    params: { slug: entry.data.filename.split('.')[0] },
+    props: { filename: entry.data.filename },
+  }));
+}
+interface Props {
+  filename: string;
+}
+const { filename } = Astro.props as Props;
+---
+
+<Layout title={filename}>
+  <canvas id="threeCanvas" data-filename={filename}></canvas>
+</Layout>
+<script>
+  import show3DModel from '../../assets/src/three';
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('threeCanvas') as HTMLCanvasElement;
+    const queryParams = new URLSearchParams(window.location.search);
+    const isDeveloperMode = queryParams.get('dev') === 'true';
+    const filename = canvas.dataset.filename || 'warn.gltf';
+    if (canvas) {
+      show3DModel(canvas, filename, isDeveloperMode);
+    } else {
+      console.error('Canvas element not found');
+    }
+  });
+</script>

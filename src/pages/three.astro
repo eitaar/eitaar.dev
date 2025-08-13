@@ -1,16 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const { filename } = Astro.props;
 ---
 
 <Layout title="Three.js Example">
-  <canvas id="threeCanvas" class="fixed h-screen w-full"></canvas>
+  <div class="fixed h-screen w-full bg-[#17191d]">
+    <canvas id="threeCanvas" class=""></canvas>
+  </div>
 </Layout>
 <script>
   import show3DModel from '../assets/src/three';
   document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('threeCanvas') as HTMLCanvasElement;
+    const queryParams = new URLSearchParams(window.location.search);
+    const modelFile = queryParams.get('file') || 'warn.gltf';
+    const isDeveloperMode = queryParams.get('dev') === 'true';
     if (canvas) {
-      show3DModel(canvas);
+      show3DModel(canvas, modelFile, isDeveloperMode);
     } else {
       console.error('Canvas element not found');
     }

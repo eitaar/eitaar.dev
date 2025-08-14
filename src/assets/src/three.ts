@@ -27,7 +27,7 @@ export default async function show3DModel(
   const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
   camera.position.set(0, 4, 4);
 
-  const renderer = new WebGPURenderer({ canvas: canvas, antialias: true });
+  const renderer = new WebGPURenderer({ canvas, antialias: true });
   await renderer.init();
 
   const controls = new OrbitControls(camera, renderer.domElement);

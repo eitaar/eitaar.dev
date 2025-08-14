@@ -51,4 +51,5 @@ export interface Model {
   description?: string;
   date: Date;
   software: 'Blender' | 'Blockbench';
+  polygons: number;
 }

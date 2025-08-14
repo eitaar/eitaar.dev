@@ -25,9 +25,9 @@ export default async function show3DModel(
   const nearPlane = 0.1;
   const farPlane = 1000;
   const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-  camera.position.set(0, 5, 5);
+  camera.position.set(0, 4, 4);
 
-  const renderer = new WebGPURenderer({ canvas });
+  const renderer = new WebGPURenderer({ canvas: canvas, antialias: true });
   await renderer.init();
 
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -50,6 +50,8 @@ export default async function show3DModel(
 
   // Configure renderer
   renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.shadowMap.enabled = true;
 
   // Handle window resize events
   const handleResize = () => {

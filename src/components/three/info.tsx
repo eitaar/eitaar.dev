@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader } from '@heroui/react';
+import { Card, CardBody, CardHeader, Chip } from '@heroui/react';
 import models from '../../data/models';
 import type { Model } from '../../types/common';
 import { useEffect, useState } from 'react';
@@ -17,14 +17,25 @@ export default function ModelInfo() {
     return null;
   }
   return (
-    <div className="pointer-events-none fixed top-4 right-4 z-20 flex w-full max-w-sm flex-col items-end">
+    <div className="pointer-events-none fixed top-0 z-20 flex w-full flex-col items-end p-4 lg:right-0 lg:max-w-sm">
       <Card className="pointer-events-auto w-full border-1 border-divider bg-background/80 shadow-lg backdrop-blur-sm">
-        <CardHeader>
-          <h2 className="text-lg font-semibold text-foreground">{targetModel?.title}</h2>
+        <CardHeader className="flex flex-col items-start gap-2">
+          <h2 className="text-lg font-bold text-foreground">{targetModel?.title}</h2>
+          <div className="flex items-center gap-1">
+            <Chip variant="solid" color="primary" className="text-small" size="sm">
+              {targetModel?.software}
+            </Chip>
+            <Chip variant="solid" color="secondary" className="text-small" size="sm">
+              {targetModel?.date.toLocaleDateString()}
+            </Chip>
+            <Chip variant="solid" color="success" className="text-small" size="sm">
+              {targetModel?.polygons} polygons
+            </Chip>
+          </div>
         </CardHeader>
         {targetModel?.description && (
-          <CardBody>
-            <p className="text-small text-foreground/80">{targetModel.description}</p>
+          <CardBody className="pt-0">
+            <p className="">{targetModel.description}</p>
           </CardBody>
         )}
       </Card>

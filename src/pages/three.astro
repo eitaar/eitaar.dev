@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Info from '../components/three/info.tsx';
+import Info from '../components/three/Info';
 ---
 
-<Layout title="Three.js Example">
+<Layout title="3D Model Viewer">
   <div
     id="loadingScreen"
     class="fixed inset-0 z-50 flex items-center justify-center bg-[#17191d] opacity-100 transition-opacity duration-500"
@@ -32,6 +32,9 @@ import Info from '../components/three/info.tsx';
     const queryParams = new URLSearchParams(window.location.search);
     const modelFile = queryParams.get('file') || 'warn.gltf';
     const isDeveloperMode = queryParams.get('dev') === 'true';
+    if (isDeveloperMode) {
+      console.log('Loading model:', modelFile, 'Developer mode:', isDeveloperMode);
+    }
     show3DModel(canvas, modelFile, isDeveloperMode)
       .then(() => {
         loadingScreen.style.opacity = '0';

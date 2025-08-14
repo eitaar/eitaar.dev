@@ -32,7 +32,9 @@ import Info from '../components/three/Info';
     const queryParams = new URLSearchParams(window.location.search);
     const modelFile = queryParams.get('file') || 'warn.gltf';
     const isDeveloperMode = queryParams.get('dev') === 'true';
-    console.log('Loading model:', modelFile, 'Developer mode:', isDeveloperMode);
+    if (isDeveloperMode) {
+      console.log('Loading model:', modelFile, 'Developer mode:', isDeveloperMode);
+    }
     show3DModel(canvas, modelFile, isDeveloperMode)
       .then(() => {
         loadingScreen.style.opacity = '0';

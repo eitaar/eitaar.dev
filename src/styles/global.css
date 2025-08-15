@@ -56,7 +56,6 @@
     color 0.1s linear;
   border: 2px solid transparent;
 }
-/* make a style for CARD for light mode */
 
 .CARD:hover {
   transform: translateY(-4px);

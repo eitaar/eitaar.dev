@@ -15,7 +15,7 @@ import Projects from '../components/index/astro/Projects.astro';
   <div
     class="mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"
   >
-    <About class="" />
+    <About />
   </div>
   <div>
     <h2
@@ -37,7 +37,7 @@ import Projects from '../components/index/astro/Projects.astro';
           </div>
         </div>
       </div>
-      <!-- fotter -->
+      <!-- footer -->
     </section>
   </div>
   <div>
@@ -52,12 +52,4 @@ import Projects from '../components/index/astro/Projects.astro';
     </div>
   </div>
 </Layout>
-<script>
-  import { initArt } from '../assets/src/art.ts';
-  try {
-    const canvas = document.getElementById('artCanvas');
-    initArt();
-  } catch (e) {
-    console.warn('art init failed', e);
-  }
-</script>
+<script></script>

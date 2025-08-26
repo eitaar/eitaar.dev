@@ -7,17 +7,20 @@ import Stats from '../components/index/astro/Stats.astro';
 import Hobbies from '../components/index/astro/Hobbies.astro';
 import Header from '../layouts/astro/Header.astro';
 import Projects from '../components/index/astro/Projects.astro';
+import TestTSX from '../components/testTSX';
 ---
 
 <Layout title="eitaar.dev" showRain={true}>
-  <canvas id="artCanvas" class="fixed -z-10 h-screen w-full"></canvas>
+  <div id="bg-wrapper">
+    <TestTSX client:load />
+  </div>
   <Header class="fixed inset-x-0 top-0 z-50" />
   <div
-    class="mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"
+    class="relative z-10 mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"
   >
-    <About class="" />
+    <About />
   </div>
-  <div>
+  <div class="relative z-10">
     <h2
       class="mx-auto w-9/10 py-8 text-center font-Quantico text-3xl font-bold underline underline-offset-8"
       id="ABOUT"
@@ -37,10 +40,10 @@ import Projects from '../components/index/astro/Projects.astro';
           </div>
         </div>
       </div>
-      <!-- fotter -->
+      <!-- footer -->
     </section>
   </div>
-  <div>
+  <div class="relative z-10">
     <h2
       class="mx-auto w-9/10 py-8 text-center font-Quantico text-3xl font-bold underline underline-offset-8"
       id="PROJECTS"
@@ -52,12 +55,3 @@ import Projects from '../components/index/astro/Projects.astro';
     </div>
   </div>
 </Layout>
-<script>
-  import { initArt } from '../assets/src/art.ts';
-  try {
-    const canvas = document.getElementById('artCanvas');
-    initArt();
-  } catch (e) {
-    console.warn('art init failed', e);
-  }
-</script>

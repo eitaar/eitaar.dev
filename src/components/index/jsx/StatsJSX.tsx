@@ -17,9 +17,12 @@ interface StatsProps {
   children?: React.ReactNode;
 }
 const LanguageLegendItem = ({ lang, index }: { lang: Language; index: number }) => (
-  <div className="flex items-center justify-center">
-    <div className="h-3.5 w-3.5 rounded-full" style={{ backgroundColor: lang.color }}></div>
-    <p className="ml-1">
+  <div className="flex items-center">
+    <div
+      className="h-3 w-3 flex-shrink-0 rounded-full"
+      style={{ backgroundColor: lang.color }}
+    ></div>
+    <p className="ml-2 text-sm">
       {formatLanguageName(lang.name)} {Math.round(lang.percentage * 2) / 2}%
     </p>
   </div>
@@ -48,14 +51,17 @@ export default function StatsComponent({ StatsData, children }: StatsProps) {
       </CardHeader>
       <CardBody className="pt-0">
         <div className="flex flex-col items-center justify-center">
-          <PieChart data={pieChartData} size={250} showLabels={true} />
-          <div className="grid w-full grid-cols-3 font-Quantico">
-            {StatsData.data.languages.slice(0, 9).map((lang: Language, index: number) => (
-              <LanguageLegendItem key={index} lang={lang} index={index} />
-            ))}
+          <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:items-center lg:justify-center">
+            <div className="flex-shrink-0">
+              <PieChart data={pieChartData} size={250} showLabels={true} />
+            </div>
+            <div className="grid h-1/2 grid-cols-2 place-items-center gap-x-4 gap-y-1 font-Quantico lg:grid-cols-2">
+              {StatsData.data.languages.slice(0, 9).map((lang: Language, index: number) => (
+                <LanguageLegendItem key={index} lang={lang} index={index} />
+              ))}
+            </div>
           </div>
 
-          {/* Stats Numbers */}
           <div className="w-full pt-4 font-Quantico">
             <div className="flex w-full flex-wrap justify-center gap-4">
               <StatItem value={StatsData.data.totalRepositories} label="Repositories" />

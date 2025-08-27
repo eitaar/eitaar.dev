@@ -5,6 +5,16 @@ export interface Language {
   color: string;
 }
 
+export interface PieChartSlice {
+  value: number;
+  color: string;
+  name: string;
+}
+
+export interface PieChartData {
+  slices: PieChartSlice[];
+}
+
 export interface StatsData {
   status: 'success' | 'error';
   data: {

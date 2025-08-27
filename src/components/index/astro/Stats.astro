@@ -1,5 +1,5 @@
 ---
-import type { StatsData, Language } from '../../../types/common';
+import type { StatsData, Language, PieChartSlice } from '../../../types/common';
 import { Icon } from 'astro-icon/components';
 import StatsComponent from '../jsx/StatsJSX';
 import { fetcher } from '../../../assets/src/fetcher';
@@ -28,29 +28,15 @@ const dummyData: StatsData = {
     ],
   },
 };
-
-function convertToCumulativePercentages(languages: Language[]): Language[] {
-  let cumulative = 0;
-  return languages.map((lang) => {
-    cumulative += lang.percentage;
-    return { ...lang, percentage: cumulative };
-  });
-}
-
-const originalStats = process.env.NODE_ENV === 'development' ? dummyData : await fetcher();
-const statsWithCumulativePercentages = {
-  ...originalStats,
-  data: {
-    ...originalStats.data,
-    languages: convertToCumulativePercentages(originalStats.data.languages),
-  },
-};
+const StatsData: StatsData = process.env.NODE_ENV === 'production' ? await fetcher() : dummyData;
+// Prepare data for pie chart
+const StarsData: PieChartSlice[] = StatsData.data.languages.map((lang) => ({
+  name: lang.name,
+  value: lang.size,
+  color: lang.color,
+}));
 ---
 
-<StatsComponent
-  client:visible
-  originalStats={originalStats}
-  cumulativeStats={statsWithCumulativePercentages}
->
+<StatsComponent StatsData={StatsData}>
   <Icon name="mdi:graph-box" class="h-7 w-auto" />
 </StatsComponent>

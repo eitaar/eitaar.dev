@@ -1,32 +1,34 @@
-import { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { type Container, type ISourceOptions } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
 import { loadLinksPreset } from '@tsparticles/preset-links';
 
-export default function App() {
-  const [init, setInit] = useState(false);
+let isInitialized = false;
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
+function isSmartphone(): boolean {
+  return typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+}
+async function initializeParticles() {
+  if (isInitialized) return;
+  try {
+    await initParticlesEngine(async (engine) => {
       await loadSlim(engine);
       await loadLinksPreset(engine);
-    })
-      .then(() => {
-        setInit(true);
-      })
-      .catch((error) => {
-        console.error('Failed to initialize particles engine:', error);
-      });
-  }, []);
+    });
+    isInitialized = true;
+  } catch (error) {
+    console.error('Failed to initialize particles engine:', error);
+  }
+}
 
+export default function App() {
   const options: ISourceOptions = {
     preset: 'links',
     particles: {
       number: {
-        value: 200,
+        value: isSmartphone() ? 30 : 100,
         density: {
-          enable: true,
+          enable: false,
         },
       },
     },
@@ -47,9 +49,8 @@ export default function App() {
     }
   };
 
-  if (!init) {
-    return null;
-  }
+  // Initialize particles when component renders
+  initializeParticles();
 
   return (
     <div className="bg-wrapper">

@@ -1,11 +1,5 @@
 @import 'tailwindcss';
 
-/* Ensure all content appears above particles */
-body > * {
-  position: relative;
-  z-index: 1;
-}
-
 @font-face {
   font-family: 'Quantico';
   src: url(/fonts/quantico.woff2) format('woff2');

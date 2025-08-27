@@ -59,7 +59,7 @@ export default function PageNotFound() {
             <Button onPress={handleReturnHome} color="primary" variant="shadow">
               Return To Top
             </Button>
-            <Button onPress={handleEnjoyNyan} color="secondary" variant="shadow">
+            <Button onPress={handleEnjoyNyan} color="secondary" variant="flat">
               Enjoy Nyan Cat
             </Button>
           </div>

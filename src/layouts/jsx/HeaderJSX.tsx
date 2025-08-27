@@ -107,7 +107,7 @@ export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: 
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex flex-col items-center">
+      <NavbarMenu className="fixed flex flex-col items-center">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={item.name} className="">
             <Link

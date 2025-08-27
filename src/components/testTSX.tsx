@@ -1,58 +1,64 @@
 import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { type Container } from '@tsparticles/engine';
+import { type Container, type ISourceOptions } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
 import { loadLinksPreset } from '@tsparticles/preset-links';
 
-// Initialize particles engine once at module level
-let engineInitialized = false;
-let initPromise: Promise<void> | null = null;
+let isInitialized = false;
 
-const initializeEngine = async (): Promise<void> => {
-  if (engineInitialized) return;
-
-  if (initPromise) return initPromise;
-
-  initPromise = initParticlesEngine(async (engine) => {
-    await loadSlim(engine);
-    await loadLinksPreset(engine);
-  }).then(() => {
-    engineInitialized = true;
-  });
-
-  return initPromise;
-};
+function isSmartphone(): boolean {
+  return typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+}
+async function initializeParticles() {
+  if (isInitialized) return;
+  try {
+    await initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+      await loadLinksPreset(engine);
+    });
+    isInitialized = true;
+  } catch (error) {
+    console.error('Failed to initialize particles engine:', error);
+  }
+}
 
 export default function App() {
-  // Initialize engine when component is first loaded
-  initializeEngine();
-
-  const options = {
+  const options: ISourceOptions = {
     preset: 'links',
+    particles: {
+      number: {
+        value: isSmartphone() ? 30 : 100,
+        density: {
+          enable: false,
+        },
+      },
+    },
     background: {
       color: {
         value: 'transparent',
       },
     },
+    fullScreen: {
+      enable: true,
+      zIndex: -100,
+    },
   };
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
+    if (container) {
+      console.log('Particles loaded:', container);
+    }
   };
 
+  // Initialize particles when component renders
+  initializeParticles();
+
   return (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={options}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: -999,
-        pointerEvents: 'none',
-      }}
-    />
+    <div className="bg-wrapper">
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
+    </div>
   );
 }

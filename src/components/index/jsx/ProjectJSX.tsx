@@ -10,6 +10,7 @@ interface ProjectProps {
   children: ReactNode;
   githubIcon?: ReactNode;
   pageIcon?: ReactNode;
+  isBlurred?: boolean;
 }
 
 export default function ProjectJSX({
@@ -21,9 +22,10 @@ export default function ProjectJSX({
   children,
   githubIcon,
   pageIcon,
+  isBlurred = false,
 }: ProjectProps) {
   return (
-    <Card className="CARD font-Quantico text-sm" isBlurred={false}>
+    <Card className="CARD font-Quantico text-sm" isBlurred={isBlurred}>
       <CardHeader>{children}</CardHeader>
       <CardBody className="pt-0 pb-2">
         <h2 className="text-center text-2xl font-bold">{title}</h2>

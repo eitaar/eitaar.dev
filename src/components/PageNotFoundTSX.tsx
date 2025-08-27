@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Button, Card, CardBody } from '@heroui/react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { type Container } from '@tsparticles/engine';
+import { type Container, type ISourceOptions } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
-
+function isSmartphone(): boolean {
+  return typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+}
 export default function PageNotFound() {
   const [init, setInit] = useState(false);
   const [showOverlay, setShowOverlay] = useState(true);
@@ -47,7 +49,7 @@ export default function PageNotFound() {
           showOverlay ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <div className="z-10 space-y-6">
+        <div className="z-10 space-y-4">
           <h1 className="font-Quantico text-8xl font-bold text-white drop-shadow-2xl">404</h1>
           <h2 className="font-Quantico text-3xl text-white drop-shadow-lg">Nyant Found</h2>
           <p className="mx-auto text-lg text-gray-200 drop-shadow-md">
@@ -55,7 +57,7 @@ export default function PageNotFound() {
             <br />
             It seems like we're wandering through space with Nyan Cat.
           </p>
-          <div className="flex flex-col gap-3 pt-4 sm:flex-row sm:justify-center">
+          <div className="flex flex-row justify-center gap-3 pt-4">
             <Button onPress={handleReturnHome} color="primary" variant="shadow">
               Return To Top
             </Button>

@@ -58,7 +58,6 @@ export default function App() {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className=""
       />
     </div>
   );

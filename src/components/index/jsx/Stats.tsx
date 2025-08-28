@@ -2,6 +2,11 @@ import { Card, CardHeader, CardBody } from '@heroui/react';
 import type { StatsData, Language } from '../../../types/common';
 import PieChart from '../../PieChart';
 
+interface StatsProps {
+  statsData: StatsData;
+  children?: React.ReactNode;
+}
+
 const formatLanguageName = (name: string): string => {
   const upperCaseCount = name.split('').filter((letter) => letter.toUpperCase() === letter).length;
   return upperCaseCount >= 2
@@ -12,18 +17,14 @@ const formatLanguageName = (name: string): string => {
     : name;
 };
 
-interface StatsProps {
-  StatsData: StatsData;
-  children?: React.ReactNode;
-}
-const LanguageLegendItem = ({ lang, index }: { lang: Language; index: number }) => (
+const LanguageLegendItem = ({ languageData }: { languageData: Language }) => (
   <div className="flex items-center">
     <div
       className="h-3 w-3 flex-shrink-0 rounded-full"
-      style={{ backgroundColor: lang.color }}
+      style={{ backgroundColor: languageData.color }}
     ></div>
     <p className="ml-2 text-sm">
-      {formatLanguageName(lang.name)} {Math.round(lang.percentage * 2) / 2}%
+      {formatLanguageName(languageData.name)} {languageData.percentage}%
     </p>
   </div>
 );
@@ -35,9 +36,15 @@ const StatItem = ({ value, label }: { value: number; label: string }) => (
   </div>
 );
 
-export default function StatsComponent({ StatsData, children }: StatsProps) {
+export default function StatsComponent({ statsData, children }: StatsProps) {
+  // Sort data by value in descending order and take top 9 languages
+  const top9Languages = statsData.data.languages.slice(0, 9);
+
+  // Calculate the total of all languages and top 9 languages
+  const top9Total = top9Languages.reduce((sum: number, lang: Language) => sum + lang.size, 0);
+
   // Convert language data to PieChart format
-  const pieChartData = StatsData.data.languages.map((lang) => ({
+  const pieChartData = statsData.data.languages.map((lang: Language) => ({
     name: lang.name,
     value: lang.size,
     color: lang.color,
@@ -56,19 +63,19 @@ export default function StatsComponent({ StatsData, children }: StatsProps) {
               <PieChart data={pieChartData} size={250} showLabels={true} />
             </div>
             <div className="grid h-1/2 grid-cols-2 place-items-center gap-x-4 gap-y-1 font-Quantico lg:grid-cols-2">
-              {StatsData.data.languages.slice(0, 9).map((lang: Language, index: number) => (
-                <LanguageLegendItem key={index} lang={lang} index={index} />
+              {top9Languages.map((lang: Language, index: number) => (
+                <LanguageLegendItem key={index} languageData={lang} />
               ))}
             </div>
           </div>
 
           <div className="w-full pt-4 font-Quantico">
             <div className="flex w-full flex-wrap justify-center gap-4">
-              <StatItem value={StatsData.data.totalRepositories} label="Repositories" />
-              <StatItem value={StatsData.data.totalStars} label="Stars" />
-              <StatItem value={StatsData.data.totalCommitContributions} label="Contributions" />
-              <StatItem value={StatsData.data.followerCount} label="Followers" />
-              <StatItem value={StatsData.data.totalPRs} label="PRs" />
+              <StatItem value={statsData.data.totalRepositories} label="Repositories" />
+              <StatItem value={statsData.data.totalStars} label="Stars" />
+              <StatItem value={statsData.data.totalCommitContributions} label="Contributions" />
+              <StatItem value={statsData.data.followerCount} label="Followers" />
+              <StatItem value={statsData.data.totalPRs} label="PRs" />
             </div>
           </div>
         </div>

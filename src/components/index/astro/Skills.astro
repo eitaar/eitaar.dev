@@ -1,17 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components';
-import SkillsJSX from '../jsx/SkillsJSX';
+import SkillsComponent from '../jsx/Skills';
 ---
 
-<SkillsJSX>
+<SkillsComponent>
   <Icon name="mdi:tools" slot="skillIcon" class="h-7 w-auto" />
-  <Icon name="skill-icons:javascript" slot="jsIcon" class="h-10 w-auto xl:h-12" />
-  <Icon name="skill-icons:typescript" class="h-10 w-auto xl:h-12" slot="tsIcon" />
+  <Icon name="skill-icons:javascript" slot="javascriptIcon" class="h-10 w-auto xl:h-12" />
+  <Icon name="skill-icons:typescript" class="h-10 w-auto xl:h-12" slot="typescriptIcon" />
   <Icon name="devicon:nuxt" class="h-10 w-auto xl:h-12" slot="nuxtIcon" />
   <Icon name="devicon:vuejs" class="h-10 w-auto xl:h-12" slot="vueIcon" />
   <Icon name="devicon:astro" class="h-10 w-auto xl:h-12" slot="astroIcon" />
-  <Icon name="devicon:tailwindcss" class="h-10 w-auto xl:h-12" slot="twIcon" />
+  <Icon name="devicon:tailwindcss" class="h-10 w-auto xl:h-12" slot="tailwindIcon" />
   <Icon name="devicon:pixijs" class="h-10 w-auto xl:h-12" slot="pixiIcon" />
-  <Icon name="devicon:python" class="h-10 w-auto xl:h-12" slot="pyIcon" />
-  <Icon name="mdi:language-markdown" class="h-10 w-auto xl:h-12" slot="mdIcon" />
-</SkillsJSX>
+  <Icon name="devicon:python" class="h-10 w-auto xl:h-12" slot="pythonIcon" />
+  <Icon name="mdi:language-markdown" class="h-10 w-auto xl:h-12" slot="markdownIcon" />
+</SkillsComponent>

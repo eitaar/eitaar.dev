@@ -1,13 +1,13 @@
 import { Card, CardHeader, CardBody } from '@heroui/react';
 import type { Hobby } from '../../../types/common';
 
-interface HobbiesJSXProps {
+interface HobbiesProps {
   hobbies: Hobby[];
   hobbyIcon?: React.ReactNode;
   [key: string]: any;
 }
 
-export default function HobbiesJSX(props: HobbiesJSXProps) {
+export default function Hobbies(props: HobbiesProps) {
   const { hobbies } = props;
 
   return (

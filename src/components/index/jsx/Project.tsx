@@ -13,7 +13,7 @@ interface ProjectProps {
   isBlurred?: boolean;
 }
 
-export default function ProjectJSX({
+export default function Project({
   title,
   stack,
   description,

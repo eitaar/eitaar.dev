@@ -8,7 +8,7 @@ interface AboutProps {
   discordIcon?: ReactNode;
 }
 
-export default function AboutJSX({ avatarImg, githubIcon, xIcon, discordIcon }: AboutProps) {
+export default function About({ avatarImg, githubIcon, xIcon, discordIcon }: AboutProps) {
   return (
     <div className="mx-auto flex h-full items-center justify-center gap-5 lg:max-w-2/5">
       <div className="flex flex-col items-center gap-4">

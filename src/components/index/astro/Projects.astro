@@ -1,5 +1,5 @@
 ---
-import ProjectJSX from '../jsx/ProjectJSX';
+import ProjectComponent from '../jsx/Project';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 const { isPreview } = Astro.props;
@@ -24,7 +24,7 @@ const renderedProjects = isPreview ? projects.slice(0, 4) : projects;
       }
 
       return (
-        <ProjectJSX client:visible {...projectProps}>
+        <ProjectComponent client:visible {...projectProps}>
           <Icon name="ri:github-fill" slot="githubIcon" class="h-3/5 w-auto" />
           <Icon name="mdi:open-in-new" slot="pageIcon" class="h-3/5 w-auto" />
           <Image
@@ -39,7 +39,7 @@ const renderedProjects = isPreview ? projects.slice(0, 4) : projects;
             loading="lazy"
             fetchpriority="low"
           />
-        </ProjectJSX>
+        </ProjectComponent>
       );
     })
   }

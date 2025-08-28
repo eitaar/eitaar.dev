@@ -2,10 +2,10 @@
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import avatar from '../../../assets/img/avatar.webp';
-import AboutJSX from '../jsx/AboutJSX';
+import AboutComponent from '../jsx/About';
 ---
 
-<AboutJSX client:visible>
+<AboutComponent client:visible>
   <Image
     src={avatar}
     alt="Avatar"
@@ -16,9 +16,9 @@ import AboutJSX from '../jsx/AboutJSX';
     decoding="async"
     format="avif"
     quality={75}
-    class="bg-transparent shadow-lg w-40 rounded-full border-2 border-slate-200 lg:w-50"
+    class="w-40 rounded-full border-2 border-slate-200 bg-transparent shadow-lg lg:w-50"
   />
   <Icon name="ri:twitter-x-fill" slot="xIcon" class="h-7 w-7" />
   <Icon name="ri:github-fill" slot="githubIcon" class="h-7 w-7" />
   <Icon name="ri:discord-fill" slot="discordIcon" class="h-7 w-7 text-[#5662f6]" />
-</AboutJSX>
+</AboutComponent>

@@ -3,27 +3,27 @@ import type { ReactNode } from 'react';
 
 interface InterestsProps {
   interestIcon?: ReactNode;
-  ardIcon?: ReactNode;
+  arduinoIcon?: ReactNode;
   cppIcon?: ReactNode;
   rustIcon?: ReactNode;
-  bderIcon?: ReactNode;
-  fltIcon?: ReactNode;
+  blenderIcon?: ReactNode;
+  flutterIcon?: ReactNode;
   javaIcon?: ReactNode;
-  p5Icon?: ReactNode;
-  thjsIcon?: ReactNode;
+  p5jsIcon?: ReactNode;
+  threejsIcon?: ReactNode;
   reactIcon?: ReactNode;
 }
 
-export default function InterestsJSX({
+export default function Interests({
   interestIcon,
-  ardIcon,
+  arduinoIcon,
   cppIcon,
   rustIcon,
-  bderIcon,
-  fltIcon,
+  blenderIcon,
+  flutterIcon,
   javaIcon,
-  p5Icon,
-  thjsIcon,
+  p5jsIcon,
+  threejsIcon,
   reactIcon,
 }: InterestsProps) {
   return (
@@ -33,14 +33,14 @@ export default function InterestsJSX({
         <p className="text-center font-Quantico text-3xl font-bold">Interests</p>
       </CardHeader>
       <CardBody className="flex w-full flex-row flex-wrap items-start justify-center gap-2">
-        <div>{ardIcon}</div>
+        <div>{arduinoIcon}</div>
         <div>{cppIcon}</div>
         <div>{rustIcon}</div>
-        <div>{bderIcon}</div>
-        <div>{fltIcon}</div>
+        <div>{blenderIcon}</div>
+        <div>{flutterIcon}</div>
         <div>{javaIcon}</div>
-        <div>{p5Icon}</div>
-        <div>{thjsIcon}</div>
+        <div>{p5jsIcon}</div>
+        <div>{threejsIcon}</div>
         <div>{reactIcon}</div>
       </CardBody>
     </Card>

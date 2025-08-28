@@ -1,42 +1,18 @@
 ---
 import type { StatsData, Language, PieChartSlice } from '../../../types/common';
 import { Icon } from 'astro-icon/components';
-import StatsComponent from '../jsx/StatsJSX';
+import StatsComponent from '../jsx/Stats';
 import { fetcher } from '../../../assets/src/fetcher';
 
-// dummy data
-const dummyData: StatsData = {
-  status: 'success',
-  data: {
-    followerCount: 2,
-    totalCommitContributions: 365,
-    totalSize: 266079,
-    totalStars: 2,
-    totalRepositories: 13,
-    totalPRs: 78,
-    languages: [
-      { name: 'Vue', size: 99430, percentage: 37.37, color: '#41b883' },
-      { name: 'JavaScript', size: 72874, percentage: 27.39, color: '#f1e05a' },
-      { name: 'TypeScript', size: 31385, percentage: 11.8, color: '#3178c6' },
-      { name: 'Astro', size: 28581, percentage: 10.74, color: '#ff5a03' },
-      { name: 'CSS', size: 22210, percentage: 8.35, color: '#663399' },
-      { name: 'EJS', size: 5497, percentage: 2.07, color: '#a91e50' },
-      { name: 'Java', size: 2319, percentage: 0.87, color: '#b07219' },
-      { name: 'HTML', size: 2313, percentage: 0.87, color: '#e34c26' },
-      { name: 'MDX', size: 1144, percentage: 0.43, color: '#fcb32c' },
-      { name: 'Batchfile', size: 326, percentage: 0.12, color: '#C1F12E' },
-    ],
-  },
-};
-const StatsData: StatsData = process.env.NODE_ENV === 'production' ? await fetcher() : dummyData;
+const statsData: StatsData = await fetcher();
 // Prepare data for pie chart
-const StarsData: PieChartSlice[] = StatsData.data.languages.map((lang) => ({
+const starsData: PieChartSlice[] = statsData.data.languages.map((lang) => ({
   name: lang.name,
   value: lang.size,
   color: lang.color,
 }));
 ---
 
-<StatsComponent StatsData={StatsData}>
+<StatsComponent statsData={statsData}>
   <Icon name="mdi:graph-box" class="h-7 w-auto" />
 </StatsComponent>

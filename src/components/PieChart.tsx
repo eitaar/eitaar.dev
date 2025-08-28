@@ -15,7 +15,7 @@ interface Props {
 const PieChart: React.FC<Props> = ({ data, size = 300, showLabels = true }) => {
   // Sort data by value in descending order and take top 9 languages
   const sortedData = [...data].sort((a, b) => b.value - a.value);
-  const top9Data = sortedData.slice(0, 9);
+  const top9Data = sortedData.slice(0, 8);
 
   // Calculate the total of all languages and top 9 languages
   const originalTotal = data.reduce((sum, d) => sum + d.value, 0);

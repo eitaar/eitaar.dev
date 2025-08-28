@@ -32,17 +32,6 @@ export default function About({ avatarImg, githubIcon, xIcon, discordIcon }: Abo
             >
               {githubIcon}
             </Button>
-            <Button
-              isIconOnly={true}
-              variant="light"
-              as="a"
-              href="https://x.com/eitaar0"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X"
-            >
-              {xIcon}
-            </Button>
             <Popover placement="bottom" showArrow={true}>
               <PopoverTrigger>
                 <Button

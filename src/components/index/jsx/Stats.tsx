@@ -38,7 +38,7 @@ const StatItem = ({ value, label }: { value: number; label: string }) => (
 
 export default function StatsComponent({ statsData, children }: StatsProps) {
   // Sort data by value in descending order and take top 9 languages
-  const top9Languages = statsData.data.languages.slice(0, 9);
+  const top9Languages = statsData.data.languages.slice(0, 8);
 
   // Calculate the total of all languages and top 9 languages
   const top9Total = top9Languages.reduce((sum: number, lang: Language) => sum + lang.size, 0);

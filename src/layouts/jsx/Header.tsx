@@ -22,7 +22,7 @@ interface menuItem {
   name: string;
   href: string;
 }
-export default function HeaderJSX({ themeToggle, rainToggleOn, rainToggleOff }: HeaderProps) {
+export default function Header({ themeToggle, rainToggleOn, rainToggleOff }: HeaderProps) {
   const [isRainVisible, setIsRainVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuItems: menuItem[] = [

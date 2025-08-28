@@ -7,11 +7,11 @@ import Stats from '../components/index/astro/Stats.astro';
 import Hobbies from '../components/index/astro/Hobbies.astro';
 import Header from '../layouts/astro/Header.astro';
 import Projects from '../components/index/astro/Projects.astro';
-import TestTSX from '../components/testTSX';
+import ParticlesBackground from '../components/tsParticles/ParticlesBackground';
 ---
 
 <Layout title="eitaar.dev" showRain={true}>
-  <TestTSX client:idle />
+  <ParticlesBackground client:idle />
   <Header class="" />
   <div
     class="mx-auto flex min-h-[calc(100vh-var(--navbar-height))] w-9/10 items-center justify-center"

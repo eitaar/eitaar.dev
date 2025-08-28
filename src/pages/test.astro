@@ -1,9 +1,16 @@
 ---
-import TestTSX from '../components/testTSX';
 import Layout from '../layouts/Layout.astro';
-import PageNotFoundTSX from '../components/PageNotFoundTSX';
+import PieChart from '../components/PieChart';
+import { fetcher } from '../assets/src/fetcher';
+import type { StatsData } from '../types/common';
+const Stats: StatsData = await fetcher();
+const chartData = Stats.data.languages.map((lang) => ({
+  name: lang.name,
+  value: lang.size,
+  color: lang.color,
+}));
 ---
 
-<Layout title="Test TSX in Astro">
-  <PageNotFoundTSX client:load />
+<Layout title="eitaar.dev">
+  <PieChart data={chartData} size={250} showLabels={true} />
 </Layout>

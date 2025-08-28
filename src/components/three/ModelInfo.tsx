@@ -1,17 +1,22 @@
 import { Card, CardBody, CardHeader, Chip } from '@heroui/react';
 import models from '../../data/models';
 import type { Model } from '../../types/common';
-import { useEffect, useState } from 'react';
 
 export default function ModelInfo() {
-  const [targetModel, setTargetModel] = useState<Model | null>(null);
+  // Get model from URL params (client-side only)
+  const getTargetModel = (): Model | null => {
+    if (typeof window === 'undefined') return null;
 
-  useEffect(() => {
     const targetFile = new URLSearchParams(window.location.search).get('file') || 'warn.gltf';
-    const model = models.find((model) => model.filename === targetFile) || null;
-    setTargetModel(model);
-    document.title = model ? `${model.title} - eitaar.dev` : 'eitaar.dev';
-  }, []);
+    return models.find((model) => model.filename === targetFile) || null;
+  };
+
+  const targetModel = getTargetModel();
+
+  // Set document title (client-side only)
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    document.title = targetModel ? `${targetModel.title} - eitaar.dev` : 'eitaar.dev';
+  }
 
   if (!targetModel) {
     return null;

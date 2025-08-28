@@ -3,28 +3,28 @@ import type { ReactNode } from 'react';
 
 interface SkillsProps {
   skillIcon?: ReactNode;
-  jsIcon?: ReactNode;
-  tsIcon?: ReactNode;
+  javascriptIcon?: ReactNode;
+  typescriptIcon?: ReactNode;
   nuxtIcon?: ReactNode;
   vueIcon?: ReactNode;
   astroIcon?: ReactNode;
-  twIcon?: ReactNode;
-  pixIcon?: ReactNode;
-  pyIcon?: ReactNode;
-  mdIcon?: ReactNode;
+  tailwindIcon?: ReactNode;
+  pixiIcon?: ReactNode;
+  pythonIcon?: ReactNode;
+  markdownIcon?: ReactNode;
 }
 
-export default function SkillsJSX({
+export default function Skills({
   skillIcon,
-  jsIcon,
-  tsIcon,
+  javascriptIcon,
+  typescriptIcon,
   nuxtIcon,
   vueIcon,
   astroIcon,
-  twIcon,
-  pixIcon,
-  pyIcon,
-  mdIcon,
+  tailwindIcon,
+  pixiIcon,
+  pythonIcon,
+  markdownIcon,
 }: SkillsProps) {
   return (
     <Card className="CARD flex h-full w-full flex-1 justify-center" isBlurred={true}>
@@ -33,15 +33,15 @@ export default function SkillsJSX({
         <p className="text-center font-Quantico text-3xl font-bold">Skills</p>
       </CardHeader>
       <CardBody className="flex w-full flex-row flex-wrap items-start justify-center gap-2">
-        <div>{jsIcon}</div>
-        <div>{tsIcon}</div>
+        <div>{javascriptIcon}</div>
+        <div>{typescriptIcon}</div>
         <div>{nuxtIcon}</div>
         <div>{vueIcon}</div>
         <div>{astroIcon}</div>
-        <div>{twIcon}</div>
-        <div>{pixIcon}</div>
-        <div>{pyIcon}</div>
-        <div>{mdIcon}</div>
+        <div>{tailwindIcon}</div>
+        <div>{pixiIcon}</div>
+        <div>{pythonIcon}</div>
+        <div>{markdownIcon}</div>
       </CardBody>
     </Card>
   );

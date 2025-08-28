@@ -17,11 +17,11 @@ async function initializeParticles() {
     });
     isInitialized = true;
   } catch (error) {
-    console.error('Failed to initialize particles engine:', error);
+    console.warn('Particles engine initialization failed');
   }
 }
 
-export default function App() {
+export default function ParticlesBackground() {
   const options: ISourceOptions = {
     preset: 'links',
     particles: {
@@ -44,9 +44,7 @@ export default function App() {
   };
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    if (container) {
-      console.log('Particles loaded:', container);
-    }
+    // Particles loaded successfully
   };
 
   // Initialize particles when component renders
@@ -54,11 +52,7 @@ export default function App() {
 
   return (
     <div className="bg-wrapper">
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />
     </div>
   );
 }

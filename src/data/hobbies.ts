@@ -12,6 +12,16 @@ const hobbies: Hobby[] = [
     iconName: 'simple:undertale',
   },
   {
+    title: 'Mahjong',
+    flavour: 'Pon',
+    iconName: 'twemoji:mahjong-red-dragon',
+  },
+  {
+    title: 'Reading',
+    flavour: 'Mostly manga',
+    iconName: 'mdi:book-open-variant',
+  },
+  {
     title: 'Coding',
     flavour: 'Still learning...',
     iconName: 'devicon:vscode',

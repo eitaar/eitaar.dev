@@ -30,7 +30,7 @@
     "@twemoji/api": "^16.0.1",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
-    "astro": "^5.12.9",
+    "astro": "^5.14.3",
     "astro-expressive-code": "^0.41.2",
     "astro-icon": "^1.1.5",
     "astro-particles": "^2.10.0",

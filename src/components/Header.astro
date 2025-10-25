@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
+];
+---
+
+<input type="checkbox" id="toggleMenu" class="hidden" aria-label="Toggle menu" />
+
+<header
+  class="fixed top-0 z-50 w-full border-b-2 border-base-300 bg-base-100/50 backdrop-blur-md transition-colors duration-100"
+>
+  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <!-- Logo -->
+    <a
+      href="/"
+      class="flex items-center font-Bungee text-2xl tracking-tight text-base-content hover:text-primary sm:text-3xl"
+    >
+      <span>eitaar</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden items-center gap-6 md:flex">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'link text-sm font-medium transition-colors',
+              currentPath === item.href ? 'text-primary' : 'text-base-content',
+            ]}
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- Right Section: Theme Toggle + Mobile Menu Button -->
+    <div class="flex items-center gap-2">
+      <!-- Theme Toggle Button -->
+      <button
+        type="button"
+        class="flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-base-300"
+        aria-label="Toggle theme"
+        title="Toggle theme"
+        onclick="window.toggleTheme()"
+      >
+        <Icon name="mdi:white-balance-sunny" class="h-5 w-5 sm:h-6 sm:w-6" data-theme-icon="sun" />
+        <Icon name="mdi:moon-and-stars" class="h-5 w-5 sm:h-6 sm:w-6" data-theme-icon="moon" />
+      </button>
+      <div class="md:hidden">
+        <!-- Mobile Menu Button -->
+        <label
+          for="toggleMenu"
+          class="flex cursor-pointer items-center justify-center rounded-lg p-2 transition-colors hover:bg-base-200"
+        >
+          <Icon name="mdi:menu" class="h-6 w-6" data-menu-icon="open" />
+          <Icon name="mdi:close" class="h-6 w-6" data-menu-icon="close" />
+        </label>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav
+  id="mobile-menu"
+  class="pointer-events-none fixed top-16 left-0 z-40 max-h-0 w-full overflow-hidden border-0 bg-base-100 opacity-0 shadow-sm outline-0 transition-all duration-300 ease-out [#toggleMenu:checked~&]:pointer-events-auto [#toggleMenu:checked~&]:max-h-[60vh] [#toggleMenu:checked~&]:opacity-100"
+>
+  <div class="flex flex-col px-4 py-2">
+    {
+      navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-base-200 hover:text-primary',
+            currentPath === item.href ? 'bg-base-200/50 text-primary' : 'text-base-content/70',
+          ]}
+        >
+          {item.name}
+        </a>
+      ))
+    }
+  </div>
+</nav>

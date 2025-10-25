@@ -1,0 +1,225 @@
+@import "tailwindcss";
+@import "./light.css";
+@import "./dark.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@font-face {
+	font-family: "Bungee";
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url("/fonts/bungee-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Rubik";
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url("/fonts/rubik-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Rubik";
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url("/fonts/rubik-bold.woff2") format("woff2");
+}
+
+@theme {
+	--font-Bungee: Bungee, sans-serif;
+	--font-Rubik: Rubik, sans-serif;
+}
+@theme inline {
+	--tracking-tightest: -0.075em;
+	--color-base-100: var(--color-base-100);
+	--color-base-200: var(--color-base-200);
+	--color-base-300: var(--color-base-300);
+	--color-base-content: var(--color-base-content);
+	--color-primary: var(--color-primary);
+	--color-primary-content: var(--color-primary-content);
+	--color-secondary: var(--color-secondary);
+	--color-secondary-content: var(--color-secondary-content);
+	--color-accent: var(--color-accent);
+	--color-accent-content: var(--color-accent-content);
+	--color-neutral: var(--color-neutral);
+	--color-neutral-content: var(--color-neutral-content);
+	--color-info: var(--color-info);
+	--color-info-content: var(--color-info-content);
+	--color-success: var(--color-success);
+	--color-success-content: var(--color-success-content);
+	--color-warning: var(--color-warning);
+	--color-warning-content: var(--color-warning-content);
+	--color-error: var(--color-error);
+	--color-error-content: var(--color-error-content);
+}
+
+:root {
+	@apply font-Rubik text-base-content bg-base-100;
+}
+
+@layer utilities {
+	.bg-pattern {
+		background-color: var(--color-base-100);
+		z-index: -10;
+		background-image:
+			radial-gradient(70% 60% at 8% 14%, rgba(255, 214, 165, 0.58), transparent 70%),
+			radial-gradient(62% 50% at 92% 18%, rgba(167, 219, 255, 0.62), transparent 72%),
+			radial-gradient(60% 60% at 52% 95%, rgba(255, 255, 255, 0.82), transparent 66%),
+			radial-gradient(50% 50% at 74% 64%, rgba(197, 128, 255, 0.38), transparent 68%),
+			radial-gradient(48% 48% at 26% 70%, rgba(248, 172, 214, 0.42), transparent 70%),
+			linear-gradient(to right, rgba(37, 99, 235, 0.18) 1px, transparent 1px),
+			linear-gradient(to bottom, rgba(59, 130, 246, 0.16) 1px, transparent 1px);
+		background-size:
+			120% 100%,
+			110% 100%,
+			120% 100%,
+			115% 100%,
+			105% 100%,
+			48px 48px,
+			48px 48px;
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+	}
+
+	@media (max-width: 640px) {
+		.bg-pattern {
+			background-image:
+				radial-gradient(150% 90% at 18% 12%, rgba(255, 214, 165, 0.68), transparent 76%),
+				radial-gradient(135% 85% at 88% 24%, rgba(167, 219, 255, 0.7), transparent 78%),
+				radial-gradient(170% 130% at 50% 102%, rgba(255, 255, 255, 0.86), transparent 68%),
+				radial-gradient(150% 110% at 72% 60%, rgba(197, 128, 255, 0.44), transparent 74%),
+				radial-gradient(120% 90% at 30% 78%, rgba(248, 172, 214, 0.48), transparent 76%),
+				linear-gradient(to right, rgba(37, 99, 235, 0.2) 1px, transparent 1px),
+				linear-gradient(to bottom, rgba(59, 130, 246, 0.18) 1px, transparent 1px);
+			background-size:
+				160% 100%,
+				150% 100%,
+				155% 120%,
+				150% 110%,
+				140% 110%,
+				52px 52px,
+				52px 52px;
+			background-position:
+				left top,
+				center 12%,
+				center 98%,
+				right center,
+				left 70%,
+				left top,
+				left top;
+		}
+	}
+
+	[data-theme="dark"] .bg-pattern {
+		background-color: var(--color-base-300);
+		z-index: -10;
+		background-image:
+			radial-gradient(68% 60% at 12% 16%, rgba(125, 86, 255, 0.48), transparent 74%),
+			radial-gradient(60% 54% at 90% 20%, rgba(64, 193, 255, 0.38), transparent 76%),
+			radial-gradient(58% 60% at 50% 100%, rgba(255, 255, 255, 0.12), transparent 70%),
+			radial-gradient(52% 52% at 70% 66%, rgba(217, 70, 239, 0.34), transparent 72%),
+			radial-gradient(48% 46% at 28% 72%, rgba(67, 206, 162, 0.32), transparent 70%),
+			linear-gradient(to right, rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+			linear-gradient(to bottom, rgba(148, 163, 184, 0.16) 1px, transparent 1px);
+		background-size:
+			120% 100%,
+			110% 100%,
+			120% 120%,
+			115% 110%,
+			105% 110%,
+			48px 48px,
+			48px 48px;
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+	}
+
+	@media (max-width: 640px) {
+		[data-theme="dark"] .bg-pattern {
+			background-image:
+				radial-gradient(165% 95% at 18% 14%, rgba(125, 86, 255, 0.5), transparent 80%),
+				radial-gradient(150% 90% at 90% 26%, rgba(64, 193, 255, 0.42), transparent 82%),
+				radial-gradient(150% 125% at 50% 104%, rgba(255, 255, 255, 0.14), transparent 72%),
+				radial-gradient(170% 102% at 72% 68%, rgba(217, 70, 239, 0.36), transparent 78%),
+				radial-gradient(135% 95% at 30% 80%, rgba(67, 206, 162, 0.34), transparent 76%),
+				linear-gradient(to right, rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+				linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+			background-size:
+				170% 110%,
+				160% 105%,
+				165% 130%,
+				160% 120%,
+				150% 115%,
+				54px 54px,
+				54px 54px;
+			background-position:
+				left top,
+				center 14%,
+				center 102%,
+				right center,
+				left 72%,
+				left top,
+				left top;
+		}
+	}
+
+	[data-theme="dark"] [data-theme-icon="sun"],
+	[data-theme="light"] [data-theme-icon="moon"] {
+		display: none;
+	}
+
+	/* Mobile menu toggle & animation (no JS) */
+	[data-menu-icon="close"] {
+		display: none;
+	}
+
+	#toggleMenu:checked ~ header [data-menu-icon="close"] {
+		display: block;
+	}
+
+	#toggleMenu:checked ~ header [data-menu-icon="open"] {
+		display: none;
+	}
+}
+
+.link {
+	position: relative;
+	@apply hover:text-primary underline-offset-4;
+}
+
+.link::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: center;
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 1px;
+	pointer-events: none;
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+	transform: translateX(-50%) scaleX(1);
+}
+
+.bg-pattern {
+	transition:
+		background-color 0.1s linear,
+		background-image 0.1s linear;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+	transition: color 0.1s linear;
+}

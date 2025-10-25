@@ -1,0 +1,61 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'eitaar.dev' }: Props = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <BaseHead title={title} description={description} />
+    <script is:inline>
+      function initTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      initTheme();
+    </script>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+    <main class="bg-pattern">
+      <div class="container mx-auto">
+        <slot />
+      </div>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+    <script>
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        // Dispatch custom event for theme change
+        document.dispatchEvent(new CustomEvent('themeChanged'));
+      }
+      window.toggleTheme = toggleTheme;
+      document.addEventListener('astro:after-swap', () => {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      });
+    </script>
+    <div class="hidden">
+      <span class="bg-primary text-primary-content"></span>
+      <span class="bg-secondary text-secondary-content"></span>
+      <span class="bg-accent text-accent-content"></span>
+    </div>
+  </body>
+</html>

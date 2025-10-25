@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  label?: string;
+  icon?: string;
+  variant?: 'solid' | 'outline' | 'soft';
+  color?: 'primary' | 'secondary' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { label, icon, variant = 'soft', color = 'primary', size = 'md' } = Astro.props;
+
+const baseClasses = 'inline-flex items-center justify-center rounded-full font-medium';
+
+const colorVariants = {
+  solid: {
+    primary: 'bg-primary text-primary-content',
+    secondary: 'bg-secondary text-secondary-content',
+    accent: 'bg-accent text-accent-content',
+  },
+  outline: {
+    primary: 'border-2 border-primary text-primary',
+    secondary: 'border-2 border-secondary text-secondary',
+    accent: 'border-2 border-accent text-accent',
+  },
+  soft: {
+    primary: 'bg-primary/20 text-primary',
+    secondary: 'bg-secondary/20 text-secondary',
+    accent: 'bg-accent/20 text-accent',
+  },
+};
+
+const sizeVariants = {
+  sm: 'px-2 py-0.5 text-xs',
+  md: 'px-3 py-1 text-sm',
+  lg: 'px-4 py-2 text-base',
+};
+
+const variantClasses = colorVariants[variant][color];
+const sizeClasses = sizeVariants[size];
+---
+
+<div class:list={[baseClasses, variantClasses, sizeClasses]}>
+  {icon && <Icon name={icon} width="100%" height="100%" class="size-4" />}
+  {label && <span class:list={{ 'ms-2': icon }}>{label}</span>}
+</div>

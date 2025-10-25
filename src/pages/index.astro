@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SkillCard from '../components/SkillCard.astro';
+import { Skills } from '../data/skills';
+import Button from '../components/ui/Button.astro';
+---
+<Layout title="eitaar - Portfolio" description="Portfolio of Eitaar.">
+	<!-- Hero Section -->
+	<section class="flex min-h-screen items-center justify-center px-6 py-24">
+		<div class="mx-auto max-w-2xl text-center">
+			<h1 class="mb-6 font-Bungee text-6xl text-primary md:text-7xl">EITAAR</h1>
+			<p class="mb-6 text-2xl">Full Stack Developer & Creative Builder</p>
+			<p class="mb-8 text-xl text-base-content/70">
+				Crafting beautiful, high-performance web experiences with modern technologies and thoughtful
+				design
+			</p>
+			<div class="flex justify-center gap-4">
+				<Button text="View Projects" href="#projects" variant="soft" color="accent"/>
+				<Button text="Get in Touch" href="#contact" variant="soft" color="accent"/>
+			</div>
+		</div>
+	</section>
+
+	<!--Skills -->
+	<section class="px-6 py-24" id="skills">
+		<div class="mx-auto max-w-6xl">
+			<h2 class="mb-10 text-center font-Bungee text-5xl">Skills</h2>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				{
+          Skills.map((skill) => (
+            <SkillCard
+              icon={skill.icon}
+				name={skill.name}
+				description={skill.description}
+				confidence={skill.confidence}
+				tags={skill.tags}
+				/> )) }
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -24,7 +24,9 @@
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "double",
-			"enabled": true
+			"enabled": true,
+			"semicolons": "always",
+			"bracketSpacing": true
 		}
 	},
 	"json": {

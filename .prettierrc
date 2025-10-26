@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "indentStyle": "tab",
+  "lineWidth": 100,
+  "indentWidth": 2,
+  "lineEnding": "lf",
+  "singleQuote": false,
+  "semi": true,
+  "tailwindStylesheet": "./src/styles/global.css",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}

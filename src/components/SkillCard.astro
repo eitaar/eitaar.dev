@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Chip from './ui/Chip.astro';
-import type { SkillProps } from '../types/global';
+import { Icon } from "astro-icon/components";
+import ChipUI from "./ui/ChipUI.astro";
+import type { SkillProps } from "../types/global";
 interface Props extends SkillProps {}
 const { icon, name, description, confidence, tags } = Astro.props;
 ---
@@ -12,7 +12,7 @@ const { icon, name, description, confidence, tags } = Astro.props;
     <h3 class="text-xl font-semibold">{name}</h3>
   </div>
   <div class="mb-4 flex flex-wrap gap-2">
-    {tags && tags?.map((tag) => <Chip label={tag} size="sm" />)}
+    {tags && tags?.map((tag) => <ChipUI label={tag} size="sm" />)}
   </div>
   <p class="mb-4 text-base-content/80">{description}</p>
   <div class="flex items-center">
@@ -21,8 +21,8 @@ const { icon, name, description, confidence, tags } = Astro.props;
       {
         Array.from({ length: 5 }, (_, i) => (
           <Icon
-              name="mdi:star"
-            class={`h-5 w-5 ${i < confidence ? 'fill-current text-yellow-400' : 'text-gray-300'}`}
+            name="mdi:star"
+            class={`h-5 w-5 ${i < confidence ? "fill-current text-yellow-400" : "text-gray-300"}`}
           />
         ))
       }

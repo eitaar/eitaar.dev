@@ -19,6 +19,7 @@
 		"@astrojs/sitemap": "^3.6.0",
 		"@iconify-json/devicon": "^1.2.45",
 		"@iconify-json/mdi": "^1.2.3",
+		"@iconify-json/simple-icons": "^1.2.56",
 		"@tailwindcss/vite": "^4.1.13",
 		"astro": "5.15.1",
 		"astro-icon": "^1.1.5",

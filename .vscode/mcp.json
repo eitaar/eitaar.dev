@@ -3,11 +3,7 @@
 	"servers": {
 		"playwright": {
 			"command": "npx",
-			"args": [
-				"@playwright/mcp@latest",
-				"--browser",
-				"msedge"
-			],
+			"args": ["@playwright/mcp@latest", "--browser", "msedge"],
 			"cwd": "${workspaceFolder}",
 			"type": "stdio"
 		}

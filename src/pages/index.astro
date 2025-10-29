@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="eitaar - Portfolio" description="Portfolio of Eitaar.">
 	<!--About section -->
 	<section class="relative px-6 py-40" id="about">
-		<div class="mx-auto max-w-5xl">
+		<div class="mx-auto max-w-7xl">
 			<h2 class="mb-8 text-center font-Bungee text-5xl">Profile</h2>
 			<div class="flex flex-col items-center justify-center gap-12 py-20 lg:flex-row lg:gap-20">
 				<div class="shrink-0">
@@ -51,8 +51,8 @@ import Layout from "../layouts/Layout.astro";
 							<p class="text-lg">Japanese</p>
 						</div>
 						<div class="flex flex-col gap-1">
-							<p class="profile-title">Location</p>
-							<p class="text-lg">United Kingdom</p>
+							<p class="profile-title">Interests</p>
+							<p class="text-lg">3D modeling / CG / Machine Learning</p>
 						</div>
 					</div>
 				</div>
@@ -63,10 +63,10 @@ import Layout from "../layouts/Layout.astro";
 	<!-- Skills Section -->
 	<section class="px-6 py-20" id="skills">
 		<div class="mx-auto max-w-7xl">
-			<h2 class="mb-8 text-center font-Bungee text-5xl">Skills</h2>
+			<h2 class="mb-8 text-center font-Bungee text-5xl">Tech Stacks</h2>
 			<div class="mb-8 flex flex-wrap items-center justify-center gap-3">
 				{
-          ["All", "Language", "Framework", "Design", "Other"].map((label) => (
+          ["All", "Language", "Framework", "Design", "Modeling", "Other"].map((label) => (
             <ChipUI
               label={label}
               variant="outline"

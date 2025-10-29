@@ -2,7 +2,7 @@
 @import "./light.css";
 @import "./dark.css";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @font-face {
 	font-family: "Bungee";
@@ -227,4 +227,3 @@ a {
 .profile-title {
 	@apply text-sm font-semibold tracking-widest text-accent/70 uppercase;
 }
-

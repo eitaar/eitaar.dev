@@ -10,7 +10,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="eitaar - Portfolio" description="Portfolio of Eitaar.">
 	<!--About section -->
-	<section class="relative px-6 py-40" id="about">
+	<section
+		class="relative px-6 py-40 min-h-screen flex flex-col items-center justify-center"
+		id="about"
+	>
 		<div class="mx-auto max-w-7xl">
 			<h2 class="mb-8 text-center font-Bungee text-5xl">Profile</h2>
 			<div class="flex flex-col items-center justify-center gap-12 py-20 lg:flex-row lg:gap-20">
@@ -18,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
 					<Image
 						src={avatar}
 						alt="Eitaar's Avatar"
-						class="rounded-full border-4 border-b-gray-500"
+						class="rounded-full border-4 border-secondary"
 						width={275}
 						height={275}
 					/>
@@ -94,6 +97,8 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</section>
+
+	<!-- Projects section -->
 	<script>
 	function filterTags(selectedTag: string): void {
 		const cards = document.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;

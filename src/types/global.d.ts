@@ -14,4 +14,13 @@ interface SkillProps {
 	tags: string[];
 }
 
-export type { SkillProps };
+interface ProjectProps {
+	title: string;
+	description: string;
+	imageUrl: ImageMetadata;
+	projectUrl?: string;
+	repoUrl?: string;
+	tags: string[];
+}
+
+export type { SkillProps, ProjectProps };

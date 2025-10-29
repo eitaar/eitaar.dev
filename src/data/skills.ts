@@ -4,8 +4,7 @@ export const Skills: SkillProps[] = [
 	{
 		icon: "simple-icons:blockbench",
 		name: "Blockbench",
-		description:
-			"Proficient in using Blockbench for 3D modeling and texturing, especially for Minecraft assets",
+		description: "Have used it to create 3D Minecraft assets",
 		confidence: 4,
 		tags: ["Game", "Modeling"],
 	},
@@ -14,7 +13,7 @@ export const Skills: SkillProps[] = [
 		name: "JavaScript",
 		description: "Knows basics and can program at an intermediate level",
 		confidence: 3,
-		tags: ["Web", "Language", "FrontEnd", "Backend"],
+		tags: ["Web", "Language", "BothEnd"],
 	},
 	{
 		icon: "devicon:astro",
@@ -33,7 +32,7 @@ export const Skills: SkillProps[] = [
 	{
 		icon: "devicon:css3",
 		name: "CSS",
-		description: "Knows basics and can style simple web pages (does not mean I am good at design)",
+		description: "Can style simple web pages (does not mean I am good at design)",
 		confidence: 3,
 		tags: ["Web", "Design", "Frontend"],
 	},

@@ -67,3 +67,4 @@ When I add the -usemcp flag (short for use context 7 and playwright mcp mode) at
 
 ### 8. environments
 - the development server is always running on localhost:4321 so you do not need to start a new server.
+- we use yarn as package manager, not npm or pnpm.

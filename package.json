@@ -8,9 +8,9 @@
 		"bp": "astro build && astro preview",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "biome format --write",
-		"lint": "biome lint --write",
-		"check": "biome check --write"
+		"biome:format": "biome format --write",
+		"biome:lint": "biome lint --write",
+		"biome:check": "biome check --write"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "12.6.10",

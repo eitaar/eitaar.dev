@@ -1,24 +1,23 @@
 ---
 import { Icon } from "astro-icon/components";
-import ChipUI from "./ui/ChipUI.astro";
 import type { SkillProps } from "../types/global";
+import ChipUI from "./ui/ChipUI.astro";
+
 interface Props extends SkillProps {}
 const { icon, name, description, confidence, tags } = Astro.props;
 ---
-
-<div class="rounded-lg bg-base-100 p-6 shadow">
-  <div class="mb-3 flex items-center">
-    <Icon name={icon} class="mr-3 h-8 w-8" />
-    <h3 class="text-xl font-semibold">{name}</h3>
-  </div>
-  <div class="mb-4 flex flex-wrap gap-2">
-    {tags && tags?.map((tag) => <ChipUI label={tag} size="sm" />)}
-  </div>
-  <p class="mb-4 text-base-content/80">{description}</p>
-  <div class="flex items-center">
-    <span class="mr-2 text-sm">Confidence:</span>
-    <div class="flex">
-      {
+<div class="SKILLCARD rounded-lg bg-base-100 p-6 shadow" data-tag={tags[1].toLowerCase()}>
+	<div class="mb-3 flex items-center">
+		<Icon name={icon} class="mr-3 h-8 w-8"/>
+		<h3 class="text-xl font-semibold">{name}</h3>
+	</div>
+	<div class="mb-4 flex flex-wrap gap-2">
+		{tags && tags?.map((tag) => <ChipUI label={tag} size="sm" />)}
+	</div>
+	<div class="flex items-center">
+		<span class="mr-2 text-sm">Confidence:</span>
+		<div class="flex">
+			{
         Array.from({ length: 5 }, (_, i) => (
           <Icon
             name="mdi:star"
@@ -26,6 +25,6 @@ const { icon, name, description, confidence, tags } = Astro.props;
           />
         ))
       }
-    </div>
-  </div>
+		</div>
+	</div>
 </div>

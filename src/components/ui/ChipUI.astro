@@ -1,53 +1,49 @@
 ---
 interface Props {
-  label: string;
-  variant?: "solid" | "outline" | "soft";
-  isRadio?: boolean;
-  size?: "sm" | "md" | "lg";
-  name?: string;
-  selected?: boolean;
+	label: string;
+	variant?: "solid" | "outline" | "soft";
+	isRadio?: boolean;
+	size?: "sm" | "md" | "lg";
+	name?: string;
+	selected?: boolean;
 }
 
 const {
-  label,
-  variant = "soft",
-  isRadio = false,
-  size = "md",
-  name,
-  selected = false,
+	label,
+	variant = "soft",
+	isRadio = false,
+	size = "md",
+	name,
+	selected = false,
 } = Astro.props;
 
-const baseClasses =
-  "inline-flex items-center justify-center font-semibold rounded-full";
+const baseClasses = "inline-flex items-center justify-center font-semibold rounded-full";
 
 const sizeMap = {
-  sm: "px-3 py-1 text-xs",
-  md: "px-4 py-2 text-sm",
-  lg: "px-6 py-2 text-base",
+	sm: "px-3 py-1 text-xs",
+	md: "px-4 py-2 text-sm",
+	lg: "px-6 py-2 text-base",
 };
 
 const sizeClasses = sizeMap[size];
 
 const normalColorVariants = {
-  solid: "bg-primary text-primary-content",
-  outline: "border-2 border-primary text-primary",
-  soft: "bg-primary/20 text-primary",
+	solid: "bg-primary text-primary-content",
+	outline: "border-2 border-primary text-primary",
+	soft: "bg-primary/20 text-primary",
 };
 
 const radioColorVariants = {
-  unselected: "bg-base-200/90 text-base-content hover:bg-base-200",
-  selected: "bg-primary/20 text-primary hover:bg-primary/30",
+	unselected: "bg-base-200/90 text-base-content hover:bg-base-200",
+	selected: "bg-primary/20 text-primary hover:bg-primary/30",
 };
 
-const variantClasses = isRadio
-  ? radioColorVariants.unselected
-  : normalColorVariants[variant];
+const variantClasses = isRadio ? radioColorVariants.unselected : normalColorVariants[variant];
 
 const hoverClasses = isRadio ? "hover:bg-primary/30" : "";
 
 const classList = [baseClasses, sizeClasses, variantClasses, hoverClasses];
 ---
-
 {
   isRadio ? (
     name ? (

@@ -36,6 +36,13 @@ export const Skills: SkillProps[] = [
 		confidence: 3,
 		tags: ['Web', 'Markup', 'Frontend'],
 	},
+		{
+		icon: 'devicon:vuejs',
+		name: 'Vue',
+		description: 'Knows the very basic and able to make small, simple app',
+		confidence: 3,
+		tags: ['Web', 'Framework', 'Frontend'],
+	},
 	{
 		icon: 'devicon:markdown',
 		name: 'Markdown',
@@ -51,17 +58,31 @@ export const Skills: SkillProps[] = [
 		tags: ['Web', 'Design', 'Frontend'],
 	},
 	{
-		icon: 'devicon:vuejs',
-		name: 'Vue',
-		description: 'Knows the very basic and able to make small, simple app',
+		icon: 'devicon:typescript',
+		name: 'TypeScript',
+		description: 'Can use types to write more robust code but needs further practice',
+		confidence: 2,
+		tags: ['Web', 'Language', 'Backend'],
+	},
+	{
+		icon: 'devicon:nuxtjs',
+		name: 'Nuxt.js',
+		description: 'Have a basic understanding of Nuxt.js and can build simple projects',
 		confidence: 2,
 		tags: ['Web', 'Framework', 'Frontend'],
 	},
 	{
-		icon: 'devicon:typescript',
-		name: 'TypeScript',
-		description: 'Can use types to write more robust code but needs further practice',
+		icon: 'devicon:pixijs',
+		name: 'PixiJS',
+		description: 'Have used PixiJS for small graphics projects and experiments',
 		confidence: 1,
-		tags: ['Web', 'Language', 'Backend'],
+		tags: ['Graphics', 'Design', 'Frontend'],
 	},
+	{
+		icon: 'devicon:rust',
+		name: 'Rust',
+		description: 'Have a basic understanding of Rust and can write simple programs',
+		confidence: 1,
+		tags: ['Scripting', 'Language', 'Backend'],
+	}
 ];

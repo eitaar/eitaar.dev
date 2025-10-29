@@ -2,6 +2,7 @@ declare global {
 	interface Window {
 		toggleTheme: () => void;
 		toggleMobileMenu: () => void;
+		copyToClipboard: (text: string) => void;
 	}
 }
 

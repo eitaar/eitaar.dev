@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "indentStyle": "tab",
-  "lineWidth": 100,
+  "lineWidth": 120,
   "indentWidth": 2,
   "lineEnding": "lf",
   "singleQuote": false,

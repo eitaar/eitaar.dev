@@ -83,35 +83,6 @@
 		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
 	}
 
-	@media (max-width: 640px) {
-		.bg-pattern {
-			background-image:
-				radial-gradient(150% 90% at 18% 12%, rgba(255, 214, 165, 0.68), transparent 76%),
-				radial-gradient(135% 85% at 88% 24%, rgba(167, 219, 255, 0.7), transparent 78%),
-				radial-gradient(170% 130% at 50% 102%, rgba(255, 255, 255, 0.86), transparent 68%),
-				radial-gradient(150% 110% at 72% 60%, rgba(197, 128, 255, 0.44), transparent 74%),
-				radial-gradient(120% 90% at 30% 78%, rgba(248, 172, 214, 0.48), transparent 76%),
-				linear-gradient(to right, rgba(37, 99, 235, 0.2) 1px, transparent 1px),
-				linear-gradient(to bottom, rgba(59, 130, 246, 0.18) 1px, transparent 1px);
-			background-size:
-				160% 100%,
-				150% 100%,
-				155% 120%,
-				150% 110%,
-				140% 110%,
-				52px 52px,
-				52px 52px;
-			background-position:
-				left top,
-				center 12%,
-				center 98%,
-				right center,
-				left 70%,
-				left top,
-				left top;
-		}
-	}
-
 	[data-theme="dark"] .bg-pattern {
 		background-color: var(--color-base-300);
 		z-index: -10;
@@ -132,35 +103,6 @@
 			48px 48px,
 			48px 48px;
 		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
-	}
-
-	@media (max-width: 640px) {
-		[data-theme="dark"] .bg-pattern {
-			background-image:
-				radial-gradient(165% 95% at 18% 14%, rgba(125, 86, 255, 0.5), transparent 80%),
-				radial-gradient(150% 90% at 90% 26%, rgba(64, 193, 255, 0.42), transparent 82%),
-				radial-gradient(150% 125% at 50% 104%, rgba(255, 255, 255, 0.14), transparent 72%),
-				radial-gradient(170% 102% at 72% 68%, rgba(217, 70, 239, 0.36), transparent 78%),
-				radial-gradient(135% 95% at 30% 80%, rgba(67, 206, 162, 0.34), transparent 76%),
-				linear-gradient(to right, rgba(148, 163, 184, 0.22) 1px, transparent 1px),
-				linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
-			background-size:
-				170% 110%,
-				160% 105%,
-				165% 130%,
-				160% 120%,
-				150% 115%,
-				54px 54px,
-				54px 54px;
-			background-position:
-				left top,
-				center 14%,
-				center 102%,
-				right center,
-				left 72%,
-				left top,
-				left top;
-		}
 	}
 
 	[data-theme="dark"] [data-theme-icon="sun"],
@@ -225,5 +167,5 @@ a {
 }
 
 .profile-title {
-	@apply text-sm font-semibold tracking-widest text-accent/70 uppercase;
+	@apply text-sm font-semibold tracking-widest text-accent/70 uppercase text-center sm:text-left;
 }

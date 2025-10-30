@@ -2,34 +2,44 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import avatar from "../assets/img/avatar.webp";
+import projectImage from "../assets/img/projects/portfolio.png";
+import ProjectCard from "../components/ProjectCard.astro";
 import SkillCard from "../components/SkillCard.astro";
 import ButtonUI from "../components/ui/ButtonUI.astro";
 import ChipUI from "../components/ui/ChipUI.astro";
+import { Projects } from "../data/projects";
 import { Skills } from "../data/skills";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="eitaar - Portfolio" description="Portfolio of Eitaar.">
 	<!--About section -->
 	<section
-		class="relative px-6 py-40 min-h-screen flex flex-col items-center justify-center"
+		class="relative flex min-h-screen flex-col items-center justify-center px-6 py-40"
 		id="about"
 	>
 		<div class="mx-auto max-w-7xl">
-			<h2 class="mb-8 text-center font-Bungee text-5xl">Profile</h2>
-			<div class="flex flex-col items-center justify-center gap-12 py-20 lg:flex-row lg:gap-20">
-				<div class="shrink-0">
+			<h2 class="text-center font-Bungee text-5xl ">Profile</h2>
+			<div
+				class="flex flex-col items-center justify-center gap-8 py-10 sm:py-20 sm:flex-row sm:gap-12 lg:gap-20"
+			>
+				<div class="">
 					<Image
 						src={avatar}
 						alt="Eitaar's Avatar"
 						class="rounded-full border-4 border-secondary"
+						loading="eager"
+						quality="mid"
+						format="avif"
+						fetchpriority="high"
 						width={275}
 						height={275}
 					/>
 				</div>
 				<div class="flex flex-col gap-4">
-					<h3 class="font-Bungee text-5xl text-primary">eitaar</h3>
-					<div class="flex flex-row gap-2">
+					<h3 class="font-Bungee text-5xl text-primary text-center sm:text-left">eitaar</h3>
+					<div class="flex flex-row gap-2 justify-center sm:justify-start">
 						<ButtonUI
+							text="github Icon"
 							icon="mdi:github"
 							iconOnly={true}
 							color="neutral"
@@ -38,6 +48,7 @@ import Layout from "../layouts/Layout.astro";
 							target="_blank"
 						/>
 						<ButtonUI
+							text="discord Icon"
 							icon="mdi:discord"
 							iconOnly={true}
 							color="neutral"
@@ -47,15 +58,15 @@ import Layout from "../layouts/Layout.astro";
 					<div class="space-y-4">
 						<div class="flex flex-col gap-1">
 							<p class="profile-title">Hobby</p>
-							<p class="text-lg">Minecraft / Manga / Music</p>
+							<p class="text-lg text-center sm:text-left">Minecraft / Manga / Music</p>
 						</div>
 						<div class="flex flex-col gap-1">
 							<p class="profile-title">Nationality</p>
-							<p class="text-lg">Japanese</p>
+							<p class="text-lg text-center sm:text-left">Japanese</p>
 						</div>
 						<div class="flex flex-col gap-1">
 							<p class="profile-title">Interests</p>
-							<p class="text-lg">3D modeling / CG / Machine Learning</p>
+							<p class="text-lg text-center sm:text-left">3D modeling / CG / Machine Learning</p>
 						</div>
 					</div>
 				</div>
@@ -69,15 +80,17 @@ import Layout from "../layouts/Layout.astro";
 			<h2 class="mb-8 text-center font-Bungee text-5xl">Tech Stacks</h2>
 			<div class="mb-8 flex flex-wrap items-center justify-center gap-3">
 				{
-          ["All", "Language", "Framework", "Design", "Modeling", "Other"].map((label) => (
-            <ChipUI
-              label={label}
-              variant="outline"
-              isRadio={true}
-              name="tags"
-              selected={label === "All"}
-            />
-          ))
+          ["All", "Language", "Framework", "Design", "Modeling", "Other"].map(
+            (label) => (
+              <ChipUI
+                label={label}
+                variant="outline"
+                isRadio={true}
+                name="tags"
+                selected={label === "All"}
+              />
+            ),
+          )
         }
 			</div>
 			<div id="skill-wrapper">
@@ -99,43 +112,56 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<!-- Projects section -->
-	<script>
-	function filterTags(selectedTag: string): void {
-		const cards = document.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
+	<section class="px-6 py-20" id="projects">
+		<div class="mx-auto max-w-7xl">
+			<h2 class="mb-8 text-center font-Bungee text-5xl">Projects</h2>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				{
+          Projects.map((project)=>(
+            <ProjectCard title={project.title} description={project.description} imageUrl={project.imageUrl} tags={project.tags} repoUrl={project.repoUrl}/>
+          ))
+        }
+			</div>
+		</div>
+	</section>
+</Layout>
 
-		cards.forEach((card) => {
-			const tag = card.dataset.tag;
+<script>
+function filterTags(selectedTag: string): void {
+	const cards = document.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
 
-			if (selectedTag === "all" || tag === selectedTag) {
-				card.style.display = "block";
-			} else {
-				card.style.display = "none";
+	cards.forEach((card) => {
+		const tag = card.dataset.tag;
+
+		if (selectedTag === "all" || tag === selectedTag) {
+			card.style.display = "block";
+		} else {
+			card.style.display = "none";
+		}
+	});
+}
+
+// Add event listeners to radio buttons
+document.addEventListener("astro:page-load", () => {
+	const radioInputs = document.getElementsByName("tags") as NodeListOf<HTMLInputElement>;
+	radioInputs.forEach((input) => {
+		input.addEventListener("change", () => {
+			if (input.checked) {
+				filterTags(input.value.toLowerCase());
 			}
 		});
-	}
-
-	// Add event listeners to radio buttons
-	document.addEventListener("astro:page-load", () => {
-		const radioInputs = document.getElementsByName("tags") as NodeListOf<HTMLInputElement>;
-		radioInputs.forEach((input) => {
-			input.addEventListener("change", () => {
-				if (input.checked) {
-					filterTags(input.value.toLowerCase());
-				}
-			});
-		});
 	});
+});
 
-	function copyToClipboard(text: string): void {
-		navigator.clipboard.writeText(text).then(
-			() => {
-				console.log("Text copied to clipboard: ", text);
-			},
-			(err) => {
-				console.error("Could not copy text: ", err);
-			},
-		);
-	}
-	window.copyToClipboard = copyToClipboard;
-	</script>
-</Layout>
+function copyToClipboard(text: string): void {
+	navigator.clipboard.writeText(text).then(
+		() => {
+			console.log("Text copied to clipboard: ", text);
+		},
+		(err) => {
+			console.error("Could not copy text: ", err);
+		},
+	);
+}
+window.copyToClipboard = copyToClipboard;
+</script>

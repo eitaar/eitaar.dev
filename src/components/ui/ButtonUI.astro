@@ -90,6 +90,7 @@ computed.buttonClassList = ["cursor-pointer", ...computed.classList];
       target={target}
       rel={computed.rel}
       class:list={computed.classList}
+			aria-label={text}
     >
       {computed.showLeftIcon && <Icon name={icon} {...computed.iconProps} />}
       {!iconOnly && text}
@@ -99,9 +100,9 @@ computed.buttonClassList = ["cursor-pointer", ...computed.classList];
     <button
       type="button"
       disabled={disabled}
-      name={name}
       onclick={onclick}
       class:list={computed.buttonClassList}
+			aria-label={text}
     >
       {computed.showLeftIcon && <Icon name={icon} {...computed.iconProps} />}
       {!iconOnly && text}

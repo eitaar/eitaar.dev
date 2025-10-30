@@ -2,12 +2,13 @@
 import type { ProjectProps } from "../types/global";
 
 interface Props extends ProjectProps {}
-const { title, description, imageUrl } = Astro.props;
+const { title, description, imageUrl, slug } = Astro.props;
 
 import { Image } from "astro:assets";
 ---
-<div
+<a
 	class="PROJECTCARD rounded-lg bg-base-100 shadow flex flex-col hover:-translate-y-1 transition-transform duration-200 hover:shadow-lg"
+	href={`/projects/${Astro.props.slug}`}
 >
 	<div class="w-full h-54 border-b-2 border-base-300">
 		<Image
@@ -23,4 +24,4 @@ import { Image } from "astro:assets";
 		<h3 class="text-xl font-bold">{title}</h3>
 		<p class="text-base-content/90 text-sm leading-relaxed">{description}</p>
 	</div>
-</div>
+</a>

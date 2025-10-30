@@ -64,7 +64,8 @@ When I add the -qf flag (short for quick fix) at the end of my instruction:
 When I add the -usemcp flag (short for use context 7 and playwright mcp mode) at the end of my instruction:
 - Use the context 7 mcp to get the lates documents.
 - use playwright mcp to test the code.
+- use astro docs mcp to get the latest astro docs.
 
 ### 8. environments
 - the development server is always running on localhost:4321 so you do not need to start a new server.
-- we use yarn as package manager, not npm or pnpm.
+- we use npm as package manager, not yarn or pnpm.

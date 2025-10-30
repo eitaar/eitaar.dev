@@ -1,17 +1,17 @@
 /* Light Theme Variables */
 :root {
 	color-scheme: "light";
-	--color-base-100: oklch(100% 0 0);
+	--color-base-100: #f8f9fa;
 	--color-base-200: oklch(95% 0 0);
 	--color-base-300: oklch(90% 0 0);
-	--color-base-content: oklch(21% 0.006 285.885);
+	--color-base-content: #212529;
 	--color-primary: #1f75fe;
 	--color-primary-content: oklch(93% 0.034 272.788);
 	--color-secondary: oklch(62% 0.265 303.9);
 	--color-secondary-content: oklch(94% 0.028 342.258);
 	--color-accent: oklch(72% 0.219 149.579);
 	--color-accent-content: oklch(38% 0.063 188.416);
-	--color-neutral: oklch(14% 0.005 285.823);
+	--color-neutral: #dee2e6;
 	--color-neutral-content: oklch(92% 0.004 286.32);
 	--color-info: oklch(78% 0.154 211.53);
 	--color-info-content: oklch(29% 0.066 243.157);

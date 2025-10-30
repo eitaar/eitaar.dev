@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import { Projects } from "../../data/projects";
+import Layout from "../../layouts/Layout.astro";
+import type { ProjectProps } from "../../types/global";
+export function getStaticPaths() {
+	return Projects.map((project: ProjectProps) => ({
+		params: {
+			slug: project.slug,
+		},
+	}));
+}
+const { slug } = Astro.params;
+const project: ProjectProps = Projects.find((proj) => proj.slug === slug) as ProjectProps;
+---
+<Layout title={project.title} description={project.description}>
+	<div class="pt-32">
+		<h2 class="text-center text-5xl font-semibold tracking-wide mb-16">{project.title}</h2>
+		<a
+			href={project.projectUrl?project.projectUrl:project.repoUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Image
+				src={project.imageUrl}
+				alt={` screenshot of the ${project.title}`}
+				width={540}
+				height={300}
+				class="mx-auto rounded-lg shadow-xl hover:-translate-y-1 transition-transform duration-200 hover:shadow-2xl"
+			/>
+		</a>
+		<h3 class="mt-20 mb-2 text-3xl text-center font-Bungee tracking-tighter">OVERVIEW</h3>
+		<div class="w-full h-px bg-neutral mb-10"></div>
+		<article class="prose text-center mx-auto prose-lg dark:prose-invert">
+			{project.content}
+		</article>
+	</div>
+</Layout>

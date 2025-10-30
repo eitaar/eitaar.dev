@@ -16,7 +16,9 @@ interface SkillProps {
 
 interface ProjectProps {
 	title: string;
+	slug: string;
 	description: string;
+	content: string;
 	imageUrl: ImageMetadata;
 	projectUrl?: string;
 	repoUrl?: string;

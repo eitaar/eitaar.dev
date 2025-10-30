@@ -7,7 +7,7 @@ const { title, description, imageUrl, slug } = Astro.props;
 import { Image } from "astro:assets";
 ---
 <a
-	class="PROJECTCARD rounded-lg bg-base-100 shadow flex flex-col hover:-translate-y-1 transition-transform duration-200 hover:shadow-lg"
+	class="PROJECTCARD rounded-lg bg-base-100 shadow flex flex-col hover:-translate-y-1 transition-transform! duration-200 hover:shadow-lg"
 	href={`/projects/${Astro.props.slug}`}
 >
 	<div class="w-full h-54 border-b-2 border-base-300">

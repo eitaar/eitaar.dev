@@ -14,7 +14,7 @@ const { slug } = Astro.params;
 const project: ProjectProps = Projects.find((proj) => proj.slug === slug) as ProjectProps;
 ---
 <Layout title={project.title} description={project.description}>
-	<div class="pt-32">
+	<section class="pt-32 mx-6">
 		<h2 class="text-center text-5xl font-semibold tracking-wide mb-16">{project.title}</h2>
 		<a
 			href={project.projectUrl?project.projectUrl:project.repoUrl}
@@ -31,8 +31,8 @@ const project: ProjectProps = Projects.find((proj) => proj.slug === slug) as Pro
 		</a>
 		<h3 class="mt-20 mb-2 text-3xl text-center font-Bungee tracking-tighter">OVERVIEW</h3>
 		<div class="w-full h-px bg-neutral mb-10"></div>
-		<article class="prose text-center mx-auto prose-lg dark:prose-invert">
+		<article class="prose text-center mx-auto lg:prose-lg dark:prose-invert">
 			{project.content}
 		</article>
-	</div>
+	</section>
 </Layout>

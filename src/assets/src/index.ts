@@ -1,3 +1,9 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
 function filterTags(selectedTag: string): void {
 	const cards = document.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
 
@@ -35,3 +41,30 @@ function copyToClipboard(text: string): void {
 	);
 }
 window.copyToClipboard = copyToClipboard;
+
+// Animate titles when they enter the view
+function animateTitleOnScroll(selector: string): void {
+	const element = document.querySelector(selector) as HTMLElement;
+	if (!element) return;
+
+	const split = new SplitText(selector, { type: "chars" });
+
+	gsap.from(split.chars, {
+		opacity: 0,
+		y: 30,
+		stagger: 0.05,
+		ease: "back.out(2)",
+		duration: 0.5,
+		scrollTrigger: {
+			trigger: element,
+			start: "top 80%",
+			once: true,
+		},
+	});
+}
+
+document.addEventListener("astro:page-load", () => {
+	animateTitleOnScroll("#profileTitle");
+	animateTitleOnScroll("#techStackTitle");
+	animateTitleOnScroll("#projectTitle");
+});

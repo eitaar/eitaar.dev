@@ -1,3 +1,5 @@
+import aitaarImg from "../assets/img/projects/aitaar.png";
+import blockbenchImg from "../assets/img/projects/double-sided-sword.png";
 import githubStatsImg from "../assets/img/projects/github-stats.png";
 import portFolioImg from "../assets/img/projects/portfolio.png";
 import wahootImg from "../assets/img/projects/wahoot.png";
@@ -29,6 +31,17 @@ export const Projects: ProjectProps[] = [
 		tags: ["Astro", "Tailwind CSS", "Web"],
 	},
 	{
+		title: "3D models",
+		slug: "3d-models",
+		description:
+			"Collection of 3D models created using Blockbench for Minecraft resource packs / plugins.",
+		content:
+			"I created several low-poly 3D models using Blockbench, which is a 3D modeling software which can be use to create Minecraft assets. These models include a double-sided sword from Neon Genesis Evangelion and other custom designs that I made for fun and practice.",
+		imageUrl: blockbenchImg,
+		repoUrl: "https://github.com/eitaar/EitmcResourcePack/",
+		tags: ["Blockbench", "3D Modeling"],
+	},
+	{
 		title: "Github Stats",
 		slug: "github-stats",
 		description: "A small REST API to fetch and display GitHub user statistics. Built with Hono",
@@ -37,5 +50,17 @@ export const Projects: ProjectProps[] = [
 		imageUrl: githubStatsImg,
 		projectUrl: "https://get-github-stats.eitaar.workers.dev/eitaar",
 		tags: ["Astro", "Tailwind CSS", "Web"],
+	},
+	{
+		title: "Aitaar",
+		slug: "aitaar",
+		description:
+			"A hyper super duper AI (annoning ininteligence) chatbot built with Nuxt and tailwindcss.",
+		content:
+			"This is a random chatbot project that I made for no reason when my PC broke and I had to use replit for development. It is 99% AI-generated. Whenever you ask something, it will respond with a answer for ultimate quesion. I guess I was testing the limits of AI code generation?",
+		imageUrl: aitaarImg,
+		projectUrl: "https://aitaar.vercel.app",
+		repoUrl: "github.com/eitaar/aitaar",
+		tags: ["Nuxt", "Tailwind CSS", "Web", "AI"],
 	},
 ];

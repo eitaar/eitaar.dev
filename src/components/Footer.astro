@@ -1,0 +1,80 @@
+---
+import { Icon } from "astro-icon/components";
+
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+	{ name: "GitHub", icon: "mdi:github", href: "https://github.com/eitaar" },
+	{ name: "Discord", icon: "mdi:discord", href: "#" },
+	{ name: "Twitter", icon: "mdi:twitter", href: "#" },
+];
+
+const footerLinks = [
+	{ label: "Home", href: "/" },
+	{ label: "Projects", href: "/projects" },
+	{ label: "Articles", href: "/article" },
+];
+---
+<footer class="border-t-2 border-base-300 bg-base-100 py-12">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="grid gap-8 md:grid-cols-3">
+			<!-- Brand Section -->
+			<div class="flex flex-col gap-4">
+				<a href="/" class="font-Bungee text-2xl text-base-content hover:text-primary"> eitaar </a>
+				<p class="text-sm text-base-content/70">
+					Portfolio & Blog of eitaar. Interested in web development, 3D modeling, and machine
+					learning.
+				</p>
+			</div>
+
+			<!-- Links Section -->
+			<div>
+				<h3 class="mb-4 font-semibold text-base-content">Navigation</h3>
+				<nav class="flex flex-col gap-2">
+					{
+						footerLinks.map((link) => (
+							<a
+								href={link.href}
+								class="text-sm text-base-content/70 transition-colors hover:text-primary"
+							>
+								{link.label}
+							</a>
+						))
+					}
+				</nav>
+			</div>
+
+			<!-- Social Links Section -->
+			<div>
+				<h3 class="mb-4 font-semibold text-base-content">Follow</h3>
+				<div class="flex gap-3">
+					{
+						socialLinks.map((link) => (
+							<a
+								href={link.href}
+								aria-label={link.name}
+								title={link.name}
+								class="flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-base-300"
+							>
+								<Icon name={link.icon} class="h-5 w-5" />
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</div>
+
+		<!-- Divider -->
+		<div class="my-8 border-t border-base-300"></div>
+
+		<!-- Bottom Section -->
+		<div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+			<p class="text-center text-sm text-base-content/60 sm:text-left">
+				&copy; {currentYear}eitaar. All rights reserved.
+			</p>
+			<p class="text-center text-sm text-base-content/60">
+				Made with <span class="text-red-500">♥</span>using Astro
+			</p>
+		</div>
+	</div>
+</footer>

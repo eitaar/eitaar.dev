@@ -62,9 +62,30 @@ function animateTitleOnScroll(selector: string): void {
 		},
 	});
 }
+// Animate skill cards on scroll
+function animateSkillCardsOnScroll(): void {
+	const skillArea = document.querySelector("#skill-area");
+	if (!skillArea) return;
+
+	const cards = skillArea.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
+
+	gsap.from(cards, {
+		opacity: 0,
+		y: 30,
+		stagger: 0.08,
+		ease: "power2.out",
+		duration: 0.5,
+		scrollTrigger: {
+			trigger: skillArea,
+			start: "top 80%",
+			once: true,
+		},
+	});
+}
 
 document.addEventListener("astro:page-load", () => {
 	animateTitleOnScroll("#profileTitle");
 	animateTitleOnScroll("#techStackTitle");
 	animateTitleOnScroll("#projectTitle");
+	animateSkillCardsOnScroll();
 });

@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["eitaar", "gsap"],
+	"cSpell.words": ["Aitaar", "Blockbench", "eitaar", "gsap", "wahoot"],
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "biomejs.biome",
 	"[astro]": {

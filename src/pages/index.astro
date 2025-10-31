@@ -116,7 +116,7 @@ import Layout from "../layouts/Layout.astro";
 	<section class="px-6 py-20" id="projects">
 		<div class="mx-auto max-w-7xl">
 			<h2 class="mb-8 text-center font-Bungee text-5xl" id="projectTitle">Projects</h2>
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="project-area">
 				{
           Projects.map((project)=>(
             <ProjectCard title={project.title} description={project.description} imageUrl={project.imageUrl} tags={project.tags} repoUrl={project.repoUrl} slug={project.slug} content=""/>

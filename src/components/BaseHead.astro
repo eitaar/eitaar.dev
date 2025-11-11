@@ -10,6 +10,7 @@ interface Props {
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 
 const { title, description } = Astro.props;
+import avatarIcon from "../assets/img/avatar.webp";
 ---
 <!-- Global Metadata -->
 <meta charset="utf-8">
@@ -42,10 +43,7 @@ const { title, description } = Astro.props;
 <meta property="og:url" content={Astro.url}>
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
-<!-- <meta
-  property="og:image"
-  content={Astro.site ? new URL(avatarIcon.src, Astro.site) : avatarIcon.src}
-/> -->
+<meta property="og:image" content="https://eitaar.dev/avatar.webp">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">

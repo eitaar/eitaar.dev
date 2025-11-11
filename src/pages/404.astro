@@ -1,0 +1,40 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import "../styles/global.css";
+import Image from "astro/components/Image.astro";
+import NotFoundImage from "../assets/img/404.png";
+import ButtonUI from "../components/ui/ButtonUI.astro";
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+	<head>
+		<BaseHead title="404 Not Found" description="The page you are looking for does not exist."/>
+		<script is:inline>
+		function initTheme() {
+			const savedTheme = localStorage.getItem("theme");
+			const theme = savedTheme || "dark";
+			document.documentElement.setAttribute("data-theme", theme);
+		}
+		initTheme();
+		</script>
+	</head>
+	<body>
+		<div class="w-full h-screen flex flex-col justify-center items-center gap-6">
+			<Image src={NotFoundImage} alt="404 Not Found" width={600}/>
+			<p class="text-pretty text-lg text-base-content/70 text-center">
+				The page you are looking for does not seem to exist.
+			</p>
+			<ButtonUI href="/" isLink={true} text="Go Home" color="accent"/>
+		</div>
+		<p class="absolute bottom-5 right-5 text-xs md:text-sm text-base-content/50">
+			KawaiiLogos by
+			<a
+				href="https://github.com/SAWARATSUKI/KawaiiLogos"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline hover:text-base-content/70"
+				>SAWARATSUKI</a
+			>
+		</p>
+	</body>
+</html>

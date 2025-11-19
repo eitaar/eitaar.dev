@@ -5,16 +5,14 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 function filterTags(selectedTag: string): void {
-	const cards = document.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
+	const skillArea = document.getElementById("skill-area");
+	if (!skillArea) return;
+
+	const cards = skillArea.querySelectorAll(".SKILLCARD") as NodeListOf<HTMLElement>;
+	const isAll = selectedTag === "all";
 
 	cards.forEach((card) => {
-		const tag = card.dataset.tag;
-
-		if (selectedTag === "all" || tag === selectedTag) {
-			card.style.display = "block";
-		} else {
-			card.style.display = "none";
-		}
+		card.style.display = isAll || card.dataset.tag === selectedTag ? "block" : "none";
 	});
 }
 
@@ -64,7 +62,10 @@ function animateTitleOnScroll(selector: string): void {
 }
 // Animate skill cards on scroll
 function animateCardOnScroll(selector: string, cardClass: string): void {
-	const cards = document.querySelectorAll(`${selector} ${cardClass}`) as NodeListOf<HTMLElement>;
+	const container = document.querySelector(selector);
+	if (!container) return;
+
+	const cards = container.querySelectorAll(cardClass) as NodeListOf<HTMLElement>;
 	if (!cards.length) return;
 
 	gsap.set(cards, { opacity: 0, y: 30 });
@@ -75,7 +76,7 @@ function animateCardOnScroll(selector: string, cardClass: string): void {
 		ease: "power2.out",
 		duration: 0.5,
 		scrollTrigger: {
-			trigger: selector,
+			trigger: container,
 			start: "top 80%",
 			once: true,
 		},

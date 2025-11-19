@@ -3,15 +3,19 @@ import { Image } from "astro:assets";
 import { Projects } from "../../data/projects";
 import Layout from "../../layouts/Layout.astro";
 import type { ProjectProps } from "../../types/global";
+
+const projectsMap = new Map(Projects.map((p) => [p.slug, p]));
+
 export function getStaticPaths() {
 	return Projects.map((project: ProjectProps) => ({
 		params: {
 			slug: project.slug,
 		},
+		props: { project },
 	}));
 }
-const { slug } = Astro.params;
-const project: ProjectProps = Projects.find((proj) => proj.slug === slug) as ProjectProps;
+
+const { project } = Astro.props as { project: ProjectProps };
 ---
 <Layout title={project.title} description={project.description}>
 	<section class="pt-32 mx-6">

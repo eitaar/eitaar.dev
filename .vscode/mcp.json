@@ -1,0 +1,15 @@
+{
+	"inputs": [],
+	"servers": {
+		"playwright": {
+			"command": "npx",
+			"args": ["@playwright/mcp@latest", "--browser", "msedge"],
+			"cwd": "${workspaceFolder}",
+			"type": "stdio"
+		},
+		"figma": {
+			"url": "https://mcp.figma.com/mcp",
+			"type": "http"
+		}
+	}
+}

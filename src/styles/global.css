@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@font-face {
+	font-display: swap;
+	font-family: "Share";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/share-v20-latin-regular.woff2") format("woff2");
+}
+@font-face {
+	font-display: swap;
+	font-family: "Share";
+	font-style: bold;
+	font-weight: 700;
+	src: url("/fonts/share-v20-latin-700.woff2") format("woff2");
+}
+@font-face {
+	font-display: swap;
+	font-family: "Space Mono";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/space-mono-v17-latin-regular.woff2") format("woff2");
+}
+@font-face {
+	font-display: swap;
+	font-family: "Space Mono";
+	font-style: bold;
+	font-weight: 700;
+	src: url("/fonts/space-mono-v17-latin-700.woff2") format("woff2");
+}
+@font-face {
+	font-display: swap;
+	font-family: "Ndot57Caps";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Ndot57Caps.woff2") format("woff2");
+}
+
+@theme {
+	--font-Ndot: "Ndot57Caps", sans-serif;
+	--font-Share: "Share", sans-serif;
+	--font-SpaceMono: "Space Mono", monospace;
+	--tracking-text: 0.002em;
+	--color-content: #e0e0e0;
+	--color-subContent: #dbdbdb;
+	--color-bg: #0a0a0a;
+	--text-normal: 1rem;
+}
+
+.headline {
+	@apply font-SpaceMono text-xl font-bold tracking-text;
+}
+
+.title {
+	@apply font-Share text-5xl tracking-widest;
+}
+
+.projectTitle {
+	@apply font-Share text-3xl font-bold tracking-tighter;
+}
+
+.text {
+	@apply font-SpaceMono text-normal tracking-text;
+}
+
+.chip-text {
+	@apply font-SpaceMono text-xs tracking-wider;
+}
+
+:root {
+	@apply text-content;
+}

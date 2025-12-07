@@ -1,0 +1,41 @@
+{
+	"name": "eitaar.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev --host",
+		"build": "astro build",
+		"bp": "astro build && astro preview",
+		"preview": "astro preview",
+		"astro": "astro",
+		"biome:format": "biome format --write",
+		"biome:lint": "biome lint --write",
+		"biome:check": "biome check --write",
+		"prettier": "npx prettier . --write",
+		"format": "npx prettier . --write && biome check --write"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "12.6.10",
+		"@astrojs/mdx": "4.3.8",
+		"@astrojs/rss": "4.0.13",
+		"@astrojs/sitemap": "^3.6.0",
+		"@iconify-json/devicon": "^1.2.50",
+		"@iconify-json/mdi": "^1.2.3",
+		"@iconify-json/simple-icons": "^1.2.59",
+		"@tailwindcss/typography": "^0.5.19",
+		"@tailwindcss/vite": "^4.1.17",
+		"astro": "^5.15.9",
+		"astro-icon": "^1.1.5",
+		"gsap": "^3.13.0",
+		"tailwindcss": "^4.1.17"
+	},
+	"devDependencies": {
+		"@astrojs/node": "9.5.0",
+		"@biomejs/biome": "^2.3.2",
+		"daisyui": "^5.5.5",
+		"prettier": "^3.7.4",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"wrangler": "^4.45.2"
+	}
+}

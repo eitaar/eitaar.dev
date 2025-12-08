@@ -43,11 +43,10 @@
 	--color-content: #e0e0e0;
 	--color-subContent: #dbdbdb;
 	--color-bg: #0a0a0a;
-	--text-normal: 1rem;
 }
 
 .headline {
-	@apply font-SpaceMono text-xl font-bold tracking-text;
+	@apply font-SpaceMono text-lg font-bold tracking-text sm:text-xl;
 }
 
 .title {
@@ -59,7 +58,7 @@
 }
 
 .text {
-	@apply font-SpaceMono text-normal tracking-text;
+	@apply font-SpaceMono text-sm tracking-text sm:text-base;
 }
 
 .chip-text {

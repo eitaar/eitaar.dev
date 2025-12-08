@@ -3,9 +3,11 @@ import { Image } from "astro:assets";
 import { bigint } from "astro:schema";
 import Glyph from "../assets/glyph.svg";
 import dotAvatar from "../assets/img/dotAvatar.png";
+import portfolioImage from "../assets/img/projects/portfolio.png";
 import blenderIcon from "../assets/svg/blender.svg";
 import typescriptIcon from "../assets/svg/typescript.svg";
 import AboutHero from "../components/AboutHero.astro";
+import ProjectHero from "../components/ProjectHero.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -49,6 +51,18 @@ import Layout from "../layouts/Layout.astro";
 			text={`In my free time, I enjoy exploring creative pursuits like coding, 3D modelling, and reading comics.\nI love experimenting with new tools and techniques that help me bring ideas to life`}
 			Icon={blenderIcon}
 			iconPosition="right"
+		/>
+	</div>
+	<div
+		class="container mx-auto flex h-screen flex-col items-center justify-center gap-12 sm:gap-16"
+	>
+		<ProjectHero
+			title="PORTFOLIO"
+			description="An unofficial third-party Kahoot! client designed to improve the user experience. Built using NuxtJS and a custom Kahoot API module."
+			imageSrc={portfolioImage}
+			imagePosition="left"
+			chips={["Astro", "Tailwind CSS"]}
+			numbering={1}
 		/>
 	</div>
 </Layout>

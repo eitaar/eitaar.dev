@@ -1,0 +1,10 @@
+---
+interface Props {
+	text: string;
+}
+const { text } = Astro.props;
+---
+
+<div class="flex w-fit items-center justify-center rounded-full border border-gray-400 px-3 py-1">
+	<p class="chip-text">{text}</p>
+</div>

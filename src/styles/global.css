@@ -34,11 +34,18 @@
 	font-weight: 400;
 	src: url("/fonts/Ndot57Caps.woff2") format("woff2");
 }
+@font-face {
+	font-display: swap;
+	font-family: "Share Tech Mono";
+	font-weight: 400;
+	font-style: normal;
+}
 
 @theme {
 	--font-Ndot: "Ndot57Caps", sans-serif;
 	--font-Share: "Share", sans-serif;
 	--font-SpaceMono: "Space Mono", monospace;
+	--font-ShareTech: "Share Tech Mono", monospace;
 	--tracking-text: 0.002em;
 	--color-content: #e0e0e0;
 	--color-subContent: #dbdbdb;
@@ -54,7 +61,7 @@
 }
 
 .projectTitle {
-	@apply font-Share text-3xl font-bold tracking-tighter;
+	@apply font-Share text-4xl font-bold tracking-tighter;
 }
 
 .text {
@@ -62,9 +69,12 @@
 }
 
 .chip-text {
-	@apply font-SpaceMono text-xs tracking-wider;
+	@apply font-SpaceMono text-xs tracking-[0.15rem];
 }
 
+.numbering {
+	@apply font-ShareTech tracking-wide text-[#676767];
+}
 :root {
 	@apply text-content;
 }

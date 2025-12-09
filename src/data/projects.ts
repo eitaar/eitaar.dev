@@ -16,7 +16,7 @@ const projects: ProjectProps[] = [
 	{
 		title: "Wahoot!",
 		description:
-			"An unofficial third-party Kahoot! client with extra features designed to streamline and enhance the user experience. Built with NuxtJS and powered by a custom Kahoot! API module.",
+			"An unofficial third-party Kahoot! client with extra features designed to streamline and enhance the user experience. Built with Nuxt and powered by a custom Kahoot! API module.",
 		chips: ["Nuxt", "Javascript"],
 		numbering: 2,
 		imagePosition: "right",
@@ -25,7 +25,7 @@ const projects: ProjectProps[] = [
 	{
 		title: "AItaar",
 		description:
-			"A hyper super duper AI (annoying ininteligence) chatbot built with Nuxt and tailwind css.",
+			"A hyper super duper AI (annoying ininteligence) chatbot built with Nuxt and Tailwind CSS.",
 		chips: ["Nuxt", "Tailwind CSS"],
 		numbering: 3,
 		imagePosition: "left",

@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface SocialLink {
+	platform: string;
+	icon: string;
+	link: string;
+}
+const socialLinks: SocialLink[] = [
+	{
+		platform: "github",
+		icon: "mdi:github",
+		link: "https://github.com/eitaar",
+	},
+	{
+		platform: "steam",
+		icon: "mdi:steam",
+		link: "https://steamcommunity.com/profiles/76561199572433897/",
+	},
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-subContent/20 bg-bg py-8">
+	<div
+		class="container mx-auto flex flex-col items-center gap-6 px-4 sm:flex-row sm:justify-between"
+	>
+		<div class="flex flex-col items-center gap-2 sm:items-start">
+			<p class="font-Ndot text-2xl tracking-wider">EITAAR</p>
+			<p class="font-SpaceMono text-sm text-subContent">Portfolio · {currentYear}</p>
+		</div>
+		<div class="flex flex-col items-center gap-4 sm:items-end">
+			<div class="flex items-center gap-4">
+				{
+					socialLinks.map((social) => (
+						<a
+							href={social.link}
+							target="_blank"
+							rel="noreferrer noopener"
+							aria-label={social.platform}
+							class="text-subContent"
+						>
+							<Icon name={social.icon} class="h-6 w-6" />
+						</a>
+					))
+				}
+			</div>
+			<p class="text-center font-SpaceMono text-sm text-subContent sm:text-right">
+				Design inspired by
+				<a
+					href="https://nothing.tech/"
+					target="_blank"
+					rel="noreferrer noopener"
+					class="link font-Ndot!"
+					>Nothing</a
+				>
+			</p>
+		</div>
+	</div>
+</footer>

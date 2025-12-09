@@ -69,7 +69,7 @@
 }
 
 .chip-text {
-	@apply font-SpaceMono text-xs tracking-[0.15rem];
+	@apply font-SpaceMono text-xs tracking-widest;
 }
 
 .numbering {
@@ -79,5 +79,5 @@
 	@apply cursor-pointer font-Share tracking-wide underline underline-offset-4;
 }
 :root {
-	@apply text-content;
+	@apply scroll-smooth text-content;
 }

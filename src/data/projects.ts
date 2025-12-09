@@ -1,3 +1,4 @@
+import aiTaarImage from "../assets/img/projects/aitaar.png";
 import portfolioImage from "../assets/img/projects/portfolio.png";
 import wahootImage from "../assets/img/projects/wahoot.png";
 import type { ProjectProps } from "../type/types";
@@ -20,6 +21,15 @@ const projects: ProjectProps[] = [
 		numbering: 2,
 		imagePosition: "right",
 		imageSrc: wahootImage,
+	},
+	{
+		title: "AItaar",
+		description:
+			"A hyper super duper AI (annoying ininteligence) chatbot built with Nuxt and tailwind css.",
+		chips: ["Nuxt", "Tailwind CSS"],
+		numbering: 3,
+		imagePosition: "left",
+		imageSrc: aiTaarImage,
 	},
 ];
 

@@ -1,0 +1,26 @@
+---
+const navItems = [
+	{ name: "Top", href: "/" },
+	{ name: "About", href: "/#about" },
+	{ name: "Projects", href: "/#projects" },
+];
+---
+
+<header class="fixed top-0 z-20 w-full">
+	<nav class="container mx-auto flex h-16 items-center justify-between px-4">
+		<a href="/" aria-label="Home">
+			<h1 class="font-Ndot text-2xl tracking-wider">EITAAR</h1>
+		</a>
+		<ul class="flex items-center gap-8">
+			{
+				navItems.map((item) => (
+					<li>
+						<a href={item.href} class="font-SpaceMono text-sm tracking-wider text-content">
+							{item.name}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+</header>

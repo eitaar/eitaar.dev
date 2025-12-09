@@ -7,28 +7,39 @@ interface Props extends ProjectProps {}
 import { Image } from "astro:assets";
 import ChipComponent from "./ChipComponent.astro";
 
-const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "");
+const slug = title
+	.toLowerCase()
+	.trim()
+	.replace(/\s+/g, "-")
+	.replace(/[^a-z0-9-]/g, "")
+	.replace(/-+/g, "-")
+	.replace(/^-+|-+$/g, "");
 ---
 
 <div
-	class="flex items-stretch justify-center gap-10 px-28"
-	class:list={imagePosition === "left" ? "flex-row" : "flex-row-reverse"}
+	class="flex w-full flex-col items-center justify-center gap-6 px-4 sm:px-6 md:flex-row md:items-stretch md:gap-8 lg:gap-10 lg:px-28"
+	class:list={{
+		"md:flex-row": imagePosition === "left",
+		"md:flex-row-reverse": imagePosition === "right",
+	}}
 >
 	<Image
 		src={imageSrc}
 		alt={title}
-		class="rounded-lg border-2 border-content object-cover grayscale"
+		class="h-auto w-full max-w-[480px] rounded-lg border-2 border-content object-cover grayscale sm:max-w-[520px]"
 		format="avif"
 		width={440}
 		height={248}
 	/>
-	<div class="flex h-full flex-col gap-4 py-1">
+	<div
+		class="flex h-full w-full max-w-2xl flex-col items-center gap-4 py-1 text-center md:items-start md:text-left"
+	>
 		<p class="numbering">({numbering.toString().padStart(3, "0")})</p>
 		<h4 class="projectTitle">{title}</h4>
 		<p class="text">{description}</p>
-		<div class="flex items-center justify-start gap-4">
+		<div class="flex flex-wrap items-center justify-center gap-3 md:justify-start md:gap-4">
 			{chips.map((text) => <ChipComponent text={text} />)}
 		</div>
-		<a class="link mt-auto justify-self-end" href={`/projects/${slug}`}> See More </a>
+		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}> See More </a>
 	</div>
 </div>

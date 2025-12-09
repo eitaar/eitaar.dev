@@ -75,6 +75,9 @@
 .numbering {
 	@apply font-ShareTech tracking-wide text-[#676767];
 }
+.link {
+	@apply cursor-pointer font-Share tracking-wide underline underline-offset-4;
+}
 :root {
 	@apply text-content;
 }

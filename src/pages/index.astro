@@ -1,17 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import { bigint } from "astro:schema";
 import Glyph from "../assets/glyph.svg";
 import dotAvatar from "../assets/img/dotAvatar.png";
-import portfolioImage from "../assets/img/projects/portfolio.png";
 import blenderIcon from "../assets/svg/blender.svg";
 import typescriptIcon from "../assets/svg/typescript.svg";
 import AboutHero from "../components/AboutHero.astro";
 import ProjectHero from "../components/ProjectHero.astro";
+import { projects } from "../data/projects";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout title="portfolio" description="a portfolio page">
 	<Glyph
 		aria-label="glyph logo"
 		class="absolute top-1/2 left-1/2 -z-10 m-auto w-11/12 -translate-x-1/2 -translate-y-1/2 fill-current text-white blur sm:h-4/5 sm:w-auto sm:blur-xl"
@@ -54,15 +53,20 @@ import Layout from "../layouts/Layout.astro";
 		/>
 	</div>
 	<div
-		class="container mx-auto flex h-screen flex-col items-center justify-center gap-12 sm:gap-16"
+		class="container mx-auto flex h-screen flex-col items-center justify-center gap-12 sm:gap-20"
 	>
-		<ProjectHero
-			title="PORTFOLIO"
-			description="An unofficial third-party Kahoot! client designed to improve the user experience. Built using NuxtJS and a custom Kahoot API module."
-			imageSrc={portfolioImage}
-			imagePosition="left"
-			chips={["Astro", "Tailwind CSS"]}
-			numbering={1}
-		/>
+		<h3 class="title">PROJECTS</h3>
+		{
+			projects.map((project, index) => (
+				<ProjectHero
+					title={project.title}
+					description={project.description}
+					chips={project.chips}
+					numbering={index + 1}
+					imagePosition={index % 2 === 0 ? "left" : "right"}
+					imageSrc={project.imageSrc}
+				/>
+			))
+		}
 	</div>
 </Layout>

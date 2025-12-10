@@ -30,6 +30,10 @@ const slug = title
 		format="avif"
 		width={440}
 		height={248}
+		fetchpriority={"low"}
+		loading={"lazy"}
+		format="avif"
+		quality="mid"
 	/>
 	<div
 		class="flex h-full w-full max-w-2xl flex-col items-center gap-4 py-1 text-center md:items-start md:text-left"
@@ -40,6 +44,8 @@ const slug = title
 		<div class="flex flex-wrap items-center justify-center gap-3 md:justify-start md:gap-4">
 			{chips.map((text) => <ChipComponent text={text} />)}
 		</div>
-		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}> See More </a>
+		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}>
+			Project Details
+		</a>
 	</div>
 </div>

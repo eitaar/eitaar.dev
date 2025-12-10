@@ -19,9 +19,7 @@
 		"@astrojs/mdx": "4.3.8",
 		"@astrojs/rss": "4.0.13",
 		"@astrojs/sitemap": "^3.6.0",
-		"@iconify-json/devicon": "^1.2.50",
 		"@iconify-json/mdi": "^1.2.3",
-		"@iconify-json/simple-icons": "^1.2.59",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.17",
 		"astro": "^5.15.9",
@@ -32,7 +30,6 @@
 	"devDependencies": {
 		"@astrojs/node": "9.5.0",
 		"@biomejs/biome": "^2.3.2",
-		"daisyui": "^5.5.5",
 		"prettier": "^3.7.4",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",

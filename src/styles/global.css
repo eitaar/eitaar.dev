@@ -39,6 +39,7 @@
 	font-family: "Share Tech Mono";
 	font-weight: 400;
 	font-style: normal;
+	src: url("/fonts/shareTechMono.woff2") format("woff2");
 }
 
 @theme {
@@ -73,7 +74,7 @@
 }
 
 .numbering {
-	@apply font-ShareTech tracking-wide text-[#676767];
+	@apply font-ShareTech tracking-wide text-[#898989];
 }
 .link {
 	@apply cursor-pointer font-Share tracking-wide underline underline-offset-4;

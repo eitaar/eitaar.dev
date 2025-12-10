@@ -51,6 +51,17 @@
 	--color-content: #e0e0e0;
 	--color-subContent: #dbdbdb;
 	--color-bg: #0a0a0a;
+
+	--animate-breathe: breathe 5s ease-in-out infinite;
+}
+@keyframes breathe {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
 }
 
 .headline {

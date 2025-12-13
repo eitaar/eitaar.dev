@@ -64,7 +64,7 @@ When I add the -qf flag (short for quick fix) at the end of my instruction:
 
 When I add the -usemcp flag (short for use context 7 and playwright mcp mode) at the end of my instruction:
 
-- Use the context 7 mcp to get the lates documents.
+- Use the context 7 mcp to get the latest documents.
 - use playwright mcp to test the code. close the browser after testing.
 - use astro docs mcp to get the latest astro docs.
 

@@ -13,7 +13,8 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="portfolio" description="a portfolio page">
 	<Glyph
 		aria-label="glyph logo"
-		class="absolute top-1/2 left-1/2 -z-10 m-auto w-11/12 -translate-x-1/2 -translate-y-1/2 animate-breathe fill-current text-white blur sm:h-4/5 sm:w-auto sm:blur-xl"
+		class="absolute top-1/2 left-1/2 -z-10 m-auto w-11/12 -translate-x-1/2 -translate-y-1/2 fill-current text-white blur sm:h-4/5 sm:w-auto sm:blur-xl"
+		id="glyph"
 	/>
 	<div
 		class="flex h-screen w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row sm:gap-16"
@@ -36,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
 		/>
 	</div>
 	<div
-		class="container mx-auto flex min-h-screen flex-col items-center justify-center gap-12 sm:gap-16"
+		class="container mx-auto mb-32 flex min-h-screen flex-col items-center justify-center gap-12 sm:mb-0 sm:gap-16"
 		id="about"
 	>
 		<h3 class="title">ABOUT</h3>

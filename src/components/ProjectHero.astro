@@ -33,7 +33,7 @@ const slug = title
 ---
 
 <article
-	class="group flex flex-col items-center justify-center gap-6 md:flex-row md:items-stretch md:gap-8 lg:gap-10"
+	class="group flex flex-col items-center justify-center gap-8 md:flex-row md:items-stretch md:gap-12 lg:gap-16"
 	class:list={{
 		"md:flex-row-reverse": imagePosition === "right",
 	}}
@@ -50,12 +50,12 @@ const slug = title
 		quality="high"
 	/>
 	<div
-		class="flex h-full w-full max-w-2xl flex-col items-center gap-4 py-1 text-center md:items-start md:text-left"
+		class="flex h-full w-full max-w-2xl flex-col items-center gap-6 py-2 text-center md:items-start md:gap-8 md:text-left"
 	>
 		<p class="numbering">({numbering.toString().padStart(3, "0")})</p>
 		<h2 class="projectTitle hover-underline-animation">{title}</h2>
 		<p class="text">{description}</p>
-		<div class="flex flex-wrap items-center justify-center gap-3 md:justify-start md:gap-4">
+		<div class="flex flex-wrap items-center justify-center gap-4 md:justify-start md:gap-6">
 			{chips.map((text) => <ChipComponent text={text} />)}
 		</div>
 		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}>

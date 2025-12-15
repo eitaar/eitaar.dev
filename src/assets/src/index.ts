@@ -72,4 +72,9 @@ function animate() {
 }
 
 // Run animation
-animate();
+if (
+	window.matchMedia("(prefers-reduced-motion: no-preference)").matches &&
+	localStorage.getItem("animateGlyphs") !== "false"
+) {
+	animate();
+}

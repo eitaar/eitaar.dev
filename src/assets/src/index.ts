@@ -34,8 +34,8 @@ const pattern = [
 ];
 
 const timings = {
-	fadeIn: 80,
-	fadeOut: 300,
+	fadeIn: 200,
+	fadeOut: 800,
 };
 
 const glyphs = [

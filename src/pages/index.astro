@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import Glyph from "../assets/glyph.svg";
 import dotAvatar from "../assets/img/dotAvatar.png";
 import blenderIcon from "../assets/svg/blender.svg";
 import typescriptIcon from "../assets/svg/typescript.svg";
 import AboutHero from "../components/AboutHero.astro";
 import ProjectHero from "../components/ProjectHero.astro";
-import { projects } from "../data/projects";
 import Layout from "../layouts/Layout.astro";
+
+const projects = await getCollection("projects");
+const topProjects = projects.filter((project) => project.data.topProject);
 ---
 
 <Layout title="portfolio" description="a portfolio page">
@@ -17,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
 		id="glyph"
 	/>
 	<div
-		class="flex h-[100svh] w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row sm:gap-16"
+		class="flex h-svh w-full flex-col-reverse items-center justify-center gap-4 sm:flex-row sm:gap-16"
 	>
 		<div class="flex flex-col items-center justify-center gap-1 sm:items-start sm:gap-4">
 			<h2 class="font-Ndot text-4xl tracking-wider sm:text-7xl">EITAAR</h2>
@@ -60,14 +63,18 @@ import Layout from "../layouts/Layout.astro";
 	>
 		<h3 class="title">PROJECTS</h3>
 		{
-			projects.map((project, index) => (
+			topProjects.map((project, index) => (
 				<ProjectHero
-					title={project.title}
-					description={project.description}
-					chips={project.chips}
+					title={project.data.title}
+					description={project.data.description}
+					chips={project.data.chips}
 					numbering={index + 1}
+					url={project.data.url}
+					githubUrl={project.data.githubUrl}
 					imagePosition={index % 2 === 0 ? "left" : "right"}
-					imageSrc={project.imageSrc}
+					imageSrc={project.data.imageSrc}
+					topProject={true}
+					lastUpdated={project.data.lastUpdated}
 				/>
 			))
 		}

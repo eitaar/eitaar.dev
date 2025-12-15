@@ -67,7 +67,7 @@
 }
 
 .title {
-	@apply font-Share text-5xl tracking-widest;
+	@apply text-center font-Share text-5xl tracking-widest;
 }
 
 .projectTitle {

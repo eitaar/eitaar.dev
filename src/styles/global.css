@@ -51,16 +51,14 @@
 	--color-content: #e0e0e0;
 	--color-subContent: #dbdbdb;
 	--color-bg: #0a0a0a;
-
-	--animate-breathe: breathe 5s ease-in-out infinite;
 }
-@keyframes breathe {
-	0%,
-	100% {
-		opacity: 0;
+
+@keyframes underline {
+	from {
+		width: 0%;
 	}
-	50% {
-		opacity: 1;
+	to {
+		width: 100%;
 	}
 }
 
@@ -90,6 +88,11 @@
 .link {
 	@apply cursor-pointer font-Share tracking-wide underline underline-offset-4;
 }
+
+.hover-underline-animation {
+	@apply relative w-fit after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-focus:after:scale-x-100;
+}
+
 :root {
 	@apply scroll-smooth text-content;
 }

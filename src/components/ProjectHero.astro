@@ -6,11 +6,13 @@ import ChipComponent from "./ChipComponent.astro";
 type ProjectProps = CollectionEntry<"projects">["data"];
 
 interface Props extends ProjectProps {
+	id: string;
 	numbering: number;
 	imagePosition: "left" | "right";
 }
 
 const {
+	id,
 	title,
 	description,
 	chips,
@@ -56,7 +58,7 @@ const slug = title
 		<h2 class="projectTitle hover-underline-animation">{title}</h2>
 		<p class="text">{description}</p>
 		<div class="flex flex-wrap items-center justify-center gap-4 md:justify-start md:gap-6">
-			{chips.map((text) => <ChipComponent text={text} />)}
+			{chips.map((text) => <ChipComponent label={text} />)}
 		</div>
 		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}>
 			Project Details

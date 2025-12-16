@@ -1,0 +1,80 @@
+---
+import { getCollection, render } from "astro:content";
+import "../../styles/typography.css";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+	return projects.map((project) => ({
+		params: { id: project.id },
+		props: { project },
+	}));
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+type MetaItem = { title: string; value: string; href?: string };
+
+const projectMetaData: MetaItem[] = [
+	project.data.url && {
+		title: "website",
+		value: project.data.url,
+		href: project.data.url,
+	},
+	project.data.githubUrl && {
+		title: "repository",
+		value: project.data.githubUrl.replace("https://github.com/", ""),
+		href: project.data.githubUrl,
+	},
+	project.data.lastUpdated && {
+		title: "last Updated",
+		value: new Intl.DateTimeFormat("en-UK").format(project.data.lastUpdated),
+	},
+	project.data.chips && {
+		title: "tech stack",
+		value: project.data.chips.join(", "),
+	},
+].filter(Boolean) as MetaItem[];
+---
+
+<Layout title={project.data.title} description={project.data.description}>
+	<div class="container mx-auto flex flex-col items-center gap-10 px-4 md:px-8">
+		<h2 class="projectTitle mt-12 text-center text-4xl tracking-tight md:text-5xl lg:text-7xl">
+			{project.data.title}
+		</h2>
+
+		<Image
+			src={project.data.imageSrc}
+			alt={project.data.title}
+			width={640}
+			height={360}
+			quality={"high"}
+			loading={"eager"}
+			format="avif"
+			class="w-full max-w-3xl rounded-lg border border-subContent object-cover"
+		/>
+		<div class="flex w-full max-w-3xl flex-col gap-6">
+			<p class="title my-2 text-2xl tracking-normal md:text-3xl lg:text-4xl">OVERVIEW</p>
+			<div class="h-px w-full bg-subContent/70"></div>
+			<div class="flex w-full flex-col justify-center gap-4">
+				{
+					projectMetaData.map((item) => (
+						<div class="flex items-center justify-between gap-4">
+							<p class="headline">{item.title}</p>
+							{item.href ? (
+								<a href={item.href} target="_blank" class="link">
+									{item.value}
+								</a>
+							) : (
+								<p class="text">{item.value}</p>
+							)}
+						</div>
+					))
+				}
+			</div>
+			<div class="prose prose-invert mt-6 max-w-none">
+				<Content/>
+			</div>
+		</div>
+	</div>
+</Layout>

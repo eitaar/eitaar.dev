@@ -20,7 +20,7 @@ const sortedProjects = projects.sort((a, b) => {
 					chips={project.data.chips}
 					lastUpdated={project.data.lastUpdated}
 					numbering={index}
-					imagePosition={index % 2 == 0 ? "left" : "right"}
+					imagePosition={index % 2 === 0 ? "left" : "right"}
 					imageSrc={project.data.imageSrc}
 				/>
 			))

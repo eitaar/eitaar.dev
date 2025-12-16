@@ -1,11 +1,27 @@
 ---
-import type { ProjectProps } from "../type/types";
-
-const { title, description, chips, numbering, imagePosition, imageSrc } = Astro.props;
-interface Props extends ProjectProps {}
-
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 import ChipComponent from "./ChipComponent.astro";
+
+type ProjectProps = CollectionEntry<"projects">["data"];
+
+interface Props extends ProjectProps {
+	numbering: number;
+	imagePosition: "left" | "right";
+}
+
+const {
+	title,
+	description,
+	chips,
+	numbering,
+	imagePosition,
+	imageSrc,
+	url,
+	githubUrl,
+	lastUpdated,
+	topProject = false,
+} = Astro.props;
 
 const slug = title
 	.toLowerCase()
@@ -16,10 +32,9 @@ const slug = title
 	.replace(/^-+|-+$/g, "");
 ---
 
-<div
-	class="group flex w-full flex-col items-center justify-center gap-6 px-4 sm:px-6 md:flex-row md:items-stretch md:gap-8 lg:gap-10 lg:px-28"
+<article
+	class="group flex flex-col items-center justify-center gap-8 md:flex-row md:items-stretch md:gap-12 lg:gap-16"
 	class:list={{
-		"md:flex-row": imagePosition === "left",
 		"md:flex-row-reverse": imagePosition === "right",
 	}}
 >
@@ -30,21 +45,21 @@ const slug = title
 		format="avif"
 		width={440}
 		height={248}
-		fetchpriority={"low"}
-		loading={"lazy"}
-		quality={"high"}
+		fetchpriority="low"
+		loading="lazy"
+		quality="high"
 	/>
 	<div
-		class="flex h-full w-full max-w-2xl flex-col items-center gap-4 py-1 text-center md:items-start md:text-left"
+		class="flex h-full w-full max-w-2xl flex-col items-center gap-6 py-2 text-center md:items-start md:gap-8 md:text-left"
 	>
 		<p class="numbering">({numbering.toString().padStart(3, "0")})</p>
-		<h4 class="projectTitle hover-underline-animation">{title}</h4>
+		<h2 class="projectTitle hover-underline-animation">{title}</h2>
 		<p class="text">{description}</p>
-		<div class="flex flex-wrap items-center justify-center gap-3 md:justify-start md:gap-4">
+		<div class="flex flex-wrap items-center justify-center gap-4 md:justify-start md:gap-6">
 			{chips.map((text) => <ChipComponent text={text} />)}
 		</div>
 		<a class="link mt-auto justify-self-end md:self-start" href={`/projects/${slug}`}>
 			Project Details
 		</a>
 	</div>
-</div>
+</article>

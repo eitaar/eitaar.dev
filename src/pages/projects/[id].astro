@@ -31,7 +31,7 @@ const projectMetaData: MetaItem[] = [
 		value: new Intl.DateTimeFormat("en-UK").format(project.data.lastUpdated),
 	},
 	project.data.chips && {
-		title: "tech Stack",
+		title: "tech stack",
 		value: project.data.chips.join(", "),
 	},
 ].filter(Boolean) as MetaItem[];

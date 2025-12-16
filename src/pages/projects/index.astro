@@ -15,6 +15,7 @@ const sortedProjects = projects.sort((a, b) => {
 		{
 			sortedProjects.map((project, index) => (
 				<ProjectHero
+					id={project.id}
 					title={project.data.title}
 					description={project.data.description}
 					chips={project.data.chips}

@@ -13,7 +13,7 @@ const projects = await getCollection("projects");
 const topProjects = projects.filter((project) => project.data.topProject);
 ---
 
-<Layout title="portfolio" description="a portfolio page">
+<Layout title="portfolio" description="a portfolio page" stickyHeader={true}>
 	<Glyph
 		aria-label="glyph logo"
 		class="absolute top-1/2 left-1/2 -z-10 m-auto w-11/12 -translate-x-1/2 -translate-y-1/2 fill-current text-white blur sm:h-4/5 sm:w-auto sm:blur-lg"
@@ -65,6 +65,7 @@ const topProjects = projects.filter((project) => project.data.topProject);
 		{
 			topProjects.map((project, index) => (
 				<ProjectHero
+					id={project.id}
 					title={project.data.title}
 					description={project.data.description}
 					chips={project.data.chips}

@@ -63,7 +63,7 @@
 }
 
 .headline {
-	@apply font-SpaceMono text-lg font-bold tracking-text sm:text-xl;
+	@apply font-SpaceMono text-lg font-bold tracking-text md:text-xl;
 }
 
 .title {
@@ -75,7 +75,7 @@
 }
 
 .text {
-	@apply font-SpaceMono text-sm tracking-text sm:text-base;
+	@apply font-SpaceMono text-sm tracking-text md:text-base;
 }
 
 .chip-text {

@@ -11,14 +11,14 @@ const { sticky = false } = Astro.props;
 ---
 
 <header
-	class="z-20 w-full backdrop-blur-lg sm:backdrop-blur-none"
+	class="z-20 w-full backdrop-blur-lg md:backdrop-blur-none"
 	class:list={sticky ? "fixed top-0" : ""}
 >
-	<nav class="container mx-auto flex h-16 items-center justify-between px-6 sm:px-12">
+	<nav class="container mx-auto flex h-16 items-center justify-between px-6 md:px-12">
 		<a href="/" aria-label="Home">
 			<h1 class="font-Ndot text-2xl tracking-wider">EITAAR</h1>
 		</a>
-		<ul class="flex items-center gap-6 sm:gap-8">
+		<ul class="flex items-center gap-6 md:gap-8">
 			{
 				navItems.map((item) => (
 					<li>

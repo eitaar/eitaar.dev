@@ -14,7 +14,7 @@ const isLeft = iconPosition === "left" || !iconPosition;
 ---
 
 <div
-	class="flex flex-col items-center gap-6 px-4 text-left sm:items-start sm:gap-10"
+	class="flex flex-col items-center gap-8 px-6 text-left sm:items-start sm:gap-12 sm:px-12"
 	class:list={isLeft ? "sm:flex-row" : "sm:flex-row-reverse"}
 >
 	<div class="flex items-start justify-center sm:justify-start">
@@ -27,7 +27,7 @@ const isLeft = iconPosition === "left" || !iconPosition;
 		/>
 	</div>
 
-	<div class="flex w-full flex-col items-center gap-2 sm:items-start sm:gap-4">
+	<div class="flex w-full flex-col items-center gap-4 sm:items-start sm:gap-6">
 		<h4 class="headline text-center sm:text-left">{heading}</h4>
 		<p class="text text-center leading-relaxed whitespace-pre-line text-subContent sm:text-left">
 			{text}
